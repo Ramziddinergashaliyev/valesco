@@ -27,8 +27,14 @@
     &__item {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 50px;
       position: relative;
+    }
+
+    @media (max-width:1560px) {
+      &__item {
+        gap: 30px;
+      }
     }
 
     &__list {
