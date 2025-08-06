@@ -3,6 +3,7 @@ import Header from './header/Header'
 import { Outlet } from 'react-router-dom'
 import Footer from './footer/Footer'
 import { IoMdArrowRoundUp } from 'react-icons/io'
+import "./layout.scss"
 
 const Layout = () => {
   const [showTopBtn, setShowTopBtn] = useState(false)
@@ -28,7 +29,7 @@ const Layout = () => {
       <Footer />
 
       {showTopBtn && (
-        <div className='topMenu'>
+        <div className='topMenus'>
           <button onClick={scrollToTop}>
             <IoMdArrowRoundUp />
           </button>
