@@ -17,15 +17,15 @@ button {
   cursor: pointer;
 }
 
-// .container {
-//   max-width: 1340px;
-//   margin: 0 auto;
-//   width: 100%;
-//   padding: 0px 12px;
-// }
-
 .container {
-  width: 90%;
+  max-width: 1648px;
   margin: 0 auto;
-  max-width: 1540px;
+  width: 100%;
+  padding: 0px 12px;
+}
+
+@media (max-width: 1560px) {
+  .container {
+    max-width: 1360px;
+  }
 }
