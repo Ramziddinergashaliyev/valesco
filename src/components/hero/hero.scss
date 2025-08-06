@@ -1,0 +1,51 @@
+.slider-container {
+  width: 100%;
+  height:  calc(100vh - 174px);
+
+  .mySwiper {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+
+      svg {
+        --progress: 0;
+        transform: rotate(-90deg);
+        width: 100%;
+        height: 100%;
+      }
+
+      circle {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 4;
+        stroke-dasharray: 126;
+        stroke-dashoffset: calc(126 * var(--progress));
+        transition: stroke-dashoffset 0.1s linear;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+  }
+}

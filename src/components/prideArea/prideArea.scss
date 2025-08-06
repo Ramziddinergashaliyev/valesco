@@ -1,0 +1,99 @@
+.prideArea {
+    padding: 50px 0px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        align-items: flex-start;
+
+        &-title {
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 64px;
+            color: black;
+        }
+
+        &-text {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 32px;
+            color: gray;
+
+            span {
+                color: black;
+            }
+        }
+    }
+
+    &__bottom {
+        display: grid;
+        grid-template-columns: 1.6fr 2fr;
+        gap: 20px;
+        align-items: flex-end;
+        padding: 40px 0px;
+
+        &-btn {
+            width: 300px;
+            padding: 15px;
+            border: 1px solid #333331;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: white;
+            font-size: 16px;
+        }
+
+        &-btn:hover {
+            background-color: #333331;
+            color: white;
+            transition: .5s;
+        }
+
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        &-card {
+            border: 1px solid #aaa6;
+            padding: 30px 20px;
+            border-radius: 4px;
+
+            &-img {
+                img {
+                    width: 220px;
+                    height: 240px;
+                    object-fit: contain;
+                }
+            }
+
+            &-title {
+                font-size: 16px;
+                font-weight: 400;
+                color: #333331;
+                padding-top: 30px;
+                text-align: center;
+            }
+        }
+
+        &-card:hover {
+            background-color: #333331;
+            transition: .6s;
+        }
+
+        &-card:hover .prideArea__bottom-card-title {
+            color: white;
+            transition: .6s;
+        }
+    }
+}
