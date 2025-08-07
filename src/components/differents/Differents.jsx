@@ -12,11 +12,11 @@ const Differents = () => {
                 <h1 className="differents__left-title">Что делает ZIC особенным</h1>
                 <p className="differents__left-text">Самым большим преимуществом SK ZIC является то, что в нем используется лучшее в мире базовое масло группы III — YUBASE.</p>
                 <p className="differents__left-desc"><span>YUBASE</span> — это собственный бренд базового масла SK Enmove, который занимает более 40% на мировом рынке базовых масел премиум-класса группы III.</p>
-                <button>Узнать больше<MdArrowOutward /></button>
+                <button className='differents__left-btn'>Узнать больше<MdArrowOutward /></button>
             </div>
             <div className="differents__right">
-                <img src={img1} alt="different img-top" />
-                <img src={img2} alt="different img-bottom" />
+                <img className='differents__right-topImg' src={img1} alt="different img-top" />
+                <img className='differents__right-bottomImg' src={img2} alt="different img-bottom" />
             </div>
         </div>
     )

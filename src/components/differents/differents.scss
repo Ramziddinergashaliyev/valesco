@@ -1,0 +1,73 @@
+.differents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        &-title {
+            font-size: 52px;
+            font-weight: 700;
+            color: black;
+            line-height: 58px;
+            padding-bottom: 20px;
+        }
+
+        &-text {
+            font-size: 28px;
+            font-weight: 500;
+            color: black;
+            line-height: 34px;
+        }
+
+        &-desc {
+            font-size: 24px;
+            font-weight: 500;
+            color: gray;
+            line-height: 30px;
+            span {
+                color: black;
+            }
+        }
+
+        &-btn {
+            padding: 15px;
+            width: 250px;
+            border: 1px solid #333331;
+            background-color: white;
+            color: #333331;
+            border-radius: 40px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        &-btn:hover {
+            background-color: #333331;
+            color: white;
+            transition: .6s;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+    }
+
+    &__right-topImg,
+    &__right-bottomImg {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        border-radius: 30px;
+    }
+}

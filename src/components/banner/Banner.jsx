@@ -8,9 +8,9 @@ const Banner = () => {
         <div className='banner'>
             <div className="banner__container container">
                 <div className="banner__top">
-                    <h2 className='banner__top-title'>Почему ZIC</h2>
+                    <h2 className='banner__top-title'>Почему Valesco</h2>
                     <p className='banner__top-text'>
-                        ZIC способствует повышению производительности двигателей
+                        Valesco способствует повышению производительности двигателей
                         и обеспечивает превосходную защиту даже в экстремальных
                         климатических условиях.</p>
                 </div>

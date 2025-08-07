@@ -6,9 +6,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './hero.scss';
 
-import img from "../../assets/images/swipper.jpg"
-import img2 from "../../assets/images/swipper2.jpg"
-import img3 from "../../assets/images/swipper3.jpg"
+import img from "../../assets/images/hero-1.jpg"
+import img2 from "../../assets/images/hero-2.jpg"
+import img3 from "../../assets/images/hero-3.jpg"
 
 const Hero = () => {
   const progressCircle = useRef(null);

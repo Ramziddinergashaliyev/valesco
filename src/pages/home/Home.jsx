@@ -7,6 +7,7 @@ import Banner from '../../components/banner/Banner'
 import PrideArea from '../../components/prideArea/PrideArea'
 import Differents from '../../components/differents/Differents'
 import Leazy from '../../components/leazy/Leazy'
+import Mission from '../../components/mission/Mission'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Banner/>
       <PrideArea/>
       <Differents/>
+      <Mission/>
     </>
   )
 }
