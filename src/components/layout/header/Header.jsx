@@ -10,7 +10,9 @@ const Header = () => {
     <header className='header'>
       <nav className="header__nav container">
         <div className="header__nav__logo">
+          <NavLink to={"/"}>
           <img src={logo} alt="header logo" />
+          </NavLink>
         </div>
 
         <ul className="header__nav__item">
