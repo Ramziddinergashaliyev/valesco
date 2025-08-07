@@ -1,7 +1,7 @@
 .header {
   background-color: white;
   padding: 20px 0px;
-  height: 90px;
+  height: 110px;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,6 +11,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+
+  @media (max-width: 1560px) {
+    
+  }
 
   &__nav {
     display: flex;
@@ -27,7 +32,7 @@
     &__item {
       display: flex;
       align-items: center;
-      gap: 50px;
+      gap: 55px;
       position: relative;
     }
 
@@ -39,7 +44,7 @@
 
     &__list {
       position: relative;
-      font-size: 16px;
+      font-size: 15px;
       color: #333331;
       font-weight: 400;
       line-height: 24px;
@@ -60,11 +65,11 @@
     }
 
     &__btn {
-      padding: 10px 10px;
+      padding: 8px;
       background-color: #333331;
       color: white;
       border: 1px solid #333331;
-      font-size: 16px;
+      font-size: 15px;
     }
 
     .dropdown {
