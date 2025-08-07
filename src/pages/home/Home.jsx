@@ -5,6 +5,8 @@ import HeroBrand from '../../components/heroBrand/HeroBrand'
 import ProductRange from '../../components/productRange/ProductRange'
 import Banner from '../../components/banner/Banner'
 import PrideArea from '../../components/prideArea/PrideArea'
+import Differents from '../../components/differents/Differents'
+import Leazy from '../../components/leazy/Leazy'
 
 const Home = () => {
   return (
@@ -15,6 +17,7 @@ const Home = () => {
       <ProductRange/>
       <Banner/>
       <PrideArea/>
+      <Differents/>
     </>
   )
 }
