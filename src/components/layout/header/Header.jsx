@@ -3,6 +3,7 @@ import logo from "../../../assets/icons/logo.png"
 import { FiMenu, FiSearch } from "react-icons/fi";
 import "./header.scss"
 import { IoIosArrowDown, IoMdArrowDropdown } from 'react-icons/io';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -18,7 +19,7 @@ const Header = () => {
           <li className="header__nav__list">
             SK Enmove <IoMdArrowDropdown />
             <ul className="dropdown">
-              <li>О компании</li>
+              <li><NavLink to={"/about"}>О компании</NavLink></li>
               <li>История</li>
               <li>Новости</li>
             </ul>

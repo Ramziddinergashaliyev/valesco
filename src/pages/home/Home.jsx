@@ -8,6 +8,7 @@ import PrideArea from '../../components/prideArea/PrideArea'
 import Differents from '../../components/differents/Differents'
 import Leazy from '../../components/leazy/Leazy'
 import Mission from '../../components/mission/Mission'
+import CallTo from '../../components/callTo/CallTo'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <PrideArea/>
       <Differents/>
       <Mission/>
+      <CallTo/>
     </>
   )
 }
