@@ -11,7 +11,7 @@ const Header = () => {
       <nav className="header__nav container">
         <div className="header__nav__logo">
           <NavLink to={"/"}>
-          <img src={logo} alt="header logo" />
+            <img src={logo} alt="header logo" />
           </NavLink>
         </div>
 
@@ -22,8 +22,9 @@ const Header = () => {
             SK Enmove <IoMdArrowDropdown />
             <ul className="dropdown">
               <li><NavLink to={"/about"}>О компании</NavLink></li>
-              <li>История</li>
-              <li>Новости</li>
+              <li><NavLink to={"/news"}>Новости</NavLink></li>
+              <li><NavLink to={"/impact"}>Социальная ответственность</NavLink></li>
+              <li><NavLink to={"/culture"}>Корпоративная культура</NavLink></li>
             </ul>
           </li>
 

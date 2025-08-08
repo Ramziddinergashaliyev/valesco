@@ -1,5 +1,6 @@
 .about {
     padding: 150px 0px 40px;
+
     &__top {
         display: grid;
         grid-template-columns: 1.5fr 2fr;
@@ -27,10 +28,10 @@
         align-items: start;
 
         &-title {
-           font-size: 42px;
-           font-weight: 500; 
-           color: black;
-           line-height: 48px;
+            font-size: 42px;
+            font-weight: 500;
+            color: black;
+            line-height: 48px;
         }
 
         &-info {
@@ -52,7 +53,7 @@
 
             &-cards {
                 display: grid;
-                grid-template-columns: repeat(3,1fr);
+                grid-template-columns: repeat(3, 1fr);
                 grid-gap: 20px;
             }
 
@@ -78,6 +79,128 @@
                     color: gray;
                     line-height: 26px;
                 }
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+
+        &-title {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 26px;
+            color: gray;
+            padding-top: 20px;
+        }
+
+        &-text {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            color: gray;
+            padding: 20px 0px;
+
+            span {
+                color: black;
+            }
+        }
+    }
+
+    &-imgs {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        gap: 50px;
+
+        &-img {
+            width: 220px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &-title {
+                font-size: 17px;
+                font-weight: 400;
+                color: gray;
+                line-height: 22px;
+
+                span {
+                    color: black;
+                }
+            }
+
+            &-text {
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 22px;
+                color: gray;
+            }
+        }
+    }
+
+    &__networks {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 50px;
+        padding: 40px 0px;
+
+        &-title {
+            font-size: 42px;
+            font-weight: 500;
+            color: black;
+            font-weight: 700;
+            line-height: 48px;
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &__card {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            border-bottom: 1px solid #aaa3;
+            padding-bottom: 20px;
+            gap: 20px;
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &-title {
+                    font-size: 26px;
+                    font-weight: 600;
+                    color: #333331;
+                    line-height: 26px;
+                    padding-bottom: 20px;
+                }
+
+                &-text {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: gray;
+                    line-height: 24px;
+                }
+            }
+
+            &-imgs {
+               img {
+                border-radius: 20px;
+               }
             }
         }
     }
