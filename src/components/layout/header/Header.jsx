@@ -4,6 +4,7 @@ import { FiMenu, FiSearch } from "react-icons/fi";
 import "./header.scss"
 import { IoIosArrowDown, IoMdArrowDropdown } from 'react-icons/io';
 import { NavLink } from 'react-router-dom';
+import Oem from '../../../pages/oem/Oem';
 
 const Header = () => {
   return (
@@ -31,10 +32,10 @@ const Header = () => {
           <li className="header__nav__list">
             Бренд <IoMdArrowDropdown />
             <ul className="dropdown">
-              <li>Уникальность</li>
-              <li>Преимущества</li>
+              <li><NavLink to={"/unical"}>Уникальность</NavLink></li>
+              <li><NavLink to={"/benafits"}>Преимущества</NavLink></li>
               <li>Партнерство</li>
-              <li>OEM</li>
+              <li><NavLink to={"/oem"}>Oem</NavLink></li>
               <li>Отзывы</li>
             </ul>
           </li>
@@ -51,8 +52,8 @@ const Header = () => {
           <li className="header__nav__list">
             Подбор масла <IoMdArrowDropdown />
             <ul className="dropdown">
-              <li>По авто</li>
-              <li>По параметрам</li>
+              <li><NavLink to={"/oil"}>Подбор масла</NavLink></li>
+              <li>Продукты для китайских автомобилей</li>
             </ul>
           </li>
 
