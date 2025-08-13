@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import img from "../../assets/images/oem.jpg"
 import Accordion from '@mui/material/Accordion';
 import AccordionActions from '@mui/material/AccordionActions';
@@ -8,17 +8,18 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 
-
 import "./oem.scss"
 
 const Oem = () => {
+  const [expanded, setExpanded] = useState(false);
 
-   const [expanded, setExpanded] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-
 
   return (
     <div className='oem container'>
@@ -231,7 +232,7 @@ const Oem = () => {
               <p className='oem-accardion-info-desc'>Завод XGMA выпускает широкий спектр современной строительной техники: фронтальные погрузчики, катки, автогрейдера, экскаваторы, бульдозера, вилочные погрузчики, коммунальную технику.</p>
               <p className='oem-accardion-info-desc'>Компания SK тесно сотрудничает с крупнейшим заводом в Китае по производству дорожно-строительной техники XGMA. <br />Вся эта техника требует значительных объемов смазочных материалов для различных узлов и агрегатов. Благодаря высокому качеству данных смазочных материалов обеспечивается беcперебойная и надежная работа техники в гарантийный период.</p>
               <p className='oem-accardion-info-desc'>Это тем более важно, т.к. строительная и землеройная техника работает порой в крайне тяжелых условиях эксплуатации (высокие нагрузки, критические температуры, пыльный воздух, круглосуточная работа и т.п.).  Надежная эксплуатация техники в этих условиях, а также сокращение сервисных простоев - это основные преимущества использования смазочных материалов Valesco.</p>
-s            </AccordionDetails>
+              s            </AccordionDetails>
           </Accordion>
         </div>
       </div>

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img from ".././../assets/images/benafits.jpg"
 
 import "./benafits.scss"
 import { BENAFITS } from '../../static'
 
 const Benafits = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className='benafits container'>
             <div className="benafits-top">

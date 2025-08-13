@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./oil.scss"
 
 const Oil = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className='oil container'>
             <div className="oil-top">

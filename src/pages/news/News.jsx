@@ -31,7 +31,7 @@
 
 // export default News
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdArrowOutward } from "react-icons/md";
 import "./news.scss";
 import { NEWS } from '../../static';
@@ -42,6 +42,10 @@ const News = () => {
   const handleLoadMore = () => {
     setVisibleCount(prev => prev + 4); // Har bosganda yana 4 ta qo‘shamiz
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className='news container'>
@@ -67,8 +71,8 @@ const News = () => {
 
       {/* Agar hammasi chiqmagan bo‘lsa, tugmani ko‘rsatamiz */}
       {visibleCount < NEWS.length && (
-        <button 
-          className="load-more-btn" 
+        <button
+          className="load-more-btn"
           onClick={handleLoadMore}
         >
           Загрузить еще

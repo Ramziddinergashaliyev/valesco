@@ -1,0 +1,85 @@
+.chinaAuto {
+    padding-top: 150px;
+
+    &-top {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &-title {
+            font-size: 52px;
+            font-weight: 600;
+            color: #333331;
+            line-height: 58px;
+            width: 60%;
+        }
+
+        &-filter {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            span {
+                font-size: 20px;
+                font-weight: 400;
+                color: #333331;
+            }
+
+            &-boxs {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                button {
+                    padding: 13px 30px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    border-radius: 40px;
+                    border: 1px solid #aaa8;
+                    background-color: white;
+                }
+
+                button:hover {
+                    background-color: #333331;
+                    color: white;
+                    transition: .5s;
+
+                }
+            }
+        }
+
+        &-model {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            span {
+                font-size: 20px;
+                font-weight: 400;
+                color: #333331;
+            }
+
+            &-boxs {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                button {
+                    padding: 13px 30px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    border-radius: 40px;
+                    border: 1px solid #aaa8;
+                    background-color: white;
+                }
+
+                button:hover {
+                    background-color: #333331;
+                    color: white;
+                    transition: .5s;
+
+                }
+            }
+        }
+    }
+}

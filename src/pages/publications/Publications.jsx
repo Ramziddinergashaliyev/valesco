@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./publications.scss"
 import { NEWS, PUBLIC } from '../../static'
 import { MdArrowOutward } from 'react-icons/md'
 
 const Publications = () => {
   const [ hide, setHide ] = useState(6)
+
+   useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
 
   const handleChange = () => {
     setHide(prev => prev + 5)

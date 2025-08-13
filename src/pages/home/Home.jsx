@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeroTop from '../../components/heroTop/HeroTop'
 import Hero from '../../components/hero/Hero'
 import HeroBrand from '../../components/heroBrand/HeroBrand'
@@ -11,17 +11,20 @@ import Mission from '../../components/mission/Mission'
 import CallTo from '../../components/callTo/CallTo'
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
-      <HeroTop/>
-      <Hero/>
-      <HeroBrand/>
-      <ProductRange/>
-      <Banner/>
-      <PrideArea/>
-      <Differents/>
-      <Mission/>
-      <CallTo/>
+      <HeroTop />
+      <Hero />
+      <HeroBrand />
+      <ProductRange />
+      <Banner />
+      <PrideArea />
+      <Differents />
+      <Mission />
+      <CallTo />
     </>
   )
 }

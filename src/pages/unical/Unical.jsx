@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img from "../../assets/images/unical.jpg"
 import "./unical.scss"
 
 const Unical = () => {
+     useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     const UNICAL = [
         {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./otzive.scss"
 
 import Accordion from '@mui/material/Accordion';
@@ -10,6 +10,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 
 const Otzive = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className='otzive container'>
       <h2 className="otzive-title">SK Enmove - большая семья и мы ее ценим</h2>

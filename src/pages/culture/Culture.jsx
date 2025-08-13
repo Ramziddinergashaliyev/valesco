@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./culture.scss"
 import img from "../../assets/images/culture.jpg"
 import { FaArrowRight, FaArrowUp, FaPlus } from 'react-icons/fa'
 
 const Culture = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className='culture container'>
       <div className="culture-top">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -44,6 +44,10 @@ const faqData = [
 const Faq = () => {
   const [visibleCount, setVisibleCount] = useState(5);
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const handleLoadMore = () => {
     setVisibleCount(prev => prev + 5);
   };
@@ -68,8 +72,8 @@ const Faq = () => {
         ))}
 
         {visibleCount < faqData.length && (
-          <button 
-            className="faq-load-more" 
+          <button
+            className="faq-load-more"
             onClick={handleLoadMore}
           >
             Загрузить еще

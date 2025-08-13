@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img from "../../assets/images/about.png"
 import "./about.scss"
 import { MISSION, NETWORKS } from '../../static'
 import img1 from "../../assets/images/hero-2.jpg"
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className='container about'>
       <div className="about__top">

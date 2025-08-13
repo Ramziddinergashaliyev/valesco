@@ -2,6 +2,8 @@ import img1 from "../assets/images/pride3.jpg"
 import img2 from "../assets/images/pride1.jpg"
 import img3 from "../assets/images/pride2.jpg"
 
+import kanistr from "../assets/images/pride1.jpg"
+
 import net1 from "../assets/images/net1.jpg"
 import net2 from "../assets/images/net2.jpg"
 import net3 from "../assets/images/net3.jpg"
@@ -399,3 +401,75 @@ export const PUBLIC = [
 
 ]
 
+export const BOXS = [
+    {
+        id: 1,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+    {
+        id: 2,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+    {
+        id: 3,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+    {
+        id: 4,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+    {
+        id: 5,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+    {
+        id: 6,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+    {
+        id: 7,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+    {
+        id: 8,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+    {
+        id: 9,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+    {
+        id: 10,
+        img: kanistr,
+        title: "ZIC TOP ES 0W-20",
+        text: "Полностью синтетическое моторное масло",
+        sky: "GW4B15D"
+    },
+]

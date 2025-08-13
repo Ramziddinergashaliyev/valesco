@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./impact.scss"
 import img from "../../assets/images/impact.jpg"
 import img1 from "../../assets/images/impgroup.jpg"
@@ -9,6 +9,11 @@ import { IMPACT } from '../../static'
 
 
 const Impact = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className='impact container'>
       <div className="impact-top">
