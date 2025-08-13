@@ -13,9 +13,7 @@
   justify-content: center;
 
 
-  @media (max-width: 1560px) {
-    
-  }
+  @media (max-width: 1560px) {}
 
   &__nav {
     display: flex;
@@ -42,6 +40,41 @@
       }
     }
 
+    // &__list {
+    //   position: relative;
+    //   font-size: 15px;
+    //   color: #333331;
+    //   font-weight: 400;
+    //   line-height: 24px;
+    //   cursor: pointer;
+    //   display: flex;
+    //   align-items: center;
+    //   gap: 2px;
+
+    //   svg {
+    //     font-size: 12px;
+    //   }
+
+    //   &:hover .dropdown {
+    //     opacity: 1;
+    //     visibility: visible;
+    //     transform: translateY(0);
+    //   }
+    // }
+
+    &__btn {
+      padding: 8px;
+      background-color: #333331;
+      color: white;
+      border: 1px solid #333331;
+      font-size: 14px;
+    }
+
+    &__bottom-menu {
+      font-size: 20px;
+      display: none;
+    }
+
     &__list {
       position: relative;
       font-size: 15px;
@@ -61,15 +94,8 @@
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+        transition-delay: 0s; // ochilish darhol
       }
-    }
-
-    &__btn {
-      padding: 8px;
-      background-color: #333331;
-      color: white;
-      border: 1px solid #333331;
-      font-size: 14px;
     }
 
     .dropdown {
@@ -85,29 +111,38 @@
       visibility: hidden;
       transform: translateY(10px);
       transition: all 0.3s ease;
-      z-index: 100;
+      transition-delay: 0.1s; // yopilishini kechiktirish
+      z-index: 9999;
 
       li {
         padding: 10px 20px;
         white-space: nowrap;
+        pointer-events: auto; // klik ishlashini ta'minlaydi
+
         &:hover {
           background-color: #222;
         }
-      }
-    }
 
-    &__bottom {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-
-      &-search,
-      &-menu {
-        font-size: 22px;
+        a {
+          display: block;
+          color: white;
+          text-decoration: none;
+        }
       }
 
-      &-menu {
-        display: none;
+      &__bottom {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        &-search,
+        &-menu {
+          font-size: 22px;
+        }
+
+        &-menu {
+          display: none;
+        }
       }
     }
   }

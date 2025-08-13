@@ -11,6 +11,12 @@ import Oem from './pages/oem/Oem'
 import Unical from './pages/unical/Unical'
 import Benafits from './pages/benafits/Benafits'
 import Oil from './pages/oil/Oil'
+import Distrbut from './pages/distrbut/Distrbut'
+import Faq from './pages/faq/Faq'
+import Publications from './pages/publications/Publications'
+import Contact from './pages/contact/Contact'
+import ChinaAuto from './pages/chinaAuto/ChinaAuto'
+import Otzive from './pages/otzive/Otzive'
 
 const App = () => {
   return (
@@ -26,6 +32,12 @@ const App = () => {
           <Route path='/unical' element={<Unical />} />
           <Route path='/benafits' element={<Benafits />} />
           <Route path='/oil' element={<Oil />} />
+          <Route path='/distrbut' element={<Distrbut />} />
+          <Route path='/faq' element={<Faq />} />
+          <Route path='/public' element={<Publications />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/chinaAuto' element={<ChinaAuto />} />
+          <Route path='/otziv' element={<Otzive />} />
         </Route>
       </Routes>
     </>

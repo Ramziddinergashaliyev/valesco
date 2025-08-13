@@ -1,0 +1,101 @@
+.news {
+    &-title {
+        font-size: 72px;
+        font-weight: 500;
+        color: #333331;
+        line-height: 40px;
+        padding-top: 150px;
+    }
+
+    &-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        padding-top: 90px;
+    }
+
+    &-card {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 20px;
+
+        &-info {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-gap: 20px;
+            align-items: flex-start;
+            img {
+                width: 120px;
+                height: 120px;
+                object-fit: contain;
+            }
+
+            &-middle {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &-text {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: gray;
+                }
+
+                &-title {
+                    font-size: 22px;
+                    font-weight: 500;
+                    color: #333331;
+                    line-height: 32px;
+                }
+
+                &-desc {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: gray;
+                    font-weight: 400;
+                }
+            }
+
+            &-btn {
+                padding: 16px;
+                font-size: 18px;
+                border-radius: 40px;
+                background: transparent;
+                border: 1px solid #aaa4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            &-btn:hover {
+                background-color: #333331;
+                color: white;
+                transition: .6s;
+            }
+        }
+
+        &-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333331;
+        }
+    }
+
+    .load-more-btn {
+        width: 240px;
+        padding: 15px;
+        border-radius: 60px;
+        font-size: 18px;
+        border: 1px solid #333331;
+        background-color: white;
+        margin: 80px auto 0px;
+        display: block;
+    }
+
+    .load-more-btn:hover {
+        background-color: #333331;
+        color: white;
+        transition: .5s;
+    }
+}

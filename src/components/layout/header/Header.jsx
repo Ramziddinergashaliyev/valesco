@@ -36,7 +36,7 @@ const Header = () => {
               <li><NavLink to={"/benafits"}>Преимущества</NavLink></li>
               <li>Партнерство</li>
               <li><NavLink to={"/oem"}>Oem</NavLink></li>
-              <li>Отзывы</li>
+              <li><NavLink to={"/otziv"}>Отзывы</NavLink></li>
             </ul>
           </li>
 
@@ -53,29 +53,27 @@ const Header = () => {
             Подбор масла <IoMdArrowDropdown />
             <ul className="dropdown">
               <li><NavLink to={"/oil"}>Подбор масла</NavLink></li>
-              <li>Продукты для китайских автомобилей</li>
+              <li><NavLink to={"/chinaAuto"}>Продукты для китайских автомобилей</NavLink></li>
             </ul>
           </li>
 
           <li className="header__nav__list">
             Где купить <IoMdArrowDropdown />
             <ul className="dropdown">
-              <li>Дистрибьюторы</li>
-              <li>Интернет-магазины</li>
-              <li>Офлайн-магазины</li>
+              <li><NavLink to={"/distrbut"}>Дистрибьюторы</NavLink></li>
+              <li>Торговые точки</li>
             </ul>
           </li>
 
           <li className="header__nav__list">
             База знаний <IoMdArrowDropdown />
             <ul className="dropdown">
-              <li>FAQ</li>
-              <li>Статьи</li>
-              <li>Видео</li>
+              <li><NavLink to={"/faq"}>FAQ</NavLink></li>
+              <li><NavLink to={"/public"}>Публикации</NavLink></li>
             </ul>
           </li>
 
-          <li className="header__nav__list">Контакты</li>
+          <li className="header__nav__list"><NavLink to={"/contact"}>Контакты</NavLink></li>
         </ul>
 
         <div className="header__nav__bottom">
