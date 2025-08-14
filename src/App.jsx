@@ -18,6 +18,7 @@ import Contact from './pages/contact/Contact'
 import ChinaAuto from './pages/chinaAuto/ChinaAuto'
 import Otzive from './pages/otzive/Otzive'
 import ProductItem from './pages/productItem/ProductItem'
+import SingleProduct from './pages/singleProduct/SingleProduct'
 
 const App = () => {
   return (
@@ -39,7 +40,8 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/chinaAuto' element={<ChinaAuto />} />
           <Route path='/otziv' element={<Otzive />} />
-          <Route path='/item' element={<ProductItem />} />
+          <Route path='/productItem' element={<ProductItem />} />
+          <Route path='/singleProduct' element={<SingleProduct />} />
         </Route>
       </Routes>
     </>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from "../../../assets/icons/logo.png"
 import { FiMenu, FiSearch } from "react-icons/fi";
 import "./header.scss"
@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import Oem from '../../../pages/oem/Oem';
 
 const Header = () => {
+
   return (
     <header className='header'>
       <nav className="header__nav container">
@@ -43,7 +44,7 @@ const Header = () => {
           <li className="header__nav__list">
             Каталог <IoMdArrowDropdown />
             <ul className="dropdown">
-              <li><NavLink to={"/item"}>Моторные масла</NavLink></li>
+              <li><NavLink to={"/productItem"}>Моторные масла</NavLink></li>
               <li>Трансмиссионные масла</li>
               <li>Антифризы</li>
             </ul>
