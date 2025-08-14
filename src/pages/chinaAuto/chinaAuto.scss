@@ -82,4 +82,81 @@
             }
         }
     }
+
+    &-bottom {
+        padding: 50px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &-boxs {
+            display: grid;
+            grid-template-columns: 400px 1fr 200px; 
+            align-items: center;
+            border-bottom: 1px solid #aaa8;
+            padding-bottom: 40px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &-text {
+                font-size: 24px;
+                color: #333331;
+                font-weight: 500;
+            }
+
+            &-middle {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                img {
+                    width: 200px;
+                    height: 200px;
+                    object-fit: contain;
+                }
+
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+
+                    &-title {
+                        font-size: 26px;
+                        font-weight: 500;
+                        color: #333331;
+                        line-height: 30px;
+                    }
+
+                    &-text {
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: gray;
+                        line-height: 28px;
+                        width: 70%;
+                    }
+                }
+            }
+
+            &-btn {
+                font-size: 18px;
+                padding: 16px 20px;
+                border-radius: 40px;
+                border: 1px solid #aaa8;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            &-btn:hover {
+                background-color: #333331;
+                color: white;
+                transition: .6s;
+
+            }
+        }
+    }
 }

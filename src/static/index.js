@@ -407,69 +407,69 @@ export const BOXS = [
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
     {
         id: 2,
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
     {
         id: 3,
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
     {
         id: 4,
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
     {
         id: 5,
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
     {
         id: 6,
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
     {
         id: 7,
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
     {
         id: 8,
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
     {
         id: 9,
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
     {
         id: 10,
         img: kanistr,
         title: "ZIC TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
-        sky: "GW4B15D"
+        sky: "0W30 GX7000 SN CF 4L"
     },
 ]

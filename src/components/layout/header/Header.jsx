@@ -43,7 +43,7 @@ const Header = () => {
           <li className="header__nav__list">
             Каталог <IoMdArrowDropdown />
             <ul className="dropdown">
-              <li>Моторные масла</li>
+              <li><NavLink to={"/item"}>Моторные масла</NavLink></li>
               <li>Трансмиссионные масла</li>
               <li>Антифризы</li>
             </ul>
