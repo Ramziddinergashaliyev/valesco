@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./singleProduct.scss"
 
 import img from "../../assets/images/pride1.jpg"
@@ -7,6 +7,11 @@ import Packing from '../../components/packing/Packing'
 import Specificat from '../../components/specificat/Specificat'
 
 const SingleProduct = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    })
+
     return (
         <div className='single'>
             <div className="single-top container">

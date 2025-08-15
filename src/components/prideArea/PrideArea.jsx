@@ -2,6 +2,7 @@ import React from 'react'
 import "./prideArea.scss"
 import { MdArrowOutward } from 'react-icons/md'
 import { PRIDE } from '../../static'
+import { NavLink } from 'react-router-dom'
 
 
 const PrideArea = () => {
@@ -21,7 +22,9 @@ const PrideArea = () => {
                             PRIDE?.map(el => (
                                 <div key={el?.id} className="prideArea__bottom-card">
                                     <div className="prideArea__bottom-card-img">
-                                        <img src={el?.img} alt={el?.title} />
+                                        <NavLink to={"/singleProduct"}>
+                                           <img src={el?.img} alt={el?.title} />
+                                        </NavLink>
                                     </div>
                                     <h3 className="prideArea__bottom-card-title">{el?.title}</h3>
                                 </div>

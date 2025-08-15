@@ -19,6 +19,7 @@ import ChinaAuto from './pages/chinaAuto/ChinaAuto'
 import Otzive from './pages/otzive/Otzive'
 import ProductItem from './pages/productItem/ProductItem'
 import SingleProduct from './pages/singleProduct/SingleProduct'
+import Outlets from './pages/outlets/Outlets'
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
           <Route path='/otziv' element={<Otzive />} />
           <Route path='/productItem' element={<ProductItem />} />
           <Route path='/singleProduct' element={<SingleProduct />} />
+          <Route path='/outlets' element={<Outlets />} />
         </Route>
       </Routes>
     </>

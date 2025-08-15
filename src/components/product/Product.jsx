@@ -6,6 +6,7 @@ import img1 from "../../assets/icons/col-icn.svg"
 import img2 from "../../assets/icons/row-icn.svg"
 import { BOXS } from '../../static'
 import { FiPlus } from 'react-icons/fi'
+import { NavLink } from 'react-router-dom'
 
 const Product = () => {
     const [hide, setHide] = useState(false)
@@ -92,7 +93,9 @@ const Product = () => {
                             BOXS?.map((el, index) => (
                                 <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
                                     <div className="product-card-img">
-                                        <img src={el?.img} alt="product-img" />
+                                        <NavLink to={"/singleProduct"}>
+                                           <img src={el?.img} alt="product-img" />
+                                        </NavLink>
                                     </div>
                                     <div className="product-card-info">
                                         <h2 className="product-card-info-title">{el?.title}</h2>
@@ -109,14 +112,16 @@ const Product = () => {
                                 <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
                                     <div className="product-box-left">
                                         <div className="product-box-left-img">
-                                            <img src={el?.img} alt="" />
+                                            <NavLink to={"/singleProduct"}>
+                                               <img src={el?.img} alt="" />
+                                            </NavLink>
                                         </div>
                                         <div className="product-box-left-info">
                                             <h2 className="product-box-left-info-title">{el?.title}</h2>
                                             <p className="product-box-left-info-text">{el?.text}</p>
                                         </div>
                                     </div>
-                                    <button className='product-box-btn'>Подробнее<MdArrowOutward /></button>
+                                    <NavLink to={"/singleProduct"}><button className='product-box-btn'>Подробнее<MdArrowOutward /></button></NavLink>
                                 </div>
                             ))
                         }
