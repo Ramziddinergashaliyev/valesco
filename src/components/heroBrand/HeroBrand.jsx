@@ -1,6 +1,7 @@
 import React from 'react'
 import "./heroBrand.scss"
 import { MdArrowOutward } from 'react-icons/md'
+import { NavLink } from 'react-router-dom'
 
 const HeroBrand = () => {
     return (
@@ -11,7 +12,9 @@ const HeroBrand = () => {
                     <h3 className="heroBrand__info-title">
                         Бренд Valesco принадлежит компании по производству смазочных материалов SK Enmove.</h3>
                     <p className="heroBrand__info-text"><span>Наша главная цель</span> — это предоставлять продукты, которые опережают свое время, используя творческий подход и новейшие технологии.</p>
-                    <button className="heroBrand__info-btn">Узнать больше<MdArrowOutward /></button>
+                    <NavLink to={"/about"}>
+                       <button className="heroBrand__info-btn">Узнать больше<MdArrowOutward /></button>
+                    </NavLink>
                 </div>
             </div>
         </div>

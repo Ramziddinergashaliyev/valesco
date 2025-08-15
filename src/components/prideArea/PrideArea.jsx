@@ -16,14 +16,16 @@ const PrideArea = () => {
                     </p>
                 </div>
                 <div className="prideArea__bottom">
-                    <button className='prideArea__bottom-btn'>Все премиальные продукты<MdArrowOutward /></button>
+                    <NavLink to={"/productItem"}>
+                        <button className='prideArea__bottom-btn'>Все премиальные продукты<MdArrowOutward /></button>
+                    </NavLink>
                     <div className="prideArea__bottom-cards">
                         {
                             PRIDE?.map(el => (
                                 <div key={el?.id} className="prideArea__bottom-card">
                                     <div className="prideArea__bottom-card-img">
                                         <NavLink to={"/singleProduct"}>
-                                           <img src={el?.img} alt={el?.title} />
+                                            <img src={el?.img} alt={el?.title} />
                                         </NavLink>
                                     </div>
                                     <h3 className="prideArea__bottom-card-title">{el?.title}</h3>

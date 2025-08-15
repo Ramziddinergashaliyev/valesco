@@ -36,7 +36,7 @@ const Header = () => {
               <ul className="dropdown-item">
                 <li className="dropdown-item-list"><NavLink to="/unical">Уникальность</NavLink></li>
                 <li className="dropdown-item-list"><NavLink to="/benafits">Преимущества</NavLink></li>
-                <li className="dropdown-item-list">Партнерство</li>
+                {/* <li className="dropdown-item-list">Партнерство</li> */}
                 <li className="dropdown-item-list"><NavLink to="/oem">Oem</NavLink></li>
                 <li className="dropdown-item-list"><NavLink to="/otziv">Отзывы</NavLink></li>
               </ul>

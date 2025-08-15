@@ -87,14 +87,14 @@ const Product = () => {
 
             {
                 hide
-                    ?
-                    <div className="product-cards fade-in">
+                ?
+                <div className="product-cards fade-in">
                         {
                             BOXS?.map((el, index) => (
                                 <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
                                     <div className="product-card-img">
                                         <NavLink to={"/singleProduct"}>
-                                           <img src={el?.img} alt="product-img" />
+                                            <img src={el?.img} alt="product-img" />
                                         </NavLink>
                                     </div>
                                     <div className="product-card-info">
@@ -104,16 +104,16 @@ const Product = () => {
                                 </div>
                             ))
                         }
-                    </div>
-                    :
-                    <div className="product-boxs fade-in">
+                </div>
+                :
+                <div className="product-boxs fade-in">
                         {
                             BOXS?.map((el, index) => (
                                 <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
                                     <div className="product-box-left">
                                         <div className="product-box-left-img">
                                             <NavLink to={"/singleProduct"}>
-                                               <img src={el?.img} alt="" />
+                                                <img src={el?.img} alt="" />
                                             </NavLink>
                                         </div>
                                         <div className="product-box-left-info">
@@ -125,7 +125,7 @@ const Product = () => {
                                 </div>
                             ))
                         }
-                    </div>
+                </div>
             }
         </div>
     )
