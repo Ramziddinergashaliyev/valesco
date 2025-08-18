@@ -1,6 +1,5 @@
 .heroTop {
     padding-top: 142px;
-//    padding: 10px 0px;
     &__container {
         display: flex;
         align-items: center;
@@ -12,7 +11,7 @@
         font-weight: 600;
         line-height: 26px;
         color: black;
-        // padding: 10px 0px;
+        width: 20%;
     }
 
     &__text {
@@ -20,5 +19,30 @@
         font-weight: 400;
         line-height: 34px;
         color: gray;
+    }
+
+    @media (max-width: 1200px) {
+        &__title {
+            width: 60%;
+        }
+    }
+
+    @media (max-width:500px) {
+        &__container {
+          flex-direction: column;
+        }
+
+        &__title {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__container {
+            gap: 10px;
+        }
+
+        &__text {
+           font-size: 22px;
+        }
     }
 }

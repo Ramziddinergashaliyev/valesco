@@ -1,10 +1,12 @@
 .mission {
     padding: 70px 0px;
+
     &-container {
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
+
     &-top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -40,7 +42,7 @@
 
     &-cards {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
         padding-top: 20px;
     }
@@ -68,6 +70,7 @@
                 line-height: 22px;
                 color: gray;
             }
+
             &-desc {
                 position: absolute;
                 right: 20px;
@@ -79,6 +82,7 @@
                 font-size: 18px;
                 font-weight: 500;
                 color: black;
+
                 svg {
                     display: flex;
                     align-items: center;
@@ -93,8 +97,92 @@
         opacity: 0;
         transition: .6s;
     }
+
     &-card:hover .mission-card-info-desc {
         opacity: 1;
         transition: .6s;
+    }
+
+    @media (max-width:900px) {
+        &-top-title {
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 40px;
+        }
+
+        &-top-info-title {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        &-top-info-text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+
+        &-top-info {
+            gap: 15px;
+        }
+    }
+
+    @media (max-width:660px) {
+        padding: 20px 0px;
+
+        &-top {
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+
+            &-title {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            &-info-title {
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 24px;
+                text-align: center;
+            }
+
+            &-info-text {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        &-cards {
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 10px;
+        }
+
+        &-container {
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &-cards {
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 10px;
+        }
+
+        &-card {
+            height: 230px;
+        }
+
+        &-card-title {
+           font-size: 30px;
+           line-height: 26px;
+           font-weight: 600;
+        }
+
+        &-card-info-desc,
+        &-card-info-text {
+           font-size: 14px;
+        }
     }
 }

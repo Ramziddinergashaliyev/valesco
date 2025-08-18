@@ -12,7 +12,7 @@ const PrideArea = () => {
                 <div className="prideArea__top">
                     <h2 className="prideArea__top-title">Наша гордость</h2>
                     <p className="prideArea__top-text"><span>Масла на полностью синтетической основе</span> – новая премиальная линейка
-                        продукции ZIC TOP. Теперь доступны и в России!
+                        продукции Valesco TOP. Теперь доступны и в России!
                     </p>
                 </div>
                 <div className="prideArea__bottom">
@@ -33,7 +33,7 @@ const PrideArea = () => {
                             ))
                         }
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     )

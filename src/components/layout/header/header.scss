@@ -54,6 +54,7 @@
     &__bottom-menu {
       font-size: 20px;
       display: none;
+      cursor: pointer;
     }
 
     &__list {
@@ -97,8 +98,18 @@
 
       &-list {
         padding: 10px 20px;
-        white-space: nowrap;
+        // white-space: nowrap;
         pointer-events: auto;
+      }
+
+    }
+    @media (max-width: 600px) {
+      .dropdown-item {
+        width: 200px;
+      }
+
+      .dropdown-item-list {
+        padding: 5px 10px;
       }
     }
 
@@ -235,6 +246,84 @@
     cursor: pointer;
   }
 
+  &__nav__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    display: none;
+
+    svg {
+      font-size: 22px;
+    }
+
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #aaa5;
+    z-index: 1000;
+  }
+
+  @media (max-width: 1140px) {
+    &__nav__item {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 80%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding-left: 30px;
+      justify-content: start;
+      padding-top: 110px;
+      background-color: #fff;
+      box-shadow: 1px 1px 10px #aaa6;
+      transition: .6s;
+      z-index: 1100;
+    }
+
+    &__nav__hide {
+      left: 0;
+      transition: .6s;
+    }
+
+    &__nav__bottom-menu {
+      display: block;
+    }
+
+    &__nav__btn {
+      background-color: transparent;
+      border: none;
+      font-size: 15px;
+      color: #333331;
+      font-weight: 400;
+      line-height: 24px;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    &__nav__close  {
+      display: block;
+    }
+  }
+
+  @media (max-width: 560px) {
+    &__nav__bottom {
+      gap: 6px;
+    }
+
+    &__nav {
+      gap: 10px;
+    }
+  }
+
   @media (max-width: 768px) {
     &-search-result-form {
       width: 90%;
@@ -247,6 +336,24 @@
 
     &__nav__bottom-menu {
       display: block;
+    }
+  }
+
+  @media (max-width:400px) {
+    &-search-result {
+      height: 140px;
+    }
+
+    &-search-result-form {
+      padding-top: 20px;
+    }
+
+    &-search-result-form-icon input {
+      padding: 10px 5px;
+    }
+
+    &-search-result-form {
+      gap: 10px;
     }
   }
 }

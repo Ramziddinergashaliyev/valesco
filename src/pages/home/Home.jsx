@@ -24,7 +24,7 @@ const Home = () => {
       <PrideArea />
       <Differents />
       <Mission />
-      <CallTo />
+      <CallTo /> 
     </>
   )
 }

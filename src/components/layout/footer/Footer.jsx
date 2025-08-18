@@ -1,6 +1,7 @@
 import React from 'react'
 import img from "../../../assets/icons/logo.png"
 import "./footer.scss"
+import { NavLink } from 'react-router-dom'
 
 
 const Footer = () => {
@@ -12,22 +13,24 @@ const Footer = () => {
           <img src={img} alt="footer logo" />
         </div>
         <ul className="footer__item">
-           <li className="footer__item-list">SK Enmove</li>
-           <li className="footer__item-list">Бренд Valesco</li>
-           <li className="footer__item-list">Каталог</li>
-           <li className="footer__item-list">Подбор масла</li>
+          <li className="footer__item-list">
+            <NavLink>SK Enmove</NavLink>
+          </li>
+          <li className="footer__item-list"><NavLink>Бренд Valesco</NavLink></li>
+          <li className="footer__item-list"><NavLink>Каталог</NavLink></li>
+          <li className="footer__item-list"><NavLink>Подбор масла</NavLink></li>
         </ul>
         <ul className="footer__item">
-           <li className="footer__item-list">Где купить</li>
-           <li className="footer__item-list">PR</li>
-           <li className="footer__item-list">База знаний</li>
-           <li className="footer__item-list">Контакты</li>
+          <li className="footer__item-list"><NavLink>Где купить</NavLink></li>
+          <li className="footer__item-list"><NavLink>PR</NavLink></li>
+          <li className="footer__item-list"><NavLink>База знаний</NavLink></li>
+          <li className="footer__item-list"><NavLink>Контакты</NavLink></li>
         </ul>
         <ul className="footer__item">
-           <li className="footer__item-list">Вход для партнеров</li>
-           <li className="footer__item-list">Политика обработки cookies</li>
-           <li className="footer__item-list">Мы во Вконтакте</li>
-           <li className="footer__item-list">Карта сайта</li>
+          <li className="footer__item-list"><NavLink>Вход для партнеров</NavLink></li>
+          <li className="footer__item-list"><NavLink>Политика обработки cookies</NavLink></li>
+          <li className="footer__item-list"><NavLink>Мы во Вконтакте</NavLink></li>
+          <li className="footer__item-list"><NavLink>Карта сайта</NavLink></li>
         </ul>
       </nav>
     </footer>

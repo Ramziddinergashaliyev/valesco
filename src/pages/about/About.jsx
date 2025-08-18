@@ -3,16 +3,27 @@ import img from "../../assets/images/about.png"
 import "./about.scss"
 import { MISSION, NETWORKS } from '../../static'
 import img1 from "../../assets/images/hero-2.jpg"
+import vd from "../../assets/videos/vd.webm"
 
 const About = () => {
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
   return (
     <div className='container about'>
       <div className="about__top">
         <h2 className="about__top-title">О компании SK Enmove</h2>
-        <img className='about__top-img' src={img} alt="about-images" />
+        {/* <img className='about__top-img' src={img} alt="about-images" /> */}
+        <video
+          className='about__top-vd'
+          src={vd}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
       </div>
       <div className="about__take">
         <h2 className="about__take-title">Кто мы такие</h2>
