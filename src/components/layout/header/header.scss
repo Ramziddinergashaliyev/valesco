@@ -94,7 +94,7 @@
       transition: all 0.3s ease;
       transition-delay: 0.1s;
       z-index: 9999;
-      
+
       &-list {
         padding: 10px 20px;
         white-space: nowrap;
@@ -118,6 +118,37 @@
       align-items: center;
       gap: 14px;
     }
+
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+
+      select {
+        appearance: none;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px 40px 10px 40px;
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .lang-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        color: #666;
+        pointer-events: none;
+      }
+    }
+
 
     &__bottom-search,
     &__bottom-menu {

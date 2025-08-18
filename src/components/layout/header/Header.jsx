@@ -32,17 +32,6 @@ const Header = () => {
             </li>
 
             <li className="header__nav__list">
-              Бренд <IoMdArrowDropdown />
-              <ul className="dropdown-item">
-                <li className="dropdown-item-list"><NavLink to="/unical">Уникальность</NavLink></li>
-                <li className="dropdown-item-list"><NavLink to="/benafits">Преимущества</NavLink></li>
-                {/* <li className="dropdown-item-list">Партнерство</li> */}
-                <li className="dropdown-item-list"><NavLink to="/oem">Oem</NavLink></li>
-                <li className="dropdown-item-list"><NavLink to="/otziv">Отзывы</NavLink></li>
-              </ul>
-            </li>
-
-            <li className="header__nav__list">
               Каталог <IoMdArrowDropdown />
               <ul className="dropdown-item">
                 <li className="dropdown-item-list"><NavLink to="/productItem">Моторные масла</NavLink></li>
@@ -67,18 +56,16 @@ const Header = () => {
               </ul>
             </li>
 
-            <li className="header__nav__list">
-              База знаний <IoMdArrowDropdown />
-              <ul className="dropdown-item">
-                <li className="dropdown-item-list"><NavLink to="/faq">FAQ</NavLink></li>
-                <li className="dropdown-item-list"><NavLink to="/public">Публикации</NavLink></li>
-              </ul>
-            </li>
-
             <li className="header__nav__list"><NavLink to="/contact">Контакты</NavLink></li>
           </ul>
 
           <div className="header__nav__bottom">
+            <div className="lang-dropdown">
+              <select className='header__nav__bottom-lang'>
+              <option value="ru">🇷🇺 Русский</option>
+              <option value="en">🇬🇧 English</option>
+            </select>
+            </div>
             <span
               style={{ cursor: 'pointer' }}
               onClick={() => setSearchHide(p => !p)}
@@ -86,6 +73,7 @@ const Header = () => {
             >
               {!searchHide ? <FiSearch /> : <IoMdClose />}
             </span>
+
             <span className='header__nav__bottom-menu'><FiMenu /></span>
           </div>
         </nav>
