@@ -139,8 +139,8 @@
             }
 
             &-info-title {
-              font-size: 20px;
-              line-height: 26px;
+                font-size: 20px;
+                line-height: 26px;
             }
 
             &-info-text {
@@ -153,9 +153,9 @@
                 grid-template-columns: 1fr;
             }
 
-            .about-imgs{
-               gap: 20px;
-               flex-direction: column;
+            .about-imgs {
+                gap: 20px;
+                flex-direction: column;
             }
 
             .about-imgs-img {
@@ -165,8 +165,8 @@
 
         @media (max-width:500px) {
             &-info-title {
-               font-size: 16px;
-               line-height: 22px;
+                font-size: 16px;
+                line-height: 22px;
             }
 
             &__take-info-text {
@@ -175,8 +175,8 @@
             }
 
             .about-info-title {
-               font-size: 14px;
-               line-height: 24px;
+                font-size: 14px;
+                line-height: 24px;
             }
         }
 
@@ -327,9 +327,10 @@
 
             &__card-imgs {
                 width: 100%;
-               img {
-                width: 100%;
-               }
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }

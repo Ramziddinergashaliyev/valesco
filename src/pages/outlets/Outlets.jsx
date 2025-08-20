@@ -229,7 +229,6 @@ const Outlets = () => {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

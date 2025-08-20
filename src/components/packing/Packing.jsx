@@ -28,7 +28,7 @@ const Packing = () => {
                     PAC?.map(el => (
                         <div key={el?.id} className="packing-table">
                             <div className="packing-table-left">
-                                <img src={el?.img} alt="packing-imgs" />
+                                <img src={el?.img} alt={`acking-imgs ${el?.title}`} />
                                 <p className="packing-table-left-text">{el?.title}</p>
                             </div>
                             <p className='packing-table-text'>{el?.number}</p>

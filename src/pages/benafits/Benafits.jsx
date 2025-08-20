@@ -35,10 +35,10 @@ const Benafits = () => {
                     <table className="benefits-table">
                         <tbody>
                             {BENAFITS?.map((el) => (
-                                <tr key={el.id} className="benefits-row">
-                                    <td className="benefits-id">{el.id.toString().padStart(2, '0')}</td>
-                                    <td className="benefits-title">{el.title}</td>
-                                    <td className="benefits-text">{el.text}</td>
+                                <tr key={el?.id} className="benefits-row">
+                                    <td className="benefits-id">{el?.id.toString().padStart(2, '0')}</td>
+                                    <td className="benefits-title">{el?.title}</td>
+                                    <td className="benefits-text">{el?.text}</td>
                                 </tr>
                             ))}
                         </tbody>

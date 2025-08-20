@@ -98,7 +98,6 @@
 
       &-list {
         padding: 10px 20px;
-        // white-space: nowrap;
         pointer-events: auto;
       }
 
@@ -268,6 +267,7 @@
     height: 100vh;
     background: #aaa5;
     z-index: 1000;
+    cursor: pointer;
   }
 
   @media (max-width: 1140px) {

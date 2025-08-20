@@ -33,6 +33,52 @@
                 color: gray;
             }
         }
+
+        @media (max-width:1210px) {
+            &-title {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            &-info {
+                gap: 10px;
+            }
+
+            &-info-title {
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            &-info-text {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        @media (max-width:740px) {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        @media (max-width:400px) {
+            &-title {
+                font-size: 16px;
+                line-height: 20px;
+                text-align: center;
+            }
+
+            &-info-title {
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+            }
+
+            &-info-text {
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+            }
+        }
     }
 
     &-middle {
@@ -123,18 +169,18 @@
 
         &-info {
             &-text {
-              font-size: 18px;
-              font-weight: 400;
-              color: gray;  
-              line-height: 26px;
-              padding-bottom: 40px;
+                font-size: 18px;
+                font-weight: 400;
+                color: gray;
+                line-height: 26px;
+                padding-bottom: 40px;
             }
         }
 
-       .css-rizt0-MuiTypography-root {
-           padding: 0px;
-       }
-       
+        .css-rizt0-MuiTypography-root {
+            padding: 0px;
+        }
+
     }
 
     &-partners {
@@ -169,50 +215,214 @@
         padding: 80px 0px;
         margin-top: 50px;
 
-       &-black {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-gap: 60px;
-
-        &-title {
-            font-size: 26px;
-            font-weight: 400;
-            color: white;
-        }
-
-        &-info {
-            display: flex;
-            align-items: center;
-            gap: 50px;
+        &-black {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 60px;
 
             &-title {
-                font-size: 18px;
+                font-size: 26px;
                 font-weight: 400;
-                line-height: 28px;
-                color: gray;
-                width: 60%;
+                color: white;
             }
 
-            &-btn {
-                width: 300px;
-                padding: 17px 10px;
-                border-radius: 40px;
-                border: 1px solid white;
+            &-info {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                gap: 10px;
-                cursor: pointer;
-                font-size: 15px;
-            }
+                gap: 50px;
 
-            &-btn:hover {
-                background-color: #333331;
-                color: white;
-                transition: .6s;
+                &-title {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: gray;
+                    width: 60%;
+                }
+
+                &-btn {
+                    width: 300px;
+                    padding: 17px 10px;
+                    border-radius: 40px;
+                    border: 1px solid white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    cursor: pointer;
+                    font-size: 15px;
+                }
+
+                &-btn:hover {
+                    background-color: #333331;
+                    color: white;
+                    transition: .6s;
+                }
             }
         }
-       } 
+    }
+
+    @media (max-width:1050px) {
+        &-middle-title {
+            font-size: 22px;
+            line-height: 30px;
+            width: 100%;
+        }
+    }
+
+    @media (max-width:1000px) {
+        &-middle {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        &-middle-info {
+            gap: 10px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        &-markets-title {
+            font-size: 22px;
+            line-height: 26px;
+            width: 100%;
+        }
+
+        &-markets-info-text {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &-markets {
+            grid-template-columns: 1fr;
+        }
+
+        &-partners {
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+        }
+
+        &-partners-info {
+            gap: 10px;
+        }
+
+        &-bottom-black {
+            grid-template-columns: 1fr;
+        }
+
+        &-bottom-black {
+            gap: 10px;
+        }
+    }
+
+    @media (max-width:800px) {
+        .css-yfrx4k-MuiAccordionSummary-content {
+            padding: 0px;
+        }
+
+        .css-rizt0-MuiTypography-root {
+            font-size: 14px !important;
+        }
+
+        &-middle-info-text {
+            font-size: 14px !important;
+            line-height: 18px;
+        }
+
+    }
+
+    @media (max-width:680px) {
+        &-markets {
+            gap: 10px;
+            grid-template-columns: 1fr;
+            padding-top: 20px;
+        }
+    }
+
+    @media (max-width:570px) {
+
+        &-bottom-black-title {
+          font-size: 20px;
+          line-height: 22px;
+          text-align: center;
+        }
+
+        &-bottom-black-info {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &-bottom-black-info-title {
+          font-size: 14px;
+          line-height: 20px;
+          text-align: center;
+          width: 100%;
+        }
+
+        &-bottom-black-info-btn {
+            width: 220px;
+            padding: 10px;
+        }
+
+        &-bottom {
+            padding: 40px 0px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        &-middle-title {
+            font-size: 18px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        &-middle {
+            padding-top: 20px;
+            gap: 10px;
+        }
+
+        &-accardion {
+            gap: 10px;
+        }
+
+        &-middle-info-text {
+            font-size: 14px !important;
+            text-align: center;
+        }
+
+        &-markets-title {
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        &-markets-info-text {
+            text-align: center;
+            padding-bottom: 10px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &-partners-title {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        &-partners-info-text {
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+        }
+
+        .css-rizt0-MuiTypography-root {
+            padding: 6px;
+        }
+
+        &-partners {
+            padding-top: 10px;
+        }
+
+
     }
 
 

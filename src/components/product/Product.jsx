@@ -148,13 +148,11 @@ const Product = () => {
     const [filterHide, setFilterHide] = useState(null)
     const [isMobile, setIsMobile] = useState(false)
 
-    // Ekran o'lchamini kuzatish
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 700)
         }
-
-        handleResize() // Dastlabki tekshirish
+        handleResize()
         window.addEventListener('resize', handleResize)
 
         return () => window.removeEventListener('resize', handleResize)
@@ -174,7 +172,6 @@ const Product = () => {
                     {filterHide ? 'Показать фильтр' : 'Скрыть фильтр'}
                 </button>
                 <div className="product-filter-right">
-                    {/* 700px dan katta ekranlarda ikkala tugmani ko'rsatish */}
                     {!isMobile && (
                         <button
                             onClick={() => setHide(false)}
@@ -237,9 +234,9 @@ const Product = () => {
             </div>
 
             {
-                hide || isMobile // Mobile da har doim grid ko'rinishi
-                ?
-                <div className="product-cards fade-in">
+                hide || isMobile
+                    ?
+                    <div className="product-cards fade-in">
                         {
                             BOXS?.map((el, index) => (
                                 <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
@@ -255,16 +252,16 @@ const Product = () => {
                                 </div>
                             ))
                         }
-                </div>
-                :
-                <div className="product-boxs fade-in">
+                    </div>
+                    :
+                    <div className="product-boxs fade-in">
                         {
                             BOXS?.map((el, index) => (
                                 <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
                                     <div className="product-box-left">
                                         <div className="product-box-left-img">
                                             <NavLink to={"/singleProduct"}>
-                                                <img src={el?.img} alt="" />
+                                                <img src={el?.img} alt={`${el?.title} image`} />
                                             </NavLink>
                                         </div>
                                         <div className="product-box-left-info">
@@ -276,7 +273,7 @@ const Product = () => {
                                 </div>
                             ))
                         }
-                </div>
+                    </div>
             }
         </div>
     )

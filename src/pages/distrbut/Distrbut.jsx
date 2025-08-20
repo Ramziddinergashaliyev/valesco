@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import img from "../../assets/icons/filter.svg"
 import "./distrbut.scss"
 import { CgMathPlus } from "react-icons/cg";
@@ -116,17 +116,16 @@ const Distrbut = () => {
     'ТАДЖИКИСТАН'
   ];
 
-  // Filter funksiyasi
   const handleFilterClick = (country) => {
     setActiveFilters(prev => {
       if (prev.includes(country)) {
         return prev.filter(f => f !== country)
       } else {
+        return [...prev, country] 
       }
     })
   }
 
-  // Filtrlangan data
   const filteredData = activeFilters.length === 0
     ? Data
     : Data.filter(item => activeFilters.includes(item.country))
