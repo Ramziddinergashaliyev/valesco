@@ -24,6 +24,7 @@
             grid-template-columns: 1fr 3fr 1fr;
             grid-gap: 20px;
             align-items: flex-start;
+
             img {
                 width: 120px;
                 height: 120px;
@@ -97,5 +98,80 @@
         background-color: #333331;
         color: white;
         transition: .5s;
+    }
+
+    @media (max-width:880px) {
+        &-card {
+            grid-template-columns: 1fr;
+        }
+
+        &-cards {
+            gap: 20px;
+        }
+    }
+
+    @media (max-width:650px) {
+        &-card-info-middle-title {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &-card-info-middle-text {
+            font-size: 12px;
+        }
+
+        &-card-info-btn {
+            gap: 6px;
+            font-size: 14px;
+        }
+
+        &-card-info-middle {
+            gap: 8px;
+        }
+
+        &-card-info-middle-desc {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width:550px) {
+        &-card-info {
+            grid-template-columns: 1fr;
+
+            img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+            }
+        }
+
+        &-title {
+            font-size: 26px;
+            text-align: center;
+            padding-top: 130px;
+        }
+
+        &-title {
+            font-size: 26px;
+            text-align: center;
+        }
+
+        &-cards {
+            padding-top: 40px;
+        }
+
+        &-card-info-middle {
+            align-items: center;
+        }
+
+        &-card-info-middle-desc,
+        &-card-info-middle-title {
+            text-align: center;
+        }
+
+        &-card-text {
+            text-align: center;
+        }
     }
 }

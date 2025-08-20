@@ -7,7 +7,6 @@ import img3 from "../../assets/images/doct.jpg"
 import img4 from "../../assets/images/prinsp.jpg"
 import { IMPACT } from '../../static'
 
-
 const Impact = () => {
 
   useEffect(() => {
@@ -17,8 +16,8 @@ const Impact = () => {
   return (
     <div className='impact container'>
       <div className="impact-top">
-        <h1 className="impact-top-title">социальная
-          ответственность</h1>
+        <h1 className="impact-top-title">
+          социальная ответственность</h1>
         <div className="impact-top-imgs">
           <img src={img} alt="impact-top-img" />
         </div>
@@ -97,7 +96,7 @@ const Impact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>  
 
     </div>
   )

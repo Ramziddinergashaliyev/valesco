@@ -33,6 +33,7 @@ const SingleProduct = () => {
                 </div>
             </div>
 
+
             <div className="single-dropdown">
                 <ul className="single-dropdown-item container">
                     <li className="single-dropdown-item-list"><a href="#addvantages">Преимущества</a></li>
@@ -41,12 +42,12 @@ const SingleProduct = () => {
                     <li className="single-dropdown-item-list">Характеристики</li>
                     <li className="single-dropdown-item-list">Документация</li>
                 </ul>
-                <div className="single-dropdown-result">
+                 <div className="single-dropdown-result">
                     <Advantages/>
                     <Packing/>
                     <Specificat/>
-                </div>
-            </div>
+                </div> 
+            </div> 
         </div>
     )
 }

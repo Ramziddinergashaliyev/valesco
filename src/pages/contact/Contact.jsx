@@ -18,7 +18,8 @@ const Contact = () => {
             <p className="contact-bottom-left-addres-title">Адрес</p>
             <p className="contact-bottom-left-addres-text"><span>123112</span> <br />
               Москва, «МОСКВА-СИТИ» Северная Башня, ул.
-              Тестовская, 10, подъезд 2, этаж 13, офис 1302</p>
+              Тестовская, 10, подъезд 2, этаж 13, офис 1302
+            </p>
           </div>
           <div className="contact-bottom-left-sv">
             <p className="contact-bottom-left-sv-title">для связи</p>
@@ -29,7 +30,7 @@ const Contact = () => {
               </div>
               <div className="contact-bottom-left-sv-info-pochta">
                 <span>Электронная почта</span>
-                <p className="contact-bottom-left-sv-info-pochta-text">zic@sk.com</p>
+                <p className="contact-bottom-left-sv-info-pochta-text">valescoinfo@gmail.com</p>
               </div>
             </div>
           </div>
