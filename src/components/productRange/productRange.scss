@@ -47,13 +47,37 @@
             border: 1px solid #333331;
             background-color: #333331;
             color: white;
+            transition: .5s;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                transition: left 0.6s;
+            }
 
             &:hover {
-                background-color: white;
-                color: #333331;
-                border: 1px solid #333331;
-                transition: .5s;
+                transform: translateY(-3px);
+                box-shadow: 0 15px 35px rgba(51, 51, 49, 0.3);
             }
+
+            &:hover:before {
+                left: 100%;
+            }
+
+            &:hover svg {
+                transform: rotate(45deg) scale(1.1);
+            }
+
+            svg{
+                transition: transform 0.3s ease;
+                font-size: 20px;
+            }
+
         }
     }
 
@@ -116,7 +140,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                
+
             }
         }
 
@@ -159,7 +183,7 @@
             font-weight: 400;
         }
 
-        &__info-desc  {
+        &__info-desc {
             font-size: 14px;
         }
     }
@@ -178,8 +202,8 @@
     }
 
     @media (max-width:480px) {
-        &__category  {
-          gap: 10px
+        &__category {
+            gap: 10px
         }
     }
 
@@ -193,11 +217,11 @@
         }
 
         &__info-text {
-          font-size: 16px;
-          line-height: 20px;
-          font-weight: 300;
-          text-align: center;
-          width: 100%;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 300;
+            text-align: center;
+            width: 100%;
         }
 
         &__info-desc {
@@ -209,8 +233,8 @@
         }
 
         &__info {
-           gap: 15px;
-           align-items: center;
+            gap: 15px;
+            align-items: center;
         }
     }
 

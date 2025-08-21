@@ -155,7 +155,7 @@
 
     @media (max-width: 800px) {
         &-cards {
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-gap: 10px;
         }
 
@@ -166,7 +166,7 @@
 
     @media (max-width: 500px) {
         &-cards {
-            grid-template-columns: repeat(1,1fr);
+            grid-template-columns: repeat(1, 1fr);
             grid-gap: 10px;
         }
 
@@ -175,14 +175,14 @@
         }
 
         &-card-title {
-           font-size: 30px;
-           line-height: 26px;
-           font-weight: 600;
+            font-size: 30px;
+            line-height: 26px;
+            font-weight: 600;
         }
 
         &-card-info-desc,
         &-card-info-text {
-           font-size: 14px;
+            font-size: 14px;
         }
     }
 }

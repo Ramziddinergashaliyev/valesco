@@ -92,7 +92,7 @@
 
         &-boxs {
             display: grid;
-            grid-template-columns: 400px 1fr 200px; 
+            grid-template-columns: 400px 1fr 200px;
             align-items: center;
             border-bottom: 1px solid #aaa8;
             padding-bottom: 40px;
@@ -111,6 +111,7 @@
                 display: flex;
                 align-items: center;
                 gap: 20px;
+
                 img {
                     width: 200px;
                     height: 200px;
@@ -167,12 +168,12 @@
         }
 
         &-bottom-boxs-middle-info-title {
-          font-size: 20px
+            font-size: 20px
         }
 
         &-bottom-boxs-middle-info-text {
-          font-size: 16px;
-          line-height: 20px;
+            font-size: 16px;
+            line-height: 20px;
         }
 
         &-top-title {
@@ -183,7 +184,57 @@
     }
 
     @media (max-width:960px) {
-        
+        &-bottom-boxs {
+            grid-template-columns: 1fr;
+            align-items: start;
+            gap: 20px;
+            border: 1px solid #aaa4;
+            border-radius: 10px;
+            padding: 20px 10px;
+        }
+
+        &-bottom {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        &-bottom-boxs-middle {
+            flex-direction: column;
+        }
+
+        &-bottom-boxs-text {
+           font-size: 16px;
+           line-height: 20px;
+           font-weight: 400;
+           text-align: center;
+           color: #333331;
+        }
+
+        &-bottom-boxs-middle-info {
+          align-items: center;
+        }
+
+        &-bottom-boxs-middle-info-title {
+           font-size: 18px;
+           text-align: center;
+        }
+
+        &-bottom-boxs-middle-info-text {
+           display: none;
+        }
+
+        &-bottom-boxs-btn {
+          padding: 10px;
+          width: 100%;
+        }
+
+    }
+
+    @media (max-width:720px) {
+        &-bottom {
+            grid-template-columns: repeat(2,1fr);
+        }
     }
 
     @media (max-width:570px) {
@@ -193,8 +244,15 @@
         }
     }
 
+    @media (max-width:480px) {
+        &-bottom {
+         grid-template-columns: 1fr;
+        }
+    }
+
     @media (max-width:350px) {
         padding-top: 130px;
+
         &-top-title {
             font-size: 18px;
             line-height: 26px;

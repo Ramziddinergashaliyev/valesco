@@ -4,7 +4,6 @@ import { MdArrowOutward } from 'react-icons/md'
 import { PRIDE } from '../../static'
 import { NavLink } from 'react-router-dom'
 
-
 const PrideArea = () => {
     return (
         <div className='prideArea'>
@@ -33,7 +32,7 @@ const PrideArea = () => {
                             ))
                         }
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     )
