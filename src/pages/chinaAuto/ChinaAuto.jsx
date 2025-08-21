@@ -12,7 +12,7 @@ const ChinaAuto = () => {
       <div className="chinaAuto-top">
         <h2 className="chinaAuto-top-title">продукты, рекомендуемые для
           китайских автомобилей</h2>
-        <div className="chinaAuto-top-filter">
+        {/* <div className="chinaAuto-top-filter">
           <span>Выбор бренда</span>
           <div className="chinaAuto-top-filter-boxs">
             <button>HAVAL</button>
@@ -38,7 +38,7 @@ const ChinaAuto = () => {
             <button>H9</button>
             <button>H5</button>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="chinaAuto-bottom">

@@ -35,39 +35,39 @@ const Header = () => {
             <li className="header__nav__list">
               SK Enmove <IoMdArrowDropdown />
               <ul className="dropdown-item">
-                <li className="dropdown-item-list"><NavLink to="/about">{t("company")}</NavLink></li>
-                <li className="dropdown-item-list"><NavLink to="/news">{t("news")}</NavLink></li>
-                <li className="dropdown-item-list"><NavLink to="/impact">{t("social")}</NavLink></li>
-                <li className="dropdown-item-list"><NavLink to="/culture">{t("culture")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/about">{t("company")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/news">{t("news")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/impact">{t("social")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/culture">{t("culture")}</NavLink></li>
               </ul>
             </li>
 
             <li className="header__nav__list">
               {t("catalog")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
-                <li className="dropdown-item-list"><NavLink to="/productItem">{t("engineOils")}</NavLink></li>
-                <li className="dropdown-item-list">{t("transmissionOils")}</li>
-                <li className="dropdown-item-list">{t("antifreezes")}</li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/productItem">{t("engineOils")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("transmissionOils")}</li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("antifreezes")}</li>
               </ul>
             </li>
 
             <li className="header__nav__list">
               {t("oilSelection")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
-                <li className="dropdown-item-list"><NavLink to="/oil">{t("oilSelectionTitle")}</NavLink></li>
-                <li className="dropdown-item-list"><NavLink to="/chinaAuto">{t("chinaCars")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/oil">{t("oilSelectionTitle")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/chinaAuto">{t("chinaCars")}</NavLink></li>
               </ul>
             </li>
 
             <li className="header__nav__list">
               {t("whereBuy")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
-                <li className="dropdown-item-list"><NavLink to="/distrbut">{t("distributors")}</NavLink></li>
-                <li className="dropdown-item-list"><NavLink to={"/outlets"}>{t("outlets")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/distrbut">{t("distributors")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={"/outlets"}>{t("outlets")}</NavLink></li>
               </ul>
             </li>
 
-            <li className="header__nav__list"><NavLink to="/contact">{t("contacts")}</NavLink></li>
+            <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/contact">{t("contacts")}</NavLink></li>
           </ul>
 
           <div className="header__nav__bottom">

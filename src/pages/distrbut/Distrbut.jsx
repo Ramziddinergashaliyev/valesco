@@ -16,8 +16,8 @@ const Distrbut = () => {
   const [activeFilters, setActiveFilters] = useState([])
 
   useEffect(() => {
-    window.scrollTo(0,0)
-  },[])
+    window.scrollTo(0, 0)
+  }, [])
 
   const Data = [
     {
@@ -121,7 +121,7 @@ const Distrbut = () => {
       if (prev.includes(country)) {
         return prev.filter(f => f !== country)
       } else {
-        return [...prev, country] 
+        return [...prev, country]
       }
     })
   }

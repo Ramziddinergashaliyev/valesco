@@ -138,7 +138,7 @@
         }
 
         &-info-right-title {
-            padding-top: 30px;
+            padding-top: 26px;
             font-size: 18px;
             font-weight: 400;
             color: #333331;
@@ -159,6 +159,30 @@
         }
     }
 
+    @media (max-width:850px) {
+        &-result-info {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &-result-info-left-title,
+        &-result-info-right-title {
+            padding-top: 10px;
+        }
+    }
+
+    @media (max-width:650px) {
+        .css-rizt0-MuiTypography-root {
+            font-size: 16px !important;
+            padding: 15px 0px 0px;
+        }
+
+        &-result {
+         gap: 5px;
+        }
+
+    }
+
     @media (max-width:610px) {
         padding-top: 130px;
         &-info {
@@ -168,13 +192,58 @@
     }
 
     @media (max-width:550px) {
+        padding-top: 5px;
         &-filter-box-info  {
            font-size: 12px;
            min-width: 140px;
         }
 
         &-filter-btn {
-            padding-top: 10px;
+            padding-top: 15px;
+        }
+
+        .css-rizt0-MuiTypography-root{
+            padding: 0px !important;
+            color: gray;
+        }
+
+        .css-1f1pi2l-MuiButtonBase-root-MuiAccordionSummary-root {
+            padding: 0px;
+        }
+
+        .distrbut-filter-box-hide {
+           padding: 30px 0px 10px;
+        }
+
+        .css-1lj39kh-MuiAccordionDetails-root {
+            padding: 0px !important;
+        }
+
+        .distrbut-result-bottom {
+            width: 100%;
+        }
+
+        .css-yfrx4k-MuiAccordionSummary-content {
+            margin: 0px;
+        }
+    }
+
+    @media (max-width:690px) {
+        &-result {
+          grid-template-columns: 1fr;
+          padding-top: 20px;
+        }
+
+        .distrbut .css-rizt0-MuiTypography-root {
+            padding-top: 0px;
+        }
+
+        .css-1f1pi2l-MuiButtonBase-root-MuiAccordionSummary-root {
+            padding: 0px;
+        }
+
+        &-result-text {
+           padding-top: 10px;
         }
     }
 
@@ -230,7 +299,6 @@
   text-align: center;
   padding: 2rem;
   color: #666;
-//   font-size: 1.1rem;
   font-weight: 300;
   font-size: 14px;
 }
