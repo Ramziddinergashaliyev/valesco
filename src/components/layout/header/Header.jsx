@@ -77,8 +77,8 @@ const Header = () => {
                 value={currentLang}
                 onChange={(e) => changeLanguage(e.target.value)}
               >
-                <option value="ru">🇷🇺 Русский</option>
-                <option value="en">🇬🇧 English</option>
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
               </select>
             </div>
 
