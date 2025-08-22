@@ -90,7 +90,7 @@ const Product = () => {
                             <button className="product-filter-result-left-btn">Chrysler<FiPlus /></button>
                             <button className="product-filter-result-left-btn">BMW<FiPlus /></button>
                             <button className="product-filter-result-left-btn">Volkswagen<FiPlus /></button>
-                            <button className="product-filter-right-left-btn">Porsche<FiPlus /></button>
+                            <button className="product-filter-result-left-btn">Porsche<FiPlus /></button>
                             <button className="product-filter-result-left-btn">Audi<FiPlus /></button>
                         </div>
                     </div>
