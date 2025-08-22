@@ -45,9 +45,12 @@ const Header = () => {
             <li className="header__nav__list">
               {t("catalog")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
-                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/productItem">{t("engineOils")}</NavLink></li>
-                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("transmissionOils")}</li>
-                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("antifreezes")}</li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/productItem">{t("Моторные масла для легковой и легкой коммерческой техники")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Моторные масла для дизельных двигателей")}</li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Тормозная жидкость")}</li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Стеклоомыватели")}</li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Гидравлические масла")}</li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Фильтры")}</li>
               </ul>
             </li>
 

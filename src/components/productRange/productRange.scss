@@ -75,7 +75,7 @@
 
             svg{
                 transition: transform 0.3s ease;
-                font-size: 20px;
+                font-size: 26px;
             }
 
         }
@@ -89,7 +89,7 @@
 
     &__card {
         position: relative;
-        border: 1px solid #aaa7;
+        border: 1px solid #aaa5;
         padding: 15px;
         height: 220px;
         border-radius: 8px;
@@ -109,15 +109,22 @@
         &::before {
             content: '';
             position: absolute;
+            border: 1px solid white;
             inset: 0;
             background: url(../../assets/images/bg.jpg) center/cover no-repeat;
             opacity: 0;
             transition: opacity 0.5s;
             z-index: 0;
         }
-
+        
         &:hover::before {
             opacity: 1;
+            border: 1px solid white;
+        }
+
+        &:hover svg {
+            transform: rotate(45deg);
+            transition: .5s;
         }
 
 

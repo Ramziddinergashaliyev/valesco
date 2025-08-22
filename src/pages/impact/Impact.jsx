@@ -32,9 +32,6 @@ const Impact = () => {
             <p className="impact-nashi-info-top-desc">SKMS (система управления SK) систематически излагает корпоративную культуру и бизнес-идеологию, а также методы управления SK Group. Это эксклюзивная философия управления SK, которую разделяют и с которой согласны все филиалы SK.</p>
           </div>
           <div className="impact-nashi-info-bottom">
-            {
-
-            }
             <div className="impact-nashi-info-bottom-boxs">
               {
                 IMPACT?.map(el => (
@@ -50,8 +47,7 @@ const Impact = () => {
       </div>
 
       <div className="impact-group">
-        <h2 className="impact-group-title">SK Group и его
-          участники</h2>
+        <h2 className="impact-group-title">SK Group и его участники</h2>
 
         <div className="impact-group-box">
           <img src={img1} alt="impact-img" />
@@ -84,7 +80,7 @@ const Impact = () => {
       <div className="impact-prinsp">
         <h2 className="impact-prinsp-title">принцип реализации</h2>
         <div className="impact-prinsp-right">
-          <img src={img4} alt="impact-img" className="impact-prinsp-right-img" />
+          {/* <img src={img4} alt="impact-img" className="impact-prinsp-right-img" /> */}
           <div className="impact-prinsp-right-info">
             <div className="impact-prinsp-right-info-top">
               <h2 className="impact-prinsp-right-info-top-title">Реализация стратегии SUPEX</h2>
