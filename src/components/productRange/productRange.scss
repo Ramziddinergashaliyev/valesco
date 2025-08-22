@@ -159,6 +159,12 @@
         }
     }
 
+    &__card:hover {
+        transform: translateY(-10px);
+        transition: .5s;
+        box-shadow: 1px 1px 10px #eee;
+    }
+
     &__card:hover .productRange__card-title {
         color: white;
         z-index: 1;

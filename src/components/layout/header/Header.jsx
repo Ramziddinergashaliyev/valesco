@@ -48,7 +48,7 @@ const Header = () => {
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/productItem">{t("Моторные масла для легковой и легкой коммерческой техники")}</NavLink></li>
                 <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Моторные масла для дизельных двигателей")}</li>
                 <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Тормозная жидкость")}</li>
-                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Стеклоомыватели")}</li>
+                {/* <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Стеклоомыватели")}</li> */}
                 <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Гидравлические масла")}</li>
                 <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Фильтры")}</li>
               </ul>
