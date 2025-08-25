@@ -3,8 +3,14 @@ import "./productRange.scss"
 import { MdArrowOutward } from 'react-icons/md'
 import { CATEGORY } from '../../static'
 import { NavLink } from 'react-router-dom'
+import { useGetCategoriesQuery } from '../../context/api/categoryApi'
 
 const ProductRange = () => {
+
+    const { data } = useGetCategoriesQuery()
+    console.log(data);
+    
+
     return (
         <div className='productRange container'>
             <div className="productRange__container">

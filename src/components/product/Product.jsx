@@ -7,11 +7,14 @@ import img2 from "../../assets/icons/row-icn.svg"
 import { BOXS } from '../../static'
 import { FiPlus } from 'react-icons/fi'
 import { NavLink } from 'react-router-dom'
+import { useGetProductsQuery } from '../../context/api/productApi'
 
 const Product = () => {
     const [hide, setHide] = useState(false)
     const [filterHide, setFilterHide] = useState(null)
     const [isMobile, setIsMobile] = useState(false)
+    const { data } = useGetProductsQuery()
+    console.log(data);
 
     useEffect(() => {
         const handleResize = () => {
@@ -21,6 +24,8 @@ const Product = () => {
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
     }, [])
+
+
 
     return (
         <div className='product container'>
