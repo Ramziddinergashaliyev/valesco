@@ -12,33 +12,6 @@ const ChinaAuto = () => {
       <div className="chinaAuto-top">
         <h2 className="chinaAuto-top-title">продукты, рекомендуемые для
           китайских автомобилей</h2>
-        {/* <div className="chinaAuto-top-filter">
-          <span>Выбор бренда</span>
-          <div className="chinaAuto-top-filter-boxs">
-            <button>HAVAL</button>
-            <button>OMODA</button>
-            <button>CHERY</button>
-            <button>TANK</button>
-            <button>JAC</button>
-            <button>GAC</button>
-            <button>BAIC</button>
-            <button>FAW</button>
-            <button>KAIYI</button>
-            <button>VOYAH</button>
-          </div>
-        </div>
-        <div className="chinaAuto-top-model">
-          <span>Выбор модели автомобиля</span>
-          <div className="chinaAuto-top-model-boxs">
-            <button>F7</button>
-            <button>Jolion</button>
-            <button>М6</button>
-            <button>F7X</button>
-            <button>H3</button>
-            <button>H9</button>
-            <button>H5</button>
-          </div>
-        </div> */}
       </div>
 
       <div className="chinaAuto-bottom">

@@ -7,6 +7,7 @@ import logo from "../../../assets/icons/logo.png"
 import { useTranslation } from 'react-i18next';
 import { AiOutlineClose } from "react-icons/ai";
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi';
+import { useGetProductsQuery } from '../../../context/api/productApi';
 
 const Header = () => {
   const [searchHide, setSearchHide] = useState(false)
@@ -49,16 +50,11 @@ const Header = () => {
             <li className="header__nav__list">
               {t("catalog")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
-                {
-                  data?.map(el => (
-                    <li key={el?.id} onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.ru}</NavLink></li>
-                  ))
-                }
-                
-                {/* <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Моторные масла для дизельных двигателей")}</li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/productItem">{t("Моторные масла для легковой и легкой коммерческой техники")}</NavLink></li>
+                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Моторные масла для дизельных двигателей")}</li>
                 <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Тормозная жидкость")}</li>
                 <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Гидравлические масла")}</li>
-                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Фильтры")}</li> */}
+                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Фильтры")}</li>
               </ul>
             </li>
 

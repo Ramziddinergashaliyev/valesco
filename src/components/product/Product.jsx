@@ -114,7 +114,16 @@ const Product = ({ data, loading }) => {
                                             <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
                                                 <div className="product-card-img">
                                                     <NavLink to={`/singleProduct/${el?.id}`}>
-                                                        <img src={el?.image[0]} alt="product-img" />
+                                                        {
+                                                            el?.image?.length < 0
+                                                            ?
+                                                            <img src={el?.image[0]} alt="product-img" />
+                                                            :
+                                                            <>
+                                                              <img src="" alt="product-hide-img" />
+                                                            </>
+
+                                                        }
                                                     </NavLink>
                                                 </div>
                                                 <div className="product-card-info">
@@ -128,31 +137,39 @@ const Product = ({ data, loading }) => {
                     </>
                     :
                     <>
-                    {
-                        loading
-                        ?
-                        <LoadingRow/>
-                        :
-                        <div className="product-boxs fade-in">
                         {
-                            data?.map((el, index) => (
-                                <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
-                                    <div className="product-box-left">
-                                        <div className="product-box-left-img">
-                                            <NavLink to={`/singleProduct/${el?.id}`}>
-                                                <img src={el?.image[0]} alt={`${el?.title} image`} />
-                                            </NavLink>
-                                        </div>
-                                        <div className="product-box-left-info">
-                                            <h2 className="product-box-left-info-title">{el?.title}</h2>
-                                        </div>
-                                    </div>
-                                    <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>Подробнее<MdArrowOutward /></button></NavLink>
-                                </div>
-                            ))
+                            loading
+                            ?
+                            <LoadingRow />
+                            :
+                            <div className="product-boxs fade-in">
+                                    {
+                                        data?.map((el, index) => (
+                                            <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
+                                                <div className="product-box-left">
+                                                  <div className="product-box-left-img">
+                                                    <NavLink to={`/singleProduct/${el?.id}`}>
+                                                            {
+                                                                el?.image?.length < 0
+                                                                ?
+                                                                <img src={el?.image[0]} alt="product-img" />
+                                                                :
+                                                                <>
+                                                                <img src="" alt="product-hide-img" />
+                                                                </>
+                                                            }
+                                                    </NavLink>
+                                                  </div>
+                                                    <div className="product-box-left-info">
+                                                      <h2 className="product-box-left-info-title">{el?.title}</h2>
+                                                    </div>
+                                                </div>
+                                                <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>Подробнее<MdArrowOutward /></button></NavLink>
+                                            </div>
+                                        ))
+                                    }
+                            </div>
                         }
-                        </div>
-                    }
                     </>
             }
 
