@@ -7,7 +7,7 @@ import logo from "../../../assets/icons/logo.png"
 import { useTranslation } from 'react-i18next';
 import { AiOutlineClose } from "react-icons/ai";
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi';
-import { useGetProductsQuery } from '../../../context/api/productApi';
+import { useGetProductsQuery, useSearchProductsQuery } from '../../../context/api/productApi';
 
 const Header = () => {
   const [searchHide, setSearchHide] = useState(false)
@@ -15,13 +15,18 @@ const Header = () => {
   const [currentLang, setCurrentLang] = useState(i18n.language || "en");
   const [hide, setHide] = useState(false)
   const { data } = useGetCategoriesQuery()
-  console.log(data);
-  
+  const [ value, setValue ] = useState("")
+  const {data:searchData} = useSearchProductsQuery({query: value})
+  console.log(searchData);
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
     setCurrentLang(lang);
   };
+
+  const handleChange = (e) => {
+    setValue(e.target.value)
+  }
 
   return (
     <>
@@ -114,7 +119,7 @@ const Header = () => {
       <div className={`header-search-result ${searchHide ? "header-search-result-hide" : ""}`}>
         <div className="header-search-result-form container">
           <div className="header-search-result-form-icon">
-            <input placeholder={t("searchPlaceholder")} type="text" />
+            <input value={value} onChange={handleChange} placeholder={t("searchPlaceholder")} type="text" />
             <FiSearch />
           </div>
           <p className='header-search-result-form-text'>{t("searchHelp")}</p>

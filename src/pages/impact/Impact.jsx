@@ -80,7 +80,6 @@ const Impact = () => {
       <div className="impact-prinsp">
         <h2 className="impact-prinsp-title">принцип реализации</h2>
         <div className="impact-prinsp-right">
-          {/* <img src={img4} alt="impact-img" className="impact-prinsp-right-img" /> */}
           <div className="impact-prinsp-right-info">
             <div className="impact-prinsp-right-info-top">
               <h2 className="impact-prinsp-right-info-top-title">Реализация стратегии SUPEX</h2>
