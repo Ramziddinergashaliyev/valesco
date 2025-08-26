@@ -9,7 +9,7 @@ const ProductRange = () => {
 
     const { data } = useGetCategoriesQuery()
     console.log(data);
-    
+
 
     return (
         <div className='productRange container'>
@@ -24,11 +24,13 @@ const ProductRange = () => {
                 </div>
                 <div className="productRange__category">
                     {
-                        CATEGORY?.map(el => (
-                            <div key={el.id} className="productRange__card">
-                                <h2 className="productRange__card-title">{el?.title}</h2>
-                                <div className='productRange__card-bottom'><p className='productRange__card-bottom-text'>Узнать больше</p><span><MdArrowOutward /></span> </div>
-                            </div>
+                        data?.map(el => (
+                            <NavLink to={`/categories/${el?.id}`}>
+                                <div key={el?.id} className="productRange__card">
+                                    <h2 className="productRange__card-title">{el?.title?.ru}</h2>
+                                    <div className='productRange__card-bottom'><p className='productRange__card-bottom-text'>Узнать больше</p><span><MdArrowOutward /></span> </div>
+                                </div>
+                            </NavLink>
                         ))
                     }
                 </div>

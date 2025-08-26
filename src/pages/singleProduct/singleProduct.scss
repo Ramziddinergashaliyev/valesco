@@ -10,15 +10,9 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 40px;
 
-        &-left {
-            display: grid;
-            grid-template-columns: 130px 1fr;
-            align-items: flex-start;
-            grid-gap: 10px;
-        }
-
         &-left-img {
-            border: 1px solid #aaa5;
+            border: 1px solid #aaa4;
+            box-shadow: 1px 1px 10px #aaa3;
             padding: 30px;
             border-radius: 4px;
 
@@ -77,18 +71,25 @@
             }
 
             &-left-bottom-imgs img {
-                padding: 0px 0px 10px;
+                padding: 10px 0px 10px;
+            }
+
+            &-left-bottom-imgs {
+                img {
+                    height: 95px;
+                    width: 110px;
+                }
             }
         }
 
-        @media (max-width:730px) {
+        @media (max-width:900px) {
             grid-template-columns: 1fr;
             grid-gap: 20px;
         }
 
         @media (max-width:370px) {
             &-left-bottom-imgs {
-                gap: 4px;
+                gap: 15px;
                 padding-top: 5px;
             }
 
@@ -102,7 +103,7 @@
 
             &-left-bottom-imgs img {
                 padding: 10px;
-                width: 60px;
+                width: 80px;
                 height: 70px;
             }
 
@@ -117,6 +118,18 @@
                 height: 250px;
             }
         }
+
+        @media (max-width:500px) {
+            &-left {
+                grid-template-columns: 1fr;
+            }
+
+            &-left-bottom-imgs {
+             order: 2;
+             display: flex;
+             flex-direction: row;
+            }
+        }
     }
 
     &-top-right {
@@ -126,15 +139,16 @@
         gap: 20px;
 
         &-title {
-            font-size: 42px;
+            font-size: 32px;
+            line-height: 36px;
             font-weight: 500;
             color: #333331;
         }
 
         &-text {
-            font-size: 19px;
+            font-size: 16px;
             font-weight: 300;
-            line-height: 24px;
+            line-height: 26px;
             color: gray;
         }
     }

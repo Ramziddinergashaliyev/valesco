@@ -5,9 +5,9 @@
   grid-gap: 30px;
 
   &-title {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 36px;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 34px;
     color: #333331;
     letter-spacing: 1px;
     position: relative;
@@ -73,32 +73,32 @@
     gap: 10px;
   }
 
- @media (max-width:720px) {
-  padding: 20px 12px 0px;
-  .characterist-info {
-    overflow-x: auto;  
+  @media (max-width:720px) {
+    padding: 20px 12px 0px;
+
+    .characterist-info {
+      overflow-x: auto;
+    }
+
+    .characterist-info-table {
+      min-width: 700px;
+    }
+
+    .characterist-info {
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+    }
   }
-
-  .characterist-info-table {
-    min-width: 700px;
-  }
-
-  .characterist-info {
-  overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    height: 6px;   
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #999;  
-    border-radius: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-}
-
-}
 }

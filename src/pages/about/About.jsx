@@ -59,25 +59,25 @@ const About = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="about__networks">
-        <h2 className="about__networks-title">отрасли</h2>
-        <div className="about__networks__cards">
-          {
-            NETWORKS?.map(el => (
-              <div key={el?.id} className="about__networks__card">
-                <div className="about__networks__card-info">
-                  <h2 className='about__networks__card-info-title'>{el?.title}</h2>
-                  <p className='about__networks__card-info-text'>{el?.text}</p>
+          <h2 className="about__networks-title">отрасли</h2>
+          <div className="about__networks__cards">
+            {
+              NETWORKS?.map(el => (
+                <div key={el?.id} className="about__networks__card">
+                  <div className="about__networks__card-info">
+                    <h2 className='about__networks__card-info-title'>{el?.title}</h2>
+                    <p className='about__networks__card-info-text'>{el?.text}</p>
+                  </div>
+                  <div className="about__networks__card-imgs">
+                    <img src={el?.img} alt={el?.title} />
+                  </div>
                 </div>
-                <div className="about__networks__card-imgs">
-                  <img src={el?.img} alt={el?.title} />
-                </div>
-              </div>
-            ))
-          }
+              ))
+            }
+          </div>
         </div>
-      </div> 
       </div>
     </div>
   )

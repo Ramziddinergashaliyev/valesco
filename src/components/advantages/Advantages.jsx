@@ -7,7 +7,7 @@ const Advantages = () => {
       <h2 className="addvantages-title">преимущества</h2>
       <div className="addvantages__info">
         <p className="addvantages-info-title">
-          Изготовлено на основе полиальфаолефинов (ПАО) и собственного синтетического базового масла YUBASE PLUS в сочетании с современным низкозольным пакетом присадок (Low SAPS).</p>
+          Изготовлено на основе полиальфаолефинов (ПАО) и собственного синтетического базового масла YUBASE PLUS в сочетании с современным низкозольным пакетом присадок.</p>
         <ul className="addvantages-info-item">
           <li className="addvantages-info-item-list">
             <span>01</span>

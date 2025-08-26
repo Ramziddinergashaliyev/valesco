@@ -9,12 +9,13 @@ import { FiPlus } from 'react-icons/fi'
 import { NavLink } from 'react-router-dom'
 import { useGetProductsQuery } from '../../context/api/productApi'
 
-const Product = () => {
+const Product = ({ data }) => {
     const [hide, setHide] = useState(false)
     const [filterHide, setFilterHide] = useState(null)
     const [isMobile, setIsMobile] = useState(false)
-    const { data } = useGetProductsQuery()
+    // const { data } = useGetProductsQuery()
     console.log(data);
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -25,11 +26,10 @@ const Product = () => {
         return () => window.removeEventListener('resize', handleResize)
     }, [])
 
-
-
     return (
         <div className='product container'>
             <h2 className="product-title">Моторные масла для легковой и легкой коммерческой техники</h2>
+
             <div className="product-top">
                 <p className='product-top-text'>Для оптимального подбора продукта Valesco, соответствующего вашему автомобилю, пожалуйста, воспользуйтесь нашим модулем подбора масла.</p>
                 <button className='product-top-btn'> Подобрать масло<MdArrowOutward /></button>
@@ -107,16 +107,15 @@ const Product = () => {
                 ?
                 <div className="product-cards fade-in">
                         {
-                            BOXS?.map((el, index) => (
+                            data?.map((el, index) => (
                                 <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
                                     <div className="product-card-img">
-                                        <NavLink to={"/singleProduct"}>
-                                            <img src={el?.img} alt="product-img" />
+                                        <NavLink to={`/singleProduct/${el?.id}`}>
+                                            <img src={el?.image[0]} alt="product-img" />
                                         </NavLink>
                                     </div>
                                     <div className="product-card-info">
                                         <h2 className="product-card-info-title">{el?.title}</h2>
-                                        <p className="product-card-info-text">{el?.text}</p>
                                     </div>
                                 </div>
                             ))
@@ -125,25 +124,25 @@ const Product = () => {
                 :
                 <div className="product-boxs fade-in">
                         {
-                            BOXS?.map((el, index) => (
+                            data?.map((el, index) => (
                                 <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
                                     <div className="product-box-left">
                                         <div className="product-box-left-img">
-                                            <NavLink to={"/singleProduct"}>
-                                                <img src={el?.img} alt={`${el?.title} image`} />
+                                            <NavLink to={`/singleProduct/${el?.id}`}>
+                                                <img src={el?.image[0]} alt={`${el?.title} image`} />
                                             </NavLink>
                                         </div>
                                         <div className="product-box-left-info">
                                             <h2 className="product-box-left-info-title">{el?.title}</h2>
-                                            <p className="product-box-left-info-text">{el?.text}</p>
                                         </div>
                                     </div>
-                                    <NavLink to={"/singleProduct"}><button className='product-box-btn'>Подробнее<MdArrowOutward /></button></NavLink>
+                                    <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>Подробнее<MdArrowOutward /></button></NavLink>
                                 </div>
                             ))
                         }
                 </div>
             }
+
         </div>
     )
 }
