@@ -19,7 +19,6 @@ const SingleProduct = () => {
 
     const { id } = useParams()
     const { data: byData, isLoading } = useGetProductByIdQuery(id)
-    console.log(byData);
 
     return (
         <div className='single'>

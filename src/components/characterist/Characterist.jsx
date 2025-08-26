@@ -2,7 +2,6 @@ import React from 'react'
 import "./characterist.scss"
 
 const Characterist = ({ data }) => {
-    console.log(data);
 
     return (
         <div id='characterist' className='container characterist'>
@@ -21,80 +20,64 @@ const Characterist = ({ data }) => {
                             <tr className='characterist-info-tbody-tr'>
                                 <td className='characterist-info-tbody-td'>Класс вязкости SAE</td>
                                 {
-                                    data?.sae?.map(el => (
-                                        <>
-                                            <td className='characterist-info-tbody-td'>{el}</td>
-                                        </>
+                                    data?.sae?.map((el, index) => (
+                                        <td key={index} className='characterist-info-tbody-td'>{el}</td>
                                     ))
                                 }
                             </tr>
                             <tr className='characterist-info-tbody-tr'>
                                 <td className='characterist-info-tbody-td'>Плотность при 15°С, г/см3</td>
                                 {
-                                    data?.density?.map(el => (
-                                        <>
-                                            <td className='characterist-info-tbody-td'>{el}</td>
-                                        </>
+                                    data?.density?.map((el, index) => (
+                                        <td key={index} className='characterist-info-tbody-td'>{el}</td>
                                     ))
                                 }
                             </tr>
                             <tr className='characterist-info-tbody-tr'>
                                 <td className='characterist-info-tbody-td'>Кинематическая вязкость при 40 °С, мм2/с</td>
                                 {
-                                    data?.kinematic_one?.map(el => (
-                                        <>
-                                            <td className='characterist-info-tbody-td'>{el}</td>
-                                        </>
+                                    data?.kinematic_one?.map((el, index) => (
+                                        <td key={index} className='characterist-info-tbody-td'>{el}</td>
                                     ))
                                 }
                             </tr>
                             <tr className='characterist-info-tbody-tr'>
                                 <td className='characterist-info-tbody-td'>Кинематическая вязкость при 100 °С, мм2/с</td>
                                 {
-                                    data?.kinematic_two?.map(el => (
-                                        <>
-                                            <td className='characterist-info-tbody-td'>{el}</td>
-                                        </>
+                                    data?.kinematic_two?.map((el, index) => (
+                                        <td key={index} className='characterist-info-tbody-td'>{el}</td>
                                     ))
                                 }
                             </tr>
                             <tr className='characterist-info-tbody-tr'>
                                 <td className='characterist-info-tbody-td'>Индекс вязкости</td>
                                 {
-                                    data?.viscosity?.map(el => (
-                                        <>
-                                            <td className='characterist-info-tbody-td'>{el}</td>
-                                        </>
+                                    data?.viscosity?.map((el, index) => (
+                                        <td key={index} className='characterist-info-tbody-td'>{el}</td>
                                     ))
                                 }
                             </tr>
                             <tr className='characterist-info-tbody-tr'>
                                 <td className='characterist-info-tbody-td'>Температура вспышки в открытом тигле °С	</td>
                                 {
-                                    data?.flash?.map(el => (
-                                        <>
-                                            <td className='characterist-info-tbody-td'>{el}</td>
-                                        </>
+                                    data?.flash?.map((el, index) => (
+                                        <td key={index} className='characterist-info-tbody-td'>{el}</td>
                                     ))
                                 }
                             </tr>
                             <tr className='characterist-info-tbody-tr'>
                                 <td className='characterist-info-tbody-td'>Температура затвердевания, °С</td>
                                 {
-                                    data?.temperature?.map(el => (
-                                        <>
-                                            <td className='characterist-info-tbody-td'>{el}</td>
-                                        </>
+                                    data?.temperature?.map((el, index) => (
+                                        <td key={index} className='characterist-info-tbody-td'>{el}</td>
                                     ))
                                 }
                             </tr>
                             <tr className='characterist-info-tbody-tr'>
                                 <td className='characterist-info-tbody-td'>Щелочное число, мг КОН/г</td>
                                 {
-                                    data?.base?.map(el => (
-                                        <>
-                                            <td className='characterist-info-tbody-td'>{el}</td>
-                                        </>
+                                    data?.base?.map((el, index) => (
+                                        <td key={index} className='characterist-info-tbody-td'>{el}</td>
                                     ))
                                 }
                             </tr>

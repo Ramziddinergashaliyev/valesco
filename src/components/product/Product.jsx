@@ -4,18 +4,15 @@ import { MdArrowOutward } from 'react-icons/md'
 import filter from "../../assets/icons/filter.svg"
 import img1 from "../../assets/icons/col-icn.svg"
 import img2 from "../../assets/icons/row-icn.svg"
-import { BOXS } from '../../static'
 import { FiPlus } from 'react-icons/fi'
 import { NavLink } from 'react-router-dom'
-import { useGetProductsQuery } from '../../context/api/productApi'
+import Loading from '../loading/Loading'
+import LoadingRow from '../loadingRow/LoadingRow'
 
-const Product = ({ data }) => {
+const Product = ({ data, loading }) => {
     const [hide, setHide] = useState(false)
     const [filterHide, setFilterHide] = useState(null)
     const [isMobile, setIsMobile] = useState(false)
-    // const { data } = useGetProductsQuery()
-    console.log(data);
-
 
     useEffect(() => {
         const handleResize = () => {
@@ -104,25 +101,39 @@ const Product = ({ data }) => {
 
             {
                 hide || isMobile
-                ?
-                <div className="product-cards fade-in">
+                    ?
+                    <>
                         {
-                            data?.map((el, index) => (
-                                <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
-                                    <div className="product-card-img">
-                                        <NavLink to={`/singleProduct/${el?.id}`}>
-                                            <img src={el?.image[0]} alt="product-img" />
-                                        </NavLink>
-                                    </div>
-                                    <div className="product-card-info">
-                                        <h2 className="product-card-info-title">{el?.title}</h2>
-                                    </div>
-                                </div>
-                            ))
+                            loading
+                            ?
+                            <Loading />
+                            :
+                            <div className="product-cards fade-in">
+                                    {
+                                        data?.map((el, index) => (
+                                            <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
+                                                <div className="product-card-img">
+                                                    <NavLink to={`/singleProduct/${el?.id}`}>
+                                                        <img src={el?.image[0]} alt="product-img" />
+                                                    </NavLink>
+                                                </div>
+                                                <div className="product-card-info">
+                                                    <h2 className="product-card-info-title">{el?.title}</h2>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
+                            </div>
                         }
-                </div>
-                :
-                <div className="product-boxs fade-in">
+                    </>
+                    :
+                    <>
+                    {
+                        loading
+                        ?
+                        <LoadingRow/>
+                        :
+                        <div className="product-boxs fade-in">
                         {
                             data?.map((el, index) => (
                                 <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
@@ -140,7 +151,9 @@ const Product = ({ data }) => {
                                 </div>
                             ))
                         }
-                </div>
+                        </div>
+                    }
+                    </>
             }
 
         </div>

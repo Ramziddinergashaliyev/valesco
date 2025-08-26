@@ -6,9 +6,7 @@ import { useGetCategoriesByIdQuery } from '../../context/api/categoryApi'
 
 const ProductItem = () => {
     const { id } = useParams()
-    const { data } = useGetCategoriesByIdQuery(id)
-    console.log(data);
-    
+    const { data, isLoading } = useGetCategoriesByIdQuery(id)
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -16,7 +14,7 @@ const ProductItem = () => {
     
     return (
         <>
-            <Product data={data?.products} />
+            <Product data={data?.products} loading={isLoading} />
         </>
     )
 }
