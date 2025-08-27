@@ -8,11 +8,18 @@ import { FiPlus } from 'react-icons/fi'
 import { NavLink } from 'react-router-dom'
 import Loading from '../loading/Loading'
 import LoadingRow from '../loadingRow/LoadingRow'
+import { ClosedCaption } from 'lucide-react'
+import { IoMdClose } from "react-icons/io";
 
 const Product = ({ data, loading }) => {
     const [hide, setHide] = useState(false)
     const [filterHide, setFilterHide] = useState(null)
     const [isMobile, setIsMobile] = useState(false)
+    const [selectedFilters, setSelectedFilters] = useState({
+        lineType: [],
+        viscosity: []
+    })
+    const [filteredData, setFilteredData] = useState([])
 
     useEffect(() => {
         const handleResize = () => {
@@ -22,6 +29,64 @@ const Product = ({ data, loading }) => {
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
     }, [])
+
+    useEffect(() => {
+        if (!data) {
+            setFilteredData([])
+            return
+        }
+
+        let filtered = [...data]
+
+        if (selectedFilters.viscosity.length > 0) {
+            filtered = filtered.filter(item => {
+                const itemViscosity = item.sae?.[0] || ''
+                return selectedFilters.viscosity.includes(itemViscosity)
+            })
+        }
+
+        if (selectedFilters.lineType.length > 0) {
+            filtered = filtered.filter(item => {
+                const title = item.title || ''
+                return selectedFilters.lineType.some(lineType =>
+                    title.toLowerCase().includes(lineType.toLowerCase())
+                )
+            })
+        }
+
+        setFilteredData(filtered)
+    }, [data, selectedFilters])
+
+    const handleFilterSelect = (filterType, value) => {
+        setSelectedFilters(prev => {
+            const updatedFilters = { ...prev }
+
+            if (updatedFilters[filterType].includes(value)) {
+                updatedFilters[filterType] = updatedFilters[filterType].filter(item => item !== value)
+            } else {
+                updatedFilters[filterType] = [...updatedFilters[filterType], value]
+            }
+
+            return updatedFilters
+        })
+    }
+
+    const isFilterSelected = (filterType, value) => {
+        return selectedFilters[filterType].includes(value)
+    }
+
+    const getFilterButtonClass = (filterType, value) => {
+        return `product-filter-result-left-btn ${isFilterSelected(filterType, value) ? 'selected' : ''}`
+    }
+
+    const clearAllFilters = () => {
+        setSelectedFilters({
+            lineType: [],
+            viscosity: []
+        })
+    }
+
+    const displayData = filteredData
 
     return (
         <div className='product container'>
@@ -54,49 +119,111 @@ const Product = ({ data, loading }) => {
                     </button>
                 </div>
             </div>
-
             <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
                 <div className="product-filter-result">
                     <div className="product-filter-result-left animate-item" style={{ '--delay': '0.1s' }}>
                         <p className="product-filter-result-left-text">Линейка моторных масел</p>
                         <div className="product-filter-result-left-btns">
-                            <button className="product-filter-result-left-btn">Top<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Zero<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Racing<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">X9<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">X7<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">X5<FiPlus /></button>
+                            <button
+                                className={getFilterButtonClass('lineType', 'Top')}
+                                onClick={() => handleFilterSelect('lineType', 'Top')}
+                            >
+                                Top<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('lineType', 'Zero')}
+                                onClick={() => handleFilterSelect('lineType', 'Zero')}
+                            >
+                                Zero<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('lineType', 'Racing')}
+                                onClick={() => handleFilterSelect('lineType', 'Racing')}
+                            >
+                                Racing<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('lineType', 'X9')}
+                                onClick={() => handleFilterSelect('lineType', 'X9')}
+                            >
+                                X9<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('lineType', 'X7')}
+                                onClick={() => handleFilterSelect('lineType', 'X7')}
+                            >
+                                X7<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('lineType', 'X5')}
+                                onClick={() => handleFilterSelect('lineType', 'X5')}
+                            >
+                                X5<FiPlus />
+                            </button>
                         </div>
                     </div>
                     <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
                         <p className="product-filter-result-left-text">Вязкость</p>
                         <div className="product-filter-result-left-btns">
-                            <button className="product-filter-result-left-btn">0W - 20<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">0W - 30<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">5W - 30<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">0W - 40<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">5W - 40<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">0W - 16<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">10W - 50<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">10W - 40<FiPlus /></button>
-                        </div>
-                    </div>
-                    <div className="product-filter-result-left animate-item" style={{ '--delay': '0.3s' }}>
-                        <p className="product-filter-result-left-text">Допуск автопроизводителя</p>
-                        <div className="product-filter-result-left-btns">
-                            <button className="product-filter-result-left-btn">Mercedes-Benz<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Volvo<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Jaguar<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Land Rover<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Ford<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Chrysler<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">BMW<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Volkswagen<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Porsche<FiPlus /></button>
-                            <button className="product-filter-result-left-btn">Audi<FiPlus /></button>
+                            <button
+                                className={getFilterButtonClass('viscosity', '0W-20')}
+                                onClick={() => handleFilterSelect('viscosity', '0W-20')}
+                            >
+                                0W - 20<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('viscosity', '0W-30')}
+                                onClick={() => handleFilterSelect('viscosity', '0W-30')}
+                            >
+                                0W - 30<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('viscosity', '5W-30')}
+                                onClick={() => handleFilterSelect('viscosity', '5W-30')}
+                            >
+                                5W - 30<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('viscosity', '0W-40')}
+                                onClick={() => handleFilterSelect('viscosity', '0W-40')}
+                            >
+                                0W - 40<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('viscosity', '5W-40')}
+                                onClick={() => handleFilterSelect('viscosity', '5W-40')}
+                            >
+                                5W - 40<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('viscosity', '0W-16')}
+                                onClick={() => handleFilterSelect('viscosity', '0W-16')}
+                            >
+                                0W - 16<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('viscosity', '10W-50')}
+                                onClick={() => handleFilterSelect('viscosity', '10W-50')}
+                            >
+                                10W - 50<FiPlus />
+                            </button>
+                            <button
+                                className={getFilterButtonClass('viscosity', '10W-40')}
+                                onClick={() => handleFilterSelect('viscosity', '10W-40')}
+                            >
+                                10W - 40<FiPlus />
+                            </button>
                         </div>
                     </div>
                 </div>
+
+                {(selectedFilters.lineType.length > 0 || selectedFilters.viscosity.length > 0) && (
+                    <div className="product-filter-clear">
+                        <button onClick={clearAllFilters} className="product-filter-clear-btn">
+                            <IoMdClose />
+                        </button>
+                    </div>
+                )}
             </div>
 
             {
@@ -105,24 +232,23 @@ const Product = ({ data, loading }) => {
                     <>
                         {
                             loading
-                            ?
-                            <Loading />
-                            :
-                            <div className="product-cards fade-in">
+                                ?
+                                <Loading />
+                                :
+                                <div className="product-cards fade-in">
                                     {
-                                        data?.map((el, index) => (
+                                        displayData?.map((el, index) => (
                                             <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
                                                 <div className="product-card-img">
                                                     <NavLink to={`/singleProduct/${el?.id}`}>
                                                         {
-                                                            el?.image?.length < 0
-                                                            ?
-                                                            <img src={el?.image[0]} alt="product-img" />
-                                                            :
-                                                            <>
-                                                              <img src="" alt="product-hide-img" />
-                                                            </>
-
+                                                            el?.image?.length > 0
+                                                                ?
+                                                                <img className='product-card-img-link' src={el?.image[0]} alt="product-img" />
+                                                                :
+                                                                <>
+                                                                <img className='product-card-img-link' src="" alt="product-hide-img" />
+                                                                </>
                                                         }
                                                     </NavLink>
                                                 </div>
@@ -132,47 +258,56 @@ const Product = ({ data, loading }) => {
                                             </div>
                                         ))
                                     }
-                            </div>
+                                    {displayData?.length === 0 && !loading && (
+                                        <div className="no-products">
+                                            <p>По выбранным фильтрам продукты не найдены</p>
+                                        </div>
+                                    )}
+                                </div>
                         }
                     </>
                     :
                     <>
                         {
                             loading
-                            ?
-                            <LoadingRow />
-                            :
-                            <div className="product-boxs fade-in">
+                                ?
+                                <LoadingRow />
+                                :
+                                <div className="product-boxs fade-in">
                                     {
-                                        data?.map((el, index) => (
+                                        displayData?.map((el, index) => (
                                             <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
                                                 <div className="product-box-left">
-                                                  <div className="product-box-left-img">
-                                                    <NavLink to={`/singleProduct/${el?.id}`}>
+                                                    <div className="product-box-left-img">
+                                                        <NavLink to={`/singleProduct/${el?.id}`}>
                                                             {
-                                                                el?.image?.length < 0
-                                                                ?
-                                                                <img src={el?.image[0]} alt="product-img" />
-                                                                :
-                                                                <>
-                                                                <img src="" alt="product-hide-img" />
-                                                                </>
+                                                                el?.image?.length > 0
+                                                                    ?
+                                                                    <img src={el?.image[0]} alt="product-img" />
+                                                                    :
+                                                                    <>
+                                                                        <img src="" alt="product-hide-img" />
+                                                                    </>
                                                             }
-                                                    </NavLink>
-                                                  </div>
+                                                        </NavLink>
+                                                    </div>
                                                     <div className="product-box-left-info">
-                                                      <h2 className="product-box-left-info-title">{el?.title}</h2>
+                                                        <h2 className="product-box-left-info-title">{el?.title}</h2>
                                                     </div>
                                                 </div>
                                                 <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>Подробнее<MdArrowOutward /></button></NavLink>
                                             </div>
                                         ))
                                     }
-                            </div>
+                                    {displayData?.length === 0 && !loading && (
+                                        <div className="no-products">
+                                            <p>По выбранным фильтрам продукты не найдены</p>
+                                        </div>
+                                    )}
+                                </div>
                         }
                     </>
             }
-
         </div>
     )
 }

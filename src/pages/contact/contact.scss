@@ -91,7 +91,7 @@
 
                 &-info {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     justify-content: space-between;
                     gap: 30px;
                 }
@@ -109,6 +109,9 @@
                     }
 
                     &-text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
                         font-size: 18px;
                         font-weight: 400;
                         color: black;

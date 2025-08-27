@@ -11,16 +11,6 @@ const SingleLoading = () => {
         >
             <div className="loadingSin__wrapper">
                 <div className="loadingSin__item">
-                    {/* <div className="loadingSin__img2">
-                          {Array.from({ length: 3 }).map((_, i) => (
-                            <div
-                              key={i}
-                              className="loadingSin__img2__text bg__animation"
-                              aria-hidden="true"
-                            ></div>
-                          ))}
-                        </div> 
-                    */}
                     <div
                         className="loadingSin__img1 bg__animation"
                         aria-hidden="true"

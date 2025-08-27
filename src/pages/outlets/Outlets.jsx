@@ -122,7 +122,7 @@ const Outlets = () => {
                     <h2 className="outlets-partners-title">региональные партнеры</h2>
                     <div className="outlets-partners-info">
                         <p className="outlets-partners-info-text">
-                            Смазочные материалы ZIC представлены в магазинах наших региональных партнеров. С подробным ассортиментом Вы можете ознакомиться на сайтах наших партнеров.</p>
+                            Смазочные материалы Valesco представлены в магазинах наших региональных партнеров. С подробным ассортиментом Вы можете ознакомиться на сайтах наших партнеров.</p>
                         <div className='outlets-accardion'>
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
@@ -224,7 +224,7 @@ const Outlets = () => {
                     <h2 className="outlets-bottom-black-title">Подбери свой Valesco</h2>
                     <div className="outlets-bottom-black-info">
                         <p className="outlets-bottom-black-info-title">
-                            Для оптимального подбора соответствующего вашему автомобилю масла ZIC воспользуйтесь модулем подбора масла</p>
+                            Для оптимального подбора соответствующего вашему автомобилю масла Valesco воспользуйтесь модулем подбора масла</p>
                         <button className='outlets-bottom-black-info-btn'>Подобрать масло<MdArrowOutward /></button>
                     </div>
                 </div>

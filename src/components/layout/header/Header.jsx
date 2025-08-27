@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { IoMdArrowDropdown, IoMdClose } from 'react-icons/io';
 import "./header.scss"
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../../assets/icons/logo.png"
 import { useTranslation } from 'react-i18next';
 import { AiOutlineClose } from "react-icons/ai";
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi';
-import { useGetProductsQuery, useSearchProductsQuery } from '../../../context/api/productApi';
+import { useSearchProductsQuery } from '../../../context/api/productApi';
 
 const Header = () => {
   const [searchHide, setSearchHide] = useState(false)
@@ -15,17 +15,36 @@ const Header = () => {
   const [currentLang, setCurrentLang] = useState(i18n.language || "en");
   const [hide, setHide] = useState(false)
   const { data } = useGetCategoriesQuery()
-  const [ value, setValue ] = useState("")
-  const {data:searchData} = useSearchProductsQuery({query: value})
-  console.log(searchData);
+  const [value, setValue] = useState("")
+  const [localSearch, setLocalSearch] = useState(null)
+  const navigate = useNavigate()
+
+  const { data: searchData, isLoading } = useSearchProductsQuery(
+    { query: value },
+    { skip: !value.trim() } 
+  );
+
+  const handleChange = (e) => {
+    const val = e.target.value
+    setValue(val)
+    if (!val.trim()) {
+      setLocalSearch(null) 
+    }
+  }
+
+  useEffect(() => {
+    if (searchData) setLocalSearch(searchData)
+  }, [searchData])
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
     setCurrentLang(lang);
   };
 
-  const handleChange = (e) => {
-    setValue(e.target.value)
+  const handleClick = (id) => {
+    navigate(`/singleProduct/${id}`)
+    setValue("")
+    setSearchHide(false)
   }
 
   return (
@@ -55,11 +74,11 @@ const Header = () => {
             <li className="header__nav__list">
               {t("catalog")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
-                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/productItem">{t("Моторные масла для легковой и легкой коммерческой техники")}</NavLink></li>
-                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Моторные масла для дизельных двигателей")}</li>
-                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Тормозная жидкость")}</li>
-                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Гидравлические масла")}</li>
-                <li onClick={() => setHide(false)} className="dropdown-item-list">{t("Фильтры")}</li>
+                {
+                  data?.map(el => (
+                    <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.ru}</NavLink></li>
+                  ))
+                }
               </ul>
             </li>
 
@@ -104,25 +123,41 @@ const Header = () => {
 
             <span onClick={() => setHide(true)} className='header__nav__bottom-menu'><FiMenu /></span>
           </div>
-          {
-            hide
-              ?
-              <>
-                <div onClick={() => setHide(false)} className="header-overlay"></div>
-              </>
-              :
-              <></>
-          }
+          {hide && <div onClick={() => setHide(false)} className="header-overlay"></div>}
         </nav>
       </header>
 
       <div className={`header-search-result ${searchHide ? "header-search-result-hide" : ""}`}>
         <div className="header-search-result-form container">
           <div className="header-search-result-form-icon">
-            <input value={value} onChange={handleChange} placeholder={t("searchPlaceholder")} type="text" />
+            <input 
+              value={value} 
+              onChange={handleChange} 
+              placeholder={t("searchPlaceholder")} 
+              type="text" 
+            />
             <FiSearch />
           </div>
           <p className='header-search-result-form-text'>{t("searchHelp")}</p>
+        </div>
+
+        <div className="header-search-info container">
+          {isLoading && value && <p>Загрузка...</p>}
+
+          {!isLoading && localSearch?.length === 0 && value && (
+            <p>Ничего не найдено</p>
+          )}
+
+          {!isLoading && value && localSearch?.map((el, idx) => (
+            <div key={idx} className="header-search-info-item">
+              {el?.image?.[0] ? (
+                  <img onClick={() => handleClick(el?.id)} src={el.image[0]} alt={el.title} className="header-search-info-item-img" />
+              ) : (
+                <img src="/placeholder.png" alt="no-img" className="header-search-info-item-img" />
+              )}
+              <p className="header-search-info-item-title">{el?.title}</p>
+            </div>
+          ))}
         </div>
       </div>
 

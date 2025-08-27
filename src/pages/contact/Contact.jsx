@@ -10,15 +10,14 @@ const Contact = () => {
       <div className="contact-top">
         <h2 className="contact-top-title">Контакты</h2>
         <p className="contact-top-text">
-          В России, Восточной Европе и странах Ближнего Зарубежья интересы SK Enmove CO., Ltd. (Республика Корея) представляет ООО «СК Энмув Рус»</p>
+          Если у вас возникли какие-либо вопросы или вам нужна дополнительная информация, мы всегда на связи. Оставьте заявку, и наши специалисты свяжутся с вами в кратчайшие сроки.</p>
       </div>
       <div className="contact-bottom">
         <div className="contact-bottom-left">
           <div className="contact-bottom-left-addres">
             <p className="contact-bottom-left-addres-title">Адрес</p>
-            <p className="contact-bottom-left-addres-text"><span>123112</span> <br />
-              Москва, «МОСКВА-СИТИ» Северная Башня, ул.
-              Тестовская, 10, подъезд 2, этаж 13, офис 1302
+            <p className="contact-bottom-left-addres-text">
+              100070, Республика Узбекистан, г. Ташкент, Яккасарайский р-н, ул. Глинка 14/3
             </p>
           </div>
           <div className="contact-bottom-left-sv">
@@ -26,11 +25,14 @@ const Contact = () => {
             <div className="contact-bottom-left-sv-info">
               <div className="contact-bottom-left-sv-info-phone">
                 <span>Телефон</span>
-                <p className="contact-bottom-left-sv-info-phone-text">+7 (495) 989-47-57</p>
+                <p className="contact-bottom-left-sv-info-phone-text">
+                  <a href="tel:+998 71 281 49 30">+998 71 281 49 30</a>
+                  <a href="tel:+998 71 203 20 31">+998 71 203 20 31</a>
+                </p>
               </div>
               <div className="contact-bottom-left-sv-info-pochta">
                 <span>Электронная почта</span>
-                <p className="contact-bottom-left-sv-info-pochta-text">valescoinfo@gmail.com</p>
+                <a href='mailTo: info@gpggroup.uz' className="contact-bottom-left-sv-info-pochta-text">info@gpggroup.uz</a>
               </div>
             </div>
           </div>
