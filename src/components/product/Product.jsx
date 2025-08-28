@@ -247,7 +247,7 @@ const Product = ({ data, loading }) => {
                                                                 <img className='product-card-img-link' src={el?.image[0]} alt="product-img" />
                                                                 :
                                                                 <>
-                                                                <img className='product-card-img-link' src="" alt="product-hide-img" />
+                                                                    <img className='product-card-img-link' src="" alt="product-hide-img" />
                                                                 </>
                                                         }
                                                     </NavLink>
@@ -293,6 +293,13 @@ const Product = ({ data, loading }) => {
                                                     </div>
                                                     <div className="product-box-left-info">
                                                         <h2 className="product-box-left-info-title">{el?.title}</h2>
+                                                        <div className="product-box-left-info-item">
+                                                            {
+                                                                el?.specifications?.map((el, index) => (
+                                                                    <span className='product-box-left-info-item-desc' key={index}>{el},</span>
+                                                                ))
+                                                            }
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>Подробнее<MdArrowOutward /></button></NavLink>

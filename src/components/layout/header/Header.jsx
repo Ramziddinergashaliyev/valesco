@@ -75,8 +75,8 @@ const Header = () => {
               {t("catalog")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
                 {
-                  data?.map(el => (
-                    <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.ru}</NavLink></li>
+                  data?.map((el, inx) => (
+                    <li key={inx} onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.ru}</NavLink></li>
                   ))
                 }
               </ul>
@@ -142,10 +142,10 @@ const Header = () => {
         </div>
 
         <div className="header-search-info container">
-          {isLoading && value && <p>Загрузка...</p>}
+          {isLoading && value && <p className='header-search-info-loading'>Загрузка...</p>}
 
           {!isLoading && localSearch?.length === 0 && value && (
-            <p>Ничего не найдено</p>
+            <p className='header-search-info-loading'>Ничего не найдено</p>
           )}
 
           {!isLoading && value && localSearch?.map((el, idx) => (

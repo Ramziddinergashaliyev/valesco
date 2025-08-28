@@ -25,8 +25,8 @@ const ProductRange = () => {
                 <div className="productRange__category">
                     {
                         data?.map(el => (
-                            <NavLink to={`/categories/${el?.id}`}>
-                                <div key={el?.id} className="productRange__card">
+                            <NavLink key={el?.id} to={`/categories/${el?.id}`}>
+                                <div className="productRange__card">
                                     <h2 className="productRange__card-title">{el?.title?.ru}</h2>
                                     <div className='productRange__card-bottom'><p className='productRange__card-bottom-text'>Узнать больше</p><span><MdArrowOutward /></span> </div>
                                 </div>
