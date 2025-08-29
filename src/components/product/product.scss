@@ -19,14 +19,14 @@
         padding: 30px 20px;
         border-radius: 16px;
         animation: fadeInUp 1s ease 0.2s both;
-        
+
         &-text {
             color: gray;
             font-size: 18px;
             font-weight: 400;
             line-height: 24px;
         }
-        
+
         &-btn {
             border: 1px solid gray;
             padding: 16px 20px;
@@ -41,7 +41,7 @@
             transition: all 0.5s ease;
             position: relative;
             overflow: hidden;
-        
+
             &::before {
                 content: '';
                 position: absolute;
@@ -154,7 +154,7 @@
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 10px;
-                
+
                 button {
                     border-radius: 20px;
                 }
@@ -191,7 +191,7 @@
 
                 &:hover {
                     transform: translateY(-2px);
-                    box-shadow: inset 0px 0px 30px rgba(55, 55, 55, 0.3);         
+                    box-shadow: inset 0px 0px 30px rgba(55, 55, 55, 0.3);
 
                     &::before {
                         left: 100%;
@@ -281,7 +281,6 @@
                 font-weight: 400;
                 color: #333331;
                 text-align: center;
-                // padding-bottom: 20px;
                 transition: color 0.3s ease;
             }
 
@@ -374,7 +373,7 @@
                 }
 
                 &-item {
-                   width: 70%;
+                    width: 70%;
                 }
 
                 &-item-desc {
@@ -578,7 +577,6 @@
             font-weight: 500;
             padding-bottom: 20px;
         }
-
     }
 
     @media (max-width:350px) {

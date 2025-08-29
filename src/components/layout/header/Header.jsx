@@ -82,13 +82,13 @@ const Header = () => {
               </ul>
             </li>
 
-            <li className="header__nav__list">
+            {/* <li className="header__nav__list">
               {t("oilSelection")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/oil">{t("oilSelectionTitle")}</NavLink></li>
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/chinaAuto">{t("chinaCars")}</NavLink></li>
               </ul>
-            </li>
+            </li> */}
 
             <li className="header__nav__list">
               {t("whereBuy")} <IoMdArrowDropdown />

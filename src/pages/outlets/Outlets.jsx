@@ -20,7 +20,6 @@ const Outlets = () => {
                         <p className="outlets-top-info-text">В 2024 году Valesco запустил программу брендирования сервисных центров и розничных магазинов по всей России – Valesco TOP.</p>
                     </div>
                 </div>
-
                 <div className="outlets-middle">
                     <h2 className="outlets-middle-title">Официальные магазины Valesco TOP</h2>
                     <div className="outlets-middle-info">
@@ -78,7 +77,7 @@ const Outlets = () => {
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel2-content"
+                                    aria-controls="panel2-content" 
                                     id="panel2-header"
                                 >
                                     <Typography component="span">Гипермаркеты</Typography>

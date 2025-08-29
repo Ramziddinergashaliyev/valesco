@@ -214,6 +214,7 @@ const Product = ({ data, loading }) => {
                                 10W - 40<FiPlus />
                             </button>
                         </div>
+
                     </div>
                 </div>
 

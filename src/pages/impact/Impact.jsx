@@ -62,7 +62,7 @@ const Impact = () => {
         <h2 className="impact-acsio-title">Удовлетворенность акционеров</h2>
         <div className="impact-acsio-info">
           <p className="impact-acsio-info-title"><span>Корпорация заботится об удовлетворенности своих акционеров.</span> Мы верим, что в долгосрочной перспективе рост удовлетворенности акционеров положительно сказывается на всех остальных участниках бизнеса.</p>
-          <img src={img2} alt="" className="impact-acsio-info-img" />
+          <img src={img2} alt="impact-acsio-img" className="impact-acsio-info-img" />
         </div>
       </div>
 

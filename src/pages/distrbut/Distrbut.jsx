@@ -21,99 +21,36 @@ const Distrbut = () => {
 
   const Data = [
     {
-      country: 'АЗЕРБАЙДЖАН',
-      distributor: 'ООО «Мурад ЛТД»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
+      country: 'Украина',
+      distributor: 'ТОВ «ПЕТОЛАВТО»',
+      title: 'Пироговский путь, 34; Киев, 03083, Украина',
+      number: ["+380(50)3146633"],
     },
     {
-      country: 'АРМЕНИЯ',
-      distributor: 'Дистрибьютор ООО «Автофан Эй Си»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
+      country: 'Казахстан',
+      distributor: 'TOO «AVTODETAIL»',
+      title: 'Казахстан, Южно-Казахстанская область, 160021, город Шымкент, Абайский район, ул Байтулы баба 14А',
+      number: ["77022837999"]
     },
     {
-      country: 'БЕЛАРУСЬ',
-      distributor: 'Armtek (ООО "Еврозапчасть")',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
+      country: 'Таджикистан',
+      distributor: 'ООО «ТОСОЛ-ПЛЮС»',
+      title: 'Таджикистан, Согдийская область, Дж. Расуловский район, пгт Мехробод ул. И. Нурматов 45/4',
+      number: ["+992 92 707 49 86"]
     },
     {
-      country: 'ГРУЗИЯ',
-      distributor: 'ООО «Грузавто Дистрибьюшн»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
-    },
-    {
-      country: 'КАЗАХСТАН',
-      distributor: 'ТОО «КазАвтоТрейд»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
-    },
-    {
-      country: 'КЫРГЫЗСТАН',
-      distributor: 'ОсОО «Бишкек Моторс»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
-    },
-    {
-      country: 'МОЛДОВА',
-      distributor: 'SRL «Молдова Авто Парт»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
-    },
-    {
-      country: 'РОССИЯ',
-      distributor: 'ООО «РосАвтоЗапчасть»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
-    },
-    {
-      country: 'ТАДЖИКИСТАН',
-      distributor: 'ООО «Душанбе Авто»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
-    },
-    {
-      country: 'ТУРКМЕНИСТАН',
-      distributor: 'ЧП «Ашхабад Моторс»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
-    },
-    {
-      country: 'УЗБЕКИСТАН',
-      distributor: 'ООО «Ўзбек Авто Савдо»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
-    },
-    {
-      country: 'УКРАИНА',
-      distributor: 'ТОВ «Українські Автозапчастини»',
-      title: 'AZ5000, Азербайджан, город Сумгаит, проспект Азербайджана 10/19',
-      number: ["994(18)6540909"],
-      mail: "ofifice@muradltd.az"
+      country: 'Туркменистан',
+      distributor: 'ИП «Нурыев Гуванч Тагандурдыевич»',
+      title: 'Туркменистан, Марыйский велаят, Векилбазар Этрап, Акгонур',
+      number: ["+993 65 551008"]
     }
   ];
 
   const filterCountries = [
-    'АЗЕРБАЙДЖАН',
-    'АРМЕНИЯ',
-    'БЕЛАРУСЬ',
-    'ГРУЗИЯ',
-    'КАЗАХСТАН',
-    'КЫРГЫЗСТАН',
-    'ТАДЖИКИСТАН'
+    'Украина',
+    'Казахстан',
+    'Таджикистан',
+    'Туркменистан'
   ];
 
   const handleFilterClick = (country) => {
@@ -187,12 +124,6 @@ const Distrbut = () => {
                             {phone}
                           </a>
                         ))}
-                      </div>
-                      <div className="distrbut-result-info-right">
-                        <span className='distrbut-result-info-span'>Электронная почта</span>
-                        <a href={`mailto:${el?.mail}`} className='distrbut-result-info-right-title'>
-                          {el?.mail}
-                        </a>
                       </div>
                     </div>
                     <button className='distrbut-result-info-btn'>

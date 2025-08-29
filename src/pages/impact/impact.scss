@@ -47,7 +47,6 @@
         grid-gap: 20px;
         padding: 50px 0px;
 
-
         &-title {
             font-size: 26px;
             font-weight: 500;
@@ -132,6 +131,7 @@
 
         @media (max-width:660px) {
             padding: 30px 0px;
+
             &-info-bottom-box {
                 grid-template-columns: 1fr;
             }
@@ -235,7 +235,6 @@
         @media (max-width:1090px) {
             grid-template-columns: 1fr;
             gap: 30px;
-
         }
 
         @media (max-width:680px) {
@@ -259,14 +258,15 @@
 
         @media (max-width:400px) {
             gap: 10px;
+
             &-title {
-              font-size: 20px;
-              line-height: 26px;
-              text-align: center;
+                font-size: 20px;
+                line-height: 26px;
+                text-align: center;
             }
 
             &-info-text {
-              font-size: 14px;
+                font-size: 14px;
             }
         }
     }
@@ -322,14 +322,14 @@
             }
 
             &-info-title {
-               font-size: 16px;
-               font-weight: 300;
-               line-height: 22px;
-               padding-bottom: 0px;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 22px;
+                padding-bottom: 0px;
             }
 
             &-info-img {
-                    height: 200px;
+                height: 200px;
             }
         }
     }
@@ -390,14 +390,14 @@
             }
 
             &-right-info-title {
-               font-size: 15px;
-               line-height: 24px;
+                font-size: 15px;
+                line-height: 24px;
             }
 
             &-right-info-text {
-               font-size: 15px;
-               font-weight: 300;
-               line-height: 20px;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 20px;
             }
         }
     }
@@ -459,15 +459,16 @@
 
         @media (max-width:550px) {
             padding: 20px 0px 10px;
+
             &-right-info-bottom-title,
             &-right-info-top-title {
-               font-size: 20px;
+                font-size: 20px;
             }
 
             &-right-info-bottom-text,
             &-right-info-top-text {
-              font-size: 14px;
-              line-height: 20px;
+                font-size: 14px;
+                line-height: 20px;
             }
         }
 

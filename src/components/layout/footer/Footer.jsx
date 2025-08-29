@@ -2,8 +2,19 @@ import React from 'react'
 import img from "../../../assets/icons/logo.png"
 import "./footer.scss"
 import { NavLink } from 'react-router-dom'
+import { useGetCategoriesQuery } from '../../../context/api/categoryApi'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+
+  const { data } = useGetCategoriesQuery()
+  console.log(data);
+  const { t, i18n } = useTranslation()
+  console.log(i18n?.language);
+  
+  
+
+
   return (
     <footer className='footer'>
       <div className="footer-line"></div>
@@ -12,22 +23,44 @@ const Footer = () => {
           <img src={img} alt="footer logo" />
         </div>
         <ul className="footer__item">
-          <li className="footer__item-list"><NavLink>SK Enmove</NavLink></li>
-          <li className="footer__item-list"><NavLink>Бренд Valesco</NavLink></li>
-          <li className="footer__item-list"><NavLink>Каталог</NavLink></li>
-          <li className="footer__item-list"><NavLink>Подбор масла</NavLink></li>
+          <h3 className='footer__item-title'>КОМПАНИЯ</h3>
+          <li className="footer__item-list"><NavLink>О компании</NavLink></li>
+          <li className="footer__item-list"><NavLink>Новости</NavLink></li>
+          <li className="footer__item-list"><NavLink>Социальная ответственность</NavLink></li>
+          <li className="footer__item-list"><NavLink>Корпоративная культураs</NavLink></li>
         </ul>
         <ul className="footer__item">
-          <li className="footer__item-list"><NavLink>Где купить</NavLink></li>
-          <li className="footer__item-list"><NavLink>PR</NavLink></li>
-          <li className="footer__item-list"><NavLink>База знаний</NavLink></li>
-          <li className="footer__item-list"><NavLink>Контакты</NavLink></li>
+          <h3 className='footer__item-title'>ПРОДУКЦИЯ</h3>
+          {
+            data?.map((el, index) => (
+              <li key={index} className="footer__item-list">
+                <NavLink>
+                  {
+                    i18n?.language === "ru"
+                    ?
+                    el?.title?.ru
+                    :
+                    el?.title?.en
+                  }
+                </NavLink></li>
+            ))
+          }
         </ul>
         <ul className="footer__item">
-          <li className="footer__item-list"><NavLink>Вход для партнеров</NavLink></li>
-          <li className="footer__item-list"><NavLink>Политика обработки cookies</NavLink></li>
-          <li className="footer__item-list"><NavLink>Мы во Вконтакте</NavLink></li>
-          <li className="footer__item-list"><NavLink>Карта сайта</NavLink></li>
+          <h3 className='footer__item-title'>КОНТАКТЫ</h3>
+          <li className="footer__item-contact">
+            <span>Номер телефона</span>
+            <a href="tel:+998 71 281 49 30">+998 71 281 49 30</a>
+            <a href="tel:+998 71 203 20 31">+998 71 203 20 31</a>
+          </li>
+          <li className="footer__item-contact">
+            <span>Адрес</span>
+            100070, Республика Узбекистан, г. Ташкент, Яккасарайский р-н, ул. Глинка 14/3
+          </li>
+          <li className="footer__item-contact">
+            <span>E-mail</span>
+            <a href="mailTo:info@gpggroup.uz">info@gpggroup.uz</a>
+          </li>
         </ul>
       </nav>
     </footer>
