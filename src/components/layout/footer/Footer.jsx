@@ -12,9 +12,6 @@ const Footer = () => {
   const { t, i18n } = useTranslation()
   console.log(i18n?.language);
   
-  
-
-
   return (
     <footer className='footer'>
       <div className="footer-line"></div>
@@ -23,18 +20,18 @@ const Footer = () => {
           <img src={img} alt="footer logo" />
         </div>
         <ul className="footer__item">
-          <h3 className='footer__item-title'>КОМПАНИЯ</h3>
-          <li className="footer__item-list"><NavLink>О компании</NavLink></li>
-          <li className="footer__item-list"><NavLink>Новости</NavLink></li>
-          <li className="footer__item-list"><NavLink>Социальная ответственность</NavLink></li>
-          <li className="footer__item-list"><NavLink>Корпоративная культураs</NavLink></li>
+          <h3 className='footer__item-title'><NavLink>КОМПАНИЯ</NavLink></h3>
+          <li className="footer__item-list"><NavLink to={"/about"}>О компании</NavLink></li>
+          <li className="footer__item-list"><NavLink to={"/news"}>Новости</NavLink></li>
+          <li className="footer__item-list"><NavLink to={"/impact"}>Социальная ответственность</NavLink></li>
+          <li className="footer__item-list"><NavLink to={"/culture"}>Корпоративная культураs</NavLink></li>
         </ul>
         <ul className="footer__item">
           <h3 className='footer__item-title'>ПРОДУКЦИЯ</h3>
           {
             data?.map((el, index) => (
               <li key={index} className="footer__item-list">
-                <NavLink>
+                <NavLink to={`/categories/${el?.id}`}>
                   {
                     i18n?.language === "ru"
                     ?

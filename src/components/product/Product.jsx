@@ -35,7 +35,6 @@ const Product = ({ data, loading }) => {
             setFilteredData([])
             return
         }
-
         let filtered = [...data]
 
         if (selectedFilters.viscosity.length > 0) {

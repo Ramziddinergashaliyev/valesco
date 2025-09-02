@@ -94,7 +94,7 @@ const Header = () => {
               {t("whereBuy")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/distrbut">{t("distributors")}</NavLink></li>
-                <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={"/outlets"}>{t("outlets")}</NavLink></li>
+                {/* <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={"/outlets"}>{t("outlets")}</NavLink></li> */}
               </ul>
             </li>
 

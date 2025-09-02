@@ -77,7 +77,7 @@ const Outlets = () => {
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel2-content" 
+                                    aria-controls="panel2-content"
                                     id="panel2-header"
                                 >
                                     <Typography component="span">Гипермаркеты</Typography>
@@ -121,7 +121,8 @@ const Outlets = () => {
                     <h2 className="outlets-partners-title">региональные партнеры</h2>
                     <div className="outlets-partners-info">
                         <p className="outlets-partners-info-text">
-                            Смазочные материалы Valesco представлены в магазинах наших региональных партнеров. С подробным ассортиментом Вы можете ознакомиться на сайтах наших партнеров.</p>
+                            Смазочные материалы Valesco представлены в магазинах наших региональных партнеров. С подробным ассортиментом Вы можете ознакомиться на сайтах наших партнеров.
+                        </p>
                         <div className='outlets-accardion'>
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
