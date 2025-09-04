@@ -1,5 +1,9 @@
 .banner {
-    background-color: #131412;
+    background: url(../../assets/images/masla.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     padding: 40px 0px;
 
     &__top {
