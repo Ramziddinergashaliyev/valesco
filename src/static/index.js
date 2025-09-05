@@ -9,6 +9,16 @@ import net2 from "../assets/images/net2.jpg"
 import net3 from "../assets/images/net3.jpg"
 import net4 from "../assets/images/net4.jpg"
 
+
+import new1 from "../assets/images/new1.jpg"
+import new2 from "../assets/images/new2.jpg"
+import new3 from "../assets/images/new3.jpg"
+import new4 from "../assets/images/new4.jpg"
+import new5 from "../assets/images/new5.jpg"
+import new6 from "../assets/images/new6.jpg"
+import new7 from "../assets/images/new7.jpg"
+import new8 from "../assets/images/new8.jpg"
+
 import news from "../assets/icons/logo.png"
 
 export const CATEGORY = [
@@ -31,6 +41,10 @@ export const CATEGORY = [
     {
         id: 5,
         title: "Фильтры"
+    },
+    {
+        id: 6,
+        title: "Антифриз"
     }
 ]
 
@@ -459,4 +473,47 @@ export const BOXS = [
         text: "Полностью синтетическое моторное масло",
         sky: "0W30 GX7000 SN CF 4L"
     },
+]
+
+export const NEW = [
+    {
+        id: 1,
+        img: new1,
+        link: "https://www.instagram.com/valescooil_uz/reel/DJqjxahMWGe/"
+    },
+    {
+        id: 2,
+        img: new2,
+        link: "https://www.instagram.com/valescooil_uz/p/DN7Rd3ejKIp/"
+    },
+    {
+        id: 3,
+        img: new3,
+        link: "https://www.instagram.com/valescooil_uz/p/DNpfJVNs-tn/"
+    },
+    {
+        id: 4,
+        img: new4,
+        link: "https://www.instagram.com/valescooil_uz/p/DNGSz3MMka0/"
+    },
+    {
+        id: 5,
+        img: new5,
+        link: "https://www.instagram.com/valescooil_uz/p/DNDPVfasCWY/"
+    },
+    {
+        id: 6,
+        img: new6,
+        link: "https://www.instagram.com/valescooil_uz/reel/DM9qTH4T3yQ/"
+    },
+    {
+        id: 7,
+        img: new7,
+        link: "https://www.instagram.com/valescooil_uz/p/DMz1H-Vsro4/"
+    },
+    {
+        id: 8,
+        img: new8,
+        link: "https://www.instagram.com/valescooil_uz/reel/DL2M1CxsBFm/"
+    }
 ]

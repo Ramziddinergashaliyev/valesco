@@ -6,11 +6,8 @@ import { useGetCategoriesQuery } from '../../../context/api/categoryApi'
 import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
-
   const { data } = useGetCategoriesQuery()
-  console.log(data);
   const { t, i18n } = useTranslation()
-  console.log(i18n?.language);
   
   return (
     <footer className='footer'>
