@@ -120,12 +120,11 @@
         }
 
         &-card:hover {
-            background-color: #333331;
             transition: .6s;
         }
 
-        &-card:hover .prideArea__bottom-card-title {
-            color: white;
+        &-card:hover img {
+            transform: scale(1.1);
             transition: .6s;
         }
     }
