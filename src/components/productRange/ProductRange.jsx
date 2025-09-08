@@ -50,7 +50,6 @@ export default ProductRange
 // import img1 from "../../assets/images/1.png"
 // import img2 from "../../assets/images/2.png"
 
-
 // const CATEGORY = [
 //   {
 //     id: 1,
@@ -184,9 +183,9 @@ export default ProductRange
 //               >
 //                 <img src={category.image} alt={category.title} />
 //               </div>
-//               <div className="productRange-card-content">
+//               {/* <div className="productRange-card-content">
 //                 <h4>{category.title}</h4> 
-//               </div>
+//               </div> */}
 //             </div>
 //           ))}
 //         </div>

@@ -4,7 +4,7 @@ import { logout } from "../slices/authSlice";
 const baseQuery = async (args, api, extraOptions) => {
   const { dispatch } = api;
   const rawBaseQuery = fetchBaseQuery({
-    baseUrl: "http://valescooil.com:10000/",
+    baseUrl: "https://valesco-production.up.railway.app/",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("x-auth-token");
       if (token) {

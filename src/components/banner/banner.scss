@@ -3,7 +3,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // background-attachment: fixed;
     padding: 40px 0px;
 
     &__top {
@@ -86,7 +85,7 @@
     }
 
     &__card:hover {
-        background-color: rgb(57, 56, 56);
+        box-shadow: inset 1px 1px 10px #eee9;
         transition: .5s;
     }
 
@@ -141,7 +140,7 @@
         padding: 10px 0px;
 
         &__card {
-          height: 260px;
+            height: 260px;
         }
 
         &__top {
