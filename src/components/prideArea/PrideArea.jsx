@@ -3,8 +3,13 @@ import "./prideArea.scss"
 import { MdArrowOutward } from 'react-icons/md'
 import { PRIDE } from '../../static'
 import { NavLink } from 'react-router-dom'
+import { useGetProductsQuery } from '../../context/api/productApi'
+import { useGetCategoriesByIdQuery } from '../../context/api/categoryApi'
 
 const PrideArea = () => {
+    const { data } =useGetCategoriesByIdQuery(10)
+    console.log(data?.products);
+    
     return (
         <div className='prideArea'>
             <div className="prideArea__container container">
@@ -20,11 +25,11 @@ const PrideArea = () => {
                     </NavLink>
                     <div className="prideArea__bottom-cards">
                         {
-                            PRIDE?.map(el => (
+                            data?.products?.slice(0,3)?.map(el => (
                                 <div key={el?.id} className="prideArea__bottom-card">
                                     <div className="prideArea__bottom-card-img">
-                                        <NavLink to={"/singleProduct"}>
-                                            <img src={el?.img} alt={el?.title} />
+                                        <NavLink to={`/singleProduct/${el.id}`}>
+                                            <img src={el?.image[1]} alt={el?.title} />
                                         </NavLink>
                                     </div>
                                     <h3 className="prideArea__bottom-card-title">{el?.title}</h3>

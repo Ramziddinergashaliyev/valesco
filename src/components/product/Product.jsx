@@ -11,7 +11,7 @@ import LoadingRow from '../loadingRow/LoadingRow'
 import { ClosedCaption } from 'lucide-react'
 import { IoMdClose } from "react-icons/io";
 
-const Product = ({ data, loading }) => {
+const Product = ({ data, loading, title }) => {
     const [hide, setHide] = useState(false)
     const [filterHide, setFilterHide] = useState(null)
     const [isMobile, setIsMobile] = useState(false)
@@ -89,7 +89,7 @@ const Product = ({ data, loading }) => {
 
     return (
         <div className='product container'>
-            <h2 className="product-title">Моторные масла для легковой и легкой коммерческой техники</h2>
+            <h2 className="product-title">{title}</h2>
 
             <div className="product-top">
                 <p className='product-top-text'>Для оптимального подбора продукта Valesco, соответствующего вашему автомобилю, пожалуйста, воспользуйтесь нашим модулем подбора масла.</p>
@@ -97,134 +97,143 @@ const Product = ({ data, loading }) => {
             </div>
 
             <div className="product-filter">
-                <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>
-                    <img src={filter} alt="filterImg" />
-                    {filterHide ? 'Показать фильтр' : 'Скрыть фильтр'}
-                </button>
-                <div className="product-filter-right">
-                    {!isMobile && (
-                        <button
-                            onClick={() => setHide(false)}
-                            className={`product-filter-right-info ${!hide ? 'active' : ''}`}
-                        >
-                            <img src={img2} alt="product-col-img" />
-                        </button>
-                    )}
-                    <button
-                        onClick={() => setHide(true)}
-                        className={`product-filter-right-info ${hide ? 'active' : ''}`}
-                    >
-                        <img src={img1} alt="product-row-img" />
-                    </button>
-                </div>
+                            <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>
+                                <img src={filter} alt="filterImg" />
+                                {filterHide ? 'Показать фильтр' : 'Скрыть фильтр'}
+                            </button>
+                            <div className="product-filter-right">
+                                {!isMobile && (
+                                    <button
+                                        onClick={() => setHide(false)}
+                                        className={`product-filter-right-info ${!hide ? 'active' : ''}`}
+                                    >
+                                        <img src={img2} alt="product-col-img" />
+                                    </button>
+                                )}
+                                <button
+                                    onClick={() => setHide(true)}
+                                    className={`product-filter-right-info ${hide ? 'active' : ''}`}
+                                >
+                                    <img src={img1} alt="product-row-img" />
+                                </button>
+                            </div>
             </div>
-            <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
-                <div className="product-filter-result">
-                    <div className="product-filter-result-left animate-item" style={{ '--delay': '0.1s' }}>
-                        <p className="product-filter-result-left-text">Линейка моторных масел</p>
-                        <div className="product-filter-result-left-btns">
-                            <button
-                                className={getFilterButtonClass('lineType', 'Top')}
-                                onClick={() => handleFilterSelect('lineType', 'Top')}
-                            >
-                                Top<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('lineType', 'Zero')}
-                                onClick={() => handleFilterSelect('lineType', 'Zero')}
-                            >
-                                Zero<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('lineType', 'Racing')}
-                                onClick={() => handleFilterSelect('lineType', 'Racing')}
-                            >
-                                Racing<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('lineType', 'X9')}
-                                onClick={() => handleFilterSelect('lineType', 'X9')}
-                            >
-                                X9<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('lineType', 'X7')}
-                                onClick={() => handleFilterSelect('lineType', 'X7')}
-                            >
-                                X7<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('lineType', 'X5')}
-                                onClick={() => handleFilterSelect('lineType', 'X5')}
-                            >
-                                X5<FiPlus />
-                            </button>
-                        </div>
-                    </div>
-                    <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
-                        <p className="product-filter-result-left-text">Вязкость</p>
-                        <div className="product-filter-result-left-btns">
-                            <button
-                                className={getFilterButtonClass('viscosity', '0W-20')}
-                                onClick={() => handleFilterSelect('viscosity', '0W-20')}
-                            >
-                                0W - 20<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('viscosity', '0W-30')}
-                                onClick={() => handleFilterSelect('viscosity', '0W-30')}
-                            >
-                                0W - 30<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('viscosity', '5W-30')}
-                                onClick={() => handleFilterSelect('viscosity', '5W-30')}
-                            >
-                                5W - 30<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('viscosity', '0W-40')}
-                                onClick={() => handleFilterSelect('viscosity', '0W-40')}
-                            >
-                                0W - 40<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('viscosity', '5W-40')}
-                                onClick={() => handleFilterSelect('viscosity', '5W-40')}
-                            >
-                                5W - 40<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('viscosity', '0W-16')}
-                                onClick={() => handleFilterSelect('viscosity', '0W-16')}
-                            >
-                                0W - 16<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('viscosity', '10W-50')}
-                                onClick={() => handleFilterSelect('viscosity', '10W-50')}
-                            >
-                                10W - 50<FiPlus />
-                            </button>
-                            <button
-                                className={getFilterButtonClass('viscosity', '10W-40')}
-                                onClick={() => handleFilterSelect('viscosity', '10W-40')}
-                            >
-                                10W - 40<FiPlus />
-                            </button>
-                        </div>
+            {
+                title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles"
+                    ?
+                    <>
+                        <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
+                            <div className="product-filter-result">
+                                <div className="product-filter-result-left animate-item" style={{ '--delay': '0.1s' }}>
+                                    <p className="product-filter-result-left-text">Линейка моторных масел</p>
+                                    <div className="product-filter-result-left-btns">
+                                        <button
+                                            className={getFilterButtonClass('lineType', 'Top')}
+                                            onClick={() => handleFilterSelect('lineType', 'Top')}
+                                        >
+                                            Top<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('lineType', 'Zero')}
+                                            onClick={() => handleFilterSelect('lineType', 'Zero')}
+                                        >
+                                            Zero<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('lineType', 'Racing')}
+                                            onClick={() => handleFilterSelect('lineType', 'Racing')}
+                                        >
+                                            Racing<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('lineType', 'X9')}
+                                            onClick={() => handleFilterSelect('lineType', 'X9')}
+                                        >
+                                            X9<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('lineType', 'X7')}
+                                            onClick={() => handleFilterSelect('lineType', 'X7')}
+                                        >
+                                            X7<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('lineType', 'X5')}
+                                            onClick={() => handleFilterSelect('lineType', 'X5')}
+                                        >
+                                            X5<FiPlus />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
+                                    <p className="product-filter-result-left-text">Вязкость</p>
+                                    <div className="product-filter-result-left-btns">
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '0W-20')}
+                                            onClick={() => handleFilterSelect('viscosity', '0W-20')}
+                                        >
+                                            0W - 20<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '0W-30')}
+                                            onClick={() => handleFilterSelect('viscosity', '0W-30')}
+                                        >
+                                            0W - 30<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '5W-30')}
+                                            onClick={() => handleFilterSelect('viscosity', '5W-30')}
+                                        >
+                                            5W - 30<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '0W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '0W-40')}
+                                        >
+                                            0W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '5W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '5W-40')}
+                                        >
+                                            5W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '0W-16')}
+                                            onClick={() => handleFilterSelect('viscosity', '0W-16')}
+                                        >
+                                            0W - 16<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '10W-50')}
+                                            onClick={() => handleFilterSelect('viscosity', '10W-50')}
+                                        >
+                                            10W - 50<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '10W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '10W-40')}
+                                        >
+                                            10W - 40<FiPlus />
+                                        </button>
+                                    </div>
 
-                    </div>
-                </div>
+                                </div>
+                            </div>
 
-                {(selectedFilters.lineType.length > 0 || selectedFilters.viscosity.length > 0) && (
-                    <div className="product-filter-clear">
-                        <button onClick={clearAllFilters} className="product-filter-clear-btn">
-                            <IoMdClose />
-                        </button>
-                    </div>
-                )}
-            </div>
+                            {(selectedFilters.lineType.length > 0 || selectedFilters.viscosity.length > 0) && (
+                                <div className="product-filter-clear">
+                                    <button onClick={clearAllFilters} className="product-filter-clear-btn">
+                                        <IoMdClose />
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    </>
+                    :
+                    <></>
+            }
+
 
             {
                 hide || isMobile
