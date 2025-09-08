@@ -29,7 +29,7 @@ const PrideArea = () => {
                                 <div key={el?.id} className="prideArea__bottom-card">
                                     <div className="prideArea__bottom-card-img">
                                         <NavLink to={`/singleProduct/${el.id}`}>
-                                            <img src={el?.image[1]} alt={el?.title} />
+                                            <img src={el?.image[0]} alt={el?.title} />
                                         </NavLink>
                                     </div>
                                     <h3 className="prideArea__bottom-card-title">{el?.title}</h3>
