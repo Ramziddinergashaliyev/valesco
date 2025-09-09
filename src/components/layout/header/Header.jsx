@@ -93,7 +93,7 @@ const Header = () => {
               </ul>
             </li> */}
 
-            <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/distrbut">{t("distributors")}</NavLink></li>
+            <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/distrbut">{t("distributors")}</NavLink></li>
 
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/contact">{t("contacts")}</NavLink></li>
           </ul>

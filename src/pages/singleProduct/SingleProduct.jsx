@@ -19,7 +19,6 @@ const SingleProduct = () => {
 
     const { id } = useParams()
     const { data: byData, isLoading } = useGetProductByIdQuery(id)
-    console.log(byData);
 
     const [activeImg, setActiveImg] = useState(null);
 
@@ -65,28 +64,28 @@ const SingleProduct = () => {
                             <div className="single-top-right">
                                 <h2 className="single-top-right-title">{byData?.title}</h2>
                                 <p className="single-top-right-text">{byData?.description_ru}</p>
-                            {
-                                byData?.category?.title?.ru === "Фильтры" || byData?.category?.title?.en === "Filters"
-                                    ?
-                                    <>
-                                        <div className="info-card">
-                                            <div className="row">
-                                                <span className="label">MODEL</span>
+                                {
+                                    byData?.category?.title?.ru === "Фильтры" || byData?.category?.title?.en === "Filters"
+                                        ?
+                                        <>
+                                            <div className="info-card">
+                                                <div className="row">
+                                                    <span className="label">MODEL</span>
+                                                </div>
+                                                <div className="row">
+                                                    <span className="value">{byData?.kinematic_one?.[0]}</span>
+                                                </div>
+                                                <div className="row">
+                                                    <span className="label">TYPE</span>
+                                                </div>
+                                                <div className="row">
+                                                    <span className="value">{byData?.kinematic_two?.[0]}</span>
+                                                </div>
                                             </div>
-                                            <div className="row">
-                                                <span className="value">{byData?.kinematic_one?.[0]}</span>
-                                            </div>
-                                            <div className="row">
-                                                <span className="label">TYPE</span>
-                                            </div>
-                                            <div className="row">
-                                                <span className="value">{byData?.kinematic_two?.[0]}</span>
-                                            </div>
-                                        </div>
-                                    </>
-                                    :
-                                    <></>
-                            }
+                                        </>
+                                        :
+                                        <></>
+                                }
                             </div>
                         </div>
                         {
@@ -102,7 +101,30 @@ const SingleProduct = () => {
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages />
-                                        <Packing data={byData?.packing} />
+                                        <Packing data={byData} />
+                                        <Specificat data={byData?.specifications} />
+                                        <Characterist data={byData} />
+                                        <Document />
+                                    </div>
+                                </div>
+                                :
+                                <></>
+                        }
+
+                        {
+                            byData?.category?.title?.ru === "Моторные масла для дизельных двигателей" || byData?.category?.title?.en === "Motor oils for diesel engines"
+                                ?
+                                <div className="single-dropdown">
+                                    <ul className="single-dropdown-item container">
+                                        <li className="single-dropdown-item-list"><a href="#addvantages">Преимущества</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#packing">Фасовка и артикул</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#specy">Спецификации</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#characterist">Характеристики</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">Документация</a></li>
+                                    </ul>
+                                    <div className="single-dropdown-result">
+                                        <Advantages />
+                                        <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
                                         <Document />
