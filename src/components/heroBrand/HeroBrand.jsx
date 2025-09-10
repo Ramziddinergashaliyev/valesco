@@ -10,7 +10,7 @@ const HeroBrand = () => {
                 <h2 className="heroBrand__title">Бренд Valesco</h2>
                 <div className="heroBrand__info">
                     <h3 className="heroBrand__info-title">
-                        Бренд Valesco принадлежит компании по производству смазочных материалов SK Enmove.</h3>
+                        Бренд EuroTec принадлежит компании по производству смазочных материалов VALESCO.</h3>
                     <p className="heroBrand__info-text"><span>Наша главная цель</span> — это предоставлять продукты, которые опережают свое время, используя творческий подход и новейшие технологии.</p>
                     <NavLink to={"/about"}>
                        <button className="heroBrand__info-btn">Узнать больше<MdArrowOutward /></button>
