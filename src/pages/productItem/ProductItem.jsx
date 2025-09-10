@@ -7,7 +7,6 @@ import Product from '../../components/product/Product'
 const ProductItem = () => {
     const { id } = useParams()
     const { data, isLoading } = useGetCategoriesByIdQuery(id)
-    console.log(data?.title?.ru);
     
 
     useEffect(() => {

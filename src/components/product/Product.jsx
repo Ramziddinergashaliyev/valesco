@@ -343,7 +343,6 @@ import LoadingRow from '../loadingRow/LoadingRow'
 import { ClosedCaption } from 'lucide-react'
 import { IoMdClose } from "react-icons/io";
 
-// Image loading komponenti
 const ImageWithLoading = ({ src, alt, className, linkTo }) => {
     const [imageLoading, setImageLoading] = useState(true);
     const [imageError, setImageError] = useState(false);
@@ -378,13 +377,13 @@ const ImageWithLoading = ({ src, alt, className, linkTo }) => {
                 </div>
             )}
             {src && src.length > 0 ? (
-                <img 
+                <img
                     className={className}
-                    src={src} 
+                    src={src}
                     alt={alt}
                     onLoad={handleImageLoad}
                     onError={handleImageError}
-                    style={{ 
+                    style={{
                         opacity: imageLoading ? 0.3 : 1,
                         transition: 'opacity 0.3s ease'
                     }}
@@ -491,7 +490,6 @@ const Product = ({ data, loading, title }) => {
 
     return (
         <div className='product container'>
-            {/* CSS spinner animatsiyasi */}
             <style>
                 {`
                 @keyframes spin {
@@ -536,47 +534,6 @@ const Product = ({ data, loading, title }) => {
                     <>
                         <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
                             <div className="product-filter-result">
-                                {/* <div className="product-filter-result-left animate-item" style={{ '--delay': '0.1s' }}>
-                                    <p className="product-filter-result-left-text">Линейка моторных масел</p>
-                                    <div className="product-filter-result-left-btns">
-                                        <button
-                                            className={getFilterButtonClass('lineType', 'Top')}
-                                            onClick={() => handleFilterSelect('lineType', 'Top')}
-                                        >
-                                            Top<FiPlus />
-                                        </button>
-                                        <button
-                                            className={getFilterButtonClass('lineType', 'Zero')}
-                                            onClick={() => handleFilterSelect('lineType', 'Zero')}
-                                        >
-                                            Zero<FiPlus />
-                                        </button>
-                                        <button
-                                            className={getFilterButtonClass('lineType', 'Racing')}
-                                            onClick={() => handleFilterSelect('lineType', 'Racing')}
-                                        >
-                                            Racing<FiPlus />
-                                        </button>
-                                        <button
-                                            className={getFilterButtonClass('lineType', 'X9')}
-                                            onClick={() => handleFilterSelect('lineType', 'X9')}
-                                        >
-                                            X9<FiPlus />
-                                        </button>
-                                        <button
-                                            className={getFilterButtonClass('lineType', 'X7')}
-                                            onClick={() => handleFilterSelect('lineType', 'X7')}
-                                        >
-                                            X7<FiPlus />
-                                        </button>
-                                        <button
-                                            className={getFilterButtonClass('lineType', 'X5')}
-                                            onClick={() => handleFilterSelect('lineType', 'X5')}
-                                        >
-                                            X5<FiPlus />
-                                        </button>
-                                    </div>
-                                </div> */}
                                 <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
                                     <p className="product-filter-result-left-text">Вязкость</p>
                                     <div className="product-filter-result-left-btns">
@@ -586,36 +543,30 @@ const Product = ({ data, loading, title }) => {
                                         >
                                             0W - 20<FiPlus />
                                         </button>
-                                        {/* <button
+                                        <button
                                             className={getFilterButtonClass('viscosity', '0W-30')}
                                             onClick={() => handleFilterSelect('viscosity', '0W-30')}
                                         >
                                             0W - 30<FiPlus />
-                                        </button> */}
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '0W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '0W-40')}
+                                        >
+                                            0W - 40<FiPlus />
+                                        </button>
                                         <button
                                             className={getFilterButtonClass('viscosity', '5W-30')}
                                             onClick={() => handleFilterSelect('viscosity', '5W-30')}
                                         >
                                             5W - 30<FiPlus />
                                         </button>
-                                        {/* <button
-                                            className={getFilterButtonClass('viscosity', '0W-40')}
-                                            onClick={() => handleFilterSelect('viscosity', '0W-40')}
-                                        >
-                                            0W - 40<FiPlus />
-                                        </button> */}
                                         <button
                                             className={getFilterButtonClass('viscosity', '5W-40')}
                                             onClick={() => handleFilterSelect('viscosity', '5W-40')}
                                         >
                                             5W - 40<FiPlus />
                                         </button>
-                                        {/* <button
-                                            className={getFilterButtonClass('viscosity', '0W-16')}
-                                            onClick={() => handleFilterSelect('viscosity', '0W-16')}
-                                        >
-                                            0W - 16<FiPlus />
-                                        </button> */}
                                         <button
                                             className={getFilterButtonClass('viscosity', '20W-50')}
                                             onClick={() => handleFilterSelect('viscosity', '20W-50')}
@@ -634,7 +585,7 @@ const Product = ({ data, loading, title }) => {
                                         >
                                             15W - 40<FiPlus />
                                         </button>
-                                         <button
+                                        <button
                                             className={getFilterButtonClass('viscosity', '15W-50')}
                                             onClick={() => handleFilterSelect('viscosity', '15W-50')}
                                         >
@@ -672,8 +623,8 @@ const Product = ({ data, loading, title }) => {
                                         displayData?.map((el, index) => (
                                             <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
                                                 <div className="product-card-img">
-                                                    <ImageWithLoading 
-                                                        src={el?.image?.[0]} 
+                                                    <ImageWithLoading
+                                                        src={el?.image?.[0]}
                                                         alt="product-img"
                                                         className="product-card-img-link"
                                                         linkTo={`/singleProduct/${el?.id}`}
@@ -706,8 +657,8 @@ const Product = ({ data, loading, title }) => {
                                             <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
                                                 <div className="product-box-left">
                                                     <div className="product-box-left-img">
-                                                        <ImageWithLoading 
-                                                            src={el?.image?.[0]} 
+                                                        <ImageWithLoading
+                                                            src={el?.image?.[0]}
                                                             alt="product-img"
                                                             linkTo={`/singleProduct/${el?.id}`}
                                                         />

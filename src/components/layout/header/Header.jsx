@@ -61,7 +61,7 @@ const Header = () => {
             <button className='header__nav__btn'>{t("authCheck")}</button>
             <button onClick={() => setHide(false)} className='header__nav__close'><AiOutlineClose /></button>
 
-            <li className="header__nav__list">
+            {/* <li className="header__nav__list"> */}
               {/* SK Enmove <IoMdArrowDropdown />
               <ul className="dropdown-item">
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/about">{t("company")}</NavLink></li>
@@ -70,7 +70,7 @@ const Header = () => {
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/culture">{t("culture")}</NavLink></li>
               </ul> */}
               
-            </li>
+            {/* </li> */}
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/about">{t("company")}</NavLink></li>
 
 

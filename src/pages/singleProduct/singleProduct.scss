@@ -47,7 +47,7 @@
                 border-radius: 4px;
             }
 
-            .thumb-img.active {
+            .active {
                 border: 2px solid red;
             }
 
@@ -83,7 +83,7 @@
             &-left-bottom-imgs {
                 img {
                     height: 95px;
-                    width: 110px;
+                    width: 90px;
                 }
             }
         }
@@ -134,6 +134,7 @@
                 order: 2;
                 display: flex;
                 flex-direction: row;
+                gap: 3px;
             }
         }
     }
@@ -250,6 +251,65 @@
         .header {
             background-color: #f5f5f5;
         }
+    }
+
+    .image-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5f5f5;
+        z-index: 1;
+    }
+
+    .image-spinner {
+        width: 24px;
+        height: 24px;
+        border: 2px solid #e3e3e3;
+        border-top: 2px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .image-error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f8f8f8;
+        color: #999;
+        font-size: 24px;
+        min-height: 100px;
+    }
+
+    .image-container img {
+        transition: opacity 0.3s ease;
+    }
+
+    .image-container img.loading {
+        opacity: 0;
+    }
+
+    .image-container img:not(.loading) {
+        opacity: 1;
     }
 
 }

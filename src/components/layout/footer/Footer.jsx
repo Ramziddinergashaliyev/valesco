@@ -22,6 +22,7 @@ const Footer = () => {
           <li className="footer__item-list"><NavLink to={"/news"}>Новости</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/impact"}>Социальная ответственность</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/culture"}>Корпоративная культураs</NavLink></li>
+          <li className="footer__item-list"><NavLink to={"/news"}>Новости</NavLink></li>
         </ul>
         <ul className="footer__item">
           <h3 className='footer__item-title'>ПРОДУКЦИЯ</h3>

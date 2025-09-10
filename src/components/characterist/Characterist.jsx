@@ -107,7 +107,19 @@ const rows = [
   { label: "Щелочное число, мг КОН/г", key: "base" }
 ];
 
+const trnassmission = [
+  // { label: "Класс вязкости SAE", key: "sae" },
+  { label: "Плотность при 15°С, г/см3", key: "density" },
+  { label: "Кинематическая вязкость при 40 °С, мм2/с", key: "kinematic_one" },
+  { label: "Кинематическая вязкость при 100 °С, мм2/с", key: "kinematic_two" },
+  { label: "Индекс вязкости", key: "viscosity" },
+  { label: "Температура вспышки в открытом тигле °С", key: "flash" },
+  { label: "Температура затвердевания, °С", key: "temperature" },
+  // { label: "Щелочное число, мг КОН/г", key: "base" }
+];
+
 const Characterist = ({ data }) => {
+
   return (
     <div id='characterist' className='container characterist'>
       <h2 className='characterist-title'>Характеристики</h2>
@@ -120,16 +132,31 @@ const Characterist = ({ data }) => {
               <th className='characterist-info-table-thead-th'>Метод испытания</th>
             </tr>
           </thead>
-          <tbody className='characterist-info-tbody'>
-            {rows.map((row, i) => (
-              <tr key={i} className='characterist-info-tbody-tr'>
-                <td className='characterist-info-tbody-td'>{row.label}</td>
-                {data?.[row.key]?.map((el, index) => (
-                  <td key={index} className='characterist-info-tbody-td'>{el}</td>
+          {
+            data?.category?.title?.ru === "Трансмиссионные масла" || data?.category?.title?.en === "Transmission oils"
+              ?
+              <tbody className='characterist-info-tbody'>
+                {trnassmission.map((row, i) => (
+                  <tr key={i} className='characterist-info-tbody-tr'>
+                    <td className='characterist-info-tbody-td'>{row.label}</td>
+                    {data?.[row.key]?.map((el, index) => (
+                      <td key={index} className='characterist-info-tbody-td'>{el}</td>
+                    ))}
+                  </tr>
                 ))}
-              </tr>
-            ))}
-          </tbody>
+              </tbody>
+              :
+              <tbody className='characterist-info-tbody'>
+                {rows.map((row, i) => (
+                  <tr key={i} className='characterist-info-tbody-tr'>
+                    <td className='characterist-info-tbody-td'>{row.label}</td>
+                    {data?.[row.key]?.map((el, index) => (
+                      <td key={index} className='characterist-info-tbody-td'>{el}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+          }
         </table>
       </div>
     </div>
