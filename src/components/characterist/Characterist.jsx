@@ -108,14 +108,12 @@ const rows = [
 ];
 
 const trnassmission = [
-  // { label: "Класс вязкости SAE", key: "sae" },
   { label: "Плотность при 15°С, г/см3", key: "density" },
   { label: "Кинематическая вязкость при 40 °С, мм2/с", key: "kinematic_one" },
   { label: "Кинематическая вязкость при 100 °С, мм2/с", key: "kinematic_two" },
   { label: "Индекс вязкости", key: "viscosity" },
   { label: "Температура вспышки в открытом тигле °С", key: "flash" },
   { label: "Температура затвердевания, °С", key: "temperature" },
-  // { label: "Щелочное число, мг КОН/г", key: "base" }
 ];
 
 const Characterist = ({ data }) => {

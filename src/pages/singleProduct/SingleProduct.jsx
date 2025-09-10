@@ -349,6 +349,29 @@ const SingleProduct = () => {
                                 :
                                 <></>
                         }
+
+                        {
+                            byData?.category?.title?.ru === "Гидравлические масла" || byData?.category?.title?.en === "Hydraulic oils"
+                                ?
+                                <div className="single-dropdown">
+                                    <ul className="single-dropdown-item container">
+                                        <li className="single-dropdown-item-list"><a href="#addvantages">Преимущества</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#packing">Фасовка и артикул</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#specy">Спецификации</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#characterist">Характеристики</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">Документация</a></li>
+                                    </ul>
+                                    <div className="single-dropdown-result">
+                                        <Advantages data={byData?.info}/>
+                                        <Packing data={byData} />
+                                        <Specificat data={byData?.specifications} />
+                                        <Characterist data={byData} />
+                                        <Document />
+                                    </div>
+                                </div>
+                                :
+                                <></>
+                        }
                     </>
             }
 
