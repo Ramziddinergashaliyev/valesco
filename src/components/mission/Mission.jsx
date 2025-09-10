@@ -8,7 +8,7 @@ const Mission = () => {
         <div className='mission'>
             <div className="container mission-container">
                 <div className="mission-top">
-                    <h1 className="mission-top-title">SK Enmove</h1>
+                    <h1 className="mission-top-title">O компании</h1>
                     <div className="mission-top-info">
                         <h3 className="mission-top-info-title">
                             Глобальный холдинг SK – мировой лидер в ключевых отраслях,

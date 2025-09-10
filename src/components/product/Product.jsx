@@ -21,7 +21,7 @@
 //     })
 //     const [filteredData, setFilteredData] = useState([])
 
-//     useEffect(() => {
+//     (() => {
 //         const handleResize = () => {
 //             setIsMobile(window.innerWidth <= 700)
 //         }

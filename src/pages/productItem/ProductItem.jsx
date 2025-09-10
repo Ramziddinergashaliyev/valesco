@@ -8,7 +8,6 @@ const ProductItem = () => {
     const { id } = useParams()
     const { data, isLoading } = useGetCategoriesByIdQuery(id)
     
-
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
