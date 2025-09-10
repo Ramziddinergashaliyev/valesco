@@ -40,7 +40,7 @@ const Distrbut = () => {
     },
     {
       country: 'Туркменистан',
-      distributor: 'ИП «Нурыев Гуванч Тагандурдыевич»',
+      distributor: 'ИП «НУРЫЕВ ГУВАНЧ ТАГАНДУРДЫЕВИЧ»',
       title: 'Туркменистан, Марыйский велаят, Векилбазар Этрап, Акгонур',
       number: ["+993 65 551008"]
     }
@@ -94,7 +94,7 @@ const Distrbut = () => {
       </div>
 
       <div className="distrbut-result">
-        {filteredData.length === 0 ? (
+        {filteredData?.length === 0 ? (
           <p className="no-results">По выбранным фильтрам результатов не найдено</p>
         ) : (
           filteredData.map((el, index) => (
