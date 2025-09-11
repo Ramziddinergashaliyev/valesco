@@ -103,13 +103,13 @@
             cursor: pointer;
 
             &-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 img {
                     width: 220px;
                     height: 240px;
                     object-fit: contain;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
                 }
             }
 
