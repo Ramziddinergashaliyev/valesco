@@ -1,29 +1,33 @@
 import React from 'react'
 import "./mission.scss"
 import { MdArrowOutward } from 'react-icons/md'
-import { MISSION } from '../../static'
+import { MISSION, MISSIONEN } from '../../static'
+import { useTranslation } from 'react-i18next'
 
 const Mission = () => {
+    const { t, i18n } = useTranslation()
+    const currentLanguage = i18n?.languages[0]
+    const cardMission = currentLanguage == "ru" ? MISSION : MISSIONEN
+
     return (
         <div className='mission'>
             <div className="container mission-container">
                 <div className="mission-top">
-                    <h1 className="mission-top-title">O компании</h1>
+                    <h1 className="mission-top-title">{t("company")}</h1>
                     <div className="mission-top-info">
                         <h3 className="mission-top-info-title">
-                            VALESCO – мировой лидер в ключевых отраслях,
-                            определяющих образ будущего</h3>
-                        <p className="mission-top-info-text">VALESCO строит целые индустрии и инвестирует в бизнесы, которые меняют правила игры для всех участников. Мы отдаем приоритет долгосрочному успеху и благополучию в интересах будущих поколений.</p>
+                            VALESCO – {t("лидер")}</h3>
+                        <p className="mission-top-info-text">{t("строит")}</p>
                     </div>
                 </div>
                 <div className="mission-cards">
                     {
-                        MISSION?.map(el => (
+                        cardMission?.map(el => (
                             <div key={el?.id} className="mission-card">
                                 <h2 className="mission-card-title">{el?.price}</h2>
                                 <div className="mission-card-info">
                                     <p className="mission-card-info-text">{el?.title}</p>
-                                    <p className="mission-card-info-desc">Узнать больше<MdArrowOutward /></p>
+                                    <p className="mission-card-info-desc">{t("Узнать больше")}<MdArrowOutward /></p>
                                 </div>
                             </div>
                         ))

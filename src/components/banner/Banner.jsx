@@ -1,27 +1,34 @@
 import React from 'react'
 import './banner.scss'
 import { MdArrowOutward } from 'react-icons/md'
-import { BANNER } from '../../static'
+import { BANNER, BANNEREN } from '../../static'
+import { useTranslation } from 'react-i18next'
 
 const Banner = () => {
+    const { t, i18n } = useTranslation()
+    const lenguage = i18n?.languages[0]
+    console.log(lenguage);
+    
+    const lenguageCard = lenguage == "ru" ? BANNER : BANNEREN
+    
+
+    
     return (
         <div className='banner'>
             <div className="banner__container container">
                 <div className="banner__top">
-                    <h2 className='banner__top-title'>Почему Valesco</h2>
+                    <h2 className='banner__top-title'>{t("Почему Valesco")}</h2>
                     <p className='banner__top-text'>
-                        Valesco способствует повышению производительности двигателей
-                        и обеспечивает превосходную защиту даже в экстремальных
-                        климатических условиях.</p>
+                        {t("способствует")}</p>
                 </div>
 
                 <div className="banner__cards">
                     {
-                        BANNER?.map(el => (
+                        lenguageCard?.map(el => (
                             <div key={el?.id} className="banner__card">
                                 <h2 className="banner__card-title">{el?.title}</h2>
                                 <p className='banner__card-text'>{el?.text}</p>
-                                <p className="banner__card-desc">Узнать больше <MdArrowOutward /></p>
+                                <p className="banner__card-desc">{t("Узнать больше")} <MdArrowOutward /></p>
                             </div>
                         ))
                     }

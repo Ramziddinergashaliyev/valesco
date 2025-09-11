@@ -4,31 +4,37 @@ import { MdArrowOutward } from 'react-icons/md'
 import { CATEGORY } from '../../static'
 import { NavLink } from 'react-router-dom'
 import { useGetCategoriesQuery } from '../../context/api/categoryApi'
+import { useTranslation } from 'react-i18next'
 
 const ProductRange = () => {
-
+  const { t, i18n } = useTranslation()
   const { data } = useGetCategoriesQuery()
-  console.log(data);
 
-
+  const currentLanguage = i18n.language || 'ru'
+  
   return (
     <div className='productRange container'>
       <div className="productRange__container">
         <div className="productRange__info">
-          <h1 className="productRange__info-title">Широкая линейка продуктов</h1>
-          <h3 className="productRange__info-text">В России много разных машин. А у нас много разных масел, в том числе с допусками и спецификациями европейских и американских автопроизводителей.</h3>
-          <p className="productRange__info-desc">Воспользуйтесь нашим подборщиком, чтобы определить, какое масло подходит для вашей машины.</p>
+          <h1 className="productRange__info-title">{t('wideProductRange')}</h1>
+          <h3 className="productRange__info-text">{t('productRangeDescription')}</h3>
+          <p className="productRange__info-desc">{t('useOurSelector')}</p>
           <NavLink to={"/categories/10"} className="productRange__info-btn">
-            Подбери свой Valesco <MdArrowOutward />
+            {t('chooseYourValesco')} <MdArrowOutward />
           </NavLink>
         </div>
         <div className="productRange__category">
           {
-            data?.map(el => (
-              <NavLink key={el?.id} to={`/categories/${el?.id}`}>
+            data?.map(category => (
+              <NavLink key={category?.id} to={`/categories/${category?.id}`}>
                 <div className="productRange__card">
-                  <h2 className="productRange__card-title">{el?.title?.ru}</h2>
-                  <div className='productRange__card-bottom'><p className='productRange__card-bottom-text'>Узнать больше</p><span><MdArrowOutward /></span> </div>
+                  <h2 className="productRange__card-title">
+                    {currentLanguage === 'ru' ? category?.title?.ru : category?.title?.en}
+                  </h2>
+                  <div className='productRange__card-bottom'>
+                    <p className='productRange__card-bottom-text'>{t('learnMore')}</p>
+                    <span><MdArrowOutward /></span>
+                  </div>
                 </div>
               </NavLink>
             ))

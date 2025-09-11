@@ -75,6 +75,34 @@ export const BANNER = [
     }
 ]
 
+export const BANNEREN = [
+    {
+        id: 1,
+        title: "Protection Against Counterfeits",
+        text: "Valesco motor oils are produced only at the factory in Uzbekistan. Valesco continuously controls every stage of production."
+    },
+    {
+        id: 2,
+        title: "Wide Range of Products",
+        text: "There are many different cars in Russia. And we have many different oils, including those with approvals and specifications from European and American automakers."
+    },
+    {
+        id: 3,
+        title: "No Overpayments",
+        text: "We use only high-quality Group III base oil by API, produced in-house at EUROTEC, so you don’t overpay for third-party supplies."
+    },
+    {
+        id: 4,
+        title: "OEM Certification",
+        text: "The Valesco brand is officially certified by global automakers."
+    },
+    {
+        id: 5,
+        title: "Honest Import",
+        text: "Valesco continues to produce oils from premium components. We don’t need to look for substitutes for base oils and additives. We simply keep using the best."
+    }
+]
+
 export const PRIDE = [
     {
         id: 1,
@@ -111,6 +139,24 @@ export const MISSION = [
     },
 ]
 
+export const MISSIONEN = [
+    {
+        id: 1,
+        price: "200+",
+        title: "The SK Holding includes more than 200 companies in various regions around the world"
+    },
+    {
+        id: 2,
+        price: "$88+",
+        title: "As of 2022, the total annual revenue exceeds 88 billion US dollars"
+    },
+    {
+        id: 3,
+        price: "117",
+        title: "Ranked 117th in the list of the world's largest companies according to Fortune 500 in 2022"
+    },
+]
+
 export const CALLTO = [
     {
         id: 1,
@@ -127,6 +173,25 @@ export const CALLTO = [
     {
         id: 4,
         title: "Где купить"
+    },
+]
+
+export const CALLTOEN = [
+    {
+        id: 1,
+        title: "We strive for maximum knowledge proficiency"
+    },
+    {
+        id: 2,
+        title: "Knowledge base"
+    },
+    {
+        id: 3,
+        title: "Stay updated with news"
+    },
+    {
+        id: 4,
+        title: "Where to buy"
     },
 ]
 

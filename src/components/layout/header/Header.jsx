@@ -24,6 +24,8 @@ const Header = () => {
     { skip: !value.trim() } 
   );
 
+  const lenguage = i18n?.languages[0]
+
   const handleChange = (e) => {
     const val = e.target.value
     setValue(val)
@@ -79,7 +81,11 @@ const Header = () => {
               <ul className="dropdown-item">
                 {
                   data?.map((el, inx) => (
+                    lenguage == "ru"
+                    ?
                     <li key={inx} onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.ru}</NavLink></li>
+                    :
+                    <li key={inx} onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.en}</NavLink></li>
                   ))
                 }
               </ul>

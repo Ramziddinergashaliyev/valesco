@@ -1,18 +1,21 @@
 import React from 'react'
 import "./differents.scss"
 import { MdArrowOutward } from 'react-icons/md'
+import { useTranslation } from 'react-i18next'
+
 
 import img1 from "../../assets/images/differ1.jpg"
 import img2 from "../../assets/images/differ2.jpg"
 
 const Differents = () => {
+    const { t, i18n } = useTranslation()
     return (
         <div className='differents container'>
             <div className="differents__left">
-                <h1 className="differents__left-title">Что делает Valesco особенным</h1>
-                <p className="differents__left-text">Самым большим преимуществом Valesco является то, что в нем используется лучшее в мире базовое масло группы III.</p>
-                <p className="differents__left-desc"><span>EUROTEC</span> — это собственный бренд базового масла Valesco, который занимает более 40% на мировом рынке базовых масел премиум-класса группы III.</p>
-                <button className='differents__left-btn'>Узнать больше<MdArrowOutward /></button>
+                <h1 className="differents__left-title">{t("делает")}</h1>
+                <p className="differents__left-text">{t("большим")}</p>
+                <p className="differents__left-desc"><span>EUROTEC</span> — {t("масел")}</p>
+                <button className='differents__left-btn'>{t("Узнать больше")}<MdArrowOutward /></button>
             </div>
             <div className="differents__right">
                 <img className='differents__right-topImg' src={img1} alt="different img-top" />
