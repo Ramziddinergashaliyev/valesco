@@ -22,8 +22,11 @@
             font-weight: 500;
             color: #333331;
             line-height: 32px;
-            width: 90%;
+            width: 60%;
 
+            @media (max-width:1400px) {
+                width: 80%;
+            }
             @media (max-width:1000px) {
                 width: 100%;
             }
@@ -34,9 +37,17 @@
             font-weight: 500;
             color: gray;
             line-height: 26px;
+            width: 60%;
 
             span {
                 color: black;
+            }
+
+            @media (max-width:1400px) {
+                width: 80%;
+            }
+            @media (max-width:1000px) {
+                width: 100%;
             }
         }
 
