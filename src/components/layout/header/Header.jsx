@@ -21,7 +21,7 @@ const Header = () => {
 
   const { data: searchData, isLoading } = useSearchProductsQuery(
     { query: value },
-    { skip: !value.trim() } 
+    { skip: !value.trim() }
   );
 
   const lenguage = i18n?.languages[0]
@@ -30,7 +30,7 @@ const Header = () => {
     const val = e.target.value
     setValue(val)
     if (!val.trim()) {
-      setLocalSearch(null) 
+      setLocalSearch(null)
     }
   }
 
@@ -64,28 +64,26 @@ const Header = () => {
             <button onClick={() => setHide(false)} className='header__nav__close'><AiOutlineClose /></button>
 
             {/* <li className="header__nav__list"> */}
-              {/* SK Enmove <IoMdArrowDropdown />
+            {/* SK Enmove <IoMdArrowDropdown />
               <ul className="dropdown-item">
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/about">{t("company")}</NavLink></li>
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/news">{t("news")}</NavLink></li>
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/impact">{t("social")}</NavLink></li>
                 <li onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to="/culture">{t("culture")}</NavLink></li>
               </ul> */}
-              
             {/* </li> */}
+
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/about">{t("company")}</NavLink></li>
-
-
             <li className="header__nav__list">
               {t("catalog")} <IoMdArrowDropdown />
               <ul className="dropdown-item">
                 {
                   data?.map((el, inx) => (
                     lenguage == "ru"
-                    ?
-                    <li key={inx} onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.ru}</NavLink></li>
-                    :
-                    <li key={inx} onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.en}</NavLink></li>
+                      ?
+                      <li key={inx} onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.ru}</NavLink></li>
+                      :
+                      <li key={inx} onClick={() => setHide(false)} className="dropdown-item-list"><NavLink to={`/categories/${el?.id}`}>{el?.title?.en}</NavLink></li>
                   ))
                 }
               </ul>
@@ -133,11 +131,11 @@ const Header = () => {
       <div className={`header-search-result ${searchHide ? "header-search-result-hide" : ""}`}>
         <div className="header-search-result-form container">
           <div className="header-search-result-form-icon">
-            <input 
-              value={value} 
-              onChange={handleChange} 
-              placeholder={t("searchPlaceholder")} 
-              type="text" 
+            <input
+              value={value}
+              onChange={handleChange}
+              placeholder={t("searchPlaceholder")}
+              type="text"
             />
             <FiSearch />
           </div>
@@ -154,7 +152,7 @@ const Header = () => {
           {!isLoading && value && localSearch?.map((el, idx) => (
             <div key={idx} className="header-search-info-item">
               {el?.image?.[0] ? (
-                  <img onClick={() => handleClick(el?.id)} src={el.image[0]} alt={el.title} className="header-search-info-item-img" />
+                <img onClick={() => handleClick(el?.id)} src={el.image[0]} alt={el.title} className="header-search-info-item-img" />
               ) : (
                 <img src="/placeholder.png" alt="no-img" className="header-search-info-item-img" />
               )}

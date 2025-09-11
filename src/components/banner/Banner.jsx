@@ -7,11 +7,8 @@ import { useTranslation } from 'react-i18next'
 const Banner = () => {
     const { t, i18n } = useTranslation()
     const lenguage = i18n?.languages[0]
-    console.log(lenguage);
     
     const lenguageCard = lenguage == "ru" ? BANNER : BANNEREN
-    
-
     
     return (
         <div className='banner'>

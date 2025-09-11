@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NEW } from '../../static'
 import { NavLink } from 'react-router-dom'
 import "./news.scss"
 
 const News = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className='news container'>
       <div className="news__cards">

@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
         <ul className="footer__item">
-          <h3 className='footer__item-title'><NavLink>{t("КОМПАНИЯ")}</NavLink></h3>
+          <h3 className='footer__item-title'>{t("КОМПАНИЯ")}</h3>
           <li className="footer__item-list"><NavLink to={"/about"}>{t("company")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/news"}>{t("news")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/distrbut"}>{t("distributors")}</NavLink></li>

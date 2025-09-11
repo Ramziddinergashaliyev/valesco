@@ -32,7 +32,7 @@ const ProductRange = () => {
                     {currentLanguage === 'ru' ? category?.title?.ru : category?.title?.en}
                   </h2>
                   <div className='productRange__card-bottom'>
-                    <p className='productRange__card-bottom-text'>{t('learnMore')}</p>
+                    <p className='productRange__card-bottom-text'>{t('Узнать больше')}</p>
                     <span><MdArrowOutward /></span>
                   </div>
                 </div>
@@ -46,7 +46,6 @@ const ProductRange = () => {
 }
 
 export default ProductRange
-
 
 // import React, { useEffect, useRef } from "react";
 // import "./productRange.scss";

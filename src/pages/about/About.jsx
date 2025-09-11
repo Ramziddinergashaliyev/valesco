@@ -61,7 +61,7 @@ const About = () => {
         </div>
 
         <div className="about__networks">
-          <h2 className="about__networks-title">отрасли</h2>
+          <h2 className="about__networks-title">Oтрасли</h2>
           <div className="about__networks__cards">
             {
               NETWORKS?.map(el => (

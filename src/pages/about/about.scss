@@ -122,6 +122,8 @@
                     line-height: 26px;
                 }
             }
+
+
         }
 
         @media (max-width:1200px) {
@@ -299,8 +301,12 @@
 
             &-imgs {
                 img {
-                    border-radius: 20px;
+                    border-radius: 4px;
                 }
+            }
+
+            &:last-child {
+                border-bottom: none;
             }
         }
 
