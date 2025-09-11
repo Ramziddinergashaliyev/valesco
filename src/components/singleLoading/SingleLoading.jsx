@@ -11,6 +11,22 @@ const SingleLoading = () => {
         >
             <div className="loadingSin__wrapper">
                 <div className="loadingSin__item">
+                    <div className="loadingSin__item-top">
+                        <div
+                            className="loadingSin__item-top__img1 bg__animation"
+                            aria-hidden="true"
+                        ></div><div
+                            className="loadingSin__item-top__img1 bg__animation"
+                            aria-hidden="true"
+                        ></div><div
+                            className="loadingSin__item-top__img1 bg__animation"
+                            aria-hidden="true"
+                        ></div>
+                        <div
+                            className="loadingSin__item-top__img1 bg__animation"
+                            aria-hidden="true"
+                        ></div>
+                    </div>
                     <div
                         className="loadingSin__img1 bg__animation"
                         aria-hidden="true"
