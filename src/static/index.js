@@ -535,7 +535,7 @@ export const BOXS = [
         title: "Valesco TOP ES 0W-20",
         text: "Полностью синтетическое моторное масло",
         sky: "0W30 GX7000 SN CF 4L"
-    },
+    }
 ]
 
 export const NEW = [

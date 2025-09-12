@@ -43,6 +43,7 @@ const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
 }
 
 const SingleProduct = () => {
+    
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])

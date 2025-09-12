@@ -16,7 +16,7 @@ const HeroBrand = () => {
                         {t("euroTech")}</h3>
                     <p className="heroBrand__info-text"><span>{t("цель")}</span> — {t("предоставлять")}</p>
                     <NavLink to={"/about"}>
-                       <button className="heroBrand__info-btn">{t("Узнать больше")}<MdArrowOutward /></button>
+                        <button className="heroBrand__info-btn">{t("Узнать больше")}<MdArrowOutward /></button>
                     </NavLink>
                 </div>
             </div>

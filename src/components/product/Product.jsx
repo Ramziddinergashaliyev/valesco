@@ -331,7 +331,6 @@
 // export default Product
 
 import React, { useState, useEffect } from 'react'
-import "./product.scss"
 import { MdArrowOutward } from 'react-icons/md'
 import filter from "../../assets/icons/filter.svg"
 import img1 from "../../assets/icons/col-icn.svg"
@@ -342,6 +341,8 @@ import Loading from '../loading/Loading'
 import LoadingRow from '../loadingRow/LoadingRow'
 import { ClosedCaption } from 'lucide-react'
 import { IoMdClose } from "react-icons/io";
+
+import "./product.scss"
 
 const ImageWithLoading = ({ src, alt, className, linkTo }) => {
     const [imageLoading, setImageLoading] = useState(true);
@@ -423,12 +424,15 @@ const Product = ({ data, loading, title }) => {
     const [filteredData, setFilteredData] = useState([])
 
     useEffect(() => {
+
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 700)
         }
+
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
+        
     }, [])
 
     useEffect(() => {

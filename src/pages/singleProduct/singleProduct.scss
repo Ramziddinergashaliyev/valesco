@@ -29,7 +29,7 @@
                 object-fit: contain;
             }
         }
-
+        
         &-left-bottom-imgs {
             display: flex;
             flex-direction: column;
@@ -199,7 +199,6 @@
                 &::-webkit-scrollbar {
                     display: none;
                 }
-
             }
 
             @media (max-width: 600px) {
@@ -309,5 +308,4 @@
     .image-container img:not(.loading) {
         opacity: 1;
     }
-
 }
