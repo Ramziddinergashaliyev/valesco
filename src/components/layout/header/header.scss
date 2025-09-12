@@ -389,6 +389,7 @@
   @media (max-width: 768px) {
     &-search-result-form {
       padding: 15px;
+      width: 100%;
     }
 
     &__nav__item {
@@ -401,15 +402,15 @@
   }
 
   @media (max-width: 400px) {
-    &-search-result {
-      height: 180px;
-    }
+    // &-search-result {
+    //   height: 180px;
+    // }
 
     &-search-result-form {
       padding: 10px;
       gap: 8px;
     }
-
+    
     &-search-result-form-icon input {
       padding: 10px 5px;
     }

@@ -17,11 +17,11 @@ const Culture = () => {
       </div>
       <div className="culture-box">
         <div className="culture-box-info">
-          <h2 className="culture-box-info-title">Корпоративная культура SK Enmove</h2>
+          <h2 className="culture-box-info-title">Корпоративная культура VALESCO</h2>
           <div className="culture-box-info-right">
             <h2 className="culture-box-info-right-title">
-              Сотрудники SK Enmove вместе создают «Культуру победы»</h2>
-            <p className="culture-box-info-right-text">В SK Enmove мы ценим профессионалов, которым не все равно. Мы поощряем инициативу, чтобы вместе преодолевать кризисные ситуации и находить возможности для дальнейшего роста.</p>
+              Сотрудники VALESCO вместе создают «Культуру победы»</h2>
+            <p className="culture-box-info-right-text">В VALESCO мы ценим профессионалов, которым не все равно. Мы поощряем инициативу, чтобы вместе преодолевать кризисные ситуации и находить возможности для дальнейшего роста.</p>
             <div className="culture-box-cards">
               <div className="culture-box-card">
                 <div className="culture-box-card-info">

@@ -460,13 +460,11 @@ const Product = ({ data, loading, title }) => {
     const handleFilterSelect = (filterType, value) => {
         setSelectedFilters(prev => {
             const updatedFilters = { ...prev }
-
             if (updatedFilters[filterType].includes(value)) {
                 updatedFilters[filterType] = updatedFilters[filterType].filter(item => item !== value)
             } else {
                 updatedFilters[filterType] = [...updatedFilters[filterType], value]
             }
-
             return updatedFilters
         })
     }

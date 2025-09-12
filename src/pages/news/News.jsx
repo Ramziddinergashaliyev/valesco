@@ -16,7 +16,7 @@ const News = () => {
           NEW?.map(el => (
             <NavLink key={el?.id} to={el?.link} className="news__card">
               <div className="news__card-img">
-                <img src={el?.img} alt="" />
+                <img className='news__card-img-image' src={el?.img} alt="News-card-img" />
               </div>
             </NavLink>
           ))

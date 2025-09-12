@@ -43,10 +43,9 @@ const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
 }
 
 const SingleProduct = () => {
-
     useEffect(() => {
         window.scrollTo(0, 0)
-    },[])
+    }, [])
 
     const { id } = useParams()
     const { data: byData, isLoading } = useGetProductByIdQuery(id)
@@ -116,7 +115,7 @@ const SingleProduct = () => {
                                             </div>
                                         </>
                                         :
-                                    <></>
+                                        <></>
                                 }
                             </div>
                         </div>
@@ -132,7 +131,7 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#document">Документация</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
-                                        <Advantages data={byData?.info}/>
+                                        <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
@@ -178,7 +177,7 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#document">Документация</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
-                                        <Advantages data={byData?.info}/>
+                                        <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
@@ -201,7 +200,7 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#document">Документация</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
-                                        <Advantages data={byData?.info}/>
+                                        <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />

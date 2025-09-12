@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { IoMdArrowDropdown, IoMdClose } from 'react-icons/io';
-import "./header.scss"
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../../assets/icons/logo.png"
 import { useTranslation } from 'react-i18next';
 import { AiOutlineClose } from "react-icons/ai";
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi';
 import { useSearchProductsQuery } from '../../../context/api/productApi';
+
+import "./header.scss"
 
 const Header = () => {
   const [searchHide, setSearchHide] = useState(false)
@@ -139,7 +140,13 @@ const Header = () => {
             />
             <FiSearch />
           </div>
+          {
+            value
+            ?
+            ""
+            :
           <p className='header-search-result-form-text'>{t("searchHelp")}</p>
+          }
         </div>
 
         <div className="header-search-info container">

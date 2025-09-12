@@ -22,9 +22,9 @@ const Benafits = () => {
                 <div className="benafits-sass-info">
                     <p className="benafits-sass-info-text">
                         Valesco способствует повышению производительности двигателей и обеспечивает превосходную защиту даже в экстремальных климатических условиях.</p>
-                    <p className="benafits-sass-info-text">100% Синтетическое моторное масло. Смешано с базовым маслом SK Valesco самого высокого качества в мире.</p>
-                    <p className="benafits-sass-info-text">Самым большим преимуществом SK Valesco является то, что в нем используется лучшее в мире базовое масло III группы - YUBASE.</p>
-                    <p className="benafits-sass-info-text">YUBASE - это собственный бренд SK Enmove, который занимает около 40% мирового рынка премиум-класса III группы.</p>
+                    <p className="benafits-sass-info-text">100% Синтетическое моторное масло. Смешано с базовым маслом Valesco самого высокого качества в мире.</p>
+                    <p className="benafits-sass-info-text">Самым большим преимуществом Valesco является то, что в нем используется лучшее в мире базовое масло III группы - EUROTEC.</p>
+                    <p className="benafits-sass-info-text">EUROTEC - это собственный бренд VALESCO, который занимает около 40% мирового рынка премиум-класса III группы.</p>
                 </div>
             </div>
 
@@ -43,10 +43,8 @@ const Benafits = () => {
                             ))}
                         </tbody>
                     </table>
-
                 </div>
             </div>
-
         </div>
     )
 }
