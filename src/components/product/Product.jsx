@@ -424,7 +424,6 @@ const Product = ({ data, loading, title }) => {
     const [filteredData, setFilteredData] = useState([])
 
     useEffect(() => {
-
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 700)
         }
@@ -432,15 +431,15 @@ const Product = ({ data, loading, title }) => {
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
-
     }, [])
 
     useEffect(() => {
+
         if (!data) {
             setFilteredData([])
             return
         }
-        
+
         let filtered = [...data]
 
         if (selectedFilters.viscosity.length > 0) {

@@ -1,11 +1,11 @@
 .contact {
     &-top {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1.4fr 2fr;
         grid-gap: 20px;
         padding-top: 160px;
         padding-bottom: 50px;
-
+    
         &-title {
             font-size: 56px;
             font-weight: 600;
