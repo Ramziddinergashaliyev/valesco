@@ -340,7 +340,7 @@
     &-card-list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 40px 10px;
+        gap: 10px;
 
         @media (max-width:1480px) {
             gap: 10px;
@@ -350,7 +350,6 @@
     &-card {
         position: relative;
         border-radius: 1rem;
-        // height: 270px;
         cursor: pointer;
         transform-style: preserve-3d;
         transition: transform 0.3s ease;
@@ -388,7 +387,7 @@
 
         &-content {
             position: absolute;
-            top: -35px;
+            top: -20px;
             left: 0;
             right: 0;
             z-index: 30;
