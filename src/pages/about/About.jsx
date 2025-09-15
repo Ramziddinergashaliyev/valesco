@@ -32,7 +32,7 @@ const About = () => {
           <div className="about__take-info">
             <h2 className="about__take-info-title">
               Наша компания является производителем, тормозных жидкостей, охлаждающих жидкостей и авто химии.</h2>
-            <p className="about__take-info-text">В 2019 году начало производить моторных автомасел под брендом VALESCO, что отвечающим мировым стандартам. Компания основана в 2011 году, как Узбекско-Российское совместное “GLOBAL PETROCHEMICAL GROUP” предприятие в городе Ташкенте.</p>
+            <p className="about__take-info-text">В 2019 году начало производить моторных автомасел под брендом VALESCO, что отвечающим мировым стандартам. Компания основана в 2011 году, как Узбекско-Kорейский совместное “GLOBAL PETROCHEMICAL GROUP” предприятие в городе Ташкенте.</p>
 
             <div className="about__take-info-cards">
               {
@@ -54,28 +54,9 @@ const About = () => {
               <img src={img1} alt="about img" className="about-imgs-img" />
               <div className="about-imgs-info">
                 <p className="about-imgs-info-title">Так как, продукция компании “GLOBAL PETROCHEMICAL GROUP” отвечает требованиям мировых автопроизводителей, с 2012 года, наша компания начало активно осваивать рынок стран СНГ. </p>
-                <p className="about-imgs-info-text">Компания экспортирует продукцию в такие страны, как Россия, Казахстан, Кыргызстан, Туркменистан и т.д. Официальным дилером, нашей компании, на территории Российской Федерации является ООО «Авто Технологи Групп»</p>
+                <p className="about-imgs-info-text">Компания экспортирует продукцию в такие страны, как Казахстан, Кыргызстан, Туркменистан и т.д. Официальным дилером, нашей компании, на территории Российской Федерации является ООО «Авто Технологи Групп»</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="about__networks">
-          <h2 className="about__networks-title">Oтрасли</h2>
-          <div className="about__networks__cards">
-            {
-              NETWORKS?.map(el => (
-                <div key={el?.id} className="about__networks__card">
-                  <div className="about__networks__card-info">
-                    <h2 className='about__networks__card-info-title'>{el?.title}</h2>
-                    <p className='about__networks__card-info-text'>{el?.text}</p>
-                  </div>
-                  <div className="about__networks__card-imgs">
-                    <img src={el?.img} alt={el?.title} />
-                  </div>
-                </div>
-              ))
-            }
           </div>
         </div>
       </div>

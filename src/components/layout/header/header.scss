@@ -1,5 +1,5 @@
 .header {
-  background-color: white;
+  background-color: #aaa3;
   padding: 20px 0px;
   height: 110px;
   position: fixed;
@@ -7,7 +7,7 @@
   left: 0;
   z-index: 999;
   width: 100%;
-  border-bottom: 1px solid #a4a4a4;
+  // border-bottom: 1px solid #a4a4a4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
     margin: 0 auto;
     padding: 0 20px;
 
@@ -59,8 +59,9 @@
 
     &__list {
       position: relative;
-      font-size: 15px;
-      color: #333331;
+      font-size: 17px;
+      // color: #333331;
+      color: #000;
       font-weight: 400;
       line-height: 24px;
       cursor: pointer;
@@ -71,6 +72,7 @@
 
     &__list svg {
       font-size: 12px;
+      color: #000;
     }
 
     &__list:hover .dropdown-item {
@@ -163,6 +165,7 @@
     &__bottom-search,
     &__bottom-menu {
       font-size: 22px;
+      color: #000;
     }
 
     &__bottom-menu {
