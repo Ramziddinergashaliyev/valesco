@@ -7,9 +7,9 @@ const Advantages = ({ data }) => {
     <div id='advantages' className='advantages container'>
       <h2 className="advantages-title">Преимущества</h2>
       <div className="advantages__info">
-        <p className="advantages-info-title">
+        {/* <p className="advantages-info-title">
           Изготовлено на основе полиальфаолефинов (ПАО) и собственного синтетического базового масла YUBASE PLUS в сочетании с современным низкозольным пакетом присадок.
-        </p>
+        </p> */}
         <ul className="advantages-info-item">
           {data.map((text, index) => {
             const formattedText = text.charAt(0).toUpperCase() + text.slice(1);

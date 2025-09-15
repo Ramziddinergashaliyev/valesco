@@ -11,9 +11,11 @@ import Mission from '../../components/mission/Mission'
 import CallTo from '../../components/callTo/CallTo'
 
 const Home = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  
   return (
     <>
       <HeroTop />
@@ -24,7 +26,7 @@ const Home = () => {
       <PrideArea />
       <Differents />
       <Mission />
-      <CallTo /> 
+      {/* <CallTo />  */}
     </>
   )
 }

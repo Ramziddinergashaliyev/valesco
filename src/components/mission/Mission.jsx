@@ -12,6 +12,7 @@ const Mission = () => {
     return (
         <div className='mission'>
             <div className="container mission-container">
+
                 <div className="mission-top">
                     <h1 className="mission-top-title">{t("company")}</h1>
                     <div className="mission-top-info">
@@ -20,6 +21,7 @@ const Mission = () => {
                         <p className="mission-top-info-text">{t("строит")}</p>
                     </div>
                 </div>
+
                 <div className="mission-cards">
                     {
                         cardMission?.map(el => (
@@ -33,6 +35,7 @@ const Mission = () => {
                         ))
                     }
                 </div> 
+                
             </div>
         </div>
     )

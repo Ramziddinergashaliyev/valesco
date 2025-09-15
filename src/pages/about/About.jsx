@@ -16,7 +16,7 @@ const About = () => {
       <div className="container">
 
         <div className="about__top">
-          <h2 className="about__top-title">О компании SK Enmove</h2>
+          <h2 className="about__top-title">О компании</h2>
           <video
             className='about__top-vd'
             src={vd}
@@ -34,7 +34,32 @@ const About = () => {
               Наша компания является производителем, тормозных жидкостей, охлаждающих жидкостей и авто химии.</h2>
             <p className="about__take-info-text">В 2019 году начало производить моторных автомасел под брендом VALESCO, что отвечающим мировым стандартам. Компания основана в 2011 году, как Узбекско-Kорейский совместное “GLOBAL PETROCHEMICAL GROUP” предприятие в городе Ташкенте.</p>
 
-            <div className="about__take-info-cards">
+            {/* <div className="about__take-info-cards">
+              {
+                MISSION?.map(el => (
+                  <div key={el.id} className="about__take-info-card">
+                    <h2 className="about__take-info-card-title">{el?.price}</h2>
+                    <p className="about__take-info-card-text">{el?.title}</p>
+                  </div>
+                ))
+              }
+            </div> */}
+
+            <div className="about-info">
+              <p className="about-info-text">Все этапы производства (включая производство тары) проводятся на собственном технологическом оборудовании. Производится тщательный контроль качества на каждом этапе производства.</p>
+              <p className="about-info-text">Продукция компании GPG полностью соответствует всем необходимым стандартам, успешно прошла испытания в соответствующих лабораториях и имеет протоколы испытаний, а также имеет сертификацию агентства стандартизации, метрологии и сертификации «УзСтандарт» и получила допуск к производству и применению в транспортных средствах согласно ТУ 64-23424406-01:2012.</p>
+            </div>
+
+            <div className="about-imgs">
+              <img src={img1} alt="about img" className="about-imgs-img" />
+              <div className="about-imgs-info">
+                <p className="about-imgs-info-text">Так как, продукция компании “GLOBAL PETROCHEMICAL GROUP” отвечает требованиям мировых автопроизводителей, с 2012 года, наша компания начало активно осваивать рынок стран СНГ.  Компания экспортирует продукцию в такие страны, как Казахстан, Кыргызстан, Туркменистан и т.д.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="about__take-info-cards">
               {
                 MISSION?.map(el => (
                   <div key={el.id} className="about__take-info-card">
@@ -44,21 +69,6 @@ const About = () => {
                 ))
               }
             </div>
-
-            <div className="about-info">
-              <p className="about-info-title">Все этапы производства (включая производство тары) проводятся на собственном технологическом оборудовании. Производится тщательный контроль качества на каждом этапе производства.</p>
-              <p className="about-info-text">Продукция компании GPG полностью соответствует всем необходимым стандартам, успешно прошла испытания в соответствующих лабораториях и имеет протоколы испытаний, а также имеет сертификацию агентства стандартизации, метрологии и сертификации «УзСтандарт» и получила допуск к производству и применению в транспортных средствах согласно ТУ 64-23424406-01:2012.</p>
-            </div>
-
-            <div className="about-imgs">
-              <img src={img1} alt="about img" className="about-imgs-img" />
-              <div className="about-imgs-info">
-                <p className="about-imgs-info-title">Так как, продукция компании “GLOBAL PETROCHEMICAL GROUP” отвечает требованиям мировых автопроизводителей, с 2012 года, наша компания начало активно осваивать рынок стран СНГ. </p>
-                <p className="about-imgs-info-text">Компания экспортирует продукцию в такие страны, как Казахстан, Кыргызстан, Туркменистан и т.д. Официальным дилером, нашей компании, на территории Российской Федерации является ООО «Авто Технологи Групп»</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   )

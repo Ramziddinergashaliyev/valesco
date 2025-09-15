@@ -1,5 +1,5 @@
 .mission {
-    padding: 70px 0px;
+    padding: 70px 0px 30px;
 
     &-container {
         display: flex;
@@ -42,7 +42,7 @@
 
     &-cards {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
         padding-top: 20px;
     }
@@ -91,16 +91,6 @@
             }
         }
 
-    }
-
-    &-card:hover .mission-card-info-text {
-        opacity: 0;
-        transition: .6s;
-    }
-
-    &-card:hover .mission-card-info-desc {
-        opacity: 1;
-        transition: .6s;
     }
 
     @media (max-width:900px) {

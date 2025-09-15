@@ -29,7 +29,7 @@ const Impact = () => {
           <div className="impact-nashi-info-top">
             <h3 className="impact-nashi-info-top-title">
               В основе успеха бизнеса Valesco лежат удовлетворенность акционеров, достижение максимума SUPEX и победный дух «Pae-gi»</h3>
-            <p className="impact-nashi-info-top-desc">SKMS (система управления SK) систематически излагает корпоративную культуру и бизнес-идеологию, а также методы управления SK Group. Это эксклюзивная философия управления SK, которую разделяют и с которой согласны все филиалы SK.</p>
+            <p className="impact-nashi-info-top-desc">MS (система управления ) систематически излагает корпоративную культуру и бизнес-идеологию, а также методы управления  Group. Это эксклюзивная философия управления , которую разделяют и с которой согласны все филиалы .</p>
           </div>
           <div className="impact-nashi-info-bottom">
             <div className="impact-nashi-info-bottom-boxs">
@@ -47,13 +47,13 @@ const Impact = () => {
       </div>
 
       <div className="impact-group">
-        <h2 className="impact-group-title">SK Group и его участники</h2>
+        <h2 className="impact-group-title"> Group и его участники</h2>
 
         <div className="impact-group-box">
           <img src={img1} alt="impact-img" />
           <div className="impact-group-info">
-            <p className="impact-group-info-text">Каждая компания SK Group осуществляет автономное и ответственное управление при совете директоров, и при этом каждая компания имеет собственный комитет управления в соответствии с соглашением о добровольном участии.</p>
-            <p className="impact-group-info-text"><span>Это уникальный подход к управлению SK Group по принципу «Независимы, но едины».</span> Все члены SK Group разделяют философию управления SK и добровольно и активно реализуют ее.</p>
+            <p className="impact-group-info-text">Каждая компания  Group осуществляет автономное и ответственное управление при совете директоров, и при этом каждая компания имеет собственный комитет управления в соответствии с соглашением о добровольном участии.</p>
+            <p className="impact-group-info-text"><span>Это уникальный подход к управлению  Group по принципу «Независимы, но едины».</span> Все члены  Group разделяют философию управления  и добровольно и активно реализуют ее.</p>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ const Impact = () => {
           <div className="impact-prinsp-right-info">
             <div className="impact-prinsp-right-info-top">
               <h2 className="impact-prinsp-right-info-top-title">Реализация стратегии SUPEX</h2>
-              <p className="impact-prinsp-right-info-top-text">Чтобы постоянно оправдывать ожидания акционеров, SK устанавливает SUPEX, то есть максимальный уровень, который может быть достигнут человеческими способностями в качестве цели. Такая задача часто сложно достижима на практике, поэтому SK будет ставить ее повторно до тех пор, пока не выйдет на следующий уровень SUPEX.</p>
+              <p className="impact-prinsp-right-info-top-text">Чтобы постоянно оправдывать ожидания акционеров,  устанавливает SUPEX, то есть максимальный уровень, который может быть достигнут человеческими способностями в качестве цели. Такая задача часто сложно достижима на практике, поэтому  будет ставить ее повторно до тех пор, пока не выйдет на следующий уровень SUPEX.</p>
             </div>
             <div className="impact-prinsp-right-info-bottom">
               <h2 className="impact-prinsp-right-info-bottom-title">Продвижение подхода SUPEX</h2>
@@ -91,7 +91,7 @@ const Impact = () => {
             </div>
           </div>
         </div>
-      </div>  
+      </div>
 
     </div>
   )

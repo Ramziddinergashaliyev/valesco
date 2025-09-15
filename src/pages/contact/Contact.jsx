@@ -6,7 +6,6 @@ const Contact = () => {
   const { t, i18n } = useTranslation()
   console.log(i18n);
   
-
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])

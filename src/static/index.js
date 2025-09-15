@@ -17,7 +17,6 @@ import new5 from "../assets/images/new5.jpg"
 import new6 from "../assets/images/new6.jpg"
 import new7 from "../assets/images/new7.jpg"
 import new8 from "../assets/images/new8.jpg"
-
 import news from "../assets/icons/logo.png"
 
 export const CATEGORY = [
@@ -124,19 +123,24 @@ export const PRIDE = [
 export const MISSION = [
     {
         id: 1,
-        price: "200+",
-        title: "В холдинг SK входят более 200 компаний в разных регионах по всему миру"
+        price: "20+",
+        title: "Лет опыта"
     },
     {
         id: 2,
-        price: "$88+",
-        title: "По данным на 2022 год общая годовая выручка составляет более 88 миллиардов долларов"
+        price: "100+",
+        title: "Наименований позиций"
     },
     {
         id: 3,
-        price: "117",
-        title: "117 место в списке крупнейших компаний мира по версии “Fortune 500” в 2022 году"
+        price: "300+",
+        title: "Специалистов"
     },
+    {
+        id: 4,
+        price: "70%",
+        title: "Реализация продукции по Узбекистану"
+    }
 ]
 
 export const MISSIONEN = [
