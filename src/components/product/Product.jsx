@@ -432,7 +432,7 @@ const Product = ({ data, loading, title }) => {
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
-        
+
     }, [])
 
     useEffect(() => {
@@ -440,6 +440,7 @@ const Product = ({ data, loading, title }) => {
             setFilteredData([])
             return
         }
+        
         let filtered = [...data]
 
         if (selectedFilters.viscosity.length > 0) {
@@ -530,6 +531,7 @@ const Product = ({ data, loading, title }) => {
                     </button>
                 </div>
             </div>
+
             {
                 title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles"
                     ?
