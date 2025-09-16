@@ -3,13 +3,14 @@
 
     &__container {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: 1.3fr 2fr;
         grid-gap: 20px;
         align-items: flex-start;
     }
 
     &__title {
-        font-size: 54px;
+        font-size: 44px;
+        line-height: 48px;
         font-weight: 700;
         color: #333331;
     }
@@ -37,47 +38,47 @@
         }
 
         &-btn {
-          padding: 15px;
-          width: 240px;
-          border: 1px solid black;
-          border-radius: 40px;
-          background-color: white;
-          font-size: 16px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 20px;
+            padding: 15px;
+            width: 240px;
+            border: 1px solid #333331;
+            border-radius: 40px;
+            background-color: white;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
 
-          svg {
-            font-size: 18px;
-          }
-
+            svg {
+              font-size: 18px;
+            }
         }
 
         &-btn:hover {
-            background-color: black;
+            background-color: #333331;
             color: white;
             transition: .6s;
+
             svg {
-                color: white;
+              color: white;
             }
         }
     }
 
     @media (max-width:850px) {
         &__title {
-          font-size: 34px;
+            font-size: 34px;
         }
 
         &__info-title {
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 24px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
         }
 
         &__info-text {
-           font-size: 16px;
-           font-weight: 300;
+            font-size: 16px;
+            font-weight: 300;
         }
     }
 
@@ -89,30 +90,30 @@
 
     @media (max-width: 340px) {
         padding: 20px 0px;
+
         &__title {
             font-size: 24px;
-            text-align: center;
             font-weight: 500;
         }
 
         &__info-title {
-           font-size: 18px;
-           font-weight: 400;
-           text-align: center;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
         }
 
         &__info-text {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
-            text-align: center;
-        }
-
-        &__info {
-            align-items: center;
+            line-height: 20px;
         }
 
         &__info-btn {
-            margin: 0 auto;
+            padding: 12px;
+        }
+
+        &__info {
+            gap: 15px;
         }
     }
 }

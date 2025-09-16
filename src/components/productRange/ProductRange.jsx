@@ -48,11 +48,6 @@
 // export default ProductRange
 
 
-
-
-
-
-
 // import React, { useEffect, useRef } from "react";
 // import "./productRange.scss";
 // import { NavLink } from "react-router-dom";
@@ -218,8 +213,6 @@
 
 // export default ProductRange;
 
-
-
 import React, { useEffect, useRef } from "react";
 import "./productRange.scss";
 import { NavLink } from "react-router-dom";
@@ -256,7 +249,7 @@ const CATEGORY = [
   {
     image: img1,
     bgImage: img2,
-  },
+  }
 ];
 
 const ProductRange = () => {
@@ -267,62 +260,8 @@ const ProductRange = () => {
   const { data } = useGetCategoriesQuery();
   console.log("API data:", data);
 
-  // useEffect(() => {
-  //   const RANGE = 20;
-
-  //   const handleMouseMove = (event, card, img, bg) => {
-  //     const rect = card.getBoundingClientRect();
-  //     const x = event.clientX - rect.left;
-  //     const y = event.clientY - rect.top;
-
-  //     const xValue = ((x / rect.width) * RANGE - RANGE / 2).toFixed(1);
-  //     const yValue = ((y / rect.height) * RANGE - RANGE / 2).toFixed(1);
-
-  //     card.style.transform = `rotateX(${-yValue}deg) rotateY(${xValue}deg)`;
-
-  //     if (img) {
-  //       img.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
-  //     }
-  //     if (bg) {
-  //       bg.style.backgroundPosition = `${xValue * 1.5}px ${-yValue * 1.5}px`;
-  //     }
-  //   };
-
-  //   const handleMouseLeave = (card, img, bg) => {
-  //     card.style.transform = `rotateX(0deg) rotateY(0deg)`;
-  //     if (img) img.style.transform = `translateX(0) translateY(0)`;
-  //     if (bg) bg.style.backgroundPosition = `center`;
-  //   };
-
-  //   const listeners = [];
-
-  //   cardRefs.current.forEach((card, index) => {
-  //     const img = imgRefs.current[index];
-  //     const bg = bgRefs.current[index];
-  //     if (!card) return;
-
-  //     const moveHandler = (e) => handleMouseMove(e, card, img, bg);
-  //     const leaveHandler = () => handleMouseLeave(card, img, bg);
-
-  //     card.addEventListener("mousemove", moveHandler);
-  //     card.addEventListener("mouseleave", leaveHandler);
-
-  //     listeners.push({ card, moveHandler, leaveHandler });
-  //   });
-
-  //   return () => {
-  //     listeners.forEach(({ card, moveHandler, leaveHandler }) => {
-  //       if (card) {
-  //         card.removeEventListener("mousemove", moveHandler);
-  //         card.removeEventListener("mouseleave", leaveHandler);
-  //       }
-  //     });
-  //   };
-  // }, []);
-
-
   useEffect(() => {
-    if (!data) return; // data yo'q bo'lsa chiqib ketadi
+    if (!data) return;
     const RANGE = 20;
 
     const handleMouseMove = (event, card, img, bg) => {
@@ -355,7 +294,7 @@ const ProductRange = () => {
       const img = imgRefs.current[index];
       const bg = bgRefs.current[index];
       if (!card) return;
-
+ 
       const moveHandler = (e) => handleMouseMove(e, card, img, bg);
       const leaveHandler = () => handleMouseLeave(card, img, bg);
 
@@ -373,8 +312,7 @@ const ProductRange = () => {
         }
       });
     };
-  }, [data]); // 🔑 endi data kelganda qaytadan ishlaydi
-
+  }, [data]);
 
   return (
     <div className="productRange container">
@@ -397,7 +335,6 @@ const ProductRange = () => {
         <div className="productRange-card-list">
           {data?.map((item, index) => {
             const category = CATEGORY[index];
-
             return (
               <div key={item.id} className="productRange-card" ref={(el) => (cardRefs.current[index] = el)}>
                 <NavLink to={`/categories/${item?.id}`}>

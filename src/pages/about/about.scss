@@ -124,6 +124,11 @@
                 }
             }
 
+            &-card:hover {
+                box-shadow: 1px 1px 10px #aaa6;
+                transition: .6s;
+            }
+
             @media (max-width:900px) {
                 &-cards {
                     display: grid;

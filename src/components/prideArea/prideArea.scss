@@ -193,5 +193,13 @@
             font-size: 12px;
             width: 100%;
         }
+
+        &__bottom {
+          padding: 0px;
+        }
+
+        &__container {
+          gap: 15px;
+        }
     }
 }
