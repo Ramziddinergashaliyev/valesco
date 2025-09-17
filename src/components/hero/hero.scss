@@ -1,6 +1,6 @@
 .slider-container {
   width: 100%;
-  height:  calc(80vh - 194px);
+  height: calc(80vh - 194px);
 
   .mySwiper {
     width: 100%;
@@ -10,8 +10,8 @@
     .slide {
       width: 100%;
       min-height: 470px;
-      background-size: cover;
-      background-position: center;
+      // background-size: cover;
+      // background-position: center;
     }
 
     .autoplay-progress {
@@ -47,5 +47,14 @@
         font-size: 12px;
       }
     }
+
+
+    @media (max-width: 1480px) {
+      padding-top: 0px;
+    }
+  }
+
+  @media (max-width: 1480px) {
+    height: calc(75vh - 194px);
   }
 }
