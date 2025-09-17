@@ -6,7 +6,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './hero.scss';
 
-import img from "../../assets/images/hero-1.jpg"
+// import img from "../../assets/images/hero-1.jpg"
+import img from "../../assets/images/newbg.webp"
 import img2 from "../../assets/images/hero-2.jpg"
 import img3 from "../../assets/images/hero-3.jpg"
 
@@ -23,8 +24,8 @@ const Hero = () => {
 
   const slides = [
     { id: 1, image: img },
-    { id: 2, image: img2 },
-    { id: 3, image: img3 },
+    // { id: 2, image: img2 },
+    // { id: 3, image: img3 },
   ];
 
   return (
@@ -45,7 +46,10 @@ const Hero = () => {
             <div
               className="slide"
               style={{
-                backgroundImage: `url(${slide.image})`
+                backgroundImage: `url(${slide.image})`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain"
               }}
             ></div>
           </SwiperSlide>

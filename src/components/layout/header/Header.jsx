@@ -148,7 +148,10 @@ const Header = () => {
 
       {searchHide && (
         <div
-          onClick={() => setSearchHide(false)}
+          onClick={() => {
+            setSearchHide(false)
+            setValue("")
+          }}
           className='header-search-result-form-overlay'
         />
       )}

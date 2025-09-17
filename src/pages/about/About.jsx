@@ -4,8 +4,12 @@ import "./about.scss"
 import { MISSION, NETWORKS } from '../../static'
 import img1 from "../../assets/images/hero-2.jpg"
 import vd from "../../assets/videos/vd.mp4"
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
+  const { t, i18n } = useTranslation()
+  console.log(i18n.languages);
+  
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -16,7 +20,7 @@ const About = () => {
       <div className="container">
 
         <div className="about__top">
-          <h2 className="about__top-title">О компании</h2>
+          <h2 className="about__top-title">{t("company")}</h2>
           <video
             className='about__top-vd'
             src={vd}
@@ -28,11 +32,11 @@ const About = () => {
         </div>
 
         <div className="about__take">
-          <h2 className="about__take-title">Кто мы такие</h2>
+          <h2 className="about__take-title">{t("Кто мы такие")}</h2>
           <div className="about__take-info">
             <h2 className="about__take-info-title">
-              Наша компания является производителем, тормозных жидкостей, охлаждающих жидкостей и авто химии.</h2>
-            <p className="about__take-info-text">В 2019 году начало производить моторных автомасел под брендом VALESCO, что отвечающим мировым стандартам. Компания основана в 2011 году, как Узбекско-Kорейский совместное “GLOBAL PETROCHEMICAL GROUP” предприятие в городе Ташкенте.</p>
+              {t("Наша компания")}</h2>
+            <p className="about__take-info-text">{t("начало")}</p>
 
             {/* <div className="about__take-info-cards">
               {
