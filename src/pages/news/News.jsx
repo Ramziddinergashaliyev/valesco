@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { NEW } from '../../static'
 import { NavLink } from 'react-router-dom'
+import logo from "../../assets/icons/logo.png"
+
 import "./news.scss"
 
 const News = () => {
@@ -11,6 +13,12 @@ const News = () => {
 
   return (
     <div className='news container'>
+      <div className="news-top">
+        <div className="news-top-img">
+          <img src={logo} alt="news-top-logo" />
+        </div>
+        <h1 className='news-top-title'>valescooil_uz</h1>
+      </div>
       <div className="news__cards">
         {
           NEW?.map(el => (

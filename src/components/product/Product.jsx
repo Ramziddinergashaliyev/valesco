@@ -502,10 +502,10 @@ const Product = ({ data, loading, title }) => {
 
             <h2 className="product-title">{title}</h2>
 
-            <div className="product-top">
+            {/* <div className="product-top">
                 <p className='product-top-text'>Для оптимального подбора продукта Valesco, соответствующего вашему автомобилю, пожалуйста, воспользуйтесь нашим модулем подбора масла.</p>
                 <button className='product-top-btn'> Подобрать масло<MdArrowOutward /></button>
-            </div>
+            </div> */}
 
             <div className="product-filter">
                 <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>

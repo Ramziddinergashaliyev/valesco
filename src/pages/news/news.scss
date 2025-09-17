@@ -1,6 +1,27 @@
 .news {
     padding-top: 140px;
 
+    &-top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 20px;
+
+        &-title {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+            color: #333331;
+        }
+    }
+
+    &-top-img {
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
     &__cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);

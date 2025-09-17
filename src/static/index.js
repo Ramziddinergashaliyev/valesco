@@ -146,19 +146,24 @@ export const MISSION = [
 export const MISSIONEN = [
     {
         id: 1,
-        price: "200+",
-        title: "The SK Holding includes more than 200 companies in various regions around the world"
+        price: "20+",
+        title: "Years of Experience"
     },
     {
         id: 2,
-        price: "$88+",
-        title: "As of 2022, the total annual revenue exceeds 88 billion US dollars"
+        price: "100+",
+        title: "Product Categories"
     },
     {
         id: 3,
-        price: "117",
-        title: "Ranked 117th in the list of the world's largest companies according to Fortune 500 in 2022"
+        price: "300+",
+        title: "Specialists"
     },
+    {
+        id: 4,
+        price: "70%",
+        title: "Product Distribution Across Uzbekistan"
+    }
 ]
 
 export const CALLTO = [
@@ -177,7 +182,7 @@ export const CALLTO = [
     {
         id: 4,
         title: "Где купить"
-    },
+    }
 ]
 
 export const CALLTOEN = [
@@ -196,7 +201,7 @@ export const CALLTOEN = [
     {
         id: 4,
         title: "Where to buy"
-    },
+    }
 ]
 
 export const NETWORKS = [
@@ -204,26 +209,26 @@ export const NETWORKS = [
         id: 1,
         title: "Энергетика и химическая промышленность",
         text: "Мы разрабатываем экологически безопасные энергетические решения и вещества, которые двигают промышленность вперед",
-        img: net1,
+        img: net1
     },
     {
         id: 2,
         title: "Информационные и коммуникационные технологии",
         text: "Мы создаем инновационные решения для развития технологий нового уровня",
-        img: net2,
+        img: net2
     },
     {
         id: 3,
         title: "Микросхемы и материалы",
         text: "Мы совершенствуем технологии производства и передовые материалы для будущих открытий",
-        img: net3,
+        img: net3
     },
     {
         id: 4,
         title: "Биотехнологии",
         text: "Мы стремимся улучшать здоровье людей и связанную инфраструктуру во всем мире",
-        img: net4,
-    },
+        img: net4
+    }
 ]
 
 export const IMPACT = [

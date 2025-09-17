@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
   const { t, i18n } = useTranslation()
-  console.log(i18n);
+  console.log(i18n?.languages[0]);
   
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -13,30 +13,27 @@ const Contact = () => {
   return (
     <div className='contact container'>
       <div className="contact-top">
-        <h2 className="contact-top-title">Контакты</h2>
-        <p className="contact-top-text">
-          Если у вас возникли какие-либо вопросы или вам нужна дополнительная информация, мы всегда на связи. Оставьте заявку, и наши специалисты свяжутся с вами в кратчайшие сроки.</p>
+        <h2 className="contact-top-title">{t("Контакты")}</h2>
+        <p className="contact-top-text">{t("какие-либо")}</p>
       </div>
       <div className="contact-bottom">
         <div className="contact-bottom-left">
           <div className="contact-bottom-left-addres">
-            <p className="contact-bottom-left-addres-title">Адрес</p>
-            <p className="contact-bottom-left-addres-text">
-              100070, Республика Узбекистан, г. Ташкент, Яккасарайский р-н, ул. Глинка 14/3
-            </p>
+            <p className="contact-bottom-left-addres-title">{t("Адрес")}</p>
+            <p className="contact-bottom-left-addres-text">{t("addressValesco")}</p>
           </div>
           <div className="contact-bottom-left-sv">
-            <p className="contact-bottom-left-sv-title">для связи</p>
+            <p className="contact-bottom-left-sv-title">{t("для связи")}</p>
             <div className="contact-bottom-left-sv-info">
               <div className="contact-bottom-left-sv-info-phone">
-                <span>Телефон</span>
+                <span>{t("телефона")}</span>
                 <p className="contact-bottom-left-sv-info-phone-text">
                   <a href="tel:+998 71 281 49 30">+998 71 281 49 30</a>
                   <a href="tel:+998 71 203 20 31">+998 71 203 20 31</a>
                 </p>
               </div>
               <div className="contact-bottom-left-sv-info-pochta">
-                <span>Электронная почта</span>
+                <span>{t("E-mail")}</span>
                 <a href='mailTo: info@gpggroup.uz' className="contact-bottom-left-sv-info-pochta-text">info@gpggroup.uz</a>
               </div>
             </div>

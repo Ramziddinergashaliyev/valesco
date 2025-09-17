@@ -59,7 +59,6 @@ const Header = () => {
               <img src={logo} alt="header logo" />
             </a>
           </div>
-
           <ul className={`header__nav__item ${hide ? "header__nav__hide" : ""}`}>
             <button onClick={() => setHide(false)} className='header__nav__close'><AiOutlineClose /></button>
 
@@ -78,9 +77,7 @@ const Header = () => {
                 }
               </ul>
             </li>
-
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/distrbut">{t("distributors")}</NavLink></li>
-
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/contact">{t("contacts")}</NavLink></li>
           </ul>
 
@@ -89,8 +86,7 @@ const Header = () => {
               <select
                 className="custom-select"
                 value={currentLang}
-                onChange={(e) => changeLanguage(e.target.value)}
-              >
+                onChange={(e) => changeLanguage(e.target.value)}>
                 <option value="ru">Русский</option>
                 <option value="en">English</option>
               </select>
@@ -123,10 +119,10 @@ const Header = () => {
           </div>
           {
             value
-            ?
-            ""
-            :
-          <p className='header-search-result-form-text'>{t("searchHelp")}</p>
+              ?
+              ""
+              :
+              <p className='header-search-result-form-text'>{t("searchHelp")}</p>
           }
         </div>
 
