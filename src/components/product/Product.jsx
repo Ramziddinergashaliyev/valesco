@@ -1,334 +1,3 @@
-// import React, { useState, useEffect } from 'react'
-// import "./product.scss"
-// import { MdArrowOutward } from 'react-icons/md'
-// import filter from "../../assets/icons/filter.svg"
-// import img1 from "../../assets/icons/col-icn.svg"
-// import img2 from "../../assets/icons/row-icn.svg"
-// import { FiPlus } from 'react-icons/fi'
-// import { NavLink } from 'react-router-dom'
-// import Loading from '../loading/Loading'
-// import LoadingRow from '../loadingRow/LoadingRow'
-// import { ClosedCaption } from 'lucide-react'
-// import { IoMdClose } from "react-icons/io";
-
-// const Product = ({ data, loading, title }) => {
-//     const [hide, setHide] = useState(false)
-//     const [filterHide, setFilterHide] = useState(null)
-//     const [isMobile, setIsMobile] = useState(false)
-//     const [selectedFilters, setSelectedFilters] = useState({
-//         lineType: [],
-//         viscosity: []
-//     })
-//     const [filteredData, setFilteredData] = useState([])
-
-//     (() => {
-//         const handleResize = () => {
-//             setIsMobile(window.innerWidth <= 700)
-//         }
-//         handleResize()
-//         window.addEventListener('resize', handleResize)
-//         return () => window.removeEventListener('resize', handleResize)
-//     }, [])
-
-//     useEffect(() => {
-//         if (!data) {
-//             setFilteredData([])
-//             return
-//         }
-//         let filtered = [...data]
-
-//         if (selectedFilters.viscosity.length > 0) {
-//             filtered = filtered.filter(item => {
-//                 const itemViscosity = item.sae?.[0] || ''
-//                 return selectedFilters.viscosity.includes(itemViscosity)
-//             })
-//         }
-
-//         if (selectedFilters.lineType.length > 0) {
-//             filtered = filtered.filter(item => {
-//                 const title = item.title || ''
-//                 return selectedFilters.lineType.some(lineType =>
-//                     title.toLowerCase().includes(lineType.toLowerCase())
-//                 )
-//             })
-//         }
-
-//         setFilteredData(filtered)
-//     }, [data, selectedFilters])
-
-//     const handleFilterSelect = (filterType, value) => {
-//         setSelectedFilters(prev => {
-//             const updatedFilters = { ...prev }
-
-//             if (updatedFilters[filterType].includes(value)) {
-//                 updatedFilters[filterType] = updatedFilters[filterType].filter(item => item !== value)
-//             } else {
-//                 updatedFilters[filterType] = [...updatedFilters[filterType], value]
-//             }
-
-//             return updatedFilters
-//         })
-//     }
-
-//     const isFilterSelected = (filterType, value) => {
-//         return selectedFilters[filterType].includes(value)
-//     }
-
-//     const getFilterButtonClass = (filterType, value) => {
-//         return `product-filter-result-left-btn ${isFilterSelected(filterType, value) ? 'selected' : ''}`
-//     }
-
-//     const clearAllFilters = () => {
-//         setSelectedFilters({
-//             lineType: [],
-//             viscosity: []
-//         })
-//     }
-
-//     const displayData = filteredData
-
-//     return (
-//         <div className='product container'>
-//             <h2 className="product-title">{title}</h2>
-
-//             <div className="product-top">
-//                 <p className='product-top-text'>Для оптимального подбора продукта Valesco, соответствующего вашему автомобилю, пожалуйста, воспользуйтесь нашим модулем подбора масла.</p>
-//                 <button className='product-top-btn'> Подобрать масло<MdArrowOutward /></button>
-//             </div>
-
-//             <div className="product-filter">
-//                 <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>
-//                     <img src={filter} alt="filterImg" />
-//                     {filterHide ? 'Показать фильтр' : 'Скрыть фильтр'}
-//                 </button>
-//                 <div className="product-filter-right">
-//                     {!isMobile && (
-//                         <button
-//                             onClick={() => setHide(false)}
-//                             className={`product-filter-right-info ${!hide ? 'active' : ''}`}
-//                         >
-//                             <img src={img2} alt="product-col-img" />
-//                         </button>
-//                     )}
-//                     <button
-//                         onClick={() => setHide(true)}
-//                         className={`product-filter-right-info ${hide ? 'active' : ''}`}
-//                     >
-//                         <img src={img1} alt="product-row-img" />
-//                     </button>
-//                 </div>
-//             </div>
-//             {
-//                 title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles"
-//                     ?
-//                     <>
-//                         <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
-//                             <div className="product-filter-result">
-//                                 <div className="product-filter-result-left animate-item" style={{ '--delay': '0.1s' }}>
-//                                     <p className="product-filter-result-left-text">Линейка моторных масел</p>
-//                                     <div className="product-filter-result-left-btns">
-//                                         <button
-//                                             className={getFilterButtonClass('lineType', 'Top')}
-//                                             onClick={() => handleFilterSelect('lineType', 'Top')}
-//                                         >
-//                                             Top<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('lineType', 'Zero')}
-//                                             onClick={() => handleFilterSelect('lineType', 'Zero')}
-//                                         >
-//                                             Zero<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('lineType', 'Racing')}
-//                                             onClick={() => handleFilterSelect('lineType', 'Racing')}
-//                                         >
-//                                             Racing<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('lineType', 'X9')}
-//                                             onClick={() => handleFilterSelect('lineType', 'X9')}
-//                                         >
-//                                             X9<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('lineType', 'X7')}
-//                                             onClick={() => handleFilterSelect('lineType', 'X7')}
-//                                         >
-//                                             X7<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('lineType', 'X5')}
-//                                             onClick={() => handleFilterSelect('lineType', 'X5')}
-//                                         >
-//                                             X5<FiPlus />
-//                                         </button>
-//                                     </div>
-//                                 </div>
-//                                 <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
-//                                     <p className="product-filter-result-left-text">Вязкость</p>
-//                                     <div className="product-filter-result-left-btns">
-//                                         <button
-//                                             className={getFilterButtonClass('viscosity', '0W-20')}
-//                                             onClick={() => handleFilterSelect('viscosity', '0W-20')}
-//                                         >
-//                                             0W - 20<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('viscosity', '0W-30')}
-//                                             onClick={() => handleFilterSelect('viscosity', '0W-30')}
-//                                         >
-//                                             0W - 30<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('viscosity', '5W-30')}
-//                                             onClick={() => handleFilterSelect('viscosity', '5W-30')}
-//                                         >
-//                                             5W - 30<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('viscosity', '0W-40')}
-//                                             onClick={() => handleFilterSelect('viscosity', '0W-40')}
-//                                         >
-//                                             0W - 40<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('viscosity', '5W-40')}
-//                                             onClick={() => handleFilterSelect('viscosity', '5W-40')}
-//                                         >
-//                                             5W - 40<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('viscosity', '0W-16')}
-//                                             onClick={() => handleFilterSelect('viscosity', '0W-16')}
-//                                         >
-//                                             0W - 16<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('viscosity', '10W-50')}
-//                                             onClick={() => handleFilterSelect('viscosity', '10W-50')}
-//                                         >
-//                                             10W - 50<FiPlus />
-//                                         </button>
-//                                         <button
-//                                             className={getFilterButtonClass('viscosity', '10W-40')}
-//                                             onClick={() => handleFilterSelect('viscosity', '10W-40')}
-//                                         >
-//                                             10W - 40<FiPlus />
-//                                         </button>
-//                                     </div>
-
-//                                 </div>
-//                             </div>
-
-//                             {(selectedFilters.lineType.length > 0 || selectedFilters.viscosity.length > 0) && (
-//                                 <div className="product-filter-clear">
-//                                     <button onClick={clearAllFilters} className="product-filter-clear-btn">
-//                                         <IoMdClose />
-//                                     </button>
-//                                 </div>
-//                             )}
-//                         </div>
-//                     </>
-//                     :
-//                     <></>
-//             }
-
-//             {
-//                 hide || isMobile
-//                     ?
-//                     <>
-//                         {
-//                             loading
-//                                 ?
-//                                 <Loading />
-//                                 :
-//                                 <div className="product-cards fade-in">
-//                                     {
-//                                         displayData?.map((el, index) => (
-//                                             <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
-//                                                 <div className="product-card-img">
-//                                                     <NavLink to={`/singleProduct/${el?.id}`}>
-//                                                         {
-//                                                             el?.image?.length > 0
-//                                                                 ?
-//                                                                 <img className='product-card-img-link' src={el?.image[0]} alt="product-img" />
-//                                                                 :
-//                                                                 <>
-//                                                                  <img className='product-card-img-link' src="" alt="product-hide-img" />
-//                                                                 </>
-//                                                         }
-//                                                     </NavLink>
-//                                                 </div>
-//                                                 <div className="product-card-info">
-//                                                     <h2 className="product-card-info-title">{el?.title}</h2>
-//                                                 </div>
-//                                             </div>
-//                                         ))
-//                                     }
-//                                     {displayData?.length === 0 && !loading && (
-//                                         <div className="no-products">
-//                                             <p>По выбранным фильтрам продукты не найдены</p>
-//                                         </div>
-//                                     )}
-//                                 </div>
-//                         }
-//                     </>
-//                     :
-//                     <>
-//                         {
-//                             loading
-//                                 ?
-//                                 <LoadingRow />
-//                                 :
-//                                 <div className="product-boxs fade-in">
-//                                     {
-//                                         displayData?.map((el, index) => (
-//                                             <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
-//                                                 <div className="product-box-left">
-//                                                     <div className="product-box-left-img">
-//                                                         <NavLink to={`/singleProduct/${el?.id}`}>
-//                                                             {
-//                                                                 el?.image?.length > 0
-//                                                                     ?
-//                                                                     <img src={el?.image[0]} alt="product-img" />
-//                                                                     :
-//                                                                     <>
-//                                                                         <img src="" alt="product-hide-img" />
-//                                                                     </>
-//                                                             }
-//                                                         </NavLink>
-//                                                     </div>
-//                                                     <div className="product-box-left-info">
-//                                                         <h2 className="product-box-left-info-title">{el?.title}</h2>
-//                                                         <div className="product-box-left-info-item">
-//                                                             {
-//                                                                 el?.specifications?.map((el, index) => (
-//                                                                     <span className='product-box-left-info-item-desc' key={index}>{el},</span>
-//                                                                 ))
-//                                                             }
-//                                                         </div>
-//                                                     </div>
-//                                                 </div>
-//                                                 <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>Подробнее<MdArrowOutward /></button></NavLink>
-//                                             </div>
-//                                         ))
-//                                     }
-//                                     {displayData?.length === 0 && !loading && (
-//                                         <div className="no-products">
-//                                             <p>По выбранным фильтрам продукты не найдены</p>
-//                                         </div>
-//                                     )}
-//                                 </div>
-//                         }
-//                     </>
-//             }
-//         </div>
-//     )
-// }
-
-// export default Product
-
 import React, { useState, useEffect } from 'react'
 import { MdArrowOutward } from 'react-icons/md'
 import filter from "../../assets/icons/filter.svg"
@@ -340,6 +9,13 @@ import Loading from '../loading/Loading'
 import LoadingRow from '../loadingRow/LoadingRow'
 import { ClosedCaption } from 'lucide-react'
 import { IoMdClose } from "react-icons/io";
+import banner1 from "../../assets/banner/img1.webp"
+import banner2 from "../../assets/banner/img2.webp"
+import banner3 from "../../assets/banner/img3.webp"
+import banner4 from "../../assets/banner/img4.webp"
+import banner5 from "../../assets/banner/img5.webp"
+import banner6 from "../../assets/banner/img6.webp"
+import banner7 from "../../assets/banner/img7.webp"
 
 import "./product.scss"
 
@@ -489,6 +165,26 @@ const Product = ({ data, loading, title }) => {
 
     const displayData = filteredData
 
+    const bannerMap = {
+        "Моторные масла для легковой и легкой коммерческой техники": banner3,
+        "Motor oils for passenger cars and light commercial vehicles": banner3,
+        "Моторные масла для дизельных двигателей": banner1,
+        "Motor oils for diesel engines": banner1,
+        "Трансмиссионные масла": banner6,
+        "Transmission oils": banner6,
+        "Гидравлические масла": banner2,
+        "Hydraulic oils": banner2,
+        "Тормозная жидкость": banner4,
+        "Brake fluid": banner4,
+        "Антифриз": banner5,
+        "Antifreeze": banner5,
+        "Фильтры": banner7,
+        "Filters": banner7,
+    }
+
+    const bannerSrc = bannerMap[title]
+
+
     return (
         <div className='product container'>
             <style>
@@ -501,11 +197,81 @@ const Product = ({ data, loading, title }) => {
             </style>
 
             <h2 className="product-title">{title}</h2>
+            {/* {(() => {
+                if (
+                    title === "Моторные масла для легковой и легкой коммерческой техники" ||
+                    title === "Motor oils for passenger cars and light commercial vehicles"
+                ) {
+                    return (
+                        <div className="product-banner">
+                            <img className="product-banner-img" src={banner3} alt="banner-one" />
+                        </div>
+                    );
+                } else if (
+                    title === "Моторные масла для дизельных двигателей" ||
+                    title === "Motor oils for diesel engines"
+                ) {
+                    return (
+                        <div className="product-banner">
+                            <img className="product-banner-img" src={banner1} alt="banner-two" />
+                        </div>
+                    );
+                } else if (
+                    title === "Трансмиссионные масла" ||
+                    title === "Transmission oils"
+                ) {
+                    return (
+                        <div className="product-banner">
+                            <img className="product-banner-img" src={banner6} alt="banner-two" />
+                        </div>
+                    );
+                } else if (
+                    title === "Гидравлические масла" ||
+                    title === "Hydraulic oils"
+                ) {
+                    return (
+                        <div className="product-banner">
+                            <img className="product-banner-img" src={banner2} alt="banner-two" />
+                        </div>
+                    );
+                } else if (
+                    title === "Тормозная жидкость" ||
+                    title === "Brake fluid"
+                ) {
+                    return (
+                        <div className="product-banner">
+                            <img className="product-banner-img" src={banner4} alt="banner-two" />
+                        </div>
+                    );
+                } else if (
+                    title === "Антифриз" ||
+                    title === "Antifreeze"
+                ) {
+                    return (
+                        <div className="product-banner">
+                            <img className="product-banner-img" src={banner5} alt="banner-two" />
+                        </div>
+                    );
+                } else if (
+                    title === "Фильтры" ||
+                    title === "Filters"
+                ) {
+                    return (
+                        <div className="product-banner">
+                            <img className="product-banner-img" src={banner7} alt="banner-two" />
+                        </div>
+                    );
+                } else {
+                    return null;
+                }
+            })()} */}
 
-            {/* <div className="product-top">
-                <p className='product-top-text'>Для оптимального подбора продукта Valesco, соответствующего вашему автомобилю, пожалуйста, воспользуйтесь нашим модулем подбора масла.</p>
-                <button className='product-top-btn'> Подобрать масло<MdArrowOutward /></button>
-            </div> */}
+            {bannerSrc && (
+                <div className="product-banner">
+                    <img className="product-banner-img" src={bannerSrc} alt="banner" />
+                </div>
+            )}
+
 
             <div className="product-filter">
                 <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>

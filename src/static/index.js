@@ -8,6 +8,47 @@ import new7 from "../assets/images/new7.jpg"
 import new8 from "../assets/images/new8.jpg"
 import news from "../assets/icons/logo.png"
 
+import img1 from "../assets/banner/img1.webp"
+import img2 from "../assets/banner/img2.webp"
+import img3 from "../assets/banner/img3.webp"
+import img4 from "../assets/banner/img4.webp"
+import img5 from "../assets/banner/img5.webp"
+import img6 from "../assets/banner/img6.webp"
+import img7 from "../assets/banner/img7.webp"
+
+
+export const CATEGORYBANNER = [
+    {
+        id: 1,
+        img: img1
+    },
+    {
+        id: 2,
+        img: img2
+    },
+    {
+        id: 3,
+        img: img3
+    },
+    {
+        id: 4,
+        img: img4
+    },
+    {
+        id: 5,
+        img: img5
+    },
+    {
+        id: 6,
+        img: img6
+    },
+    {
+        id: 7,
+        img: img7
+    },
+]
+
+
 export const CATEGORY = [
     {
         id: 1,
@@ -90,24 +131,6 @@ export const BANNEREN = [
         text: "Valesco continues to produce oils from premium components. We don’t need to look for substitutes for base oils and additives. We simply keep using the best."
     }
 ]
-
-// export const PRIDE = [
-//     {
-//         id: 1,
-//         img: img1,
-//         title: "2 EUROTEC 0W20 GX7000 SNCF 4L",
-//     },
-//     {
-//         id: 2,
-//         img: img2,
-//         title: "2 EUROTEC 0W30 GX7000 SN CF 4L",
-//     },
-//     {
-//         id: 3,
-//         img: img3,
-//         title: "2 EUROTEC 0W40 GTX7000 SNCF 4L",
-//     }
-// ]
 
 export const MISSION = [
     {
@@ -192,33 +215,6 @@ export const CALLTOEN = [
         title: "Where to buy"
     }
 ]
-
-// export const NETWORKS = [
-//     {
-//         id: 1,
-//         title: "Энергетика и химическая промышленность",
-//         text: "Мы разрабатываем экологически безопасные энергетические решения и вещества, которые двигают промышленность вперед",
-//         img: net1
-//     },
-//     {
-//         id: 2,
-//         title: "Информационные и коммуникационные технологии",
-//         text: "Мы создаем инновационные решения для развития технологий нового уровня",
-//         img: net2
-//     },
-//     {
-//         id: 3,
-//         title: "Микросхемы и материалы",
-//         text: "Мы совершенствуем технологии производства и передовые материалы для будущих открытий",
-//         img: net3
-//     },
-//     {
-//         id: 4,
-//         title: "Биотехнологии",
-//         text: "Мы стремимся улучшать здоровье людей и связанную инфраструктуру во всем мире",
-//         img: net4
-//     }
-// ]
 
 export const IMPACT = [
     {
