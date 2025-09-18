@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import img from "../../assets/images/about.png"
 import "./about.scss"
-import { MISSION, NETWORKS } from '../../static'
+import { MISSION } from '../../static'
 import img1 from "../../assets/images/hero-2.jpg"
 import vd from "../../assets/videos/vd.mp4"
 import { useTranslation } from 'react-i18next'

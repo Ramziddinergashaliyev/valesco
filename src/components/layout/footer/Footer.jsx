@@ -23,7 +23,6 @@ const Footer = () => {
           <li className="footer__item-list"><NavLink to={"/about"}>{t("company")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/news"}>{t("news")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/distrbut"}>{t("distributors")}</NavLink></li>
-          <li className="footer__item-list"><NavLink to={"/culture"}>{t("культураs")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/contact"}>{t("contacts")}</NavLink></li>
         </ul>
         

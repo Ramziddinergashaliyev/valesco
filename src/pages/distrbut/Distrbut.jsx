@@ -12,13 +12,13 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 import { MdArrowOutward } from "react-icons/md";
 import { useTranslation } from "react-i18next";
+import video from "../../assets/videos/dist.webm"
 
 const Distrbut = () => {
   const [hide, setHide] = useState(null)
   const [activeFilters, setActiveFilters] = useState([])
   const { t, i18n } = useTranslation()
-  console.log(i18n?.languages[0]);
-
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])

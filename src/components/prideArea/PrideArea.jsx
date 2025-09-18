@@ -1,7 +1,6 @@
 import React from 'react'
 import "./prideArea.scss"
 import { MdArrowOutward } from 'react-icons/md'
-import { PRIDE } from '../../static'
 import { NavLink } from 'react-router-dom'
 import { useGetProductsQuery } from '../../context/api/productApi'
 import { useGetCategoriesByIdQuery } from '../../context/api/categoryApi'

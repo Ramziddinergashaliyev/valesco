@@ -1,7 +1,5 @@
 import React from 'react'
 import "./packing.scss"
-import img1 from "../../assets/icons/1.svg"
-import img2 from "../../assets/icons/4.svg"
 
 const Packing = ({ data }) => {
     console.log(data?.category);

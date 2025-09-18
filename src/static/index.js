@@ -1,14 +1,3 @@
-import img1 from "../assets/images/pride3.jpg"
-import img2 from "../assets/images/pride1.jpg"
-import img3 from "../assets/images/pride2.jpg"
-
-import kanistr from "../assets/images/pride1.jpg"
-
-import net1 from "../assets/images/net1.jpg"
-import net2 from "../assets/images/net2.jpg"
-import net3 from "../assets/images/net3.jpg"
-import net4 from "../assets/images/net4.jpg"
-
 import new1 from "../assets/images/new1.jpg"
 import new2 from "../assets/images/new2.jpg"
 import new3 from "../assets/images/new3.jpg"
@@ -102,23 +91,23 @@ export const BANNEREN = [
     }
 ]
 
-export const PRIDE = [
-    {
-        id: 1,
-        img: img1,
-        title: "2 EUROTEC 0W20 GX7000 SNCF 4L",
-    },
-    {
-        id: 2,
-        img: img2,
-        title: "2 EUROTEC 0W30 GX7000 SN CF 4L",
-    },
-    {
-        id: 3,
-        img: img3,
-        title: "2 EUROTEC 0W40 GTX7000 SNCF 4L",
-    }
-]
+// export const PRIDE = [
+//     {
+//         id: 1,
+//         img: img1,
+//         title: "2 EUROTEC 0W20 GX7000 SNCF 4L",
+//     },
+//     {
+//         id: 2,
+//         img: img2,
+//         title: "2 EUROTEC 0W30 GX7000 SN CF 4L",
+//     },
+//     {
+//         id: 3,
+//         img: img3,
+//         title: "2 EUROTEC 0W40 GTX7000 SNCF 4L",
+//     }
+// ]
 
 export const MISSION = [
     {
@@ -204,32 +193,32 @@ export const CALLTOEN = [
     }
 ]
 
-export const NETWORKS = [
-    {
-        id: 1,
-        title: "Энергетика и химическая промышленность",
-        text: "Мы разрабатываем экологически безопасные энергетические решения и вещества, которые двигают промышленность вперед",
-        img: net1
-    },
-    {
-        id: 2,
-        title: "Информационные и коммуникационные технологии",
-        text: "Мы создаем инновационные решения для развития технологий нового уровня",
-        img: net2
-    },
-    {
-        id: 3,
-        title: "Микросхемы и материалы",
-        text: "Мы совершенствуем технологии производства и передовые материалы для будущих открытий",
-        img: net3
-    },
-    {
-        id: 4,
-        title: "Биотехнологии",
-        text: "Мы стремимся улучшать здоровье людей и связанную инфраструктуру во всем мире",
-        img: net4
-    }
-]
+// export const NETWORKS = [
+//     {
+//         id: 1,
+//         title: "Энергетика и химическая промышленность",
+//         text: "Мы разрабатываем экологически безопасные энергетические решения и вещества, которые двигают промышленность вперед",
+//         img: net1
+//     },
+//     {
+//         id: 2,
+//         title: "Информационные и коммуникационные технологии",
+//         text: "Мы создаем инновационные решения для развития технологий нового уровня",
+//         img: net2
+//     },
+//     {
+//         id: 3,
+//         title: "Микросхемы и материалы",
+//         text: "Мы совершенствуем технологии производства и передовые материалы для будущих открытий",
+//         img: net3
+//     },
+//     {
+//         id: 4,
+//         title: "Биотехнологии",
+//         text: "Мы стремимся улучшать здоровье людей и связанную инфраструктуру во всем мире",
+//         img: net4
+//     }
+// ]
 
 export const IMPACT = [
     {
@@ -322,65 +311,6 @@ export const BENAFITS = [
     }
 ]
 
-export const NEWS = [
-    {
-        id: 1,
-        years: "2025",
-        img: news,
-        title: "Программа брендирования Valesco TOP не сбавляет обороты!",
-        desc: "Расширение программы брендирования Valesco TOP продолжается",
-        month: "17 февраля, 2025"
-    },
-    {
-        id: 2,
-        years: "2024",
-        img: news,
-        title: "Valesco TOP расширяет горизонты: бренд-зоны в магазинах «Движком», Великий Новгород",
-        desc: "Программа брендирования Valesco TOP охватывает не только сервисные центры, но и магазины автозапчастей!",
-        month: "19 декабря, 2024"
-    },
-    {
-        id: 3,
-        years: "",
-        img: news,
-        title: "Valesco TOP в Барнауле: новый сервисный центр открыл свои двери",
-        desc: "Мы продолжаем расширять программу брендирования Valesco TOP",
-        month: "19 декабря, 2024"
-    },
-    {
-        id: 4,
-        years: "",
-        img: news,
-        title: "Новый премиальный АВТОСЕРВИС Valesco TOP: теперь в Новокузнецке!",
-        desc: "Рады поделиться отличной новостью — в рамках программы брендирования Valesco TOP открылся новый авторизованный автотехцентр в Новокузнецке в партнерстве с MAKK+!",
-        month: "4 декабря, 2024"
-    },
-    {
-        id: 5,
-        years: "",
-        img: news,
-        title: "Valesco: Ваш надежный выбор на рынке моторных масел",
-        desc: "На фоне обсуждений о том, что многие бренды моторных масел в России могут лишиться одобрений автопроизводителей (ОЕМ), автолюбители задаются вопросом, как изменения повлияют на доступность качественной продукции.",
-        month: "21 ноября, 2024"
-    },
-    {
-        id: 6,
-        years: "",
-        img: news,
-        title: "Valesco продолжает программу брендирования Valesco TOP",
-        desc: "Воронежский автотехцентр Автоуровень теперь тоже присоединился к программе брендирования Valesco TOP!",
-        month: "13 ноября, 2024"
-    },
-    {
-        id: 7,
-        years: "",
-        img: news,
-        title: "Официальные магазины Valesco TOP",
-        desc: "В 2024 году Valesco запустил программу брендирования сервисных центров и розничных магазинов по всей России – Valesco TOP.",
-        month: "13 ноября, 2024"
-    },
-]
-
 export const PUBLIC = [
     {
         id: 1,
@@ -471,79 +401,6 @@ export const PUBLIC = [
         id: 18,
         title: "Гидрокрегинг - синтетика или минералка?",
         text: "Бытует мнение, что гидрокрекинговые масла — это что-то между минералкой и синтетикой, вроде и не минералка, но и до настоящей правильной sсинтетики не дотягивает. Так ли это? Что такое гидрокрекинговые масла и чем они отличаются от остальных?"
-    }
-]
-
-export const BOXS = [
-    {
-        id: 1,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
-    },
-    {
-        id: 2,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
-    },
-    {
-        id: 3,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
-    },
-    {
-        id: 4,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
-    },
-    {
-        id: 5,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
-    },
-    {
-        id: 6,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
-    },
-    {
-        id: 7,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
-    },
-    {
-        id: 8,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
-    },
-    {
-        id: 9,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
-    },
-    {
-        id: 10,
-        img: kanistr,
-        title: "Valesco TOP ES 0W-20",
-        text: "Полностью синтетическое моторное масло",
-        sky: "0W30 GX7000 SN CF 4L"
     }
 ]
 

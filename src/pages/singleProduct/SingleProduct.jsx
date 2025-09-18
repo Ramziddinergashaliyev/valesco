@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import "./singleProduct.scss"
-import img from "../../assets/images/pride1.jpg"
 import Advantages from '../../components/advantages/Advantages'
 import Packing from '../../components/packing/Packing'
 import Specificat from '../../components/specificat/Specificat'

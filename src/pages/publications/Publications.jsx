@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./publications.scss"
-import { NEWS, PUBLIC } from '../../static'
+import { PUBLIC } from '../../static'
 import { MdArrowOutward } from 'react-icons/md'
 
 const Publications = () => {
