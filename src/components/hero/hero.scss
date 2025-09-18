@@ -10,6 +10,10 @@
     .slide {
       width: 100%;
       min-height: 470px;
+
+      @media (max-width: 767px) {
+          background-size: cover !important;
+      }
     }
 
     .autoplay-progress {
