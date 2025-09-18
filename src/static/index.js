@@ -16,7 +16,6 @@ import img5 from "../assets/banner/img5.webp"
 import img6 from "../assets/banner/img6.webp"
 import img7 from "../assets/banner/img7.webp"
 
-
 export const CATEGORYBANNER = [
     {
         id: 1,
@@ -47,7 +46,6 @@ export const CATEGORYBANNER = [
         img: img7
     },
 ]
-
 
 export const CATEGORY = [
     {

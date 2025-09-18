@@ -1,5 +1,5 @@
 .header {
-  background-color: #aaa3;
+  background-color: rgb(234, 234, 234);
   backdrop-filter: blur(4px);
   padding: 20px 0px;
   height: 110px;
@@ -79,7 +79,7 @@
       transform: translateY(0);
       transition-delay: 0s;
     }
-
+    
     .dropdown-item {
       position: absolute;
       top: 35px;

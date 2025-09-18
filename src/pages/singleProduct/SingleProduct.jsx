@@ -97,10 +97,10 @@ const SingleProduct = () => {
                                 <h2 className="single-top-right-title">{byData?.title}</h2>
                                 <p className="single-top-right-text">{
                                     i18n?.languages[0] === "ru"
-                                    ?
-                                    byData?.description_ru
-                                    :
-                                    byData?.description_en
+                                        ?
+                                        byData?.description_ru
+                                        :
+                                        byData?.description_en
                                 }</p>
                                 {
                                     byData?.category?.title?.ru === "Фильтры" || byData?.category?.title?.en === "Filters"
