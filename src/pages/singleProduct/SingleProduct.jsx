@@ -8,6 +8,7 @@ import Document from '../../components/document/Document'
 import { data, useParams } from 'react-router-dom'
 import { useGetProductByIdQuery } from '../../context/api/productApi'
 import SingleLoading from '../../components/singleLoading/SingleLoading'
+import { useTranslation } from 'react-i18next'
 
 const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
     const [loading, setLoading] = useState(true)
@@ -41,6 +42,7 @@ const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
 }
 
 const SingleProduct = () => {
+    const { t, i18n } = useTranslation()
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -93,7 +95,13 @@ const SingleProduct = () => {
                             </div>
                             <div className="single-top-right">
                                 <h2 className="single-top-right-title">{byData?.title}</h2>
-                                <p className="single-top-right-text">{byData?.description_ru}</p>
+                                <p className="single-top-right-text">{
+                                    i18n?.languages[0] === "ru"
+                                    ?
+                                    byData?.description_ru
+                                    :
+                                    byData?.description_en
+                                }</p>
                                 {
                                     byData?.category?.title?.ru === "Фильтры" || byData?.category?.title?.en === "Filters"
                                         ?
@@ -123,11 +131,11 @@ const SingleProduct = () => {
                                 ?
                                 <div className="single-dropdown">
                                     <ul className="single-dropdown-item container">
-                                        <li className="single-dropdown-item-list"><a href="#addvantages">Преимущества</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#packing">Фасовка и артикул</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#specy">Спецификации</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#characterist">Характеристики</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#document">Документация</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#addvantages">{t("Преимущества")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
@@ -146,11 +154,11 @@ const SingleProduct = () => {
                                 ?
                                 <div className="single-dropdown">
                                     <ul className="single-dropdown-item container">
-                                        <li className="single-dropdown-item-list"><a href="#addvantages">Преимущества</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#packing">Фасовка и артикул</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#specy">Спецификации</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#characterist">Характеристики</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#document">Документация</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#addvantages">{t("Преимущества")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
@@ -169,11 +177,11 @@ const SingleProduct = () => {
                                 ?
                                 <div className="single-dropdown">
                                     <ul className="single-dropdown-item container">
-                                        <li className="single-dropdown-item-list"><a href="#addvantages">Преимущества</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#packing">Фасовка и артикул</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#specy">Спецификации</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#characterist">Характеристики</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#document">Документация</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#addvantages">{t("Преимущества")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
@@ -192,11 +200,11 @@ const SingleProduct = () => {
                                 ?
                                 <div className="single-dropdown">
                                     <ul className="single-dropdown-item container">
-                                        <li className="single-dropdown-item-list"><a href="#addvantages">Преимущества</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#packing">Фасовка и артикул</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#specy">Спецификации</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#characterist">Характеристики</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#document">Документация</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#addvantages">{t("Преимущества")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />

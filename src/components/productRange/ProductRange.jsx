@@ -1,52 +1,3 @@
-// import React from 'react'
-// import "./productRange.scss"
-// import { MdArrowOutward } from 'react-icons/md'
-// import { CATEGORY } from '../../static'
-// import { NavLink } from 'react-router-dom'
-// import { useGetCategoriesQuery } from '../../context/api/categoryApi'
-// import { useTranslation } from 'react-i18next'
-
-// const ProductRange = () => {
-//   const { t, i18n } = useTranslation()
-//   const { data } = useGetCategoriesQuery()
-
-//   const currentLanguage = i18n.language || 'ru'
-
-//   return (
-//     <div className='productRange container'>
-//       <div className="productRange__container">
-//         <div className="productRange__info">
-//           <h1 className="productRange__info-title">{t('wideProductRange')}</h1>
-//           <h3 className="productRange__info-text">{t('productRangeDescription')}</h3>
-//           <p className="productRange__info-desc">{t('useOurSelector')}</p>
-//           <NavLink to={"/categories/10"} className="productRange__info-btn">
-//             {t('chooseYourValesco')} <MdArrowOutward />
-//           </NavLink>
-//         </div>
-//         <div className="productRange__category">
-//           {
-//             data?.map(category => (
-//               <NavLink key={category?.id} to={`/categories/${category?.id}`}>
-//                 <div className="productRange__card">
-//                   <h2 className="productRange__card-title">
-//                     {currentLanguage === 'ru' ? category?.title?.ru : category?.title?.en}
-//                   </h2>
-//                   <div className='productRange__card-bottom'>
-//                     <p className='productRange__card-bottom-text'>{t('Узнать больше')}</p>
-//                     <span><MdArrowOutward /></span>
-//                   </div>
-//                 </div>
-//               </NavLink>
-//             ))
-//           }
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default ProductRange
-
 import React, { useEffect, useRef } from "react";
 import "./productRange.scss";
 import { NavLink } from "react-router-dom";
@@ -60,6 +11,7 @@ import img6 from "../../assets/catalog/5.png";
 import img7 from "../../assets/catalog/6.png";
 import img8 from "../../assets/catalog/7.png";
 import { useGetCategoriesQuery } from "../../context/api/categoryApi";
+import { useTranslation } from "react-i18next";
 
 const CATEGORY = [
   {
@@ -96,6 +48,9 @@ const ProductRange = () => {
   const cardRefs = useRef([]);
   const imgRefs = useRef([]);
   const bgRefs = useRef([]);
+  const { t, i18n } = useTranslation()
+  console.log(i18n?.languages[0]);
+
 
   const { data } = useGetCategoriesQuery();
   console.log("API data:", data);
@@ -134,7 +89,7 @@ const ProductRange = () => {
       const img = imgRefs.current[index];
       const bg = bgRefs.current[index];
       if (!card) return;
- 
+
       const moveHandler = (e) => handleMouseMove(e, card, img, bg);
       const leaveHandler = () => handleMouseLeave(card, img, bg);
 
@@ -158,17 +113,15 @@ const ProductRange = () => {
     <div className="productRange container">
       <div className="productRange__container">
         <div className="productRange__info">
-          <h1 className="productRange__info-title">Широкая линейка продуктов</h1>
+          <h1 className="productRange__info-title">{t("линейка")}</h1>
           <h3 className="productRange__info-text">
-            В России много разных машин. А у нас много разных масел, в том числе с
-            допусками и спецификациями европейских и американских автопроизводителей.
+            {t("России много")}
           </h3>
           <p className="productRange__info-desc">
-            Воспользуйтесь нашим подборщиком, чтобы определить, какое масло подходит
-            для вашей машины.
+            {t("Воспользуйтесь нашим")}
           </p>
-          <NavLink to={"/oil"} className="productRange__info-btn">
-            Подбери свой Valesco <MdArrowOutward />
+          <NavLink to={"/categories/10"} className="productRange__info-btn">
+           {t("Все")} <MdArrowOutward />
           </NavLink>
         </div>
 
@@ -184,7 +137,13 @@ const ProductRange = () => {
                     <img src={category?.image} alt={item.title} />
                   </div>
                   <div className="productRange-card-content">
-                    <h4>{item.title?.ru}</h4>
+                    {
+                      i18n?.languages[0] === "ru"
+                        ?
+                        <h4>{item.title?.ru}</h4>
+                        :
+                        <h4>{item.title?.en}</h4>
+                    }
                   </div>
                 </NavLink>
               </div>

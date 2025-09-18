@@ -18,6 +18,7 @@ import banner6 from "../../assets/banner/img6.webp"
 import banner7 from "../../assets/banner/img7.webp"
 
 import "./product.scss"
+import { useTranslation } from 'react-i18next'
 
 const ImageWithLoading = ({ src, alt, className, linkTo }) => {
     const [imageLoading, setImageLoading] = useState(true);
@@ -97,6 +98,7 @@ const Product = ({ data, loading, title }) => {
         viscosity: []
     })
     const [filteredData, setFilteredData] = useState([])
+    const { t, i18n } = useTranslation()
 
     useEffect(() => {
         const handleResize = () => {
@@ -197,74 +199,6 @@ const Product = ({ data, loading, title }) => {
             </style>
 
             <h2 className="product-title">{title}</h2>
-            {/* {(() => {
-                if (
-                    title === "Моторные масла для легковой и легкой коммерческой техники" ||
-                    title === "Motor oils for passenger cars and light commercial vehicles"
-                ) {
-                    return (
-                        <div className="product-banner">
-                            <img className="product-banner-img" src={banner3} alt="banner-one" />
-                        </div>
-                    );
-                } else if (
-                    title === "Моторные масла для дизельных двигателей" ||
-                    title === "Motor oils for diesel engines"
-                ) {
-                    return (
-                        <div className="product-banner">
-                            <img className="product-banner-img" src={banner1} alt="banner-two" />
-                        </div>
-                    );
-                } else if (
-                    title === "Трансмиссионные масла" ||
-                    title === "Transmission oils"
-                ) {
-                    return (
-                        <div className="product-banner">
-                            <img className="product-banner-img" src={banner6} alt="banner-two" />
-                        </div>
-                    );
-                } else if (
-                    title === "Гидравлические масла" ||
-                    title === "Hydraulic oils"
-                ) {
-                    return (
-                        <div className="product-banner">
-                            <img className="product-banner-img" src={banner2} alt="banner-two" />
-                        </div>
-                    );
-                } else if (
-                    title === "Тормозная жидкость" ||
-                    title === "Brake fluid"
-                ) {
-                    return (
-                        <div className="product-banner">
-                            <img className="product-banner-img" src={banner4} alt="banner-two" />
-                        </div>
-                    );
-                } else if (
-                    title === "Антифриз" ||
-                    title === "Antifreeze"
-                ) {
-                    return (
-                        <div className="product-banner">
-                            <img className="product-banner-img" src={banner5} alt="banner-two" />
-                        </div>
-                    );
-                } else if (
-                    title === "Фильтры" ||
-                    title === "Filters"
-                ) {
-                    return (
-                        <div className="product-banner">
-                            <img className="product-banner-img" src={banner7} alt="banner-two" />
-                        </div>
-                    );
-                } else {
-                    return null;
-                }
-            })()} */}
 
             {bannerSrc && (
                 <div className="product-banner">
@@ -272,11 +206,10 @@ const Product = ({ data, loading, title }) => {
                 </div>
             )}
 
-
             <div className="product-filter">
                 <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>
                     <img src={filter} alt="filterImg" />
-                    {filterHide ? 'Показать фильтр' : 'Скрыть фильтр'}
+                    {filterHide ? t('Показать фильтр') : t('Скрыть фильтр')}
                 </button>
                 <div className="product-filter-right">
                     {!isMobile && (
@@ -442,7 +375,7 @@ const Product = ({ data, loading, title }) => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>Подробнее<MdArrowOutward /></button></NavLink>
+                                                <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>{t("Подробнее")}<MdArrowOutward /></button></NavLink>
                                             </div>
                                         ))
                                     }

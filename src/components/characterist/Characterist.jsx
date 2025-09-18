@@ -1,5 +1,6 @@
 import React from 'react'
 import "./characterist.scss"
+import { useTranslation } from 'react-i18next';
 
 const rows = [
   { label: "Класс вязкости SAE", key: "sae" },
@@ -32,6 +33,7 @@ const gidro = [
 ];
 
 const Characterist = ({ data }) => {
+  const { t, i18n } = useTranslation()
   const getRowsForCategory = () => {
     const categoryRu = data?.category?.title?.ru;
     const categoryEn = data?.category?.title?.en;
@@ -49,20 +51,20 @@ const Characterist = ({ data }) => {
 
   return (
     <div id='characterist' className='container characterist'>
-      <h2 className='characterist-title'>Характеристики</h2>
+      <h2 className='characterist-title'>{t("Характеристики")}</h2>
       <div className="characterist-info">
         <table className='characterist-info-table'>
           <thead className='characterist-info-table-thead'>
             <tr className='characterist-info-table-thead-tr'>
-              <th className='characterist-info-table-thead-th'>Название индикатора</th>
-              <th className='characterist-info-table-thead-th'>Значение</th>
-              <th className='characterist-info-table-thead-th'>Метод испытания</th>
+              <th className='characterist-info-table-thead-th'>{t("Название индикатора")}</th>
+              <th className='characterist-info-table-thead-th'>{t("Значение")}</th>
+              <th className='characterist-info-table-thead-th'>{t("Метод испытания")}</th>
             </tr>
           </thead>
           <tbody className='characterist-info-tbody'>
             {currentRows.map((row, i) => (
               <tr key={i} className='characterist-info-tbody-tr'>
-                <td className='characterist-info-tbody-td'>{row.label}</td>
+                <td className='characterist-info-tbody-td'>{t(row.label)}</td>
                 {data?.[row.key]?.map((el, index) => (
                   <td key={index} className='characterist-info-tbody-td'>{el}</td>
                 ))}

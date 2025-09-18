@@ -1,15 +1,14 @@
 import React from 'react'
 import "./advantages.scss"
+import { useTranslation } from 'react-i18next';
 
 const Advantages = ({ data }) => {
   if (!data || data.length === 0) return null; 
+  const { t,i18n } = useTranslation()
   return (
     <div id='advantages' className='advantages container'>
-      <h2 className="advantages-title">Преимущества</h2>
+      <h2 className="advantages-title">{t("Преимущества")}</h2>
       <div className="advantages__info">
-        {/* <p className="advantages-info-title">
-          Изготовлено на основе полиальфаолефинов (ПАО) и собственного синтетического базового масла YUBASE PLUS в сочетании с современным низкозольным пакетом присадок.
-        </p> */}
         <ul className="advantages-info-item">
           {data.map((text, index) => {
             const formattedText = text.charAt(0).toUpperCase() + text.slice(1);

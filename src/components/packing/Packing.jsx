@@ -1,9 +1,9 @@
 import React from 'react'
 import "./packing.scss"
+import { useTranslation } from 'react-i18next';
 
 const Packing = ({ data }) => {
-    console.log(data?.category);
-
+    const { t, i18n } = useTranslation()
     const PAC = [
         {
             id: 0,
@@ -19,7 +19,7 @@ const Packing = ({ data }) => {
 
     return (
         <div id='packing' className='packing container'>
-            <h2 className="packing-title">фасовка и артикул</h2>
+            <h2 className="packing-title">{t("Фасовка и артикул")}</h2>
             {
                 data?.category?.title?.ru === "Моторные масла для дизельных двигателей" || data?.category?.title?.ru === "Motor oils for diesel engines"
                     ?
