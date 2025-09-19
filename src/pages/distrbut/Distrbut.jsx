@@ -188,8 +188,6 @@ const Distrbut = () => {
 
 export default Distrbut
 
-
-
 {/* <>
 
 import React, { useEffect, useState } from 'react'

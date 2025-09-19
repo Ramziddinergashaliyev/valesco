@@ -167,22 +167,22 @@
 
 //     const displayData = filteredData
 
-//     const bannerMap = {
-//         "Моторные масла для легковой и легкой коммерческой техники": banner3,
-//         "Motor oils for passenger cars and light commercial vehicles": banner3,
-//         "Моторные масла для дизельных двигателей": banner1,
-//         "Motor oils for diesel engines": banner1,
-//         "Трансмиссионные масла": banner6,
-//         "Transmission oils": banner6,
-//         "Гидравлические масла": banner2,
-//         "Hydraulic oils": banner2,
-//         "Тормозная жидкость": banner4,
-//         "Brake fluid": banner4,
-//         "Антифриз": banner5,
-//         "Antifreeze": banner5,
-//         "Фильтры": banner7,
-//         "Filters": banner7,
-//     }
+// const bannerMap = {
+//     "Моторные масла для легковой и легкой коммерческой техники": banner3,
+//     "Motor oils for passenger cars and light commercial vehicles": banner3,
+//     "Моторные масла для дизельных двигателей": banner1,
+//     "Motor oils for diesel engines": banner1,
+//     "Трансмиссионные масла": banner6,
+//     "Transmission oils": banner6,
+//     "Гидравлические масла": banner2,
+//     "Hydraulic oils": banner2,
+//     "Тормозная жидкость": banner4,
+//     "Brake fluid": banner4,
+//     "Антифриз": banner5,
+//     "Antifreeze": banner5,
+//     "Фильтры": banner7,
+//     "Filters": banner7,
+// }
 
 //     const bannerSrc = bannerMap[title]
 
@@ -403,8 +403,8 @@ import { FiPlus } from 'react-icons/fi'
 import { NavLink } from 'react-router-dom'
 import Loading from '../loading/Loading'
 import LoadingRow from '../loadingRow/LoadingRow'
-import { ClosedCaption } from 'lucide-react'
 import { IoMdClose } from "react-icons/io";
+
 import banner1 from "../../assets/banner/img1.webp"
 import banner2 from "../../assets/banner/img2.webp"
 import banner3 from "../../assets/banner/img3.webp"
@@ -456,7 +456,7 @@ const ImageWithLoading = ({ src, alt, className, linkTo }) => {
                         animation: 'spin 1s linear infinite'
                     }}></div>
                 </div>
-            )} 
+            )}
             {src && src.length > 0 ? (
                 <img
                     className={className}
@@ -713,7 +713,6 @@ const Product = ({ data, loading, title }) => {
                                             15W - 50<FiPlus />
                                         </button>
                                     </div>
-
                                 </div>
                             </div>
 

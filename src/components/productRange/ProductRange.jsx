@@ -12,6 +12,7 @@ import img7 from "../../assets/catalog/6.webp";
 import img8 from "../../assets/catalog/7.webp";
 import { useGetCategoriesQuery } from "../../context/api/categoryApi";
 import { useTranslation } from "react-i18next";
+import CatalogLoading from "../catalogLoading/CatalogLoading";
 
 const CATEGORY = [
   {
@@ -49,10 +50,8 @@ const ProductRange = () => {
   const imgRefs = useRef([]);
   const bgRefs = useRef([]);
   const { t, i18n } = useTranslation()
-  console.log(i18n?.languages[0]);
 
-  const { data } = useGetCategoriesQuery();
-  // console.log("API data:", data);
+  const { data, isLoading } = useGetCategoriesQuery();
 
   useEffect(() => {
     if (!data) return;
@@ -125,6 +124,12 @@ const ProductRange = () => {
           </NavLink>
         </div>
 
+       {
+        isLoading
+        ?
+        <CatalogLoading/>
+        :
+        <>
         <div className="productRange-card-list">
           {data?.map((item, index) => {
             const category = CATEGORY[index];
@@ -150,6 +155,8 @@ const ProductRange = () => {
             );
           })}
         </div>
+        </>
+       }
       </div>
     </div>
   );
