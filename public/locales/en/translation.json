@@ -82,5 +82,7 @@
   "Индекс вязкости": "Viscosity Index",
   "Температура вспышки в открытом тигле °С": "Flash point in open crucible, °C",
   "Температура затвердевания, °С": "Pour point, °C",
-  "Щелочное число, мг КОН/г": "Base number, mg KOH/g"
+  "Щелочное число, мг КОН/г": "Base number, mg KOH/g",
+  "По выбранным":"No products were found matching the selected filters."
+
 }

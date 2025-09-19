@@ -55,7 +55,7 @@ const About = () => {
             </div>
 
             <div className="about-imgs">
-              <img src={img1} alt="about img" className="about-imgs-img" />
+              {/* <img src={img1} alt="about img" className="about-imgs-img" /> */}
               <div className="about-imgs-info">
                 <p className="about-imgs-info-text">{t("Так как")}</p>
               </div>

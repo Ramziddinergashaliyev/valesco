@@ -2,14 +2,14 @@ import React, { useEffect, useRef } from "react";
 import "./productRange.scss";
 import { NavLink } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
-import img1 from "../../assets/images/1.png";
-import img2 from "../../assets/images/2.png";
-import img3 from "../../assets/catalog/2.png";
-import img4 from "../../assets/catalog/3.png";
-import img5 from "../../assets/catalog/4.png";
-import img6 from "../../assets/catalog/5.png";
-import img7 from "../../assets/catalog/6.png";
-import img8 from "../../assets/catalog/7.png";
+import img1 from "../../assets/images/1.webp";
+import img2 from "../../assets/images/2.webp";
+import img3 from "../../assets/catalog/2.webp";
+import img4 from "../../assets/catalog/3.webp";
+import img5 from "../../assets/catalog/4.webp";
+import img6 from "../../assets/catalog/5.webp";
+import img7 from "../../assets/catalog/6.webp";
+import img8 from "../../assets/catalog/7.webp";
 import { useGetCategoriesQuery } from "../../context/api/categoryApi";
 import { useTranslation } from "react-i18next";
 
@@ -51,9 +51,8 @@ const ProductRange = () => {
   const { t, i18n } = useTranslation()
   console.log(i18n?.languages[0]);
 
-
   const { data } = useGetCategoriesQuery();
-  console.log("API data:", data);
+  // console.log("API data:", data);
 
   useEffect(() => {
     if (!data) return;
@@ -107,6 +106,7 @@ const ProductRange = () => {
         }
       });
     };
+    
   }, [data]);
 
   return (
