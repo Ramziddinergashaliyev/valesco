@@ -118,7 +118,6 @@ const Distrbut = () => {
       </div>
 
       <div className="distrbut-filter">
-
         <button onClick={() => setHide(p => !p)} className='distrbut-filter-btn'>
           <img src={img} alt="filter-img" />
           {hide ? t("Показать фильтр") : t("Скрыть фильтр")}
@@ -136,7 +135,6 @@ const Distrbut = () => {
             </button>
           ))}
         </div>
-        
       </div>
 
       <div className="distrbut-result">
