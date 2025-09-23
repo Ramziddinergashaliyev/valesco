@@ -29,7 +29,7 @@ import "./product.scss"
 import { useTranslation } from 'react-i18next'
 
 const ImageWithLoading = ({ src, alt, className, linkTo }) => {
-    
+
     const [imageLoading, setImageLoading] = useState(true);
     const [imageError, setImageError] = useState(false);
 
@@ -120,7 +120,6 @@ const Product = ({ data, loading, title }) => {
     }, [])
 
     useEffect(() => {
-
         if (!data) {
             setFilteredData([])
             return
@@ -175,8 +174,7 @@ const Product = ({ data, loading, title }) => {
     }
 
     const displayData = filteredData
-    console.log(displayData);
-
+5
     const desktopBannerMap = {
         "Моторные масла для легковой и легкой коммерческой техники": banner3,
         "Motor oils for passenger cars and light commercial vehicles": banner3,

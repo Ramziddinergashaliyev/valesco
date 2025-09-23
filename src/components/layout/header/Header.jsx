@@ -147,7 +147,7 @@ const Header = () => {
 
       {searchHide && (
         <div
-          onClick={() => {
+          onClick={() => { 
             setSearchHide(false)
             setValue("")
           }}
