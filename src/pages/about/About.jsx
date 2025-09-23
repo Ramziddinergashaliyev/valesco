@@ -34,8 +34,7 @@ const About = () => {
         <div className="about__take">
           <h2 className="about__take-title">{t("Кто мы такие")}</h2>
           <div className="about__take-info">
-            <h2 className="about__take-info-title">
-              {t("Наша компания")}</h2>
+            <h2 className="about__take-info-title">{t("Наша компания")}</h2>
             <p className="about__take-info-text">{t("начало")}</p>
 
             {/* <div className="about__take-info-cards">
@@ -55,7 +54,6 @@ const About = () => {
             </div>
 
             <div className="about-imgs">
-              {/* <img src={img1} alt="about img" className="about-imgs-img" /> */}
               <div className="about-imgs-info">
                 <p className="about-imgs-info-text">{t("Так как")}</p>
               </div>

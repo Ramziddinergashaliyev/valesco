@@ -105,7 +105,7 @@ const ProductRange = () => {
         }
       });
     };
-    
+
   }, [data]);
 
   return (
@@ -120,43 +120,42 @@ const ProductRange = () => {
             {t("Воспользуйтесь нашим")}
           </p>
           <NavLink to={"/categories/10"} className="productRange__info-btn">
-           {t("Все")} <MdArrowOutward />
+            {t("Все")} <MdArrowOutward />
           </NavLink>
         </div>
-
-       {
-        isLoading
-        ?
-        <CatalogLoading/>
-        :
-        <>
-        <div className="productRange-card-list">
-          {data?.map((item, index) => {
-            const category = CATEGORY[index];
-            return (
-              <div key={item.id} className="productRange-card" ref={(el) => (cardRefs.current[index] = el)}>
-                <NavLink to={`/categories/${item?.id}`}>
-                  <div className="productRange-card-bg" ref={(el) => (bgRefs.current[index] = el)} style={{ backgroundImage: `url(${category?.bgImage})`, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center" }} />
-                  <div className="overlay" />
-                  <div className="productRange-card-img" ref={(el) => (imgRefs.current[index] = el)}>
-                    <img src={category?.image} alt={item.title} />
-                  </div>
-                  <div className="productRange-card-content">
-                    {
-                      i18n?.languages[0] === "ru"
-                        ?
-                        <h4>{item.title?.ru}</h4>
-                        :
-                        <h4>{item.title?.en}</h4>
-                    }
-                  </div>
-                </NavLink>
+        {
+          isLoading
+            ?
+            <CatalogLoading />
+            :
+            <>
+              <div className="productRange-card-list">
+                {data?.map((item, index) => {
+                  const category = CATEGORY[index];
+                  return (
+                    <div key={item.id} className="productRange-card" ref={(el) => (cardRefs.current[index] = el)}>
+                      <NavLink to={`/categories/${item?.id}`}>
+                        <div className="productRange-card-bg" ref={(el) => (bgRefs.current[index] = el)} style={{ backgroundImage: `url(${category?.bgImage})`, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center" }} />
+                        <div className="overlay" />
+                        <div className="productRange-card-img" ref={(el) => (imgRefs.current[index] = el)}>
+                          <img src={category?.image} alt={item.title} />
+                        </div>
+                        <div className="productRange-card-content">
+                          {
+                            i18n?.languages[0] === "ru"
+                              ?
+                              <h4>{item.title?.ru}</h4>
+                              :
+                              <h4>{item.title?.en}</h4>
+                          }
+                        </div>
+                      </NavLink>
+                    </div>
+                  );
+                })}
               </div>
-            );
-          })}
-        </div>
-        </>
-       }
+            </>
+        }
       </div>
     </div>
   );

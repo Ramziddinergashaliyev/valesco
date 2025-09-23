@@ -135,14 +135,12 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
-                                        <Document />
                                     </div>
                                 </div>
                                 :
@@ -158,14 +156,12 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
-                                        <Document />
                                     </div>
                                 </div>
                                 :
@@ -181,14 +177,12 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
-                                        <Document />
                                     </div>
                                 </div>
                                 :
@@ -204,14 +198,12 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
-                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
-                                        <Document />
                                     </div>
                                 </div>
                                 :

@@ -78,27 +78,27 @@ export const BANNER = [
     {
         id: 1,
         title: "Страховка от подделок",
-        text: "Моторные масла Valesco производятся только на заводе в Узбекистан. Компания Valesco непрерывно контролирует каждый этап производства."
+        text: "Моторные масла Valesco производятся исключительно на заводе Valesco в Узбекистане. Каждый этап производства находится под строгим контролем компании."
     },
     {
         id: 2,
         title: "Широкая линейка продуктов",
-        text: "В России много разных машин. А у нас много разных масел, в том числе с допусками и спецификациями европейских и американских автопроизводителей."
+        text: "Мы предлагаем широкий ассортимент моторных масел, которые соответствуют требованиям и спецификациям ведущих европейских и американских автопроизводителей."
     },
     {
         id: 3,
         title: "Отсутствие переплат",
-        text: "Мы используем только высококлассное базовое масло группы III по API собственного производства EUROTEC, а вы не переплачиваете за закупку у стороннего производителя."
+        text: "Мы используем только высококачественное базовое масло группы III, сертифицированное по API и произведённое на собственном заводе Valesco. Благодаря этому вы не переплачиваете сторонним производителям."
     },
     {
         id: 4,
-        title: "Сертификация ОЕМ",
+        title: "Сертификация OEM",
         text: "Бренд Valesco официально сертифицирован мировыми автопроизводителями."
     },
     {
         id: 5,
         title: "Честный импорт",
-        text: "Valesco по-прежнему производит масла из премиальных компонентов. Нам не нужно искать варианты замены базовых масел и присадок. Мы просто продолжаем использовать лучшее."
+        text: "Valesco всегда производит масла только из премиальных компонентов. Нам не нужны дешёвые заменители базовых масел или присадок — мы продолжаем использовать только лучшее."
     }
 ]
 
@@ -106,27 +106,27 @@ export const BANNEREN = [
     {
         id: 1,
         title: "Protection Against Counterfeits",
-        text: "Valesco motor oils are produced only at the factory in Uzbekistan. Valesco continuously controls every stage of production."
+        text: "Valesco motor oils are produced exclusively at the Valesco plant in Uzbekistan. Every stage of production is strictly monitored by the company."
     },
     {
         id: 2,
-        title: "Wide Range of Products",
-        text: "There are many different cars in Russia. And we have many different oils, including those with approvals and specifications from European and American automakers."
+        title: "Wide Product Range",
+        text: "We offer a broad selection of motor oils that meet the requirements and specifications of leading European and American car manufacturers."
     },
     {
         id: 3,
         title: "No Overpayments",
-        text: "We use only high-quality Group III base oil by API, produced in-house at EUROTEC, so you don’t overpay for third-party supplies."
+        text: "We use only high-quality Group III base oil, API-certified and produced at Valesco’s own plant. This way, you don’t overpay third-party suppliers."
     },
     {
         id: 4,
         title: "OEM Certification",
-        text: "The Valesco brand is officially certified by global automakers."
+        text: "The Valesco brand is officially certified by global car manufacturers."
     },
     {
         id: 5,
-        title: "Honest Import",
-        text: "Valesco continues to produce oils from premium components. We don’t need to look for substitutes for base oils and additives. We simply keep using the best."
+        title: "Fair Import",
+        text: "Valesco always produces oils from premium components. We do not seek cheap substitutes for base oils or additives — we consistently use only the best."
     }
 ]
 

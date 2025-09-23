@@ -16,7 +16,6 @@ const ProductItem = () => {
 
     const text = i18n?.languages[0] === "ru" ? data?.title?.ru : data?.title?.en
 
-
     return (
         <>
             <Product data={data?.products} loading={isLoading} title={text} />

@@ -61,7 +61,6 @@ const Header = () => {
           </div>
           <ul className={`header__nav__item ${hide ? "header__nav__hide" : ""}`}>
             <button onClick={() => setHide(false)} className='header__nav__close'><AiOutlineClose /></button>
-
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/about">{t("company")}</NavLink></li>
             <li className="header__nav__list">
               {t("catalog")} <IoMdArrowDropdown />
@@ -127,10 +126,10 @@ const Header = () => {
         </div>
 
         <div className="header-search-info container">
-          {isLoading && value && <p className='header-search-info-loading'>Загрузка...</p>}
+          {isLoading && value && <p className='header-search-info-loading'>{t("Загрузка...")}</p>}
 
           {!isLoading && localSearch?.length === 0 && value && (
-            <p className='header-search-info-loading'>Ничего не найдено</p>
+            <p className='header-search-info-loading'>{t("Ничего не найдено")}</p>
           )}
 
           {!isLoading && value && localSearch?.map((el, idx) => (

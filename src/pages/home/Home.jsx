@@ -20,7 +20,7 @@ const Home = () => {
     <>
       <HeroTop />
       <Hero />
-      <HeroBrand />
+      {/* <HeroBrand /> */}
       <ProductRange />
       <Banner />
       <PrideArea />

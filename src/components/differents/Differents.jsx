@@ -13,7 +13,7 @@ const Differents = () => {
             <div className="differents__left">
                 <h1 className="differents__left-title">{t("делает")}</h1>
                 <p className="differents__left-text">{t("большим")}</p>
-                <p className="differents__left-desc"><span>EUROTEC</span> — {t("масел")}</p>
+                <p className="differents__left-desc"><span>Valesco</span> — {t("масел")}</p>
                 <button className='differents__left-btn'>{t("Узнать больше")}<MdArrowOutward /></button>
             </div>
             <div className="differents__right">

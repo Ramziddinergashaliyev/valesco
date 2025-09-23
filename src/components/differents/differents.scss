@@ -22,11 +22,12 @@
             font-weight: 500;
             color: #333331;
             line-height: 32px;
-            width: 68%;
+            width: 75%;
 
             @media (max-width:1400px) {
                 width: 80%;
             }
+
             @media (max-width:1000px) {
                 width: 100%;
             }
@@ -37,7 +38,7 @@
             font-weight: 500;
             color: gray;
             line-height: 26px;
-            width: 68%;
+            width: 75%;
 
             span {
                 color: black;
@@ -46,6 +47,7 @@
             @media (max-width:1400px) {
                 width: 80%;
             }
+
             @media (max-width:1000px) {
                 width: 100%;
             }
@@ -106,7 +108,7 @@
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
-        gap:20px;
+        gap: 20px;
         width: 100%;
     }
 
@@ -163,12 +165,13 @@
         }
 
         &__left-btn {
-           padding: 10px 20px;
-           font-size: 16px;
-           svg {
+            padding: 10px 20px;
             font-size: 16px;
-            font-weight: 500;
-           }
+
+            svg {
+                font-size: 16px;
+                font-weight: 500;
+            }
         }
 
         &__left {

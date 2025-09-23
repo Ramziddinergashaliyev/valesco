@@ -1,7 +1,7 @@
 .header {
   background-color: rgb(234, 234, 234);
   backdrop-filter: blur(4px);
-  padding: 20px 0px;
+  padding: 10px 0px;
   height: 110px;
   position: fixed;
   top: 0;
@@ -20,8 +20,8 @@
     margin: 0 auto;
 
     &__logo img {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
       object-fit: contain;
     }
 
@@ -93,7 +93,6 @@
       outline: none;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(10px);
       transition: all 0.3s ease;
       transition-delay: 0.1s;
       z-index: 9999;
