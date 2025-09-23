@@ -147,6 +147,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 40px;
+        padding-bottom: 20px;
 
         &-left {
             &-text {
