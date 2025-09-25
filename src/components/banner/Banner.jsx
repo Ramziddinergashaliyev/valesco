@@ -16,7 +16,8 @@ const Banner = () => {
                 <div className="banner__top">
                     <h2 className='banner__top-title'>{t("Почему Valesco")}</h2>
                     <p className='banner__top-text'>
-                        {t("способствует")}</p>
+                        {t("способствует")}
+                    </p>
                 </div>
 
                 <div className="banner__cards">

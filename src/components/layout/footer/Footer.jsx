@@ -39,7 +39,8 @@ const Footer = () => {
                     :
                     el?.title?.en
                   }
-                </NavLink></li>
+                </NavLink>
+              </li>
             ))
           }
         </ul>

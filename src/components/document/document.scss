@@ -13,7 +13,7 @@
     }
 
     &-title-btn {
-        width: 300px;
+        width: 250px;
         color: white;
         background-color: #333331;
         padding: 16px;
@@ -29,7 +29,7 @@
     }
 
     &-title-btn:hover {
-        transform: translateY(-6px);
+        transform: translateY(-2px);
     }
 
     @media (max-width:700px) {

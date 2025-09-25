@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { MdArrowOutward } from 'react-icons/md'
-import filter from "../../assets/icons/filter.svg"
-import img1 from "../../assets/icons/col-icn.svg"
-import img2 from "../../assets/icons/row-icn.svg"
-import { FiPlus } from 'react-icons/fi'
-import { NavLink } from 'react-router-dom'
+
 import Loading from '../loading/Loading'
 import LoadingRow from '../loadingRow/LoadingRow'
-import { IoMdClose } from "react-icons/io";
+
+import { NavLink } from 'react-router-dom'
+import { FiPlus } from 'react-icons/fi'
+import { MdArrowOutward } from 'react-icons/md'
+import { IoMdClose } from "react-icons/io"
+import { useTranslation } from 'react-i18next'
+
+import img1 from "../../assets/icons/col-icn.svg"
+import img2 from "../../assets/icons/row-icn.svg"
+import filter from "../../assets/icons/filter.svg"
 
 import banner1 from "../../assets/banner/img1.webp"
 import banner2 from "../../assets/banner/img2.webp"
@@ -26,7 +30,6 @@ import mobileBanner6 from "../../assets/banner/phone-6.webp"
 import mobileBanner7 from "../../assets/banner/phone-7.webp"
 
 import "./product.scss"
-import { useTranslation } from 'react-i18next'
 
 const ImageWithLoading = ({ src, alt, className, linkTo }) => {
 
@@ -174,7 +177,7 @@ const Product = ({ data, loading, title }) => {
     }
 
     const displayData = filteredData
-5
+
     const desktopBannerMap = {
         "Моторные масла для легковой и легкой коммерческой техники": banner3,
         "Motor oils for passenger cars and light commercial vehicles": banner3,

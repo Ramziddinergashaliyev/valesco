@@ -95,13 +95,15 @@ const SingleProduct = () => {
                             </div>
                             <div className="single-top-right">
                                 <h2 className="single-top-right-title">{byData?.title}</h2>
-                                <p className="single-top-right-text">{
+                                <p className="single-top-right-text">
+                                  {
                                     i18n?.languages[0] === "ru"
                                         ?
                                         byData?.description_ru
                                         :
                                         byData?.description_en
-                                }</p>
+                                  }
+                                </p>
                                 {
                                     byData?.category?.title?.ru === "Фильтры" || byData?.category?.title?.en === "Filters"
                                         ?
@@ -135,12 +137,14 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
+                                        <Document data={byData?.documents} />
                                     </div>
                                 </div>
                                 :
@@ -156,12 +160,14 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
+                                        <Document />
                                     </div>
                                 </div>
                                 :
@@ -177,12 +183,14 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
+                                        <Document />
                                     </div>
                                 </div>
                                 :
@@ -198,12 +206,14 @@ const SingleProduct = () => {
                                         <li className="single-dropdown-item-list"><a href="#packing">{t("Фасовка и артикул")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
                                         <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
+                                        <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
                                     </ul>
                                     <div className="single-dropdown-result">
                                         <Advantages data={byData?.info} />
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
+                                        <Document />
                                     </div>
                                 </div>
                                 :
