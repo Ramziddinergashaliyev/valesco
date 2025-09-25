@@ -105,7 +105,6 @@ const ProductRange = () => {
         }
       });
     };
-
   }, [data]);
 
   return (

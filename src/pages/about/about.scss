@@ -40,14 +40,14 @@
 
         @media (max-width:1200px) {
             grid-template-columns: 1fr 2fr;
-
+            
             &-title {
                 font-size: 34px;
                 font-weight: 400;
                 line-height: 44px;
             }
         }
-
+    
         @media (max-width: 960px) {
             grid-template-columns: 1fr;
         }

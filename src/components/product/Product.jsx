@@ -168,7 +168,6 @@ const Product = ({ data, loading, title }) => {
     const getFilterButtonClass = (filterType, value) => {
         return `product-filter-result-left-btn ${isFilterSelected(filterType, value) ? 'selected' : ''}`
     }
-
     const clearAllFilters = () => {
         setSelectedFilters({
             lineType: [],
@@ -295,12 +294,6 @@ const Product = ({ data, loading, title }) => {
                                             5W - 40<FiPlus />
                                         </button>
                                         <button
-                                            className={getFilterButtonClass('viscosity', '20W-50')}
-                                            onClick={() => handleFilterSelect('viscosity', '20W-50')}
-                                        >
-                                            20W - 50<FiPlus />
-                                        </button>
-                                        <button
                                             className={getFilterButtonClass('viscosity', '10W-40')}
                                             onClick={() => handleFilterSelect('viscosity', '10W-40')}
                                         >
@@ -317,6 +310,12 @@ const Product = ({ data, loading, title }) => {
                                             onClick={() => handleFilterSelect('viscosity', '15W-50')}
                                         >
                                             15W - 50<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '20W-50')}
+                                            onClick={() => handleFilterSelect('viscosity', '20W-50')}
+                                        >
+                                            20W - 50<FiPlus />
                                         </button>
                                     </div>
                                 </div>
