@@ -167,7 +167,7 @@ const SingleProduct = () => {
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
-                                        <Document />
+                                        <Document data={byData?.documents} />
                                     </div>
                                 </div>
                                 :
@@ -190,7 +190,7 @@ const SingleProduct = () => {
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
-                                        <Document />
+                                        <Document data={byData?.documents} />
                                     </div>
                                 </div>
                                 :
@@ -213,7 +213,7 @@ const SingleProduct = () => {
                                         <Packing data={byData} />
                                         <Specificat data={byData?.specifications} />
                                         <Characterist data={byData} />
-                                        <Document />
+                                        <Document data={byData?.documents} />
                                     </div>
                                 </div>
                                 :
