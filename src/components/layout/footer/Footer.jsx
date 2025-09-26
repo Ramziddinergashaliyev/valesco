@@ -46,7 +46,7 @@ const Footer = () => {
         </ul>
 
         <ul className="footer__item">
-          <h3 className='footer__item-title'>{t("contacts")}</h3>
+          <h3 className='footer__item-title'>{t("Контакты")}</h3>
           <li className="footer__item-contact">
             <span>{t("телефона")}</span>
             <a href="tel:+998 71 281 49 30">+998 71 281 49 30</a>

@@ -17,6 +17,7 @@ import ChinaAuto from './pages/chinaAuto/ChinaAuto'
 import ProductItem from './pages/productItem/ProductItem'
 import SingleProduct from './pages/singleProduct/SingleProduct'
 import Outlets from './pages/outlets/Outlets'
+import CatalogProduct from './pages/catologProduct/CatalogProduct'
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
           <Route path='/categories/:id' element={<ProductItem />} />
           <Route path='/singleProduct/:id' element={<SingleProduct />} />
           <Route path='/outlets' element={<Outlets />} />
+          <Route path='/catalogProduct' element={<CatalogProduct />} />
         </Route>
       </Routes>
     </>

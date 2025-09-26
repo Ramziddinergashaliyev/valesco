@@ -63,7 +63,9 @@ const Header = () => {
             <button onClick={() => setHide(false)} className='header__nav__close'><AiOutlineClose /></button>
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/about">{t("company")}</NavLink></li>
             <li className="header__nav__list">
+              <NavLink to={"/catalogProduct"}>
               {t("catalog")} <IoMdArrowDropdown />
+              </NavLink>
               <ul className="dropdown-item">
                 {
                   data?.map((el, inx) => (
