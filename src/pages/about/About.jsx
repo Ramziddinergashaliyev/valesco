@@ -10,7 +10,6 @@ import imgbg from "../../assets/images/aboutbg.webp"
 const About = () => {
   const { t, i18n } = useTranslation()
   
-
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -19,21 +18,11 @@ const About = () => {
     <div className='container about'>
       <div className="container">
 
-
         <div className="about__top">
-          {/* <h2 className="about__top-title">{t("company")}</h2> */}
         <h2 className="about__take-title">{t("company")}</h2>
         <div className="about__top-img">
           <img src={imgbg} alt="" />
         </div>
-          {/* <video
-            className='about__top-vd'
-            src={vd}
-            autoPlay
-            loop
-            muted
-            playsInline
-          /> */}
         </div>
 
         <div className="about__take">

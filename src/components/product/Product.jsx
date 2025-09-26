@@ -116,7 +116,6 @@ const Product = ({ data, loading, title }) => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 700)
         }
-
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
@@ -168,6 +167,7 @@ const Product = ({ data, loading, title }) => {
     const getFilterButtonClass = (filterType, value) => {
         return `product-filter-result-left-btn ${isFilterSelected(filterType, value) ? 'selected' : ''}`
     }
+    
     const clearAllFilters = () => {
         setSelectedFilters({
             lineType: [],
