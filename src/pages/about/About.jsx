@@ -9,7 +9,7 @@ import imgbg from "../../assets/images/aboutbg.webp"
 
 const About = () => {
   const { t, i18n } = useTranslation()
-  
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -19,10 +19,10 @@ const About = () => {
       <div className="container">
 
         <div className="about__top">
-        <h2 className="about__take-title">{t("company")}</h2>
-        <div className="about__top-img">
-          <img src={imgbg} alt="" />
-        </div>
+          <h2 className="about__take-title">{t("company")}</h2>
+          <div className="about__top-img">
+            <img src={imgbg} alt="" />
+          </div>
         </div>
 
         <div className="about__take">
@@ -45,15 +45,15 @@ const About = () => {
         </div>
 
         <div className="about__take-info-cards">
-              {
-                MISSION?.map(el => (
-                  <div key={el.id} className="about__take-info-card">
-                    <h2 className="about__take-info-card-title">{el?.price}</h2>
-                    <p className="about__take-info-card-text">{el?.title}</p>
-                  </div>
-                ))
-              }
-            </div>
+          {
+            MISSION?.map(el => (
+              <div key={el.id} className="about__take-info-card">
+                <h2 className="about__take-info-card-title">{el?.price}</h2>
+                <p className="about__take-info-card-text">{el?.title}</p>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
   )

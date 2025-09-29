@@ -3,9 +3,10 @@ import img from "../../assets/images/unical.jpg"
 import "./unical.scss"
 
 const Unical = () => {
-     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+
+    useEffect(() => {
+       window.scrollTo(0, 0)
+    }, [])
 
     const UNICAL = [
         {
@@ -66,22 +67,28 @@ const Unical = () => {
             <div className="unical-core">
                 <h2 className="unical-core-title">основная идентичность</h2>
                 <div className="unical-core-boxs">
+
                     <div className="unical-core-box">
                         <h3 className="unical-core-box-title">Креативность</h3>
                         <p className="unical-core-box-text">Решения, основанные на творческом подходе</p>
                     </div>
+
                     <div className="unical-core-box">
                         <h3 className="unical-core-box-title">Технологии</h3>
                         <p className="unical-core-box-text">Инновации, отражающие актуальные технологические возможности</p>
                     </div>
+
                     <div className="unical-core-box">
                         <h3 className="unical-core-box-title">Премиальное качество</h3>
                         <p className="unical-core-box-text">Продукты превосходного качества</p>
                     </div>
+
                 </div>
             </div>
             <div className="unical-expand">
+
                 <h2 className="unical-expand-title">развернутая идентичность</h2>
+               
                 <div className="unical-expand-cards">
                     {
                         UNICAL?.map(el => (
@@ -91,13 +98,16 @@ const Unical = () => {
                         ))
                     }
                 </div>
+
             </div>
+
             <div className="unical-cut">
                 <h2 className="unical-cut-title">суть бренда</h2>
                 <div className="unical-cut-box">
                     <p className="unical-cut-box-desc">Современный премиум</p>
                 </div>
             </div>
+
         </div>
     )
 
