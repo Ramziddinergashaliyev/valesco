@@ -38,11 +38,11 @@ const About = () => {
                 <p className="about-info-text">{t("Продукция компании")}</p>
               </div>
 
-              <div className="about-imgs">
+              {/* <div className="about-imgs">
                 <div className="about-imgs-info">
                   <p className="about-info-text">{t("Так как")}</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
