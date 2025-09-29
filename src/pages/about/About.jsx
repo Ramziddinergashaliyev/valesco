@@ -15,36 +15,37 @@ const About = () => {
   }, [])
 
   return (
-    <div className='container about'>
-      <div className="container">
-
-        <div className="about__top">
+    <div className='about'>
+      <div className="">
+        <div className="about__top container">
           <h2 className="about__take-title">{t("company")}</h2>
           <div className="about__top-img">
             <img src={imgbg} alt="" />
           </div>
         </div>
 
-        <div className="about__take">
-          <h2 className="about__take-title"></h2>
-          <div className="about__take-info">
-            <h2 className="about__take-info-title">{t("Наша компания")}</h2>
-            <p className="about__take-info-text">{t("начало")}</p>
+        <div className="about__middle">
+          <div className="container about__take">
+            <h2 className="about__take-title"></h2>
+            <div className="about__take-info">
+              <h2 className="about__take-info-title">{t("Наша компания")}</h2>
+              <p className="about__take-info-text">{t("начало")}</p>
 
-            <div className="about-info">
-              <p className="about-info-text">{t("производства")}</p>
-              <p className="about-info-text">{t("Продукция компании")}</p>
-            </div>
+              <div className="about-info">
+                <p className="about-info-text">{t("производства")}</p>
+                <p className="about-info-text">{t("Продукция компании")}</p>
+              </div>
 
-            <div className="about-imgs">
-              <div className="about-imgs-info">
-                <p className="about-info-text">{t("Так как")}</p>
+              <div className="about-imgs">
+                <div className="about-imgs-info">
+                  <p className="about-info-text">{t("Так как")}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="about__take-info-cards">
+        <div className="about__take-info-cards container">
           {
             MISSION?.map(el => (
               <div key={el.id} className="about__take-info-card">
