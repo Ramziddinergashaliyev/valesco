@@ -194,39 +194,39 @@ const Product = ({ data, loading, title }) => {
         "Filters": banner7,
     }
 
-    // const mobileBannerMap = {
-    //     "Моторные масла для легковой и легкой коммерческой техники": mobileBanner3,
-    //     "Motor oils for passenger cars and light commercial vehicles": mobileBanner3,
-    //     "Моторные масла для дизельных двигателей": mobileBanner1,
-    //     "Motor oils for diesel engines": mobileBanner1,
-    //     "Трансмиссионные масла": mobileBanner5,
-    //     "Transmission oils": mobileBanner5,
-    //     "Гидравлические масла": mobileBanner2,
-    //     "Hydraulic oils": mobileBanner2,
-    //     "Тормозная жидкость": mobileBanner4,
-    //     "Brake fluid": mobileBanner4,
-    //     "Антифриз": mobileBanner6,
-    //     "Antifreeze": mobileBanner6,
-    //     "Фильтры": mobileBanner7,
-    //     "Filters": mobileBanner7,
-    // }
-
     const mobileBannerMap = {
         "Моторные масла для легковой и легкой коммерческой техники": mobileBanner3,
         "Motor oils for passenger cars and light commercial vehicles": mobileBanner3,
-        "Моторные масла для дизельных двигателей": mobileBanner3,
-        "Motor oils for diesel engines": mobileBanner3,
-        "Трансмиссионные масла": mobileBanner3,
-        "Transmission oils": mobileBanner3,
-        "Гидравлические масла": mobileBanner3,
-        "Hydraulic oils": mobileBanner3,
-        "Тормозная жидкость": mobileBanner3,
-        "Brake fluid": mobileBanner3,
-        "Антифриз": mobileBanner3,
-        "Antifreeze": mobileBanner3,
-        "Фильтры": mobileBanner3,
-        "Filters": mobileBanner3,
+        "Моторные масла для дизельных двигателей": mobileBanner1,
+        "Motor oils for diesel engines": mobileBanner1,
+        "Трансмиссионные масла": mobileBanner5,
+        "Transmission oils": mobileBanner5,
+        "Гидравлические масла": mobileBanner2,
+        "Hydraulic oils": mobileBanner2,
+        "Тормозная жидкость": mobileBanner4,
+        "Brake fluid": mobileBanner4,
+        "Антифриз": mobileBanner6,
+        "Antifreeze": mobileBanner6,
+        "Фильтры": mobileBanner7,
+        "Filters": mobileBanner7,
     }
+
+    // const mobileBannerMap = {
+    //     "Моторные масла для легковой и легкой коммерческой техники": mobileBanner3,
+    //     "Motor oils for passenger cars and light commercial vehicles": mobileBanner3,
+    //     "Моторные масла для дизельных двигателей": mobileBanner3,
+    //     "Motor oils for diesel engines": mobileBanner3,
+    //     "Трансмиссионные масла": mobileBanner3,
+    //     "Transmission oils": mobileBanner3,
+    //     "Гидравлические масла": mobileBanner3,
+    //     "Hydraulic oils": mobileBanner3,
+    //     "Тормозная жидкость": mobileBanner3,
+    //     "Brake fluid": mobileBanner3,
+    //     "Антифриз": mobileBanner3,
+    //     "Antifreeze": mobileBanner3,
+    //     "Фильтры": mobileBanner3,
+    //     "Filters": mobileBanner3,
+    // }
 
     const bannerSrc = isMobile ? mobileBannerMap[title] : desktopBannerMap[title]
 
