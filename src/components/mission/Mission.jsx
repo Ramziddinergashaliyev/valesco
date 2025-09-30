@@ -15,11 +15,12 @@ const Mission = () => {
 
                 <div className="mission-top">
                     <h1 className="mission-top-title">{t("company")}</h1>
-                    <div className="mission-top-info">
+                    {/* <div className="mission-top-info">
                         <h3 className="mission-top-info-title">
                             VALESCO – {t("лидер")}</h3>
                         <p className="mission-top-info-text">{t("строит")}</p>
-                    </div>
+                    </div> */}
+                    
                 </div>
 
                 <div className="mission-cards">
