@@ -15,7 +15,9 @@ const Document = ({data}) => {
         <h2 className='document-title'>{t("Документация")}</h2>
         <a target="_blank"
             download
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            href={data?.[0]}
+            >
           <button className='document-title-btn'>{t("скачать")} <ImFolderDownload /></button>
         </a>
     </div>
