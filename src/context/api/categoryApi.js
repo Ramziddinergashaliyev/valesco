@@ -2,6 +2,7 @@ import { api } from "./index";
 
 export const categoryApi = api.injectEndpoints({
   endpoints: (build) => ({
+    
     getCategories: build.query({
       query: (params) => ({
         url: "/categories",

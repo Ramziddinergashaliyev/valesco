@@ -5,9 +5,11 @@ import "./benafits.scss"
 import { BENAFITS } from '../../static'
 
 const Benafits = () => {
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    
     return (
         <div className='benafits container'>
             <div className="benafits-top">

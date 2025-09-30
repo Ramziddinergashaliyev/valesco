@@ -60,13 +60,13 @@ const Distrbut = () => {
     {
       country: 'Kazakhstan',
       distributor: 'LLP «AVTODETAIL»',
-      title: 'Kazakhstan, South Kazakhstan Region, 160021, Shymkent City, Abai District, 14A Baituly Baba St.',
+      title: 'Kazakhstan, South Kazakhstan Region, 160021, Shymkent City, Abai District, 14A Baituly Baba St',
       number: ["77022837999"]
     },
     {
       country: 'Tajikistan',
       distributor: 'LLC «TOSOL-PLUS»',
-      title: 'Tajikistan, Sughd Region, J. Rasulov District, Mehrobod Settlement, 45/4 I. Nurmatov St.',
+      title: 'Tajikistan, Sughd Region, J. Rasulov District, Mehrobod Settlement, 45/4 I. Nurmatov St',
       number: ["+992 92 707 49 86"]
     },
     {

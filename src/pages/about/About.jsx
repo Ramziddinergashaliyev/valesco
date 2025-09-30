@@ -3,13 +3,12 @@ import img from "../../assets/images/about.png"
 import "./about.scss"
 import { MISSION } from '../../static'
 import img1 from "../../assets/images/hero-2.jpg"
-import vd from "../../assets/videos/vd.mp4"
 import { useTranslation } from 'react-i18next'
 import imgbg from "../../assets/images/aboutbg.webp"
 
 const About = () => {
   const { t, i18n } = useTranslation()
-
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
