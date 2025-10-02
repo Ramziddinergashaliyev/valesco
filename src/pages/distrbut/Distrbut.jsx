@@ -15,6 +15,7 @@ import { useTranslation } from "react-i18next";
 import video from "../../assets/videos/dist.webm"
 
 const Distrbut = () => {
+  
   const [hide, setHide] = useState(null)
   const [activeFilters, setActiveFilters] = useState([])
   const { t, i18n } = useTranslation()

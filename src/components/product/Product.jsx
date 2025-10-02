@@ -111,7 +111,8 @@ const Product = ({ data, loading, title }) => {
     })
     const [filteredData, setFilteredData] = useState([])
     const { t, i18n } = useTranslation()
-
+    console.log("data:", data);
+    
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 700)

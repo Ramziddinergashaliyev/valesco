@@ -7,6 +7,10 @@ import "./news.scss"
 
 const News = () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
+
   return (
     <div className='news container'>
       <div className="news-top">
