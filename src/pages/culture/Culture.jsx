@@ -8,7 +8,7 @@ const Culture = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-  
+
   return (
     <div className='culture container'>
       <div className="culture-top">
