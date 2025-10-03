@@ -34,6 +34,8 @@ const gidro = [
 
 const Characterist = ({ data }) => {
   const { t, i18n } = useTranslation()
+
+  
   const getRowsForCategory = () => {
     const categoryRu = data?.category?.title?.ru;
     const categoryEn = data?.category?.title?.en;
