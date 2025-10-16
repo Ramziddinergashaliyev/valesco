@@ -24,6 +24,7 @@ const baseQuery = async (args, api, extraOptions) => {
   }
   return result;
 };
+
 const baseQueryWithRetry = retry(baseQuery, { maxRetries: 0 });
 
 export const api = createApi({

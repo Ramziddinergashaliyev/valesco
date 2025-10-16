@@ -67,7 +67,7 @@
                 transform: translateY(-3px);
                 box-shadow: 0 15px 35px rgba(51, 51, 49, 0.3);
             }
-
+            
             &:hover:before {
                 left: 100%;
             }
@@ -75,7 +75,7 @@
             &:hover svg {
                 transform: rotate(45deg) scale(1.1);
             }
-
+        
             svg {
                 transition: transform 0.3s ease;
                 font-size: 20px;

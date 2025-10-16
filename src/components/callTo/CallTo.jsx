@@ -8,6 +8,7 @@ const CallTo = () => {
     const {t, i18n} = useTranslation()
     const currentLang = i18n?.languages[0]
     const cardCALLTO = currentLang === "ru" ? CALLTO : CALLTOEN
+    
     return (
         <div className='callTo container'>
             <div className="callTo__left">

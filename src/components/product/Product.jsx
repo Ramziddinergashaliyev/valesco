@@ -111,11 +111,12 @@ const Product = ({ data, loading, title }) => {
     })
     const [filteredData, setFilteredData] = useState([])
     const { t, i18n } = useTranslation()
-    
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 700)
         }
+
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
@@ -233,10 +234,19 @@ const Product = ({ data, loading, title }) => {
             )}
 
             <div className="product-filter">
-                <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>
-                    <img src={filter} alt="filterImg" />
-                    {filterHide ? t('Показать фильтр') : t('Скрыть фильтр')}
-                </button>
+                {
+                    title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles" || title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
+                        ?
+                        <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>
+                            <img src={filter} alt="filterImg" />
+                            {filterHide ? t('Показать фильтр') : t('Скрыть фильтр')}
+                        </button>
+                        :
+                        <>
+                            <div></div>
+                        </>
+                }
+
                 <div className="product-filter-right">
                     {!isMobile && (
                         <button
@@ -334,6 +344,51 @@ const Product = ({ data, loading, title }) => {
                     <></>
             }
 
+
+            {
+                title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
+                    ?
+                    <>
+                        <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
+                            <div className="product-filter-result">
+                                <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
+                                    <div className="product-filter-result-left-btns">
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '10W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '10W-40')}
+                                        >
+                                            10W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '15W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '15W-40')}
+                                        >
+                                            15W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '20W-50')}
+                                            onClick={() => handleFilterSelect('viscosity', '20W-50')}
+                                        >
+                                            20W - 50<FiPlus />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {(selectedFilters.lineType.length > 0 || selectedFilters.viscosity.length > 0) && (
+                                <div className="product-filter-clear">
+                                    <button onClick={clearAllFilters} className="product-filter-clear-btn">
+                                        <IoMdClose />
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    </>
+                    :
+                    <></>
+            }
+
+
             {
                 hide || isMobile
                     ?
@@ -347,14 +402,27 @@ const Product = ({ data, loading, title }) => {
                                     {
                                         displayData?.map((el, index) => (
                                             <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
-                                                <div className="product-card-img">
-                                                    <ImageWithLoading
-                                                        src={el?.image?.length > 3 ? el?.image?.[1] : el?.image?.[0]}
-                                                        alt="product-img"
-                                                        className="product-card-img-link"
-                                                        linkTo={`/singleProduct/${el?.id}`}
-                                                    />
-                                                </div>
+                                                {
+                                                    title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
+                                                        ?
+                                                        <div className="product-card-img">
+                                                            <ImageWithLoading
+                                                                src={el?.image?.[0]}
+                                                                alt="product-img"
+                                                                className="product-card-img-link"
+                                                                linkTo={`/singleProduct/${el?.id}`}
+                                                            />
+                                                        </div>
+                                                        :
+                                                        <div className="product-card-img">
+                                                            <ImageWithLoading
+                                                                src={el?.image?.length > 1 ? el?.image?.[1] : el?.image?.[0]}
+                                                                alt="product-img"
+                                                                className="product-card-img-link"
+                                                                linkTo={`/singleProduct/${el?.id}`}
+                                                            />
+                                                        </div>
+                                                }
 
                                                 <div className="product-card-info">
                                                     <h2 className="product-card-info-title">{el?.title}</h2>
@@ -382,14 +450,28 @@ const Product = ({ data, loading, title }) => {
                                         displayData?.map((el, index) => (
                                             <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
                                                 <div className="product-box-left">
-                                                    <div className="product-card-img">
-                                                        <ImageWithLoading
-                                                            src={el?.image?.length > 3 ? el?.image?.[1] : el?.image?.[0]}
-                                                            alt="product-img"
-                                                            className="product-card-img-link"
-                                                            linkTo={`/singleProduct/${el?.id}`}
-                                                        />
-                                                    </div>
+                                                    {
+                                                        title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
+                                                            ?
+                                                            <div className="product-card-img">
+                                                                <ImageWithLoading
+                                                                    src={el?.image?.[0]}
+                                                                    alt="product-img"
+                                                                    className="product-card-img-link"
+                                                                    linkTo={`/singleProduct/${el?.id}`}
+                                                                />
+                                                            </div>
+                                                            :
+                                                            <div className="product-card-img">
+                                                                <ImageWithLoading
+                                                                    src={el?.image?.length > 1 ? el?.image?.[1] : el?.image?.[0]}
+                                                                    alt="product-img"
+                                                                    className="product-card-img-link"
+                                                                    linkTo={`/singleProduct/${el?.id}`}
+                                                                />
+                                                            </div>
+
+                                                    }
                                                     <div className="product-box-left-info">
                                                         <h2 className="product-box-left-info-title">{el?.title}</h2>
                                                         <div className="product-box-left-info-item">

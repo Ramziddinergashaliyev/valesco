@@ -11,9 +11,7 @@ import img2 from "../../assets/images/sp-tec3.webp"
 
 const PrideArea = () => {
     const { t, i18n } = useTranslation()
-    const { data } = useGetCategoriesByIdQuery(10)
-    console.log(data);
-    
+    const { data } = useGetCategoriesByIdQuery(10)    
 
     const Data = [
         {
@@ -39,15 +37,18 @@ const PrideArea = () => {
     return (
         <div className='prideArea'>
             <div className="prideArea__container container">
+
                 <div className="prideArea__top">
                     <h2 className="prideArea__top-title">{t("Наша")}</h2>
                     <p className="prideArea__top-text"><span>{t("основе")}</span> – {t("премиальная")}</p>
                 </div>
 
                 <div className="prideArea__bottom">
+
                     <NavLink to={"/categories/10"}>
                         <button className='prideArea__bottom-btn'>{t("Все")}<MdArrowOutward /></button>
                     </NavLink>
+
                     <div className="prideArea__bottom-cards">
                         {
                             Data?.map(el => (

@@ -110,17 +110,10 @@ const ProductRange = ({ hide }) => {
   return (
     <div className="productRange container">
       <div className={`productRange__container ${hide === true ? "productRange__container-hide" : ""}`}>
-        {/* Info section faqat hide false bo'lganda ko'rsatiladi */}
         {!hide && (
           <div className="productRange__info">
             <h1 className="productRange__info-title">{t("линейка")}</h1>
-            {/* <h3 className="productRange__info-text">
-              {t("России много")}
-            </h3>
-            <p className="productRange__info-desc">
-              {t("Воспользуйтесь нашим")}
-            </p> */}
-             <h3 className="productRange__info-text">
+            <h3 className="productRange__info-text">
               {t("России много")}
             </h3>
             <p className="productRange__info-desc">
@@ -131,7 +124,7 @@ const ProductRange = ({ hide }) => {
             </NavLink>
           </div>
         )}
-        
+
         {isLoading ? (
           <CatalogLoading />
         ) : (
