@@ -403,7 +403,7 @@ const Product = ({ data, loading, title }) => {
                                         displayData?.map((el, index) => (
                                             <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
                                                 {
-                                                    title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
+                                                    title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines" || title === "Гидравлические масла" || title === "Hydraulic oils"
                                                         ?
                                                         <div className="product-card-img">
                                                             <ImageWithLoading
@@ -451,7 +451,7 @@ const Product = ({ data, loading, title }) => {
                                             <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
                                                 <div className="product-box-left">
                                                     {
-                                                        title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
+                                                        title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines" || title === "Гидравлические масла" || title === "Hydraulic oils"
                                                             ?
                                                             <div className="product-card-img">
                                                                 <ImageWithLoading
