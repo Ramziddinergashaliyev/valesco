@@ -66,7 +66,6 @@ const ProductSections = ({ byData, t }) => (
             {byData?.documents?.length > 0 && (
                 <Document data={byData?.documents} />
             )}
-
         </div>
     </div>
 )
@@ -111,11 +110,11 @@ const SingleProduct = () => {
     const { data: Freezee } = useGetCategoriesByIdQuery(25)
     const { data: FILTER } = useGetCategoriesByIdQuery(14)
     const { data: BREAKE } = useGetCategoriesByIdQuery(12)
-
+    
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }, [id])
-
+    
     useEffect(() => {
         if (byData?.image?.length > 0) {
             setActiveImg(byData.image[0])
@@ -123,6 +122,7 @@ const SingleProduct = () => {
     }, [byData])
 
     const isOilCategory = useMemo(() => {
+
         const categoryTitleRu = byData?.category?.title?.ru
         const categoryTitleEn = byData?.category?.title?.en
 
@@ -153,6 +153,7 @@ const SingleProduct = () => {
             return BREAKE?.products
         }
         return null
+
     }, [byData?.category, Freezee?.products, FILTER?.products, BREAKE?.products])
 
     const showFilterInfo = useMemo(() => {
