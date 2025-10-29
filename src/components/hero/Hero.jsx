@@ -81,17 +81,109 @@
 // export default Hero;
 
 
-import React from 'react'
-import imgDesktop from "../../assets/banner/herobg1.jpg";
+//Variant - 2
+
+// import React from 'react'
+// import { Swiper, SwiperSlide } from 'swiper/react'
+// import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+// import 'swiper/css'
+// import 'swiper/css/pagination'
+// import 'swiper/css/navigation'
+// import imgDesktop1 from "../../assets/banner/herobg1.jpg"
+// import imgDesktop2 from "../../assets/banner/herobg2.jpg"
+// import "./hero.scss"
+
+// const Hero = () => {
+//   return (
+//     <div className='hero'>
+//       <Swiper
+//         modules={[Autoplay, Pagination, Navigation]}
+//         spaceBetween={0}
+//         slidesPerView={1}
+//         speed={1500}
+//         autoplay={{
+//           delay: 4000,
+//           disableOnInteraction: false,
+//         }}
+//         pagination={{
+//           clickable: true,
+//         }}
+//         navigation={true}
+//         loop={true}
+//         className="hero-swiper"
+//       >
+//         <SwiperSlide>
+//           <img src={imgDesktop1} alt="Hero 1" />
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src={imgDesktop2} alt="Hero 2" />
+//         </SwiperSlide>
+//       </Swiper>
+//     </div>
+//   )
+// }
+
+// export default Hero
+
+
+
+// Hero.jsx
+import React, { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import imgDesktop1 from "../../assets/banner/herobg1.jpg"
+import imgDesktop2 from "../../assets/banner/herobg2.jpg"
 import "./hero.scss"
 
-
 const Hero = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const slides = [imgDesktop1, imgDesktop2]
+
   return (
     <div className='hero'>
-      <img src={imgDesktop} alt="" />
+      <Swiper
+        modules={[Autoplay, Navigation]}
+        spaceBetween={0}
+        slidesPerView={1}
+        speed={1500}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        // navigation={true}
+        loop={true}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        className="hero-swiper"
+      >
+        <SwiperSlide>
+          <img src={imgDesktop1} alt="Hero 1" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={imgDesktop2} alt="Hero 2" />
+        </SwiperSlide>
+      </Swiper>
+
+      <div className="custom-pagination">
+        {slides.map((_, index) => (
+          <div 
+            key={index} 
+            className={`pagination-line ${activeIndex === index ? 'active' : ''}`}
+          >
+            <div className="line-wrapper">
+              <div className="line-progress"></div>
+            </div>
+            <div className="line-number">
+              {String(index + 1).padStart(2, '0')}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
 
 export default Hero
+
+/* hero.scss */
