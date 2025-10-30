@@ -18,7 +18,7 @@ import banner2 from "../../assets/banner/img2.webp"
 import banner3 from "../../assets/banner/img3.jpg"
 import banner4 from "../../assets/banner/img4.webp"
 import banner5 from "../../assets/banner/img5.webp"
-import banner6 from "../../assets/banner/img6.webp"
+import banner6 from "../../assets/banner/img6.jpg"
 import banner7 from "../../assets/banner/img7.webp"
 
 import mobileBanner1 from "../../assets/banner/phone-1.webp"
