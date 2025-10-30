@@ -15,7 +15,7 @@ import filter from "../../assets/icons/filter.svg"
 
 import banner1 from "../../assets/banner/img1.jpg"
 import banner2 from "../../assets/banner/img2.webp"
-import banner3 from "../../assets/banner/img3.webp"
+import banner3 from "../../assets/banner/img3.jpg"
 import banner4 from "../../assets/banner/img4.webp"
 import banner5 from "../../assets/banner/img5.webp"
 import banner6 from "../../assets/banner/img6.webp"
@@ -389,7 +389,6 @@ const Product = ({ data, loading, title }) => {
                         :
                         <></>
                 }
-
 
                 {
                     hide || isMobile
