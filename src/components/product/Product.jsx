@@ -215,7 +215,7 @@ const Product = ({ data, loading, title }) => {
     const bannerSrc = isMobile ? mobileBannerMap[title] : desktopBannerMap[title]
 
     return (
-        <div className='product'>
+        <div className='product container'>
             <style>
                 {`
                 @keyframes spin {
@@ -233,177 +233,222 @@ const Product = ({ data, loading, title }) => {
                 </div>
             )}
 
-            <div className="container">
 
-                <div className="product-filter ">
-                    {
-                        title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles" || title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
-                            ?
-                            <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>
-                                <img src={filter} alt="filterImg" />
-                                {filterHide ? t('Показать фильтр') : t('Скрыть фильтр')}
-                            </button>
-                            :
-                            <>
-                                <div></div>
-                            </>
-                    }
-
-                    <div className="product-filter-right">
-                        {!isMobile && (
-                            <button
-                                onClick={() => setHide(false)}
-                                className={`product-filter-right-info ${!hide ? 'active' : ''}`}
-                            >
-                                <img src={img2} alt="product-col-img" />
-                            </button>
-                        )}
-                        <button
-                            onClick={() => setHide(true)}
-                            className={`product-filter-right-info ${hide ? 'active' : ''}`}
-                        >
-                            <img src={img1} alt="product-row-img" />
+            <div className="product-filter ">
+                {
+                    title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles" || title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
+                        ?
+                        <button onClick={() => setFilterHide(p => !p)} className='product-filter-left'>
+                            <img src={filter} alt="filterImg" />
+                            {filterHide ? t('Показать фильтр') : t('Скрыть фильтр')}
                         </button>
-                    </div>
+                        :
+                        <>
+                            <div></div>
+                        </>
+                }
+
+                <div className="product-filter-right">
+                    {!isMobile && (
+                        <button
+                            onClick={() => setHide(false)}
+                            className={`product-filter-right-info ${!hide ? 'active' : ''}`}
+                        >
+                            <img src={img2} alt="product-col-img" />
+                        </button>
+                    )}
+                    <button
+                        onClick={() => setHide(true)}
+                        className={`product-filter-right-info ${hide ? 'active' : ''}`}
+                    >
+                        <img src={img1} alt="product-row-img" />
+                    </button>
                 </div>
+            </div>
 
-                {
-                    title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles"
-                        ?
-                        <>
-                            <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
-                                <div className="product-filter-result">
-                                    <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
-                                        <div className="product-filter-result-left-btns">
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '0W-20')}
-                                                onClick={() => handleFilterSelect('viscosity', '0W-20')}
-                                            >
-                                                0W - 20<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '0W-30')}
-                                                onClick={() => handleFilterSelect('viscosity', '0W-30')}
-                                            >
-                                                0W - 30<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '0W-40')}
-                                                onClick={() => handleFilterSelect('viscosity', '0W-40')}
-                                            >
-                                                0W - 40<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '5W-30')}
-                                                onClick={() => handleFilterSelect('viscosity', '5W-30')}
-                                            >
-                                                5W - 30<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '5W-40')}
-                                                onClick={() => handleFilterSelect('viscosity', '5W-40')}
-                                            >
-                                                5W - 40<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '10W-40')}
-                                                onClick={() => handleFilterSelect('viscosity', '10W-40')}
-                                            >
-                                                10W - 40<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '15W-40')}
-                                                onClick={() => handleFilterSelect('viscosity', '15W-40')}
-                                            >
-                                                15W - 40<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '15W-50')}
-                                                onClick={() => handleFilterSelect('viscosity', '15W-50')}
-                                            >
-                                                15W - 50<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '20W-50')}
-                                                onClick={() => handleFilterSelect('viscosity', '20W-50')}
-                                            >
-                                                20W - 50<FiPlus />
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {(selectedFilters.lineType.length > 0 || selectedFilters.viscosity.length > 0) && (
-                                    <div className="product-filter-clear">
-                                        <button onClick={clearAllFilters} className="product-filter-clear-btn">
-                                            <IoMdClose />
+            {
+                title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles"
+                    ?
+                    <>
+                        <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
+                            <div className="product-filter-result">
+                                <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
+                                    <div className="product-filter-result-left-btns">
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '0W-20')}
+                                            onClick={() => handleFilterSelect('viscosity', '0W-20')}
+                                        >
+                                            0W - 20<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '0W-30')}
+                                            onClick={() => handleFilterSelect('viscosity', '0W-30')}
+                                        >
+                                            0W - 30<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '0W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '0W-40')}
+                                        >
+                                            0W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '5W-30')}
+                                            onClick={() => handleFilterSelect('viscosity', '5W-30')}
+                                        >
+                                            5W - 30<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '5W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '5W-40')}
+                                        >
+                                            5W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '10W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '10W-40')}
+                                        >
+                                            10W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '15W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '15W-40')}
+                                        >
+                                            15W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '15W-50')}
+                                            onClick={() => handleFilterSelect('viscosity', '15W-50')}
+                                        >
+                                            15W - 50<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '20W-50')}
+                                            onClick={() => handleFilterSelect('viscosity', '20W-50')}
+                                        >
+                                            20W - 50<FiPlus />
                                         </button>
                                     </div>
-                                )}
-                            </div>
-                        </>
-                        :
-                        <></>
-                }
-
-
-                {
-                    title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
-                        ?
-                        <>
-                            <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
-                                <div className="product-filter-result">
-                                    <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
-                                        <div className="product-filter-result-left-btns">
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '10W-40')}
-                                                onClick={() => handleFilterSelect('viscosity', '10W-40')}
-                                            >
-                                                10W - 40<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '15W-40')}
-                                                onClick={() => handleFilterSelect('viscosity', '15W-40')}
-                                            >
-                                                15W - 40<FiPlus />
-                                            </button>
-                                            <button
-                                                className={getFilterButtonClass('viscosity', '20W-50')}
-                                                onClick={() => handleFilterSelect('viscosity', '20W-50')}
-                                            >
-                                                20W - 50<FiPlus />
-                                            </button>
-                                        </div>
-                                    </div>
                                 </div>
+                            </div>
 
-                                {(selectedFilters.lineType.length > 0 || selectedFilters.viscosity.length > 0) && (
-                                    <div className="product-filter-clear">
-                                        <button onClick={clearAllFilters} className="product-filter-clear-btn">
-                                            <IoMdClose />
+                            {(selectedFilters.lineType.length > 0 || selectedFilters.viscosity.length > 0) && (
+                                <div className="product-filter-clear">
+                                    <button onClick={clearAllFilters} className="product-filter-clear-btn">
+                                        <IoMdClose />
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    </>
+                    :
+                    <></>
+            }
+
+            {
+                title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
+                    ?
+                    <>
+                        <div className={`product-filter-container ${filterHide ? 'show' : 'hide'}`}>
+                            <div className="product-filter-result">
+                                <div className="product-filter-result-left animate-item" style={{ '--delay': '0.2s' }}>
+                                    <div className="product-filter-result-left-btns">
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '10W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '10W-40')}
+                                        >
+                                            10W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '15W-40')}
+                                            onClick={() => handleFilterSelect('viscosity', '15W-40')}
+                                        >
+                                            15W - 40<FiPlus />
+                                        </button>
+                                        <button
+                                            className={getFilterButtonClass('viscosity', '20W-50')}
+                                            onClick={() => handleFilterSelect('viscosity', '20W-50')}
+                                        >
+                                            20W - 50<FiPlus />
                                         </button>
                                     </div>
-                                )}
+                                </div>
                             </div>
-                        </>
-                        :
-                        <></>
-                }
 
+                            {(selectedFilters.lineType.length > 0 || selectedFilters.viscosity.length > 0) && (
+                                <div className="product-filter-clear">
+                                    <button onClick={clearAllFilters} className="product-filter-clear-btn">
+                                        <IoMdClose />
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    </>
+                    :
+                    <></>
+            }
 
-                {
-                    hide || isMobile
-                        ?
-                        <>
-                            {
-                                loading
-                                    ?
-                                    <Loading />
-                                    :
-                                    <div className="product-cards fade-in">
-                                        {
-                                            displayData?.map((el, index) => (
-                                                <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
+            {
+                hide || isMobile
+                    ?
+                    <>
+                        {
+                            loading
+                                ?
+                                <Loading />
+                                :
+                                <div className="product-cards fade-in">
+                                    {
+                                        displayData?.map((el, index) => (
+                                            <div key={el?.id} className="product-card animate-card" style={{ '--delay': `${index * 0.1}s` }}>
+                                                {
+                                                    title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines" || title === "Гидравлические масла" || title === "Hydraulic oils"
+                                                        ?
+                                                        <div className="product-card-img">
+                                                            <ImageWithLoading
+                                                                src={el?.image?.[0]}
+                                                                alt="product-img"
+                                                                className="product-card-img-link"
+                                                                linkTo={`/singleProduct/${el?.id}`}
+                                                            />
+                                                        </div>
+                                                        :
+                                                        <div className="product-card-img">
+                                                            <ImageWithLoading
+                                                                src={el?.image?.length > 1 ? el?.image?.[1] : el?.image?.[0]}
+                                                                alt="product-img"
+                                                                className="product-card-img-link"
+                                                                linkTo={`/singleProduct/${el?.id}`}
+                                                            />
+                                                        </div>
+                                                }
+
+                                                <div className="product-card-info">
+                                                    <h2 className="product-card-info-title">{el?.title}</h2>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
+                                    {displayData?.length === 0 && !loading && (
+                                        <div className="no-products">
+                                            <p>{t("По выбранным")}</p>
+                                        </div>
+                                    )}
+                                </div>
+                        }
+                    </>
+                    :
+                    <>
+                        {
+                            loading
+                                ?
+                                <LoadingRow />
+                                :
+                                <div className="product-boxs fade-in">
+                                    {
+                                        displayData?.map((el, index) => (
+                                            <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
+                                                <div className="product-box-left">
                                                     {
                                                         title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines" || title === "Гидравлические масла" || title === "Hydraulic oils"
                                                             ?
@@ -424,81 +469,32 @@ const Product = ({ data, loading, title }) => {
                                                                     linkTo={`/singleProduct/${el?.id}`}
                                                                 />
                                                             </div>
+
                                                     }
-
-                                                    <div className="product-card-info">
-                                                        <h2 className="product-card-info-title">{el?.title}</h2>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
-                                        {displayData?.length === 0 && !loading && (
-                                            <div className="no-products">
-                                                <p>{t("По выбранным")}</p>
-                                            </div>
-                                        )}
-                                    </div>
-                            }
-                        </>
-                        :
-                        <>
-                            {
-                                loading
-                                    ?
-                                    <LoadingRow />
-                                    :
-                                    <div className="product-boxs fade-in">
-                                        {
-                                            displayData?.map((el, index) => (
-                                                <div key={el?.id} className="product-box animate-box" style={{ '--delay': `${index * 0.1}s` }}>
-                                                    <div className="product-box-left">
-                                                        {
-                                                            title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines" || title === "Гидравлические масла" || title === "Hydraulic oils"
-                                                                ?
-                                                                <div className="product-card-img">
-                                                                    <ImageWithLoading
-                                                                        src={el?.image?.[0]}
-                                                                        alt="product-img"
-                                                                        className="product-card-img-link"
-                                                                        linkTo={`/singleProduct/${el?.id}`}
-                                                                    />
-                                                                </div>
-                                                                :
-                                                                <div className="product-card-img">
-                                                                    <ImageWithLoading
-                                                                        src={el?.image?.length > 1 ? el?.image?.[1] : el?.image?.[0]}
-                                                                        alt="product-img"
-                                                                        className="product-card-img-link"
-                                                                        linkTo={`/singleProduct/${el?.id}`}
-                                                                    />
-                                                                </div>
-
-                                                        }
-                                                        <div className="product-box-left-info">
-                                                            <h2 className="product-box-left-info-title">{el?.title}</h2>
-                                                            <div className="product-box-left-info-item">
-                                                                {
-                                                                    el?.specifications?.map((el, index) => (
-                                                                        <span className='product-box-left-info-item-desc' key={index}>{el},</span>
-                                                                    ))
-                                                                }
-                                                            </div>
+                                                    <div className="product-box-left-info">
+                                                        <h2 className="product-box-left-info-title">{el?.title}</h2>
+                                                        <div className="product-box-left-info-item">
+                                                            {
+                                                                el?.specifications?.map((el, index) => (
+                                                                    <span className='product-box-left-info-item-desc' key={index}>{el},</span>
+                                                                ))
+                                                            }
                                                         </div>
                                                     </div>
-                                                    <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>{t("Подробнее")}<MdArrowOutward /></button></NavLink>
                                                 </div>
-                                            ))
-                                        }
-                                        {displayData?.length === 0 && !loading && (
-                                            <div className="no-products">
-                                                <p>{t("По выбранным")}</p>
+                                                <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>{t("Подробнее")}<MdArrowOutward /></button></NavLink>
                                             </div>
-                                        )}
-                                    </div>
-                            }
-                        </>
-                }
-            </div>
+                                        ))
+                                    }
+                                    {displayData?.length === 0 && !loading && (
+                                        <div className="no-products">
+                                            <p>{t("По выбранным")}</p>
+                                        </div>
+                                    )}
+                                </div>
+                        }
+                    </>
+            }
 
         </div>
     )
