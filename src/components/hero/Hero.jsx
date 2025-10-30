@@ -42,7 +42,7 @@ const Hero = () => {
         </SwiperSlide>
       </Swiper>
 
-      <div className="custom-pagination">
+      <div className="custom-pagination container">
         {slides.map((_, index) => (
           <div 
             key={index} 
