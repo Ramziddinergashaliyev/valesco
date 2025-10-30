@@ -11,11 +11,13 @@
     &-banner {
         border-radius: 40px;
         padding: 25px 0px;
+        margin-top: 110px;
+        margin-bottom: 30px;
         
         &-img {
             width: 100%;
             height: 460px;
-            object-fit: contain;
+            object-fit: cover;
         }
 
         @media (max-width: 1480px) {
@@ -276,7 +278,7 @@
         opacity: 0;
 
         &-img {
-            padding: 40px 0px 20px;
+            padding: 20px 0px 20px;
 
             img {
                 width: 100%;

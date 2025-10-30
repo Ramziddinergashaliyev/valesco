@@ -13,7 +13,7 @@ import img1 from "../../assets/icons/col-icn.svg"
 import img2 from "../../assets/icons/row-icn.svg"
 import filter from "../../assets/icons/filter.svg"
 
-import banner1 from "../../assets/banner/img1.webp"
+import banner1 from "../../assets/banner/img1.jpg"
 import banner2 from "../../assets/banner/img2.webp"
 import banner3 from "../../assets/banner/img3.webp"
 import banner4 from "../../assets/banner/img4.webp"
@@ -225,7 +225,7 @@ const Product = ({ data, loading, title }) => {
                 `}
             </style>
 
-            <h2 className="product-title">{title}</h2>
+            {/* <h2 className="product-title">{title}</h2> */}
 
             {bannerSrc && (
                 <div className="product-banner">
