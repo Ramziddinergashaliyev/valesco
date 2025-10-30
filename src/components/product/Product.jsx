@@ -215,7 +215,7 @@ const Product = ({ data, loading, title }) => {
     const bannerSrc = isMobile ? mobileBannerMap[title] : desktopBannerMap[title]
 
     return (
-        <div className='product container'>
+        <div className='product'>
             <style>
                 {`
                 @keyframes spin {
@@ -233,7 +233,9 @@ const Product = ({ data, loading, title }) => {
                 </div>
             )}
 
-            <div className="product-filter">
+            <div className="container">
+
+            <div className="product-filter ">
                 {
                     title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles" || title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
                         ?
@@ -496,6 +498,8 @@ const Product = ({ data, loading, title }) => {
                         }
                     </>
             }
+            </div>
+
         </div>
     )
 }
