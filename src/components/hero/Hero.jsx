@@ -6,11 +6,12 @@ import 'swiper/css/navigation'
 import imgDesktop1 from "../../assets/banner/herobg1.jpg"
 import imgDesktop2 from "../../assets/banner/herobg2.jpg"
 import imgDesktop3 from "../../assets/banner/herobg3.jpg"
+import imgDesktop4 from "../../assets/banner/herobg4.jpg"
 import "./hero.scss"
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const slides = [imgDesktop1, imgDesktop2, imgDesktop3]
+  const slides = [imgDesktop1, imgDesktop2, imgDesktop3, imgDesktop4]
 
   return (
     <div className='hero'>
@@ -23,7 +24,6 @@ const Hero = () => {
           delay: 4000,
           disableOnInteraction: false,
         }}
-        // navigation={true}
         loop={true}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         className="hero-swiper"
@@ -36,6 +36,9 @@ const Hero = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={imgDesktop3} alt="Hero 3" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={imgDesktop4} alt="Hero 4" />
         </SwiperSlide>
       </Swiper>
 
@@ -59,5 +62,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-/* hero.scss */

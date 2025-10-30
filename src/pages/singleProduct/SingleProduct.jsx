@@ -53,7 +53,7 @@ const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
 
 const ProductSections = ({ byData, t }) => (
     <div className="single-dropdown">
-        <ul className="single-dropdown-item container">   
+        <ul className="single-dropdown-item container">
             <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
             <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
             {byData?.documents?.length > 0 && (
@@ -110,11 +110,11 @@ const SingleProduct = () => {
     const { data: Freezee } = useGetCategoriesByIdQuery(25)
     const { data: FILTER } = useGetCategoriesByIdQuery(14)
     const { data: BREAKE } = useGetCategoriesByIdQuery(12)
-    
+
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }, [id])
-    
+
     useEffect(() => {
         if (byData?.image?.length > 0) {
             setActiveImg(byData.image[0])
