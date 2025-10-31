@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { IoMdArrowDropdown, IoMdClose } from 'react-icons/io';
 import { NavLink, useNavigate } from "react-router-dom";
-import logo from "../../../assets/icons/logo.png"
-import logo1 from "../../../assets/icons/logo1.jpg"
+import logo from "../../../assets/icons/logo.png";
+import logo1 from "../../../assets/icons/logo1.jpg";
 import { useTranslation } from 'react-i18next';
 import { AiOutlineClose } from "react-icons/ai";
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi';
