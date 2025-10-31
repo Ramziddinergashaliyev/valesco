@@ -229,15 +229,13 @@ const Product = ({ data, loading, title }) => {
                 `}
             </style>
 
-            {/* <h2 className="product-title">{title}</h2> */}
-
             {bannerSrc && (
                 <div className="product-banner">
                     <LazyLoadImage
                         src={bannerSrc}
                         className='product-banner-img'
-                        effect="black-and-white"
-                        alt="product"
+                        effect="blur"
+                        alt="products-imgs"
                     />
                     {/* <img className="product-banner-img" src={bannerSrc} alt="banner" /> */}
                 </div>
