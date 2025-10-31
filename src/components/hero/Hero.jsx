@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import imgDesktop1 from "../../assets/banner/herobg1.jpg"
-import imgDesktop2 from "../../assets/banner/herobg2.jpg"
-import imgDesktop3 from "../../assets/banner/herobg3.jpg"
-import imgDesktop4 from "../../assets/banner/herobg4.jpg"
+import imgDesktop1 from "../../assets/banner/herobg1.webp"
+import imgDesktop2 from "../../assets/banner/herobg2.webp"
+import imgDesktop3 from "../../assets/banner/herobg3.webp"
+import imgDesktop4 from "../../assets/banner/herobg4.webp"
 import "./hero.scss"
 
 const Hero = () => {
