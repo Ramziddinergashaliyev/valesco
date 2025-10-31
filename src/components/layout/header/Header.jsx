@@ -10,7 +10,7 @@ import { useGetCategoriesQuery } from '../../../context/api/categoryApi';
 import { useSearchProductsQuery } from '../../../context/api/productApi';
 
 import "./header.scss"
-
+                                                                        
 const Header = () => {
   const [searchHide, setSearchHide] = useState(false)
   const { t, i18n } = useTranslation();
@@ -59,7 +59,7 @@ const Header = () => {
             <a className='header__nav__logo-top' href="/">
               <img src={logo} alt="header logo" />
             </a>
-
+            
             <a className='header__nav__logo-bottom' href="/">
                <img src={logo1} alt="" />
             </a>
