@@ -287,7 +287,7 @@ const Header = () => {
                 onClick={() => setIsLangOpen(!isLangOpen)}
               >
                 <FiGlobe className="lang-icon-globe" />
-                <span className="lang-label">{currentLanguage?.flag} {currentLanguage?.label}</span>
+                <span className="lang-label">{currentLanguage?.label}</span>
                 <IoMdArrowDropdown className={`chevron-icon ${isLangOpen ? 'rotate' : ''}`} />
               </button>
 
@@ -299,7 +299,7 @@ const Header = () => {
                     onClick={() => changeLanguage(lang.code)}
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <span className="lang-flag">{lang.flag}</span>
+                    {/* <span className="lang-flag">{lang.flag}</span> */}
                     <span className="lang-name">{lang.label}</span>
                     {currentLang === lang.code && (
                       <span className="checkmark">✓</span>
