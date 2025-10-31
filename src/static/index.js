@@ -8,44 +8,6 @@ import new7 from "../assets/images/new7.jpg"
 import new8 from "../assets/images/new8.jpg"
 import news from "../assets/icons/logo.png"
 
-import img1 from "../assets/banner/img1.webp"
-import img2 from "../assets/banner/img2.webp"
-import img3 from "../assets/banner/img3.webp"
-import img4 from "../assets/banner/img4.webp"
-import img5 from "../assets/banner/img5.webp"
-import img6 from "../assets/banner/img6.webp"
-import img7 from "../assets/banner/img7.webp"
-
-export const CATEGORYBANNER = [
-    {
-        id: 1,
-        img: img1
-    },
-    {
-        id: 2,
-        img: img2
-    },
-    {
-        id: 3,
-        img: img3
-    },
-    {
-        id: 4,
-        img: img4
-    },
-    {
-        id: 5,
-        img: img5
-    },
-    {
-        id: 6,
-        img: img6
-    },
-    {
-        id: 7,
-        img: img7
-    },
-]
 
 export const CATEGORY = [
     {
