@@ -31,6 +31,10 @@ import mobileBanner7 from "../../assets/banner/phone-7.webp"
 
 import "./product.scss"
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
+
 const ImageWithLoading = ({ src, alt, className, linkTo }) => {
 
     const [imageLoading, setImageLoading] = useState(true);
@@ -229,7 +233,13 @@ const Product = ({ data, loading, title }) => {
 
             {bannerSrc && (
                 <div className="product-banner">
-                    <img className="product-banner-img" src={bannerSrc} alt="banner" />
+                    <LazyLoadImage
+                        src={bannerSrc}
+                        className='product-banner-img'
+                        effect="black-and-white"
+                        alt="product"
+                    />
+                    {/* <img className="product-banner-img" src={bannerSrc} alt="banner" /> */}
                 </div>
             )}
 
