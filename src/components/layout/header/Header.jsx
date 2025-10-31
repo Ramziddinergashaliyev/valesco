@@ -3,6 +3,7 @@ import { FiMenu, FiSearch } from "react-icons/fi";
 import { IoMdArrowDropdown, IoMdClose } from 'react-icons/io';
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../../assets/icons/logo.png"
+import logo1 from "../../../assets/icons/logo1.jpg"
 import { useTranslation } from 'react-i18next';
 import { AiOutlineClose } from "react-icons/ai";
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi';
@@ -55,8 +56,12 @@ const Header = () => {
       <header className='header'>
         <nav className="header__nav container">
           <div className="header__nav__logo">
-            <a href="/">
+            <a className='header__nav__logo-top' href="/">
               <img src={logo} alt="header logo" />
+            </a>
+
+            <a className='header__nav__logo-bottom' href="/">
+               <img src={logo1} alt="" />
             </a>
           </div>
           <ul className={`header__nav__item ${hide ? "header__nav__hide" : ""}`}>

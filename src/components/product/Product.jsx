@@ -34,9 +34,7 @@ import "./product.scss"
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-
 const ImageWithLoading = ({ src, alt, className, linkTo }) => {
-
     const [imageLoading, setImageLoading] = useState(true);
     const [imageError, setImageError] = useState(false);
 
