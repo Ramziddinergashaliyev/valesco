@@ -1,5 +1,5 @@
 import React from 'react'
-import img from "../../../assets/icons/logo.png"
+import img from "../../../assets/icons/logo1.jpg"
 import "./footer.scss"
 import { NavLink } from 'react-router-dom'
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi'
