@@ -51,6 +51,7 @@ const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
     )
 }
 
+
 const ProductSections = ({ byData, t }) => (
     <div className="single-dropdown">
         <ul className="single-dropdown-item container">
@@ -122,10 +123,10 @@ const SingleProduct = () => {
     }, [byData])
 
     const isOilCategory = useMemo(() => {
-
+        
         const categoryTitleRu = byData?.category?.title?.ru
         const categoryTitleEn = byData?.category?.title?.en
-
+        
         const oilCategories = [
             { ru: "Моторные масла для легковой и легкой коммерческой техники", en: "Motor oils for passenger cars and light commercial vehicles" },
             { ru: "Моторные масла для дизельных двигателей", en: "Motor oils for diesel engines" },
@@ -138,11 +139,11 @@ const SingleProduct = () => {
         )
 
     }, [byData?.category])
-
+    
     const relatedProducts = useMemo(() => {
         const categoryTitleRu = byData?.category?.title?.ru
         const categoryTitleEn = byData?.category?.title?.en
-
+        
         if (categoryTitleRu === "Антифриз" || categoryTitleEn === "Antifreeze") {
             return Freezee?.products
         }
@@ -161,7 +162,7 @@ const SingleProduct = () => {
         const categoryTitleEn = byData?.category?.title?.en
         return categoryTitleRu === "Фильтры" || categoryTitleEn === "Filters"
     }, [byData?.category])
-
+    
     if (isLoading) {
         return (
             <div className='single'>
@@ -169,7 +170,7 @@ const SingleProduct = () => {
             </div>
         )
     }
-
+    
     return (
         <div className='single'>
             <div className="single-top container">

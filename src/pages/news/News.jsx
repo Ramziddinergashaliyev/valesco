@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { NEW } from '../../static'
 import { NavLink } from 'react-router-dom'
-import logo from "../../assets/icons/logo.png"
+import logo from "../../assets/icons/logo1.jpg"
 
 import "./news.scss"
 

@@ -155,6 +155,7 @@ const ProductRange = ({ hide }) => {
           </div>
         )}
       </div>
+
     </div>
   );
 };

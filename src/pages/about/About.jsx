@@ -4,11 +4,10 @@ import "./about.scss"
 import { MISSION } from '../../static'
 import img1 from "../../assets/images/hero-2.jpg"
 import { useTranslation } from 'react-i18next'
-import imgbg from "../../assets/images/aboutbg.webp"
 
 const About = () => {
   const { t, i18n } = useTranslation()
-  
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -17,11 +16,8 @@ const About = () => {
     <div className='about'>
       <div className="">
         <div className="about__top-bg">
-          <div className="about__top container">
-            <h2 className="about__take-title">{t("company")}</h2>
-            <div className="about__top-img">
-              <img src={imgbg} alt="" />
-            </div>
+          <div className="container">
+            <h2 className='about__top-bg-title'><i>ABOUT COMPANY</i></h2>
           </div>
         </div>
 
