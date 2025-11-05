@@ -119,6 +119,11 @@
         object-fit: contain;
         border-radius: 10px;
         overflow: hidden;
+
+
+        @media (max-width:1580px) {
+            height: 270px;
+        }
     }
 
     @media (max-width: 1220px) {
