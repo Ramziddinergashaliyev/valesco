@@ -32,10 +32,6 @@ const CATEGORY = [
     image: img1,
     bgImage: img2,
   },
-  // {
-  //   image: img3,
-  //   bgImage: img2,
-  // },
   {
     image: rs1,
     bgImage: rs2,
@@ -60,27 +56,38 @@ const CATEGORY = [
     image: rs11,
     bgImage: rs12,
   },
-  // {
-  //   image: img4,
-  //   bgImage: img2,
-  // },
-  // {
-  //   image: img5,
-  //   bgImage: img2,
-  // },
-  // {
-  //   image: img6,
-  //   bgImage: img2,
-  // },
-  // {
-  //   image: img7,
-  //   bgImage: img2,
-  // },
-  // {
-  //   image: img8,
-  //   bgImage: img2,
-  // }
 ];
+
+// const CATEGORY = [
+//   {
+//     image: img1,
+//     bgImage: img2,
+//   },
+//   {
+//     image: img3,
+//     bgImage: img2,
+//   },
+//   {
+//     image: img4,
+//     bgImage: img2,
+//   },
+//   {
+//     image: img5,
+//     bgImage: img2,
+//   },
+//   {
+//     image: img6,
+//     bgImage: img2,
+//   },
+//   {
+//     image: img7,
+//     bgImage: img2,
+//   },
+//   {
+//     image: img8,
+//     bgImage: img2,
+//   }
+// ]
 
 const ProductRange = ({ hide }) => {
   const cardRefs = useRef([]);
