@@ -13,7 +13,7 @@
             grid-template-columns: none !important;
             grid-gap: 0 !important;
             padding: 20px 0px !important;
-
+            
             .productRange-card-list {
                 grid-template-columns: repeat(4, 1fr) !important;
                 grid-gap: 20px !important;
@@ -100,7 +100,7 @@
         gap: 25px;
 
         @media (max-width:1480px) {
-            gap: 25px;
+            gap: 15px;
         }
 
     }
@@ -158,9 +158,11 @@
                 margin-bottom: -5px;
             }
 
-            // @media (max-width:1480px) {
-            //     top: -20px;
-            // }
+            @media (max-width:1480px) {
+                h4 {
+                    margin-bottom: -2px;
+                }
+            }
         }
     }
 

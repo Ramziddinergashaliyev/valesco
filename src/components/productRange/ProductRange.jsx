@@ -14,23 +14,25 @@ import { useGetCategoriesQuery } from "../../context/api/categoryApi";
 import { useTranslation } from "react-i18next";
 import CatalogLoading from "../catalogLoading/CatalogLoading";
 
-import rs1 from "../../assets/icon/v1.png"
-import rs2 from "../../assets/icon/v1-1.png"
-import rs3 from "../../assets/icon/v2.png"
-import rs4 from "../../assets/icon/v2-1.png"
-import rs5 from "../../assets/icon/v3.png"
-import rs6 from "../../assets/icon/v3-1.png"
-import rs7 from "../../assets/icon/v4.png"
-import rs8 from "../../assets/icon/v4-1.png"
-import rs9 from "../../assets/icon/v5.png"
-import rs10 from "../../assets/icon/v5-1.png"
-import rs11 from "../../assets/icon/v6.png"
-import rs12 from "../../assets/icon/v6-1.png"
+import rs1 from "../../assets/icon/v1.webp"
+import rs2 from "../../assets/icon/v1-1.webp"
+import rs3 from "../../assets/icon/v2.webp"
+import rs4 from "../../assets/icon/v2-1.webp"
+import rs5 from "../../assets/icon/v3.webp"
+import rs6 from "../../assets/icon/v3-1.webp"
+import rs7 from "../../assets/icon/v4.webp"
+import rs8 from "../../assets/icon/v4-1.webp"
+import rs9 from "../../assets/icon/v5.webp"
+import rs10 from "../../assets/icon/v5-1.webp"
+import rs11 from "../../assets/icon/v6.webp"
+import rs12 from "../../assets/icon/v6-1.webp"
+import rs13 from "../../assets/icon/v7.webp"
+import rs14 from "../../assets/icon/v7-1.webp"
 
 const CATEGORY = [
   {
-    image: img1,
-    bgImage: img2,
+    image: rs13,
+    bgImage: rs14,
   },
   {
     image: rs1,
