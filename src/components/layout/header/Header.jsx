@@ -21,7 +21,6 @@ const Header = () => {
   const [localSearch, setLocalSearch] = useState(null)
   const navigate = useNavigate()
   
-  // Language selector states
   const [isLangOpen, setIsLangOpen] = useState(false);
   const langDropdownRef = useRef(null);
 
@@ -111,7 +110,6 @@ const Header = () => {
           </ul>
 
           <div className="header__nav__bottom">
-            {/* Modern Language Selector */}
             <div className="lang-selector-wrapper" ref={langDropdownRef}>
               <button
                 className={`lang-selector-button ${isLangOpen ? 'active' : ''}`}
@@ -130,7 +128,6 @@ const Header = () => {
                     onClick={() => changeLanguage(lang.code)}
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    {/* <span className="lang-flag">{lang.flag}</span> */}
                     <span className="lang-name">{lang.label}</span>
                     {currentLang === lang.code && (
                       <span className="checkmark">✓</span>
