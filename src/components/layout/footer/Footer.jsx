@@ -13,11 +13,11 @@ const Footer = () => {
     <footer className='footer'>
       <div className="footer-line"></div>
       <nav className="footer__nav container">
-
+        
         {/* <div className="footer__nav-logo">
           <img src={img} alt="footer logo" />
         </div> */}
-
+        
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("ПРОДУКЦИЯ")}</h3>
           {
@@ -44,7 +44,7 @@ const Footer = () => {
           <li className="footer__item-list"><NavLink to={"/distrbut"}>{t("distributors")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/contact"}>{t("contacts")}</NavLink></li>
         </ul>
-        
+             
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("Контакты")}</h3>
           <li className="footer__item-contact">
@@ -70,6 +70,7 @@ const Footer = () => {
           <textarea placeholder='Message' name="" id=""></textarea>
           <button className='footer__form-btn'>Send Now</button>
         </form>
+        
       </nav>
     </footer>
   )
