@@ -21,6 +21,14 @@ import banner5 from "../../assets/banner/img5.webp"
 import banner6 from "../../assets/banner/img6.webp"
 import banner7 from "../../assets/banner/img7.webp"
 
+import bannerRu1 from "../../assets/banner/imgRu1.webp"
+import bannerRu2 from "../../assets/banner/imgRu2.webp"
+import bannerRu3 from "../../assets/banner/imgRu3.webp"
+import bannerRu4 from "../../assets/banner/imgRu4.webp"
+import bannerRu5 from "../../assets/banner/imgRu5.webp"
+import bannerRu6 from "../../assets/banner/imgRu6.webp"
+import bannerRu7 from "../../assets/banner/imgRu7.webp"
+
 import mobileBanner1 from "../../assets/banner/phone-1.webp"
 import mobileBanner2 from "../../assets/banner/phone-2.webp"
 import mobileBanner3 from "../../assets/banner/phone-3.webp"
@@ -28,6 +36,7 @@ import mobileBanner4 from "../../assets/banner/phone-4.webp"
 import mobileBanner5 from "../../assets/banner/phone-5.webp"
 import mobileBanner6 from "../../assets/banner/phone-6.webp"
 import mobileBanner7 from "../../assets/banner/phone-7.webp"
+
 
 import "./product.scss"
 
@@ -181,19 +190,19 @@ const Product = ({ data, loading, title }) => {
     const displayData = filteredData
 
     const desktopBannerMap = {
-        "Моторные масла для легковой и легкой коммерческой техники": banner3,
+        "Моторные масла для легковой и легкой коммерческой техники": bannerRu3,
         "Motor oils for passenger cars and light commercial vehicles": banner3,
-        "Моторные масла для дизельных двигателей": banner1,
+        "Моторные масла для дизельных двигателей": bannerRu1,
         "Motor oils for diesel engines": banner1,
-        "Трансмиссионные масла": banner6,
+        "Трансмиссионные масла": bannerRu6,
         "Transmission oils": banner6,
-        "Гидравлические масла": banner2,
+        "Гидравлические масла": bannerRu2,
         "Hydraulic oils": banner2,
-        "Тормозная жидкость": banner4,
+        "Тормозная жидкость": bannerRu4,
         "Brake fluid": banner4,
-        "Антифриз": banner5,
+        "Антифриз": bannerRu5,
         "Antifreeze": banner5,
-        "Фильтры": banner7,
+        "Фильтры": bannerRu7,
         "Filters": banner7,
     }
 

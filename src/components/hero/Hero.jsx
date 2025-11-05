@@ -7,11 +7,22 @@ import imgDesktop1 from "../../assets/banner/herobg1.webp"
 import imgDesktop2 from "../../assets/banner/herobg2.webp"
 import imgDesktop3 from "../../assets/banner/herobg3.webp"
 import imgDesktop4 from "../../assets/banner/herobg4.webp"
+import imgDesktopRu1 from "../../assets/banner/herobgru1.webp"
+import imgDesktopRu2 from "../../assets/banner/herobgru2.webp"
+import imgDesktopRu3 from "../../assets/banner/herobgru3.webp"
+import imgDesktopRu4 from "../../assets/banner/herobgru4.webp"
 import "./hero.scss"
+import { useTranslation } from 'react-i18next'
 
 const Hero = () => {
+  const { t, i18n } = useTranslation()
+  console.log(i18n?.languages?.[0]);
+
   const [activeIndex, setActiveIndex] = useState(0)
   const slides = [imgDesktop1, imgDesktop2, imgDesktop3, imgDesktop4]
+  const slidesRu = [imgDesktopRu1, imgDesktopRu2, imgDesktopRu3, imgDesktopRu4]
+
+  const langHero = i18n?.languages?.[0] === "ru" ? slidesRu : slides
 
   return (
     <div className='hero'>
@@ -28,24 +39,19 @@ const Hero = () => {
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         className="hero-swiper"
       >
-        <SwiperSlide>
-          <img src={imgDesktop1} alt="Hero 1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={imgDesktop2} alt="Hero 2" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={imgDesktop3} alt="Hero 3" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={imgDesktop4} alt="Hero 4" />
-        </SwiperSlide>
+        {
+          langHero?.map((el, index) => (
+            <SwiperSlide key={index}>
+              <img src={el} alt="Hero 1" />
+            </SwiperSlide>
+          ))
+        }
       </Swiper>
 
       <div className="custom-pagination container">
-        {slides.map((_, index) => (
-          <div 
-            key={index} 
+        {langHero.map((_, index) => (
+          <div
+            key={index}
             className={`pagination-line ${activeIndex === index ? 'active' : ''}`}
           >
             <div className="line-wrapper">

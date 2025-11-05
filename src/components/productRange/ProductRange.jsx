@@ -14,14 +14,21 @@ import { useGetCategoriesQuery } from "../../context/api/categoryApi";
 import { useTranslation } from "react-i18next";
 import CatalogLoading from "../catalogLoading/CatalogLoading";
 
+import rs1 from "../../assets/icon/v1.png"
+import rs2 from "../../assets/icon/v1-1.png"
+
 const CATEGORY = [
   {
     image: img1,
     bgImage: img2,
   },
+  // {
+  //   image: img3,
+  //   bgImage: img2,
+  // },
   {
-    image: img3,
-    bgImage: img2,
+    image: rs1,
+    bgImage: rs2,
   },
   {
     image: img4,

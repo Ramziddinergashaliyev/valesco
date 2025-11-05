@@ -4,7 +4,7 @@
     @media (max-width:600px) {
         padding: 130px 0px 20px;
     }
-
+    
     &__top-bg {
         background-image: url(../../assets/banner/aboutbg.webp);
         background-position: center;
@@ -18,6 +18,17 @@
             font-weight: 600;
             color: white;
             padding: 40px 0px;
+        }
+
+        &-dist {
+           display: flex;
+           align-items: center;
+           list-style: none;
+           text-decoration: none;
+           flex-direction: column;
+           object-fit: contain;
+           column-width: auto;
+           stroke-dashoffset: 0cap;
         }
 
         @media (max-width:1600px) {
