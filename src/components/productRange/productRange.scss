@@ -97,10 +97,10 @@
     &-card-list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 25px;
 
         @media (max-width:1480px) {
-            gap: 10px;
+            gap: 25px;
         }
 
     }
@@ -155,7 +155,7 @@
                 color: black;
                 font-weight: 400;
                 font-size: 14px;
-                margin-bottom: 5px;
+                margin-bottom: -5px;
             }
 
             // @media (max-width:1480px) {
