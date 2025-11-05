@@ -116,6 +116,7 @@ const ProductRange = ({ hide }) => {
       if (img) {
         img.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
       }
+
       if (bg) {
         bg.style.backgroundPosition = `${xValue * 1.5}px ${-yValue * 1.5}px`;
       }
@@ -201,7 +202,6 @@ const ProductRange = ({ hide }) => {
           </div>
         )}
       </div>
-
     </div>
   );
 };

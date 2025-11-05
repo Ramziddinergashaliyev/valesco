@@ -3,7 +3,7 @@ import "./differents.scss"
 import { MdArrowOutward } from 'react-icons/md'
 import { useTranslation } from 'react-i18next'
 
-import img1 from "../../assets/images/differ1.jpg"
+import img1 from "../../assets/images/differ1.webp"
 import img2 from "../../assets/images/differ2.jpg"
 import { NavLink } from 'react-router-dom'
 
