@@ -52,7 +52,7 @@ const Footer = () => {
             <a href="tel:+998 71 281 49 30">+998 71 281 49 30</a>
             <a href="tel:+998 71 203 20 31">+998 71 203 20 31</a>
           </li>
-          <li className="footer__item-contact">
+          <li className="footer__item-contact footer__item-contact-span">
             <span>{t("address")}</span>
             {t("addressValesco")}
           </li>
@@ -61,6 +61,15 @@ const Footer = () => {
             <a href="mailTo:info@gpggroup.uz">info@gpggroup.uz</a>
           </li>
         </ul>
+
+        <form className='footer__form' action="">
+          <h3 className='footer__item-title'>LEAVE A MESSAGE</h3>
+          <input placeholder='Name' type="text" />
+          <input placeholder='Phone' type="text" />
+          <input placeholder='Email' type="text" />
+          <textarea placeholder='Message' name="" id=""></textarea>
+          <button className='footer__form-btn'>Send Now</button>
+        </form>
       </nav>
     </footer>
   )
