@@ -205,12 +205,20 @@
         height: 200px;
         width: 100%;
         
+        // &-title {
+        //     font-size: 46px;
+        //     font-weight: 600;
+        //     letter-spacing: 1px;
+        //     color: white;
+        //     padding: 24px 10px;
+        // }
+
         &-title {
             font-size: 46px;
             font-weight: 600;
             letter-spacing: 1px;
-            color: white;
-            padding: 24px 10px;
+            color: black;
+            // padding: 24px 10px;
         }
     }
 

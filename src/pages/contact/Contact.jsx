@@ -92,7 +92,6 @@ const Contact = () => {
   return (
     <div className='contact'>
       <div className="contact-top">
-        <h3 className='container contact-top-title'><i>Contact Us</i></h3>
       </div>
       <div className="contact-form container">
         <div className="contact-form-left">
@@ -125,6 +124,7 @@ const Contact = () => {
         </div>
 
         <form action="" className="contact-form-right">
+        <h3 className='container contact-top-title'>Contact Us</h3>
           <div className="contact-form-right-top">
             <label htmlFor="">
               <input placeholder='Name' type="text" />
