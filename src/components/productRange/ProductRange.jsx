@@ -16,6 +16,16 @@ import CatalogLoading from "../catalogLoading/CatalogLoading";
 
 import rs1 from "../../assets/icon/v1.png"
 import rs2 from "../../assets/icon/v1-1.png"
+import rs3 from "../../assets/icon/v2.png"
+import rs4 from "../../assets/icon/v2-1.png"
+import rs5 from "../../assets/icon/v3.png"
+import rs6 from "../../assets/icon/v3-1.png"
+import rs7 from "../../assets/icon/v4.png"
+import rs8 from "../../assets/icon/v4-1.png"
+import rs9 from "../../assets/icon/v5.png"
+import rs10 from "../../assets/icon/v5-1.png"
+import rs11 from "../../assets/icon/v6.png"
+import rs12 from "../../assets/icon/v6-1.png"
 
 const CATEGORY = [
   {
@@ -31,25 +41,45 @@ const CATEGORY = [
     bgImage: rs2,
   },
   {
-    image: img4,
-    bgImage: img2,
+    image: rs3,
+    bgImage: rs4,
   },
   {
-    image: img5,
-    bgImage: img2,
+    image: rs5,
+    bgImage: rs6,
   },
   {
-    image: img6,
-    bgImage: img2,
+    image: rs7,
+    bgImage: rs8,
   },
   {
-    image: img7,
-    bgImage: img2,
+    image: rs9,
+    bgImage: rs10,
   },
   {
-    image: img8,
-    bgImage: img2,
-  }
+    image: rs11,
+    bgImage: rs12,
+  },
+  // {
+  //   image: img4,
+  //   bgImage: img2,
+  // },
+  // {
+  //   image: img5,
+  //   bgImage: img2,
+  // },
+  // {
+  //   image: img6,
+  //   bgImage: img2,
+  // },
+  // {
+  //   image: img7,
+  //   bgImage: img2,
+  // },
+  // {
+  //   image: img8,
+  //   bgImage: img2,
+  // }
 ];
 
 const ProductRange = ({ hide }) => {
