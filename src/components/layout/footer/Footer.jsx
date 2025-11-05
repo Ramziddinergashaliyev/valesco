@@ -14,18 +14,10 @@ const Footer = () => {
       <div className="footer-line"></div>
       <nav className="footer__nav container">
 
-        <div className="footer__nav-logo">
+        {/* <div className="footer__nav-logo">
           <img src={img} alt="footer logo" />
-        </div>
+        </div> */}
 
-        <ul className="footer__item">
-          <h3 className='footer__item-title'>{t("КОМПАНИЯ")}</h3>
-          <li className="footer__item-list"><NavLink to={"/about"}>{t("company")}</NavLink></li>
-          <li className="footer__item-list"><NavLink to={"/news"}>{t("news")}</NavLink></li>
-          <li className="footer__item-list"><NavLink to={"/distrbut"}>{t("distributors")}</NavLink></li>
-          <li className="footer__item-list"><NavLink to={"/contact"}>{t("contacts")}</NavLink></li>
-        </ul>
-        
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("ПРОДУКЦИЯ")}</h3>
           {
@@ -45,6 +37,14 @@ const Footer = () => {
           }
         </ul>
 
+        <ul className="footer__item">
+          <h3 className='footer__item-title'>{t("КОМПАНИЯ")}</h3>
+          <li className="footer__item-list"><NavLink to={"/about"}>{t("company")}</NavLink></li>
+          <li className="footer__item-list"><NavLink to={"/news"}>{t("news")}</NavLink></li>
+          <li className="footer__item-list"><NavLink to={"/distrbut"}>{t("distributors")}</NavLink></li>
+          <li className="footer__item-list"><NavLink to={"/contact"}>{t("contacts")}</NavLink></li>
+        </ul>
+        
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("Контакты")}</h3>
           <li className="footer__item-contact">

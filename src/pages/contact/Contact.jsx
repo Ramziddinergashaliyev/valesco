@@ -76,7 +76,7 @@
 
 // export default Contact
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./contact.scss"
 import { GrMapLocation } from "react-icons/gr";
 import { MdOutlineMail } from 'react-icons/md';
@@ -84,6 +84,11 @@ import { LuPhone } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 
 const Contact = () => {
+
+  useEffect(() => {
+    scrollTo(0,0)
+  }, [])
+
   return (
     <div className='contact'>
       <div className="contact-top">

@@ -28,7 +28,7 @@ const Impact = () => {
           <div className="impact-nashi-info-top">
             <h3 className="impact-nashi-info-top-title">
               В основе успеха бизнеса Valesco лежат удовлетворенность акционеров, достижение максимума SUPEX и победный дух «Pae-gi»</h3>
-            <p className="impact-nashi-info-top-desc">MS (система управления ) систематически излагает корпоративную культуру и бизнес-идеологию, а также методы управления  Group. Это эксклюзивная философия управления , которую разделяют и с которой согласны все филиалы .</p>
+            <p className="impact-nashi-info-top-desc">MS (система управления ) систематически излагает корпоративную культуру и бизнес-идеологию, а также методы управления  Group. Это эксклюзивная философия управления , которую разделяют и с которой согласны все филиалы</p>
           </div>
           <div className="impact-nashi-info-bottom">
             <div className="impact-nashi-info-bottom-boxs">
