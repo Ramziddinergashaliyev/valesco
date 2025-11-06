@@ -1,65 +1,4 @@
-// import React, { useEffect } from 'react'
-// import img from "../../assets/images/about.png"
-// import "./about.scss"
-// import { MISSION } from '../../static'
-// import img1 from "../../assets/images/hero-2.jpg"
-// import { useTranslation } from 'react-i18next'
-
-// const About = () => {
-//   const { t, i18n } = useTranslation()
-
-//   useEffect(() => {
-//     window.scrollTo(0, 0)
-//   }, [])
-
-//   return (
-//     <div className='about'>
-//       <div className="">
-//         <div className="about__top-bg">
-//           <div className="container">
-//             <h2 className='about__top-bg-title'><i>ABOUT COMPANY</i></h2>
-//           </div>
-//         </div>
-
-//         <div className="about__middle">
-//           <div className="container about__take">
-//             <h2 className="about__take-title"></h2>
-//             <div className="about__take-info">
-//               <h2 className="about__take-info-title">{t("Наша компания")}</h2>
-//               <p className="about__take-info-text">{t("начало")}</p>
-
-//               <div className="about-info">
-//                 <p className="about-info-text">{t("производства")}</p>
-//                 <p className="about-info-text">{t("Продукция компании")}</p>
-//               </div>
-
-//               {/* <div className="about-imgs">
-//                 <div className="about-imgs-info">
-//                   <p className="about-info-text">{t("Так как")}</p>
-//                 </div>
-//               </div> */}
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="about__take-info-cards container">
-//           {
-//             MISSION?.map(el => (
-//               <div key={el.id} className="about__take-info-card">
-//                 <h2 className="about__take-info-card-title">{el?.price}</h2>
-//                 <p className="about__take-info-card-text">{el?.title}</p>
-//               </div>
-//             ))
-//           }
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default About
-
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import "./about.scss"
 
 import { FaCircleChevronRight } from "react-icons/fa6";
@@ -69,9 +8,43 @@ import { MISSION } from '../../static';
 import img from "../../assets/images/hero-2.jpg"
 
 const About = () => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible && count < 100) {
+      const timer = setTimeout(() => {
+        setCount(count + 1);
+      }, 20); 
+
+      return () => clearTimeout(timer);
+    }
+  }, [count, isVisible]);
+
   return (
     <div className='about'>
-
       <div className="about-top">
         <div className="about-top-box container">
           <div className="about-top-info container">
@@ -91,10 +64,10 @@ const About = () => {
 
       <div className="about-middle container">
         <div className="about-middle-top">
-          <div className="about-middle-top-box">
+          <div className="about-middle-top-box" ref={counterRef}>
             <img src={logo} alt="" />
             <div className="about-middle-top-box-info">
-              <p className="about-middle-top-box-info-text">100%</p>
+              <p className="about-middle-top-box-info-text">{count}%</p>
               <h2 className="about-middle-top-box-info-title">Guarantee</h2>
             </div>
           </div>
@@ -128,7 +101,7 @@ const About = () => {
         <div className="about-imgs-right">
           <h3 className='about-imgs-right-text'> - About Us</h3>
           <h1 className='about-imgs-right-title'>About Valesco Oil</h1>
-          <p className='about-imgs-right-desc'>Shindo Oil is more than just engine oil—it’s the symbol of modern engineering and pure performance. Our innovative formulas power the heart of your vehicle.</p>
+          <p className='about-imgs-right-desc'>Shindo Oil is more than just engine oil—it's the symbol of modern engineering and pure performance. Our innovative formulas power the heart of your vehicle.</p>
           <button className='about-imgs-right-btn'>Contact Us</button>
         </div>
       </div>
