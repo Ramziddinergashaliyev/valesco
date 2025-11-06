@@ -100,11 +100,11 @@ const About = () => {
           <img src={img} alt="" />
         </div>
         <div className="about-imgs-right">
-          <h3 className='about-imgs-right-text'> - About Us</h3>
+          <h3 className='about-imgs-right-text'>About Us</h3>
           <h1 className='about-imgs-right-title'>About Valesco Oil</h1>
-          <p className='about-imgs-right-desc'>Shindo Oil is more than just engine oil—it's the symbol of modern engineering and pure performance. Our innovative formulas power the heart of your vehicle.</p>
+          <p className='about-imgs-right-desc'>Valesco Oil is more than just engine oil. It's the symbol of modern engineering and pure performance. Our innovative formulas power the heart of your vehicle.</p>
           <button className='about-imgs-right-btn'>
-            <NavLink>Contact Us</NavLink>
+            <NavLink to={"/contact"}>Contact Us</NavLink>
           </button>
         </div>
       </div>
