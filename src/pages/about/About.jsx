@@ -70,6 +70,7 @@ import { MISSION } from '../../static';
 const About = () => {
   return (
     <div className='about'>
+
       <div className="about-top">
         <div className="about-top-box container">
           <div className="about-top-info container">
@@ -98,7 +99,7 @@ const About = () => {
           </div>
           <div className="about-middle-top-info">
             <h2 className="about-middle-top-info-title">100% Performance Guarantee</h2>
-            <p className="about-middle-top-info-text">Shindo Oil guarantees engine protection and maximum performance. Formulated to endure the toughest conditions, so you can drive with confidence.</p>
+            <p className="about-middle-top-info-text">Valesco oil guarantees engine protection and maximum performance. Formulated to endure the toughest conditions, so you can drive with confidence.</p>
           </div>
           <div className="about-middle-top-right">
             <p className="about-middle-top-right-title"><FaCircleChevronRight />Long-lasting engine protection</p>
@@ -112,8 +113,8 @@ const About = () => {
         {
           MISSION?.map(el => (
             <div className='about-card'>
-                <h3 className="about-card-title">{el?.price}</h3>
-                <p className="about-card-text">{el?.title}</p>
+              <h3 className="about-card-title">{el?.price}</h3>
+              <p className="about-card-text">{el?.title}</p>
             </div>
           ))
         }

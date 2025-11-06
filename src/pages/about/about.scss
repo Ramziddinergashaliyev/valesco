@@ -880,10 +880,7 @@
             font-size: 42px;
             font-weight: 800;
             line-height: 64px;
-            background: linear-gradient(135deg,
-                    #ff0000 0%,
-                    #cc0000 50%,
-                    #ff3333 100%);
+            background: black;
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -909,6 +906,7 @@
         &:hover &-title {
             transform: scale(1.2) rotateY(10deg);
             animation: numberPulse 0.6s ease infinite;
+            transition: .6s;
         }
 
         &-text {
