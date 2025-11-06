@@ -6,6 +6,7 @@ import { FaCircleChevronRight } from "react-icons/fa6";
 import logo from "../../assets/icons/about.svg"
 import { MISSION } from '../../static';
 import img from "../../assets/images/hero-2.jpg"
+import { NavLink } from 'react-router-dom';
 
 const About = () => {
   const [count, setCount] = useState(0);
@@ -37,7 +38,7 @@ const About = () => {
     if (isVisible && count < 100) {
       const timer = setTimeout(() => {
         setCount(count + 1);
-      }, 20); 
+      }, 20);
 
       return () => clearTimeout(timer);
     }
@@ -102,7 +103,9 @@ const About = () => {
           <h3 className='about-imgs-right-text'> - About Us</h3>
           <h1 className='about-imgs-right-title'>About Valesco Oil</h1>
           <p className='about-imgs-right-desc'>Shindo Oil is more than just engine oil—it's the symbol of modern engineering and pure performance. Our innovative formulas power the heart of your vehicle.</p>
-          <button className='about-imgs-right-btn'>Contact Us</button>
+          <button className='about-imgs-right-btn'>
+            <NavLink>Contact Us</NavLink>
+          </button>
         </div>
       </div>
     </div>
