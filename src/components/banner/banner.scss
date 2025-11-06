@@ -1,395 +1,3 @@
-// .banner {
-//     background: url(../../assets/banner/bg.webp);
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     padding: 40px 0px;
-
-//     &__top {
-//         display: grid;
-//         grid-template-columns: repeat(2, 1fr);
-//         align-items: start;
-//         gap: 20px;
-//         padding: 10px 0px 60px;
-
-//         &-title {
-//             font-size: 52px;
-//             font-weight: 700;
-//             line-height: 60px;
-//             color: white;
-//         }
-
-//         &-text {
-//             font-size: 20px;
-//             font-weight: 400;
-//             line-height: 30px;
-//             color: white;
-//         }
-//     }
-
-//     &__cards {
-//         display: grid;
-//         grid-template-columns: repeat(4, 1fr);
-//         grid-gap: 20px;
-//     }
-
-//     @media (max-width:1500px) {
-//         &__cards {
-//             display: grid;
-//             grid-template-columns: repeat(3, 1fr);
-//             grid-gap: 30px;
-//         }
-//     }
-
-//     &__card {
-//         position: relative;
-//         height: 280px;
-//         border: 1px solid #eee4;
-//         border-radius: 6px;
-//         padding: 20px 15px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         align-items: flex-start;
-//         cursor: pointer;
-
-//         &:hover {
-//             background-color: #383838;
-//             transition: .3s;
-
-//         }
-
-//         &-title {
-//             font-size: 30px;
-//             font-weight: 400;
-//             line-height: 32px;
-//             color: white;
-//         }
-
-//         &-desc {
-//             position: absolute;
-//             bottom: 20px;
-//             right: 20px;
-//             display: flex;
-//             align-items: center;
-//             gap: 10px;
-//             justify-content: flex-end;
-//             color: white;
-//             opacity: 0;
-
-//             svg {
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-//             }
-//         }
-
-//         &-text {
-//             font-size: 16px;
-//             color: rgb(190, 188, 188);
-//         }
-
-//         &:hover .banner__card-text {
-//             display: none;
-//             transition: .3;
-//         }
-//     }
-    
-//     @media (max-width:1000px) {
-//         &__top-title {
-//             font-size: 32px;
-//             font-weight: 400;
-//             line-height: 38px;
-//         }
-
-//         &__top-text {
-//             font-size: 16px;
-//             line-height: 22px;
-//             font-weight: 300;
-//         }
-
-//         &__card-title {
-//             font-size: 18px;
-//             font-weight: 400;
-//             line-height: 24px;
-//         }
-
-//         &__card-text {
-//             font-size: 13px;
-//             font-weight: 400;
-//             line-height: 18px;
-//         }
-
-//         &__cards {
-//             gap: 10px;
-//         }
-//     }
-
-//     @media (max-width:760px) {
-//         &__cards {
-//             grid-template-columns: repeat(2, 1fr);
-//             grid-gap: 10px;
-//         }
-//     }
-
-//     @media (max-width:560px) {
-//         padding: 10px 0px;
-
-//         &__card {
-//             height: 260px;
-//         }
-        
-//         &__top {
-//             grid-template-columns: 1fr;
-//             padding: 20px 0px;
-//         }
-
-//         &__cards {
-//             grid-template-columns: repeat(1, 1fr);
-//             grid-gap: 10px;
-//         }
-//     }
-// }
-
-
-// .banner {
-//     background: url(../../assets/banner/bg.webp);
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     padding: 40px 0px;
-
-//     &__top {
-//         display: grid;
-//         grid-template-columns: repeat(2, 1fr);
-//         align-items: start;
-//         gap: 20px;
-//         padding: 10px 0px 60px;
-
-//         &-title {
-//             font-size: 52px;
-//             font-weight: 700;
-//             line-height: 60px;
-//             color: white;
-//             animation: fadeInUp 0.8s ease-out;
-//         }
-
-//         &-text {
-//             font-size: 20px;
-//             font-weight: 400;
-//             line-height: 30px;
-//             color: white;
-//             animation: fadeInUp 0.8s ease-out 0.2s backwards;
-//         }
-//     }
-
-//     &__cards {
-//         display: grid;
-//         grid-template-columns: repeat(4, 1fr);
-//         grid-gap: 20px;
-//     }
-
-//     @media (max-width:1500px) {
-//         &__cards {
-//             display: grid;
-//             grid-template-columns: repeat(3, 1fr);
-//             grid-gap: 30px;
-//         }
-//     }
-
-//     &__card {
-//         position: relative;
-//         height: 280px;
-//         border: 1px solid #eee4;
-//         border-radius: 6px;
-//         padding: 20px 15px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         align-items: flex-start;
-//         cursor: pointer;
-//         overflow: hidden;
-//         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-//         animation: fadeInScale 0.6s ease-out backwards;
-        
-//         // Har bir card uchun delay
-//         &:nth-child(1) { animation-delay: 0.1s; }
-//         &:nth-child(2) { animation-delay: 0.2s; }
-//         &:nth-child(3) { animation-delay: 0.3s; }
-//         &:nth-child(4) { animation-delay: 0.4s; }
-//         &:nth-child(5) { animation-delay: 0.5s; }
-//         &:nth-child(6) { animation-delay: 0.6s; }
-
-//         // Hover effect uchun gradient overlay
-//         &::before {
-//             content: '';
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             right: 0;
-//             bottom: 0;
-//             background: linear-gradient(135deg, rgba(56, 56, 56, 0) 0%, rgba(56, 56, 56, 0.8) 100%);
-//             opacity: 0;
-//             transition: opacity 0.4s ease;
-//             z-index: 0;
-//         }
-
-//         &:hover {
-//             background-color: #383838;
-//             transform: translateY(-8px);
-//             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-//             border-color: #ffffff20;
-
-//             &::before {
-//                 opacity: 1;
-//             }
-//         }
-
-//         &-title {
-//             font-size: 30px;
-//             font-weight: 400;
-//             line-height: 32px;
-//             color: white;
-//             position: relative;
-//             z-index: 1;
-//             transition: transform 0.3s ease;
-//         }
-
-//         &:hover &-title {
-//             transform: translateX(5px);
-//         }
-
-//         &-desc {
-//             position: absolute;
-//             bottom: 20px;
-//             right: 20px;
-//             display: flex;
-//             align-items: center;
-//             gap: 10px;
-//             justify-content: flex-end;
-//             color: white;
-//             opacity: 0;
-//             transform: translateX(-20px);
-//             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-//             z-index: 1;
-
-//             svg {
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-//                 transition: transform 0.3s ease;
-//             }
-//         }
-
-//         &:hover &-desc {
-//             opacity: 1;
-//             transform: translateX(0);
-
-//             svg {
-//                 transform: rotate(45deg);
-//             }
-//         }
-
-//         &-text {
-//             font-size: 16px;
-//             color: rgb(190, 188, 188);
-//             position: relative;
-//             z-index: 1;
-//             opacity: 1;
-//             transform: translateY(0);
-//             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-//         }
-
-//         &:hover &-text {
-//             opacity: 0;
-//             transform: translateY(-10px);
-//         }
-//     }
-
-//     // Keyframe Animations
-//     @keyframes fadeInUp {
-//         from {
-//             opacity: 0;
-//             transform: translateY(30px);
-//         }
-//         to {
-//             opacity: 1;
-//             transform: translateY(0);
-//         }
-//     }
-
-//     @keyframes fadeInScale {
-//         from {
-//             opacity: 0;
-//             transform: scale(0.9) translateY(20px);
-//         }
-//         to {
-//             opacity: 1;
-//             transform: scale(1) translateY(0);
-//         }
-//     }
-    
-//     @media (max-width:1000px) {
-//         &__top-title {
-//             font-size: 32px;
-//             font-weight: 400;
-//             line-height: 38px;
-//         }
-
-//         &__top-text {
-//             font-size: 16px;
-//             line-height: 22px;
-//             font-weight: 300;
-//         }
-
-//         &__card-title {
-//             font-size: 18px;
-//             font-weight: 400;
-//             line-height: 24px;
-//         }
-
-//         &__card-text {
-//             font-size: 13px;
-//             font-weight: 400;
-//             line-height: 18px;
-//         }
-
-//         &__cards {
-//             gap: 10px;
-//         }
-//     }
-
-//     @media (max-width:760px) {
-//         &__cards {
-//             grid-template-columns: repeat(2, 1fr);
-//             grid-gap: 10px;
-//         }
-//     }
-
-//     @media (max-width:560px) {
-//         padding: 10px 0px;
-
-//         &__card {
-//             height: 260px;
-            
-//             &:hover {
-//                 transform: translateY(-4px);
-//             }
-//         }
-        
-//         &__top {
-//             grid-template-columns: 1fr;
-//             padding: 20px 0px;
-//         }
-
-//         &__cards {
-//             grid-template-columns: repeat(1, 1fr);
-//             grid-gap: 10px;
-//         }
-//     }
-// }
-
-
 .banner {
     background: url(../../assets/banner/bg.webp);
     background-position: center;
@@ -453,20 +61,42 @@
         align-items: flex-start;
         cursor: pointer;
         overflow: hidden;
-        backdrop-filter: blur(10px);
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+        background: #0009;
         transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         animation: fadeInScale 0.6s ease-out backwards;
         transform-style: preserve-3d;
-        
-        &:nth-child(1) { animation-delay: 0.1s; }
-        &:nth-child(2) { animation-delay: 0.15s; }
-        &:nth-child(3) { animation-delay: 0.2s; }
-        &:nth-child(4) { animation-delay: 0.25s; }
-        &:nth-child(5) { animation-delay: 0.3s; }
-        &:nth-child(6) { animation-delay: 0.35s; }
-        &:nth-child(7) { animation-delay: 0.4s; }
-        &:nth-child(8) { animation-delay: 0.45s; }
+
+        &:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 0.25s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: 0.3s;
+        }
+
+        &:nth-child(6) {
+            animation-delay: 0.35s;
+        }
+
+        &:nth-child(7) {
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(8) {
+            animation-delay: 0.45s;
+        }
 
         &::before {
             content: '';
@@ -477,11 +107,10 @@
             bottom: 0;
             border-radius: 12px;
             padding: 1px;
-            background: linear-gradient(135deg, 
-                rgba(255, 255, 255, 0.3),
-                rgba(255, 255, 255, 0.1),
-                rgba(255, 255, 255, 0.3)
-            );
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.3),
+                    rgba(255, 255, 255, 0.1),
+                    rgba(255, 255, 255, 0.3));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -496,7 +125,7 @@
             left: 50%;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(94, 94, 94, 0.15) 0%, transparent 70%);
             transform: translate(-50%, -50%) scale(0);
             transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             border-radius: 50%;
@@ -510,22 +139,17 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(
-                45deg,
-                transparent 30%,
-                rgba(255, 255, 255, 0.1) 50%,
-                transparent 70%
-            );
+            background: linear-gradient(45deg,
+                    transparent 30%,
+                    rgba(148, 148, 148, 0.1) 50%,
+                    transparent 70%);
             transform: rotate(45deg) translateX(-100%);
             transition: transform 0.6s ease;
         }
 
         &:hover {
-            background: linear-gradient(135deg, 
-                rgba(56, 56, 56, 0.9) 0%, 
-                rgba(40, 40, 40, 0.95) 100%
-            );
-            box-shadow: 
+            background: #0006;
+            box-shadow:
                 0 25px 50px rgba(0, 0, 0, 0.4),
                 0 0 30px rgba(255, 255, 255, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -620,6 +244,7 @@
             opacity: 0;
             transform: translateY(40px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -631,6 +256,7 @@
             opacity: 0;
             transform: scale(0.85) translateY(30px);
         }
+
         to {
             opacity: 1;
             transform: scale(1) translateY(0);
@@ -641,20 +267,24 @@
         0% {
             filter: hue-rotate(0deg);
         }
+
         100% {
             filter: hue-rotate(360deg);
         }
     }
 
     @keyframes pulse {
-        0%, 100% {
+
+        0%,
+        100% {
             transform: rotate(45deg) scale(1.1);
         }
+
         50% {
             transform: rotate(45deg) scale(1.2);
         }
     }
-    
+
     @media (max-width:1000px) {
         &__top-title {
             font-size: 32px;
@@ -697,12 +327,12 @@
 
         &__card {
             height: 260px;
-            
+
             &:hover {
                 transform: translateY(-6px) rotateX(0deg);
             }
         }
-        
+
         &__top {
             grid-template-columns: 1fr;
             padding: 20px 0px;
