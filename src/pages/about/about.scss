@@ -361,12 +361,11 @@
         width: 100%;
         height: 700px;
 
-
         &-box {
             display: grid;
             grid-template-columns: 550px 1fr;
             grid-gap: 20px;
-            padding-top: 60px;
+            padding-top: 70px;
         }
 
         &-info {
