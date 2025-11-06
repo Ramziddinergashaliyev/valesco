@@ -69,7 +69,7 @@ const About = () => {
         <div className="about-top-box container">
           <div className="about-top-info container">
             <h2 className="about-top-title">About Company</h2>
-            <p className='about-top-text'>Our company is a manufacturer of motor oil, brake fluids, coolants and auto chemicals</p>
+            <p className='about-top-text about-top-desc'>Our company is a manufacturer of motor oil, brake fluids, coolants and auto chemicals</p>
             <p className='about-top-text'>In 2019, the company began producing motor oils under the VALESCO brand, which meet international standards.
               The company was founded in 2011 as an Uzbek-Korean joint venture, GLOBAL PETROCHEMICAL GROUP, in Tashkent.</p>
             <p className='about-top-text'>All stages of production (including packaging production) are carried out using our own technological equipment.
