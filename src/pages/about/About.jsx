@@ -64,7 +64,24 @@ import "./about.scss"
 
 const About = () => {
   return (
-    <div>About</div>
+    <div className='about'>
+      <div className="about-top">
+        <div className="about-top-box container">
+          <div className="about-top-info container">
+            <h2 className="about-top-title">About Company</h2>
+            <p className='about-top-text'>Our company is a manufacturer of motor oil, brake fluids, coolants and auto chemicals</p>
+            <p className='about-top-text'>In 2019, the company began producing motor oils under the VALESCO brand, which meet international standards.
+              The company was founded in 2011 as an Uzbek-Korean joint venture, GLOBAL PETROCHEMICAL GROUP, in Tashkent.</p>
+            <p className='about-top-text'>All stages of production (including packaging production) are carried out using our own technological equipment.
+              Thorough quality control is performed at every stage of production.</p>
+            <p className='about-top-text'>GPG's products fully comply with all necessary standards, have successfully passed tests in accredited laboratories and have test protocols, as well as certification from the Agency for Standardization, Metrology and Certification
+              "UzStandard",
+              and have been approved for production and use in vehicles in accordance with TU 64-23424406-01:2012.</p>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
   )
 }
 
