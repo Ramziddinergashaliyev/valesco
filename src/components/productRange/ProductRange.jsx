@@ -2,14 +2,14 @@ import React, { useEffect, useRef } from "react";
 import "./productRange.scss";
 import { NavLink } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
-import img1 from "../../assets/images/1.webp";
-import img2 from "../../assets/images/2.webp";
-import img3 from "../../assets/catalog/2.webp";
-import img4 from "../../assets/catalog/3.webp";
-import img5 from "../../assets/catalog/4.webp";
-import img6 from "../../assets/catalog/5.webp";
-import img7 from "../../assets/catalog/6.webp";
-import img8 from "../../assets/catalog/7.webp";
+// import img1 from "../../assets/images/1.webp";
+// import img2 from "../../assets/images/2.webp";
+// import img3 from "../../assets/catalog/2.webp";
+// import img4 from "../../assets/catalog/3.webp";
+// import img5 from "../../assets/catalog/4.webp";
+// import img6 from "../../assets/catalog/5.webp";
+// import img7 from "../../assets/catalog/6.webp";
+// import img8 from "../../assets/catalog/7.webp";
 import { useGetCategoriesQuery } from "../../context/api/categoryApi";
 import { useTranslation } from "react-i18next";
 import CatalogLoading from "../catalogLoading/CatalogLoading";
@@ -152,6 +152,7 @@ const ProductRange = ({ hide }) => {
         }
       });
     };
+    
   }, [data]);
 
   return (

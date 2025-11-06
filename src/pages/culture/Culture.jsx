@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import "./culture.scss"
-import img from "../../assets/images/culture.jpg"
+// import img from "../../assets/images/culture.jpg"
 import { FaArrowRight, FaArrowUp, FaPlus } from 'react-icons/fa'
 
 const Culture = () => {
@@ -13,7 +13,7 @@ const Culture = () => {
     <div className='culture container'>
       <div className="culture-top">
         <h2 className="culture-top-title">Корпоративная культура</h2>
-        <img src={img} alt="culture-img" className="culture-top-img" />
+        {/* <img src={img} alt="culture-img" className="culture-top-img" /> */}
       </div>
       <div className="culture-box">
         <div className="culture-box-info">

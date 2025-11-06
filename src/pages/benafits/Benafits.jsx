@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import img from ".././../assets/images/benafits.jpg"
+// import img from ".././../assets/images/benafits.jpg"
 
 import "./benafits.scss"
 import { BENAFITS } from '../../static'
@@ -15,7 +15,7 @@ const Benafits = () => {
             <div className="benafits-top">
                 <h2 className="benafits-top-title">преимущества Valesco</h2>
                 <div className="benafits-top-imgs">
-                    <img src={img} alt="benafits-img" />
+                    {/* <img src={img} alt="benafits-img" /> */}
                 </div>
             </div>
 
