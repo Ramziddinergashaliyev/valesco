@@ -62,6 +62,11 @@
 import React from 'react'
 import "./about.scss"
 
+import { FaCircleChevronRight } from "react-icons/fa6";
+
+import logo from "../../assets/icons/about.svg"
+import { MISSION } from '../../static';
+
 const About = () => {
   return (
     <div className='about'>
@@ -80,6 +85,38 @@ const About = () => {
           </div>
           <div></div>
         </div>
+      </div>
+
+      <div className="about-middle container">
+        <div className="about-middle-top">
+          <div className="about-middle-top-box">
+            <img src={logo} alt="" />
+            <div className="about-middle-top-box-info">
+              <p className="about-middle-top-box-info-text">100%</p>
+              <h2 className="about-middle-top-box-info-title">Guarantee</h2>
+            </div>
+          </div>
+          <div className="about-middle-top-info">
+            <h2 className="about-middle-top-info-title">100% Performance Guarantee</h2>
+            <p className="about-middle-top-info-text">Shindo Oil guarantees engine protection and maximum performance. Formulated to endure the toughest conditions, so you can drive with confidence.</p>
+          </div>
+          <div className="about-middle-top-right">
+            <p className="about-middle-top-right-title"><FaCircleChevronRight />Long-lasting engine protection</p>
+            <p className="about-middle-top-right-title"><FaCircleChevronRight />Reduced friction, maximum efficiency</p>
+            <p className="about-middle-top-right-title"><FaCircleChevronRight />Advanced technology formulas</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="about-cards container">
+        {
+          MISSION?.map(el => (
+            <div className='about-card'>
+                <h3 className="about-card-title">{el?.price}</h3>
+                <p className="about-card-text">{el?.title}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   )
