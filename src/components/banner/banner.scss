@@ -36,9 +36,9 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
-        perspective: 1000px;
+        // perspective: 1000px;
     }
 
     @media (max-width:1500px) {
