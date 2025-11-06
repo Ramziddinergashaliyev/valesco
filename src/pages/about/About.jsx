@@ -66,6 +66,7 @@ import { FaCircleChevronRight } from "react-icons/fa6";
 
 import logo from "../../assets/icons/about.svg"
 import { MISSION } from '../../static';
+import img from "../../assets/images/hero-2.jpg"
 
 const About = () => {
   return (
@@ -118,6 +119,18 @@ const About = () => {
             </div>
           ))
         }
+      </div>
+
+      <div className="about-imgs container">
+        <div className="about-imgs-left">
+          <img src={img} alt="" />
+        </div>
+        <div className="about-imgs-right">
+          <h3 className='about-imgs-right-text'> - About Us</h3>
+          <h1 className='about-imgs-right-title'>About Valesco Oil</h1>
+          <p className='about-imgs-right-desc'>Shindo Oil is more than just engine oil—it’s the symbol of modern engineering and pure performance. Our innovative formulas power the heart of your vehicle.</p>
+          <button className='about-imgs-right-btn'>Contact Us</button>
+        </div>
       </div>
     </div>
   )
