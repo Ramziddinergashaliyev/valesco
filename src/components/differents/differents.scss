@@ -252,6 +252,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    padding-bottom: 50px;
 
     &__left {
         display: flex;
