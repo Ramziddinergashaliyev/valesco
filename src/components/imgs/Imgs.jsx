@@ -91,14 +91,14 @@ import img8 from "../../assets/anime/anime-2.webp";
 
 const Imgs = () => {
   const PRODUCTS = [
-    { id: 1, img: img1, stackPos: 50, expandPos: 8, height: 240, zIndex: 8 },
-    { id: 2, img: img2, stackPos: 50, expandPos: 18, height: 280, zIndex: 7 },
-    { id: 3, img: img3, stackPos: 50, expandPos: 30, height: 320, zIndex: 6 },
-    { id: 4, img: img4, stackPos: 50, expandPos: 45, height: 340, zIndex: 5 },
-    { id: 5, img: img5, stackPos: 50, expandPos: 60, height: 260, zIndex: 4 },
-    { id: 6, img: img6, stackPos: 50, expandPos: 70, height: 300, zIndex: 3 },
-    { id: 7, img: img7, stackPos: 50, expandPos: 82, height: 320, zIndex: 2 },
-    { id: 8, img: img8, stackPos: 50, expandPos: 92, height: 280, zIndex: 1 },
+    { id: 1, img: img1, stackPos: 50, expandPos: 8, height: 260, zIndex: 8 },
+    { id: 2, img: img2, stackPos: 50, expandPos: 18, height: 300, zIndex: 7 },
+    { id: 3, img: img3, stackPos: 50, expandPos: 30, height: 340, zIndex: 6 },
+    { id: 4, img: img4, stackPos: 50, expandPos: 45, height: 360, zIndex: 5 },
+    { id: 5, img: img5, stackPos: 50, expandPos: 60, height: 280, zIndex: 4 },
+    { id: 6, img: img6, stackPos: 50, expandPos: 70, height: 320, zIndex: 3 },
+    { id: 7, img: img7, stackPos: 50, expandPos: 82, height: 340, zIndex: 2 },
+    { id: 8, img: img8, stackPos: 50, expandPos: 92, height: 300, zIndex: 1 },
   ];
 
   const [scrollProgress, setScrollProgress] = useState(0);
