@@ -26,7 +26,7 @@ const Home = () => {
       <Banner />
       <PrideArea />
       <Differents />
-      {/* <Imgs/> */}
+      <Imgs/>
       {/* <Mission /> */}
       {/* <CallTo />  */}
     </>
