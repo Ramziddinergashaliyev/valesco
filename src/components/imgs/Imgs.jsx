@@ -1,4 +1,4 @@
-// import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from "react";
 // import "./imgs.scss";
 
 // import img1 from "../../assets/anime/anime-1.webp";
@@ -11,73 +11,81 @@
 // import img8 from "../../assets/anime/anime-2.webp";
 
 // const Imgs = () => {
-//     const PRODUCTS = [
-//         { id: 1, img: img1, stackPos: 50, expandPos: 8, height: 240, zIndex: 8 },
-//         { id: 2, img: img2, stackPos: 50, expandPos: 18, height: 280, zIndex: 7 },
-//         { id: 3, img: img3, stackPos: 50, expandPos: 30, height: 320, zIndex: 6 },
-//         { id: 4, img: img4, stackPos: 50, expandPos: 45, height: 340, zIndex: 5 },
-//         { id: 5, img: img5, stackPos: 50, expandPos: 60, height: 260, zIndex: 4 },
-//         { id: 6, img: img6, stackPos: 50, expandPos: 70, height: 300, zIndex: 3 },
-//         { id: 7, img: img7, stackPos: 50, expandPos: 82, height: 320, zIndex: 2 },
-//         { id: 8, img: img8, stackPos: 50, expandPos: 92, height: 280, zIndex: 1 }
-//     ];
+//   const PRODUCTS = [
+//     { id: 1, img: img1, stackPos: 50, expandPos: 8, height: 260, zIndex: 8 },
+//     { id: 2, img: img2, stackPos: 50, expandPos: 18, height: 300, zIndex: 7 },
+//     { id: 3, img: img3, stackPos: 50, expandPos: 30, height: 340, zIndex: 6 },
+//     { id: 4, img: img4, stackPos: 50, expandPos: 45, height: 360, zIndex: 5 },
+//     { id: 5, img: img5, stackPos: 50, expandPos: 60, height: 280, zIndex: 4 },
+//     { id: 6, img: img6, stackPos: 50, expandPos: 70, height: 320, zIndex: 3 },
+//     { id: 7, img: img7, stackPos: 50, expandPos: 82, height: 340, zIndex: 2 },
+//     { id: 8, img: img8, stackPos: 50, expandPos: 92, height: 300, zIndex: 1 },
+//   ];
 
-//     const [scrollProgress, setScrollProgress] = useState(0);
+//   const [scrollProgress, setScrollProgress] = useState(0);
 
-//     useEffect(() => {
-//         const handleScroll = () => {
-//             const element = document.querySelector('.product-animation');
-//             if (!element) return;
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const element = document.querySelector(".product-animation");
+//       if (!element) return;
 
-//             const rect = element.getBoundingClientRect();
-//             const windowHeight = window.innerHeight;
+//       const rect = element.getBoundingClientRect();
+//       const windowHeight = window.innerHeight;
 
-//             if (rect.top < windowHeight && rect.bottom > 0) {
-//                 const elementTop = rect.top;
-//                 const scrollDistance = 200;
-//                 const progress = Math.max(0, Math.min(1, (windowHeight - elementTop) / scrollDistance));
-//                 setScrollProgress(progress);
-//             }
-//         };
+//       // Animatsiya ekran markazida boshlansin
+//       const startPoint = windowHeight * 0.5;
+//       const endPoint = windowHeight * 0.1;
+//       const totalDistance = startPoint - endPoint;
 
-//         window.addEventListener('scroll', handleScroll);
-//         handleScroll();
-//         return () => window.removeEventListener('scroll', handleScroll);
-//     }, []);
+//       let progress = (startPoint - rect.top) / totalDistance;
+//       progress = Math.max(0, Math.min(1, progress));
 
-//     return (
-//         <div className="product-animation">
-//             <div className="product-container">
-//                 {PRODUCTS.map((product) => {
-//                     const currentLeft = product.stackPos + (product.expandPos - product.stackPos) * scrollProgress;
-//                     const scale = 0.7 + (0.3 * scrollProgress);
-//                     const opacity = 0.3 + (0.7 * scrollProgress);
+//       setScrollProgress(progress);
+//     };
 
-//                     return (
-//                         <img
-//                             key={product.id}
-//                             src={product.img}
-//                             alt={product.name}
-//                             className="product"
-//                             style={{
-//                                 left: `${currentLeft}%`,
-//                                 transform: `translateX(-50%) scale(${scale})`,
-//                                 height: `${product.height}px`,
-//                                 zIndex: product.zIndex,
-//                                 opacity: opacity,
-//                             }}
-//                         />
-//                     );
-//                 })}
-//             </div>
-//         </div>
-//     );
+//     window.addEventListener("scroll", handleScroll);
+//     handleScroll();
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <div className="product-animation">
+//       <div className="product-container">
+//         {PRODUCTS.map((product) => {
+//           // Stackdan expand holatga o'tish
+//           const currentLeft =
+//             product.stackPos +
+//             (product.expandPos - product.stackPos) * scrollProgress;
+
+//           // Sekin yoyilish uchun o'lcham va tiniqlik
+//           const scale = 0.7 + 0.3 * scrollProgress;
+//           const opacity = 0.4 + 0.6 * scrollProgress;
+
+//           return (
+//             <img
+//               key={product.id}
+//               src={product.img}
+//               alt={`product-${product.id}`}
+//               className="product"
+//               style={{
+//                 left: `${currentLeft}%`,
+//                 transform: `translateX(-50%) scale(${scale})`,
+//                 height: `${product.height}px`,
+//                 zIndex: product.zIndex,
+//                 opacity,
+//               }}
+//             />
+//           );
+//         })}
+//       </div>
+//     </div>
+//   );
 // };
 
 // export default Imgs;
 
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./imgs.scss";
 
 import img1 from "../../assets/anime/anime-1.webp";
@@ -103,29 +111,43 @@ const Imgs = () => {
 
   const [scrollProgress, setScrollProgress] = useState(0);
 
+  const handleScroll = useCallback(() => {
+    const element = document.querySelector(".product-animation");
+    if (!element) return;
+
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Animatsiya ekran markazida boshlansin
+    const startPoint = windowHeight * 0.6;
+    const endPoint = windowHeight * 0.1;
+    const totalDistance = startPoint - endPoint;
+
+    let progress = (startPoint - rect.top) / totalDistance;
+    progress = Math.max(0, Math.min(1, progress));
+
+    setScrollProgress(progress);
+  }, []);
+
   useEffect(() => {
-    const handleScroll = () => {
-      const element = document.querySelector(".product-animation");
-      if (!element) return;
+    // Throttle scroll events uchun
+    let ticking = false;
 
-      const rect = element.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // Animatsiya ekran markazida boshlansin
-      const startPoint = windowHeight * 0.5;
-      const endPoint = windowHeight * 0.1;
-      const totalDistance = startPoint - endPoint;
-
-      let progress = (startPoint - rect.top) / totalDistance;
-      progress = Math.max(0, Math.min(1, progress));
-
-      setScrollProgress(progress);
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", scrollListener, { passive: true });
+    handleScroll(); // Initial call
+    
+    return () => window.removeEventListener("scroll", scrollListener);
+  }, [handleScroll]);
 
   return (
     <div className="product-animation">
@@ -146,12 +168,14 @@ const Imgs = () => {
               src={product.img}
               alt={`product-${product.id}`}
               className="product"
+              loading="lazy"
               style={{
                 left: `${currentLeft}%`,
                 transform: `translateX(-50%) scale(${scale})`,
                 height: `${product.height}px`,
                 zIndex: product.zIndex,
                 opacity,
+                willChange: scrollProgress > 0 && scrollProgress < 1 ? 'transform, opacity' : 'auto',
               }}
             />
           );

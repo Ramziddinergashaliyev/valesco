@@ -1,10 +1,9 @@
 // .product-animation {
-//   min-height: 80vh;
 //   display: flex;
 //   align-items: center;
 //   justify-content: center;
-//   padding: 100px 20px;
-//   background: white;
+//   padding: 170px 20px;
+//   background: #fff;
 //   overflow: hidden;
 // }
 
@@ -12,27 +11,30 @@
 //   position: relative;
 //   width: 100%;
 //   max-width: 1400px;
-//   height: 350px;
+//   height: 400px;
 //   margin: 0 auto;
 // }
 
+// /* Rasmlar holati */
 // .product {
 //   position: absolute;
 //   bottom: 0;
-//   width: auto;
 //   object-fit: contain;
-//   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-//   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
-//   cursor: pointer;
-
-//   &:hover {
-//     // transform: translateX(-50%) scale(1.1) !important;
-//     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25));
-//     transition: all 0.3s ease;
-//     z-index: 9999 !important;
-//   }
+//   transition: all 0.8s ease-out;
+//   filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15));
+//   transform-origin: bottom center;
+//   opacity: 0.5;
 // }
 
+// /* Hover effekti */
+// .product:hover {
+//   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25));
+//   transform: translateX(-50%) scale(1.05);
+//   z-index: 999;
+//   transition: all 0.3s ease;
+// }
+
+// /* Responsiv */
 // @media (max-width: 1200px) {
 //   .product {
 //     height: 240px !important;
@@ -49,20 +51,21 @@
 //   .product {
 //     height: 140px !important;
 //   }
+
 //   .product-animation {
-//     padding: 50px 10px;
+//     padding: 60px 10px;
 //   }
 // }
 
 
 .product-animation {
-//   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 170px 20px;
   background: #fff;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .product-container {
@@ -78,39 +81,56 @@
   position: absolute;
   bottom: 0;
   object-fit: contain;
-  transition: all 0.8s ease-out;
+  transition: filter 0.3s ease, transform 0.3s ease;
   filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15));
   transform-origin: bottom center;
-  opacity: 0.5;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /* Hover effekti */
 .product:hover {
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25));
-  transform: translateX(-50%) scale(1.05);
-  z-index: 999;
-  transition: all 0.3s ease;
+//   transform: translateX(-50%) scale(1.05) !important;
+//   z-index: 999 !important;
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 /* Responsiv */
 @media (max-width: 1200px) {
+  .product-container {
+    height: 320px;
+  }
+  
   .product {
     height: 240px !important;
   }
 }
 
 @media (max-width: 768px) {
+  .product-animation {
+    padding: 100px 15px;
+  }
+  
+  .product-container {
+    height: 240px;
+  }
+  
   .product {
     height: 180px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .product {
-    height: 140px !important;
-  }
-
   .product-animation {
     padding: 60px 10px;
+  }
+  
+  .product-container {
+    height: 180px;
+  }
+  
+  .product {
+    height: 140px !important;
   }
 }
