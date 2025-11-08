@@ -111,7 +111,7 @@ const Imgs = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const handleScroll = useCallback(() => {
-    const element = document.querySelector(".product-animation");
+    const element = document.querySelector(".imgs-animation");
     if (!element) return;
 
     const rect = element.getBoundingClientRect();
@@ -147,8 +147,8 @@ const Imgs = () => {
   }, [handleScroll]);
 
   return (
-    <div className="product-animation">
-      <div className="product-container">
+    <div className="imgs-animation">
+      <div className="imgs-container">
         {PRODUCTS.map((product) => {
           const currentLeft =
             product.stackPos +
@@ -161,8 +161,8 @@ const Imgs = () => {
             <img
               key={product.id}
               src={product.img}
-              alt={`product-${product.id}`}
-              className="product"
+              alt={`imgs-${product.id}`}
+              className="imgs"
               loading="lazy"
               style={{
                 left: `${currentLeft}%`,
