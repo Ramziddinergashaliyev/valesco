@@ -54,6 +54,7 @@ const ImageWithLoading = ({ src, alt, className, linkTo }) => {
         setImageError(true);
         setImageLoading(false);
     };
+    
 
     const imageContent = (
         <div style={{ position: 'relative', width: '100%', height: '100%' }}>

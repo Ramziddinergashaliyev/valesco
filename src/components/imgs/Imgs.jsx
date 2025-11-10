@@ -1,89 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import "./imgs.scss";
-
-// import img1 from "../../assets/anime/anime-1.webp";
-// import img2 from "../../assets/anime/anime-2.webp";
-// import img3 from "../../assets/anime/anime-3.webp";
-// import img4 from "../../assets/anime/anime-4.webp";
-// import img5 from "../../assets/anime/anime-5.webp";
-// import img6 from "../../assets/anime/anime-6.webp";
-// import img7 from "../../assets/anime/anime-1.webp";
-// import img8 from "../../assets/anime/anime-2.webp";
-
-// const Imgs = () => {
-//   const PRODUCTS = [
-//     { id: 1, img: img1, stackPos: 50, expandPos: 8, height: 260, zIndex: 8 },
-//     { id: 2, img: img2, stackPos: 50, expandPos: 18, height: 300, zIndex: 7 },
-//     { id: 3, img: img3, stackPos: 50, expandPos: 30, height: 340, zIndex: 6 },
-//     { id: 4, img: img4, stackPos: 50, expandPos: 45, height: 360, zIndex: 5 },
-//     { id: 5, img: img5, stackPos: 50, expandPos: 60, height: 280, zIndex: 4 },
-//     { id: 6, img: img6, stackPos: 50, expandPos: 70, height: 320, zIndex: 3 },
-//     { id: 7, img: img7, stackPos: 50, expandPos: 82, height: 340, zIndex: 2 },
-//     { id: 8, img: img8, stackPos: 50, expandPos: 92, height: 300, zIndex: 1 },
-//   ];
-
-//   const [scrollProgress, setScrollProgress] = useState(0);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       const element = document.querySelector(".product-animation");
-//       if (!element) return;
-
-//       const rect = element.getBoundingClientRect();
-//       const windowHeight = window.innerHeight;
-
-//       // Animatsiya ekran markazida boshlansin
-//       const startPoint = windowHeight * 0.5;
-//       const endPoint = windowHeight * 0.1;
-//       const totalDistance = startPoint - endPoint;
-
-//       let progress = (startPoint - rect.top) / totalDistance;
-//       progress = Math.max(0, Math.min(1, progress));
-
-//       setScrollProgress(progress);
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     handleScroll();
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   return (
-//     <div className="product-animation">
-//       <div className="product-container">
-//         {PRODUCTS.map((product) => {
-//           // Stackdan expand holatga o'tish
-//           const currentLeft =
-//             product.stackPos +
-//             (product.expandPos - product.stackPos) * scrollProgress;
-
-//           // Sekin yoyilish uchun o'lcham va tiniqlik
-//           const scale = 0.7 + 0.3 * scrollProgress;
-//           const opacity = 0.4 + 0.6 * scrollProgress;
-
-//           return (
-//             <img
-//               key={product.id}
-//               src={product.img}
-//               alt={`product-${product.id}`}
-//               className="product"
-//               style={{
-//                 left: `${currentLeft}%`,
-//                 transform: `translateX(-50%) scale(${scale})`,
-//                 height: `${product.height}px`,
-//                 zIndex: product.zIndex,
-//                 opacity,
-//               }}
-//             />
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Imgs;
-
 import React, { useState, useEffect, useCallback } from "react";
 import "./imgs.scss";
 
@@ -94,18 +8,17 @@ import img4 from "../../assets/anime/anime-4.webp";
 import img5 from "../../assets/anime/anime-5.webp";
 import img6 from "../../assets/anime/anime-6.webp";
 import img7 from "../../assets/anime/anime-7.webp";
-import img8 from "../../assets/anime/anime-8.webp";
 
 const Imgs = () => {
+  
   const PRODUCTS = [
-    { id: 1, img: img1, stackPos: 50, expandPos: 78, height: 320, zIndex: 8 },
-    { id: 2, img: img2, stackPos: 50, expandPos: 65, height: 300, zIndex: 9 },
-    { id: 3, img: img3, stackPos: 50, expandPos: 92, height: 400, zIndex: 6 },
-    { id: 4, img: img4, stackPos: 50, expandPos: 43, height: 360, zIndex: 5 },
-    { id: 5, img: img5, stackPos: 50, expandPos: 55, height: 280, zIndex: 10 },
-    { id: 6, img: img6, stackPos: 50, expandPos: 18, height: 340, zIndex: 3 },
-    { id: 7, img: img7, stackPos: 50, expandPos: 8, height: 340, zIndex: 2 },
-    { id: 8, img: img8, stackPos: 50, expandPos: 30, height: 340, zIndex: 3 },
+    { id: 1, img: img1, stackPos: 60, expandPos: 70, height: 300, zIndex: 8 },
+    { id: 2, img: img2, stackPos: 70, expandPos: 86, height: 220, zIndex: 9 },
+    { id: 3, img: img3, stackPos: 50, expandPos: 50, height: 400, zIndex: 6 },
+    { id: 4, img: img4, stackPos: 40, expandPos: 32, height: 300, zIndex: 5 },
+    { id: 5, img: img5, stackPos: 75, expandPos: 95, height: 180, zIndex: 10 },
+    { id: 6, img: img6, stackPos: 32, expandPos: 18, height: 260, zIndex: 3 },
+    { id: 7, img: img7, stackPos: 26, expandPos: 6, height: 240, zIndex: 2 },
   ];
 
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -156,7 +69,7 @@ const Imgs = () => {
               (product.expandPos - product.stackPos) * scrollProgress;
 
             const scale = 0.7 + 0.3 * scrollProgress;
-            const opacity = 0.4 + 0.6 * scrollProgress;
+            const opacity = 0.7 + 0.3 * scrollProgress;
 
             return (
               <img
@@ -184,7 +97,6 @@ const Imgs = () => {
         <p className="imgs-info-text">VALESCO offers a full range of products with a high vertical production range, always manufactured in audited sustainable processes. In addition to many motor oils and winter chemicals for many various types of vehicles, we also offer lubricants for a wide variety of other utilisations and applications, for example in the industrial sector. VALESCO products are available in more than 15 countries worldwide today and impress more people every day with their outstanding properties.</p>
         <button className="imgs-info-btn">To our products</button>
       </div>
-
     </div>
   );
 };

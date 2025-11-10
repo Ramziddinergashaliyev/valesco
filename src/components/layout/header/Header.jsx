@@ -86,6 +86,7 @@ const Header = () => {
                <img src={logo1} alt="" />
             </a>
           </div>
+          
           <ul className={`header__nav__item ${hide ? "header__nav__hide" : ""}`}>
             <button onClick={() => setHide(false)} className='header__nav__close'><AiOutlineClose /></button>
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/about">{t("company")}</NavLink></li>
