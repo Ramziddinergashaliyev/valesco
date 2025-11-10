@@ -79,7 +79,7 @@
       border: 1px solid #aaa9;
       border-radius: 3px;
     }
-
+    
     textarea {
       height: 60px;
       resize: vertical;
@@ -88,7 +88,7 @@
       padding: 10px;
       border-radius: 3px;
     }
-
+    
     &-btn {
       width: 160px;
       padding: 12px;
@@ -107,7 +107,7 @@
       grid-gap: 20px;
     }
   }
-
+  
   @media (max-width:400px) {
     padding: 20px 0px;
 

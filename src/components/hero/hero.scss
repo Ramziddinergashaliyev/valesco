@@ -36,14 +36,14 @@
     flex-direction: column;
     gap: 8px;
     cursor: pointer;
-
+                   
     .line-wrapper {
       width: 100%;
       height: 2px;
       background: rgba(255, 255, 255, 0.3);
       position: relative;
       overflow: hidden;
-    
+                      
       .line-progress {
         position: absolute;
         top: 0;
@@ -61,7 +61,7 @@
       font-weight: 500;
       letter-spacing: 1px;
     }
-
+                          
     &.active {
       .line-wrapper .line-progress {
         animation: progressBar 4000ms linear forwards;
@@ -84,7 +84,7 @@
 
   @media (max-width: 1600px) {
     .hero-swiper {
-      height: 550px;
+      height: 540px;
     
       img {
         height: 550px;

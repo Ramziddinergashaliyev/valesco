@@ -37,7 +37,6 @@ import mobileBanner5 from "../../assets/banner/phone-5.webp"
 import mobileBanner6 from "../../assets/banner/phone-6.webp"
 import mobileBanner7 from "../../assets/banner/phone-7.webp"
 
-
 import "./product.scss"
 
 import { LazyLoadImage } from "react-lazy-load-image-component";

@@ -93,19 +93,20 @@ import img3 from "../../assets/anime/anime-3.webp";
 import img4 from "../../assets/anime/anime-4.webp";
 import img5 from "../../assets/anime/anime-5.webp";
 import img6 from "../../assets/anime/anime-6.webp";
-import img7 from "../../assets/anime/anime-1.webp";
-import img8 from "../../assets/anime/anime-2.webp";
+import img7 from "../../assets/anime/anime-7.webp";
+import img8 from "../../assets/anime/anime-8.webp";
+import img9 from "../../assets/anime/anime-9.webp";
 
 const Imgs = () => {
   const PRODUCTS = [
-    { id: 1, img: img1, stackPos: 50, expandPos: 8, height: 260, zIndex: 8 },
-    { id: 2, img: img2, stackPos: 50, expandPos: 18, height: 300, zIndex: 7 },
-    { id: 3, img: img3, stackPos: 50, expandPos: 30, height: 340, zIndex: 6 },
-    { id: 4, img: img4, stackPos: 50, expandPos: 45, height: 360, zIndex: 5 },
-    { id: 5, img: img5, stackPos: 50, expandPos: 60, height: 280, zIndex: 4 },
-    { id: 6, img: img6, stackPos: 50, expandPos: 70, height: 320, zIndex: 3 },
-    { id: 7, img: img7, stackPos: 50, expandPos: 82, height: 340, zIndex: 2 },
-    { id: 8, img: img8, stackPos: 50, expandPos: 92, height: 300, zIndex: 1 },
+    { id: 1, img: img1, stackPos: 50, expandPos: 78, height: 320, zIndex: 8 },
+    { id: 2, img: img2, stackPos: 50, expandPos: 65, height: 300, zIndex: 3 },
+    { id: 3, img: img3, stackPos: 50, expandPos: 88, height: 400, zIndex: 6 },
+    { id: 4, img: img4, stackPos: 50, expandPos: 43, height: 360, zIndex: 5 },
+    { id: 5, img: img5, stackPos: 50, expandPos: 55, height: 280, zIndex: 4 },
+    { id: 6, img: img6, stackPos: 50, expandPos: 18, height: 340, zIndex: 3 },
+    { id: 7, img: img7, stackPos: 50, expandPos: 8, height: 340, zIndex: 2 },
+    { id: 8, img: img8, stackPos: 50, expandPos: 30, height: 340, zIndex: 3 },
   ];
 
   const [scrollProgress, setScrollProgress] = useState(0);
