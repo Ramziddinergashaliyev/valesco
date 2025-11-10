@@ -1,5 +1,4 @@
 .footer {
-  // margin: 30px 0px 0px;
   padding-bottom: 20px;
   background-color: rgb(234, 234, 234);
 
@@ -9,20 +8,20 @@
     grid-gap: 40px;
     padding-top: 40px;
   }
-
+  
   @media (max-width:1580px) {
     &__nav {
       grid-template-columns: 300px 200px 1fr 350px;
     }
   }
-
+  
   &__nav-logo {
     img {
       width: 80px;
       height: 80px;
     }
   }
-
+   
   &__item {
     display: flex;
     flex-direction: column;
@@ -93,14 +92,13 @@
     &-btn {
       width: 160px;
       padding: 12px;
-      border-radius: 4px;
-      background-color: #111333;
-      border: 1px solid #111333;
+      border-radius: 12px;
+      background-color: rgb(42, 42, 40);
+      border: 1px solid rgb(42, 42, 40);
       color: white;
       display: block;
       margin: 0 auto;
     }
-
   }
 
   @media (max-width:780px) {

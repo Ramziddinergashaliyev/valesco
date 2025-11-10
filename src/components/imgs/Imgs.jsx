@@ -120,7 +120,7 @@ const Imgs = () => {
     const startPoint = windowHeight * 0.6;
     const endPoint = windowHeight * 0.1;
     const totalDistance = startPoint - endPoint;
-
+    
     let progress = (startPoint - rect.top) / totalDistance;
     progress = Math.max(0, Math.min(1, progress));
 
