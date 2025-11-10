@@ -41,14 +41,12 @@ const PrideArea = () => {
                 <div className="prideArea__top">
                     <h2 className="prideArea__top-title">{t("Наша")}</h2>
                     <p className="prideArea__top-text"><span>{t("основе")}</span> – {t("премиальная")}</p>
-                </div>
-
-                <div className="prideArea__bottom">
-
                     <NavLink to={"/categories/10"}>
                         <button className='prideArea__bottom-btn'>{t("Все")}<MdArrowOutward /></button>
                     </NavLink>
+                </div>
 
+                <div className="prideArea__bottom">
                     <div className="prideArea__bottom-cards">
                         {
                             Data?.map(el => (

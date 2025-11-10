@@ -10,6 +10,7 @@ import Leazy from '../../components/leazy/Leazy'
 import Mission from '../../components/mission/Mission'
 import CallTo from '../../components/callTo/CallTo'
 import Imgs from '../../components/imgs/Imgs'
+import Media from '../../components/media/Media'
 
 const Home = () => {
 
@@ -26,6 +27,7 @@ const Home = () => {
       <Banner />
       <PrideArea />
       <Differents />
+      <Media/>
       <Imgs/>
       {/* <Mission /> */}
       {/* <CallTo />  */}

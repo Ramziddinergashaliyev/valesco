@@ -2,16 +2,15 @@
     padding: 50px 0px;
 
     &__container {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 40px;
     }
 
     &__top {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
         &-title {
             font-size: 52px;
@@ -21,9 +20,9 @@
         }
 
         &-text {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
-            line-height: 32px;
+            line-height: 28px;
             color: gray;
 
             span {
@@ -37,10 +36,11 @@
         grid-template-columns: 1.6fr 2fr;
         gap: 20px;
         align-items: flex-end;
-        padding: 40px 0px;
+        padding: 20px 0px;
 
         &-btn {
             padding: 15px 30px;
+            margin-top: 20px;
             border-radius: 40px;
             font-size: 16px;
             display: flex;
