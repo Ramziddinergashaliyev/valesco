@@ -99,10 +99,10 @@ import img8 from "../../assets/anime/anime-8.webp";
 const Imgs = () => {
   const PRODUCTS = [
     { id: 1, img: img1, stackPos: 50, expandPos: 78, height: 320, zIndex: 8 },
-    { id: 2, img: img2, stackPos: 50, expandPos: 65, height: 300, zIndex: 3 },
+    { id: 2, img: img2, stackPos: 50, expandPos: 65, height: 300, zIndex: 9 },
     { id: 3, img: img3, stackPos: 50, expandPos: 92, height: 400, zIndex: 6 },
     { id: 4, img: img4, stackPos: 50, expandPos: 43, height: 360, zIndex: 5 },
-    { id: 5, img: img5, stackPos: 50, expandPos: 55, height: 280, zIndex: 4 },
+    { id: 5, img: img5, stackPos: 50, expandPos: 55, height: 280, zIndex: 10 },
     { id: 6, img: img6, stackPos: 50, expandPos: 18, height: 340, zIndex: 3 },
     { id: 7, img: img7, stackPos: 50, expandPos: 8, height: 340, zIndex: 2 },
     { id: 8, img: img8, stackPos: 50, expandPos: 30, height: 340, zIndex: 3 },
@@ -120,7 +120,7 @@ const Imgs = () => {
     const startPoint = windowHeight * 0.6;
     const endPoint = windowHeight * 0.1;
     const totalDistance = startPoint - endPoint;
-    
+
     let progress = (startPoint - rect.top) / totalDistance;
     progress = Math.max(0, Math.min(1, progress));
 
@@ -141,41 +141,50 @@ const Imgs = () => {
     };
 
     window.addEventListener("scroll", scrollListener, { passive: true });
-    handleScroll(); 
-    
+    handleScroll();
+
     return () => window.removeEventListener("scroll", scrollListener);
   }, [handleScroll]);
 
   return (
-    <div className="imgs-animation">
-      <div className="imgs-container">
-        {PRODUCTS.map((product) => {
-          const currentLeft =
-            product.stackPos +
-            (product.expandPos - product.stackPos) * scrollProgress;
+    <div className="container">
+      <div className="imgs-animation">
+        <div className="imgs-container">
+          {PRODUCTS.map((product) => {
+            const currentLeft =
+              product.stackPos +
+              (product.expandPos - product.stackPos) * scrollProgress;
 
-          const scale = 0.7 + 0.3 * scrollProgress;
-          const opacity = 0.4 + 0.6 * scrollProgress;
+            const scale = 0.7 + 0.3 * scrollProgress;
+            const opacity = 0.4 + 0.6 * scrollProgress;
 
-          return (
-            <img
-              key={product.id}
-              src={product.img}
-              alt={`imgs-${product.id}`}
-              className="imgs"
-              loading="lazy"
-              style={{
-                left: `${currentLeft}%`,
-                transform: `translateX(-50%) scale(${scale})`,
-                height: `${product.height}px`,
-                zIndex: product.zIndex,
-                opacity,
-                willChange: scrollProgress > 0 && scrollProgress < 1 ? 'transform, opacity' : 'auto',
-              }}
-            />
-          );
-        })}
+            return (
+              <img
+                key={product.id}
+                src={product.img}
+                alt={`imgs-${product.id}`}
+                className="imgs"
+                loading="lazy"
+                style={{
+                  left: `${currentLeft}%`,
+                  transform: `translateX(-50%) scale(${scale})`,
+                  height: `${product.height}px`,
+                  zIndex: product.zIndex,
+                  opacity,
+                  willChange: scrollProgress > 0 && scrollProgress < 1 ? 'transform, opacity' : 'auto',
+                }}
+              />
+            );
+          })}
+        </div>
       </div>
+
+      <div className="imgs-info">
+        <h3 className="imgs-info-title">HIGHTEC PRODUCTS – 100% MADE IN UZBEKISTAN</h3>
+        <p className="imgs-info-text">VALESCO offers a full range of products with a high vertical production range, always manufactured in audited sustainable processes. In addition to many motor oils and winter chemicals for many various types of vehicles, we also offer lubricants for a wide variety of other utilisations and applications, for example in the industrial sector. VALESCO products are available in more than 15 countries worldwide today and impress more people every day with their outstanding properties.</p>
+        <button className="imgs-info-btn">To our products</button>
+      </div>
+
     </div>
   );
 };
