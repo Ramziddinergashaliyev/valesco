@@ -180,7 +180,7 @@ const Imgs = () => {
       </div>
 
       <div className="imgs-info">
-        <h3 className="imgs-info-title">HIGHTEC PRODUCTS – 100% MADE IN UZBEKISTAN</h3>
+        <h3 className="imgs-info-title">VALESCO PRODUCTS – 100% MADE IN UZBEKISTAN</h3>
         <p className="imgs-info-text">VALESCO offers a full range of products with a high vertical production range, always manufactured in audited sustainable processes. In addition to many motor oils and winter chemicals for many various types of vehicles, we also offer lubricants for a wide variety of other utilisations and applications, for example in the industrial sector. VALESCO products are available in more than 15 countries worldwide today and impress more people every day with their outstanding properties.</p>
         <button className="imgs-info-btn">To our products</button>
       </div>
