@@ -63,7 +63,13 @@
                 border: 1px solid #aaa4;
                 background-color: transparent;
                 cursor: pointer;
+
+                &.active {
+                    background-color: #000;
+                    color: white;
+                }
             }
+
         }
 
         &-box-hide {
