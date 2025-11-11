@@ -17,8 +17,8 @@ const Imgs = () => {
     { id: 3, img: img3, stackPos: 50, expandPos: 50, height: 400, zIndex: 6 },
     { id: 4, img: img4, stackPos: 40, expandPos: 32, height: 300, zIndex: 5 },
     { id: 5, img: img5, stackPos: 75, expandPos: 95, height: 180, zIndex: 10 },
-    { id: 6, img: img6, stackPos: 32, expandPos: 18, height: 260, zIndex: 3 },
-    { id: 7, img: img7, stackPos: 26, expandPos: 6, height: 240, zIndex: 2 },
+    { id: 6, img: img6, stackPos: 32, expandPos: 17, height: 260, zIndex: 3 },
+    { id: 7, img: img7, stackPos: 26, expandPos: 5, height: 240, zIndex: 2 },
   ];
 
   const [scrollProgress, setScrollProgress] = useState(0);
