@@ -25,12 +25,6 @@ const Distr = () => {
 
   const Data = [
     {
-      country: 'Украина',
-      distributor: 'ТОВ «ПЕТОЛАВТО»',
-      title: 'Пироговский путь, 34; Киев, 03083, Украина',
-      number: ["+380(50)3146633"],
-    },
-    {
       country: 'Казахстан',
       distributor: 'TOO «AVTODETAIL»',
       title: 'Казахстан, Южно-Казахстанская область, 160021, город Шымкент, Абайский район, ул Байтулы баба 14А',
@@ -51,12 +45,6 @@ const Distr = () => {
   ];
 
   const DataEN = [
-    {
-      country: 'Ukraine',
-      distributor: 'LLC «PETOLAVTO»',
-      title: 'Pirogovsky Way, 34; Kyiv, 03083, Ukraine',
-      number: ["+380(50)3146633"],
-    },
     {
       country: 'Kazakhstan',
       distributor: 'LLP «AVTODETAIL»',
@@ -80,14 +68,12 @@ const Distr = () => {
   const DATADISTURB = i18n?.languages[0] === "ru" ? Data : DataEN
 
   const filterCountries = [
-    'Украина',
     'Казахстан',
     'Таджикистан',
     'Туркменистан'
   ];
 
   const filterCountriesEN = [
-    'Ukraine',
     'Kazakhstan',
     'Tajikistan',
     'Turkmenistan'

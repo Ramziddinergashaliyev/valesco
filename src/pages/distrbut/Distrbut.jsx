@@ -187,6 +187,7 @@ import React from 'react'
 import "./distrbut.scss"
 import MapChart from '../../components/mapChart/MapChart'
 import Distr from '../../components/distr/Distr'
+import { Navigate, NavLink } from 'react-router-dom'
 
 const Distrbut = () => {
   return (
@@ -200,7 +201,7 @@ const Distrbut = () => {
       <div className="distrbut-catalog">
         <h2 className='distrbut-catalog-title'>Download our catalogue</h2>
         <p className='distrbut-catalog-text'>Get to know all the details of our products and download the complete catalogs</p>
-        <button className='distrbut-catalog-btn'>See all catalogs</button>
+        <button className='distrbut-catalog-btn'><NavLink to={"/catalogProduct"}>See all catalogs</NavLink></button>
       </div>
       <div className="distrbut-map container">
         <MapChart />
