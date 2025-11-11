@@ -183,13 +183,18 @@
 // export default Distrbut;
 
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./distrbut.scss"
 import MapChart from '../../components/mapChart/MapChart'
 import Distr from '../../components/distr/Distr'
 import { Navigate, NavLink } from 'react-router-dom'
 
 const Distrbut = () => {
+
+  useEffect(() => {
+    scrollTo(0,0)
+  }, [])
+
   return (
     <div className='distrbut'>
       <div className="distrbut-top">
