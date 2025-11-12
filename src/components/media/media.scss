@@ -1,8 +1,15 @@
 .media {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 500px 1fr;
     gap: 20px;
     padding: 40px 12px;
+
+    @media (max-width:1580px) {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        gap: 20px;
+        padding: 40px 12px;
+    }
 
     &-left {
         display: flex;
@@ -10,9 +17,9 @@
         gap: 10px;
 
         &-title {
-            font-size: 42px;
-            font-weight: 500;
-            line-height: 52px;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 58px;
             width: 90%;
 
             span {

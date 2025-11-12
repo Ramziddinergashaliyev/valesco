@@ -204,11 +204,15 @@
   .imgs-animation {
     min-height: 0px !important;
   }
-  
+
 }
 
 @media (max-width: 480px) {
   .imgs-animation {
     padding: 20px 0px 60px;
+  }
+
+  .imgs-info {
+    padding-bottom: 30px;
   }
 }

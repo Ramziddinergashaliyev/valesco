@@ -66,7 +66,6 @@ const Imgs = () => {
             const currentLeft =
               product.stackPos +
               (product.expandPos - product.stackPos) * scrollProgress;
-
             const scale = 0.7 + 0.3 * scrollProgress;
             const opacity = 0.7 + 0.3 * scrollProgress;
 
