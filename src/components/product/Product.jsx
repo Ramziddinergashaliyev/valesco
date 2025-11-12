@@ -219,14 +219,14 @@ const Product = ({ data, loading, title }) => {
         "Motor oils for diesel engines": mobileBanner3,
         "Трансмиссионные масла": mobileBanner1,
         "Transmission oils": mobileBanner1,
-        "Гидравлические масла": mobileBanner2,
-        "Hydraulic oils": mobileBanner2,
-        "Тормозная жидкость": mobileBanner4,
-        "Brake fluid": mobileBanner4,
-        "Антифриз": mobileBanner6,
-        "Antifreeze": mobileBanner6,
-        "Фильтры": mobileBanner7,
-        "Filters": mobileBanner7,
+        "Гидравлические масла": mobileBanner4,
+        "Hydraulic oils": mobileBanner4,
+        "Тормозная жидкость": mobileBanner6,
+        "Brake fluid": mobileBanner6,
+        "Антифриз": mobileBanner7,
+        "Antifreeze": mobileBanner7,
+        "Фильтры": mobileBanner5,
+        "Filters": mobileBanner5,
     }
 
     const bannerSrc = isMobile ? mobileBannerMap[title] : desktopBannerMap[title]

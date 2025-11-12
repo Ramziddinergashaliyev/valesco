@@ -20,17 +20,13 @@ const Home = () => {
   
   return (
     <>
-      {/* <HeroTop /> */}
       <Hero />
-      {/* <HeroBrand /> */}
-      <ProductRange />
+      {/* <ProductRange />
       <Banner />
       <PrideArea />
       <Differents />
       <Media/>
-      <Imgs/>
-      {/* <Mission /> */}
-      {/* <CallTo />  */}
+      <Imgs/> */}
     </>
   )
 }

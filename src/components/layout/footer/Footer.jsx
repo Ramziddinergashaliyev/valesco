@@ -14,10 +14,6 @@ const Footer = () => {
       <div className="footer-line"></div>
       <nav className="footer__nav container">
 
-        {/* <div className="footer__nav-logo">
-          <img src={img} alt="footer logo" />
-        </div> */}
-
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("ПРОДУКЦИЯ")}</h3>
           {
