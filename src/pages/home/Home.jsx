@@ -21,12 +21,12 @@ const Home = () => {
   return (
     <>
       <Hero />
-      {/* <ProductRange />
+      <ProductRange />
       <Banner />
       <PrideArea />
       <Differents />
       <Media/>
-      <Imgs/> */}
+      {/* <Imgs/> */}
     </>
   )
 }
