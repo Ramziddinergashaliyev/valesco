@@ -10,7 +10,6 @@ import img6 from "../../assets/anime/anime-6.webp";
 import img7 from "../../assets/anime/anime-7.webp";
 
 const Imgs = () => {
-  
   const PRODUCTS = [
     { id: 1, img: img1, stackPos: 60, expandPos: 70, height: 300, zIndex: 8 },
     { id: 2, img: img2, stackPos: 70, expandPos: 86, height: 220, zIndex: 9 },

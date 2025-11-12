@@ -26,7 +26,7 @@ const Home = () => {
       <PrideArea />
       <Differents />
       <Media/>
-      {/* <Imgs/> */}
+      <Imgs/>
     </>
   )
 }

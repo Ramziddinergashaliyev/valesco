@@ -37,6 +37,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            transition: .6s;
 
             &-logo {
                 position: absolute;
@@ -76,6 +77,22 @@
                 align-items: center;
                 justify-content: center;
                 margin: 0 auto;
+                transition: .6s;
+            }
+
+            &-btns:hover {
+                transform: scale(1.099);
+            }
+
+            &:hover &-logo {
+                border: 2px solid red;
+                background-color: white;
+                transition: .5s;
+
+                svg {
+                    color: red;
+                    transition: .5s;
+                }
             }
         }
     }
@@ -100,7 +117,7 @@
 
     @media (max-width:670px) {
         &-right-card-img img {
-            height: 340px;
+            height: 360px;
         }
 
         &-right-card-logo {

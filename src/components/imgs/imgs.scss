@@ -64,44 +64,151 @@
     border-radius: 14px;
     color: white;
   }
+
+  @media (max-width:680px) {
+    &-title {
+      font-size: 26px;
+      text-align: center;
+    }
+
+    &-text {
+      font-size: 16px;
+      text-align: center;
+      font-weight: 300;
+      line-height: 24px;
+    }
+  }
+
+  @media (max-width:400px) {
+    &-title {
+      font-size: 22px;
+      text-align: center;
+      line-height: 28px;
+    }
+
+    &-text {
+      font-size: 14px;
+      text-align: center;
+      font-weight: 300;
+      line-height: 22px;
+    }
+
+    &-btn {
+      width: 200px;
+      padding: 12px;
+    }
+  }
 }
-
-
 
 @media (max-width: 1200px) {
   .imgs-container {
     height: 320px;
   }
-  
+
   .imgs {
-    height: 240px !important;
+    &:nth-child(1) {
+      height: 240px !important;
+      z-index: 9 !important;
+    }
+
+    &:nth-child(2) {
+      height: 200px !important;
+      z-index: 8 !important;
+    }
+
+    &:nth-child(3) {
+      height: 300px !important;
+      z-index: 10 !important;
+    }
+
+    &:nth-child(4) {
+      height: 240px !important;
+      z-index: 9 !important;
+    }
+
+    &:nth-child(5) {
+      height: 160px !important;
+    }
+
+    &:nth-child(6) {
+      height: 200px !important;
+      z-index: 8 !important;
+
+    }
+
+    &:nth-child(7) {
+      height: 160px !important;
+      z-index: 7 !important;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .imgs-container {
+    height: 320px;
+  }
+
+  .imgs {
+    &:nth-child(1) {
+      height: 160px !important;
+      z-index: 9 !important;
+    }
+
+    &:nth-child(2) {
+      height: 120px !important;
+      z-index: 8 !important;
+    }
+
+    &:nth-child(3) {
+      height: 200px !important;
+      z-index: 10 !important;
+    }
+
+    &:nth-child(4) {
+      height: 160px !important;
+      z-index: 9 !important;
+    }
+
+    &:nth-child(5) {
+      height: 80px !important;
+    }
+
+    &:nth-child(6) {
+      height: 120px !important;
+      z-index: 8 !important;
+
+    }
+
+    &:nth-child(7) {
+      height: 80px !important;
+      z-index: 7 !important;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .imgs-animation {
-    padding: 100px 15px;
+    padding: 15px;
   }
-  
+
   .imgs-container {
     height: 240px;
   }
-  
+
   .imgs {
     height: 180px !important;
   }
 }
 
+@media (max-width:600px) {
+  .imgs-animation {
+    min-height: 0px !important;
+  }
+  
+}
+
 @media (max-width: 480px) {
   .imgs-animation {
-    padding: 60px 10px;
-  }
-  
-  .imgs-container {
-    height: 180px;
-  }
-  
-  .imgs {
-    height: 140px !important;
+    padding: 20px 0px 60px;
   }
 }
