@@ -43,20 +43,20 @@ const CATEGORY = [
     bgImage: rs4,
   },
   {
-    image: rs5,
-    bgImage: rs6,
-  },
-  {
     image: rs7,
     bgImage: rs8,
   },
   {
-    image: rs9,
-    bgImage: rs10,
-  },
-  {
     image: rs11,
     bgImage: rs12,
+  },
+  {
+    image: rs5,
+    bgImage: rs6,
+  },
+  {
+    image: rs9,
+    bgImage: rs10,
   },
 ];
 

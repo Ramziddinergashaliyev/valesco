@@ -29,13 +29,20 @@ import bannerRu5 from "../../assets/banner/imgRu5.webp"
 import bannerRu6 from "../../assets/banner/imgRu6.webp"
 import bannerRu7 from "../../assets/banner/imgRu7.webp"
 
-import mobileBanner1 from "../../assets/banner/phone-1.webp"
-import mobileBanner2 from "../../assets/banner/phone-2.webp"
-import mobileBanner3 from "../../assets/banner/phone-3.webp"
-import mobileBanner4 from "../../assets/banner/phone-4.webp"
-import mobileBanner5 from "../../assets/banner/phone-5.webp"
-import mobileBanner6 from "../../assets/banner/phone-6.webp"
-import mobileBanner7 from "../../assets/banner/phone-7.webp"
+import mobileBanner1 from "../../assets/mobile/mobile1.webp"
+import mobileBanner2 from "../../assets/mobile/mobile2.webp"
+import mobileBanner3 from "../../assets/mobile/mobile3.webp"
+import mobileBanner4 from "../../assets/mobile/mobile4.webp"
+import mobileBanner5 from "../../assets/mobile/mobile5.webp"
+import mobileBanner6 from "../../assets/mobile/mobile6.webp"
+import mobileBanner7 from "../../assets/mobile/mobile7.webp"
+// import mobileBanner1 from "../../assets/banner/phone-1.webp"
+// import mobileBanner2 from "../../assets/banner/phone-2.webp"
+// import mobileBanner3 from "../../assets/banner/phone-3.webp"
+// import mobileBanner4 from "../../assets/banner/phone-4.webp"
+// import mobileBanner5 from "../../assets/banner/phone-5.webp"
+// import mobileBanner6 from "../../assets/banner/phone-6.webp"
+// import mobileBanner7 from "../../assets/banner/phone-7.webp"
 
 import "./product.scss"
 
@@ -55,7 +62,6 @@ const ImageWithLoading = ({ src, alt, className, linkTo }) => {
         setImageLoading(false);
     };
     
-
     const imageContent = (
         <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             {imageLoading && (
@@ -207,12 +213,12 @@ const Product = ({ data, loading, title }) => {
     }
 
     const mobileBannerMap = {
-        "Моторные масла для легковой и легкой коммерческой техники": mobileBanner3,
-        "Motor oils for passenger cars and light commercial vehicles": mobileBanner3,
-        "Моторные масла для дизельных двигателей": mobileBanner1,
-        "Motor oils for diesel engines": mobileBanner1,
-        "Трансмиссионные масла": mobileBanner5,
-        "Transmission oils": mobileBanner5,
+        "Моторные масла для легковой и легкой коммерческой техники": mobileBanner2,
+        "Motor oils for passenger cars and light commercial vehicles": mobileBanner2,
+        "Моторные масла для дизельных двигателей": mobileBanner3,
+        "Motor oils for diesel engines": mobileBanner3,
+        "Трансмиссионные масла": mobileBanner1,
+        "Transmission oils": mobileBanner1,
         "Гидравлические масла": mobileBanner2,
         "Hydraulic oils": mobileBanner2,
         "Тормозная жидкость": mobileBanner4,

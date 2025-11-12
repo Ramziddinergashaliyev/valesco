@@ -211,7 +211,6 @@ const Distrbut = () => {
       <div className="distrbut-map container">
         <MapChart />
       </div>
-
       <Distr/>
     </div>
   )

@@ -398,7 +398,7 @@ const MapChart = () => {
   useEffect(() => {
     const root = am5.Root.new("chartdiv");
     root.setThemes([am5themes_Animated.new(root)]);
-
+    
     const map = root.container.children.push(
       am5map.MapChart.new(root, {
         panX: "none",
@@ -414,7 +414,6 @@ const MapChart = () => {
       })
     );
 
-    // Polygon template sozlamalari
     const polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.setAll({
       tooltipText: "{name}",
@@ -427,7 +426,6 @@ const MapChart = () => {
     const pointSeries = map.series.push(am5map.MapPointSeries.new(root, {}));
     const countryColor = am5.color(0xff0000);
 
-    // Country ID mapping
     const countryIdMapping = {
       "Kazakhstan": "KZ",
       "Tajikistan": "TJ",
@@ -525,11 +523,9 @@ const MapChart = () => {
       container.children.push(hoverArea);
       container.children.moveValue(hoverArea, 0);
 
-      // Hover hodisalari
       hoverArea.events.on("pointerover", () => {
         label.animate({ key: "opacity", to: 1, duration: 200 });
         
-        // Davlat chegarasini highlight qilish
         const countryName = dataItem.dataContext.title;
         const countryId = countryIdMapping[countryName];
         
@@ -551,7 +547,6 @@ const MapChart = () => {
       hoverArea.events.on("pointerout", () => {
         label.animate({ key: "opacity", to: 0, duration: 200 });
         
-        // Davlat chegarasini asl holatiga qaytarish
         const countryName = dataItem.dataContext.title;
         const countryId = countryIdMapping[countryName];
         

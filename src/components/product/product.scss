@@ -26,6 +26,12 @@
             }
         }
 
+        @media (max-width:1000px) {
+            &-img {
+                height: 300px;
+            }
+        }
+
         @media (max-width: 1480px) {
             padding: 0px;
         }

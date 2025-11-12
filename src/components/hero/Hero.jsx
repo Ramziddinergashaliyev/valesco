@@ -7,6 +7,7 @@ import imgDesktop1 from "../../assets/banner/herobg1.webp"
 import imgDesktop2 from "../../assets/banner/herobg2.webp"
 import imgDesktop3 from "../../assets/banner/herobg3.webp"
 import imgDesktop4 from "../../assets/banner/herobg4.webp"
+
 import imgDesktopRu1 from "../../assets/banner/herobgru1.webp"
 import imgDesktopRu2 from "../../assets/banner/herobgru2.webp"
 import imgDesktopRu3 from "../../assets/banner/herobgru3.webp"
