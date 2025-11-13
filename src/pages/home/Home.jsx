@@ -21,8 +21,8 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <ProductRange />
       <Imgs/>
+      <ProductRange />
       <Banner />
       <PrideArea />
       <Differents />
