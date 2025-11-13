@@ -30,6 +30,7 @@ const Media = () => {
                     </div>
                     <button className="media-right-card-btns">Follow Us</button>
                 </div>
+                
                 <div className="media-right-card">
                     <div className="media-right-card-logo"><FaFacebookF /></div>
                     <div className="media-right-card-img">

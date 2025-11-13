@@ -98,25 +98,25 @@
 
         @media (max-width:650px) {
             &-title {
-               font-size: 28px;
-               line-height: 30px;
+                font-size: 28px;
+                line-height: 30px;
             }
 
             &-box {
-              padding-top: 15px;
+                padding-top: 15px;
             }
 
             &-text {
-              font-size: 14px;
-              line-height: 22px;
+                font-size: 14px;
+                line-height: 22px;
             }
         }
 
         @media (max-width:360px) {
             &-title {
-               font-size: 22px;
-               line-height: 26px;
-               padding-bottom: 10px;
+                font-size: 22px;
+                line-height: 26px;
+                padding-bottom: 10px;
             }
 
             &-info {
@@ -124,12 +124,12 @@
             }
 
             &-box {
-              padding-top: 15px;
+                padding-top: 15px;
             }
 
             &-text {
-              font-size: 14px;
-              line-height: 18px;
+                font-size: 14px;
+                line-height: 18px;
             }
         }
     }
@@ -376,43 +376,43 @@
 
         @media (max-width:1100px) {
             &-top {
-              gap: 20px;
+                gap: 20px;
             }
         }
 
         @media (max-width:1000px) {
             &-top {
-               grid-template-columns: 1fr;
+                grid-template-columns: 1fr;
             }
 
             &-top-right {
-              padding-left: 0px;
+                padding-left: 0px;
             }
 
             &-top-right-title {
-               padding: 12px 20px 12px 10px;
+                padding: 12px 20px 12px 10px;
             }
         }
 
         @media (max-width:450px) {
             &-top-box {
-              margin: 0 auto;
+                margin: 0 auto;
             }
 
             &-top-info-title {
-              font-size: 18px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             &-top-info-text {
-               text-align: center;
-               font-size: 15px;
+                text-align: center;
+                font-size: 15px;
             }
 
             &-top-right-title {
-            font-size: 15px;
+                font-size: 15px;
             }
         }
     }
@@ -426,13 +426,13 @@
 
     @media (max-width:950px) {
         &-cards {
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
     @media (max-width:450px) {
         &-cards {
-            grid-template-columns: repeat(1,1fr);
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
@@ -538,7 +538,7 @@
             font-weight: 500;
         }
     }
-   
+
     &-imgs {
         padding: 40px 12px;
         display: grid;
@@ -548,10 +548,19 @@
 
         &-left {
             img {
-                width: 100%;
+                width: 600px;
                 height: 550px;
                 border-radius: 50%;
                 object-fit: cover;
+            }
+
+            @media (max-width:1560px) {
+                img {
+                    width: 100%;
+                    height: 550px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
             }
         }
 
@@ -599,7 +608,7 @@
 
         &-rowe {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 20px;
             padding: 40px 0px;
 
@@ -609,6 +618,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
+
                 img {
                     width: 100%;
                     height: 120px;
@@ -631,7 +641,7 @@
 
         @media (max-width:1150px) {
             &-left img {
-               height: 450px;
+                height: 450px;
             }
         }
 
@@ -642,6 +652,7 @@
         @media (max-width:500px) {
             gap: 15px;
             padding: 30px 12px;
+
             &-left {
                 img {
                     width: 250px;
@@ -663,10 +674,10 @@
             }
 
             &-right-desc {
-               font-size: 16px;
-               font-weight: 400;
-               line-height: 22px;
-               text-align: center;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 22px;
+                text-align: center;
             }
 
             &-right-btn {
@@ -700,6 +711,7 @@
     }
 
     @keyframes floatBox {
+
         0%,
         100% {
             transform: translateY(0px);
