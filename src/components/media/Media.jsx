@@ -12,7 +12,7 @@ const Media = () => {
     return (
         <div className='media container'>
             <div className="media-left">
-                <h2 className="media-left-title">Follow us on <span>Social Media</span></h2>
+                <h2 className="media-left-title">Follow us on <br /> <span>Social Media</span></h2>
                 <span className="media-left-text">Let's stay connected</span>
             </div>
             <div className="media-right">
