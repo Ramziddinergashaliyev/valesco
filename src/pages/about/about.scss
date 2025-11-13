@@ -82,6 +82,56 @@
                 color: white;
             }
         }
+
+        @media (max-width:1050px) {
+            &-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width:768px) {
+            background: url(../../assets/images/aboutMobile.webp);
+            height: 550px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width:650px) {
+            &-title {
+               font-size: 28px;
+               line-height: 30px;
+            }
+
+            &-box {
+              padding-top: 15px;
+            }
+
+            &-text {
+              font-size: 14px;
+              line-height: 22px;
+            }
+        }
+
+        @media (max-width:360px) {
+            &-title {
+               font-size: 22px;
+               line-height: 26px;
+               padding-bottom: 10px;
+            }
+
+            &-info {
+                gap: 0px;
+            }
+
+            &-box {
+              padding-top: 15px;
+            }
+
+            &-text {
+              font-size: 14px;
+              line-height: 18px;
+            }
+        }
     }
 
     &-middle {
@@ -323,13 +373,67 @@
                 }
             }
         }
+
+        @media (max-width:1100px) {
+            &-top {
+              gap: 20px;
+            }
+        }
+
+        @media (max-width:1000px) {
+            &-top {
+               grid-template-columns: 1fr;
+            }
+
+            &-top-right {
+              padding-left: 0px;
+            }
+
+            &-top-right-title {
+               padding: 12px 20px 12px 10px;
+            }
+        }
+
+        @media (max-width:450px) {
+            &-top-box {
+              margin: 0 auto;
+            }
+
+            &-top-info-title {
+              font-size: 18px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &-top-info-text {
+               text-align: center;
+               font-size: 15px;
+            }
+
+            &-top-right-title {
+            font-size: 15px;
+            }
+        }
     }
 
     &-cards {
-        padding: 40px 0px 20px;
+        padding: 40px 12px 20px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
+    }
+
+    @media (max-width:950px) {
+        &-cards {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    @media (max-width:450px) {
+        &-cards {
+            grid-template-columns: repeat(1,1fr);
+        }
     }
 
     &-card {
@@ -434,29 +538,17 @@
             font-weight: 500;
         }
     }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
+   
     &-imgs {
-        padding: 40px 0px;
+        padding: 40px 12px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
+        grid-gap: 80px;
         align-items: center;
 
         &-left {
             img {
-                width: 600px;
+                width: 100%;
                 height: 550px;
                 border-radius: 50%;
                 object-fit: cover;
@@ -518,7 +610,7 @@
                 justify-content: center;
                 gap: 10px;
                 img {
-                    width: 200px;
+                    width: 100%;
                     height: 120px;
                     object-fit: contain;
                 }
@@ -535,6 +627,69 @@
                     color: #111333;
                 }
             }
+        }
+
+        @media (max-width:1150px) {
+            &-left img {
+               height: 450px;
+            }
+        }
+
+        @media (max-width:900px) {
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width:500px) {
+            gap: 15px;
+            padding: 30px 12px;
+            &-left {
+                img {
+                    width: 250px;
+                    height: 250px;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &-rowe {
+                grid-template-columns: 1fr;
+            }
+
+            &-right-title {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            &-right-desc {
+               font-size: 16px;
+               font-weight: 400;
+               line-height: 22px;
+               text-align: center;
+            }
+
+            &-right-btn {
+                padding: 10px;
+                width: 180px;
+                border-radius: 12px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 

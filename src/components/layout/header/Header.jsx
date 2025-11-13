@@ -3,14 +3,14 @@ import { FiMenu, FiSearch, FiGlobe } from "react-icons/fi";
 import { IoMdArrowDropdown, IoMdClose } from 'react-icons/io';
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../../assets/icons/logo.png";
-import logo1 from "../../../assets/icons/logo1.jpg";
+import logo1 from "../../../assets/icons/logo1.png";
 import { useTranslation } from 'react-i18next';
 import { AiOutlineClose } from "react-icons/ai";
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi';
 import { useSearchProductsQuery } from '../../../context/api/productApi';
 
 import "./header.scss"
-                                                                        
+                                                                       
 const Header = () => {
   const [searchHide, setSearchHide] = useState(false)
   const { t, i18n } = useTranslation();
@@ -23,21 +23,21 @@ const Header = () => {
   
   const [isLangOpen, setIsLangOpen] = useState(false);
   const langDropdownRef = useRef(null);
-
+  
   const { data: searchData, isLoading } = useSearchProductsQuery(
     { query: value },
     { skip: !value.trim() }
   );
-
+  
   const languages = [
     { code: 'ru', label: 'Русский', flag: '🇷🇺' },
     { code: 'en', label: 'English', flag: '🇬🇧' }
   ];
-
+  
   const currentLanguage = languages.find(lang => lang.code === currentLang);
-
+  
   const lenguage = i18n?.languages[0]
-
+  
   const handleChange = (e) => {
     const val = e.target.value
     setValue(val)
@@ -45,7 +45,7 @@ const Header = () => {
       setLocalSearch(null)
     }
   }
-
+  
   useEffect(() => {
     if (searchData) setLocalSearch(searchData)
   }, [searchData])
@@ -79,11 +79,11 @@ const Header = () => {
         <nav className="header__nav container">
           <div className="header__nav__logo">
             <a className='header__nav__logo-top' href="/">
-              <img src={logo} alt="header logo" />
+              <img src={logo} alt="header-logo-top" />
             </a>
             
             <a className='header__nav__logo-bottom' href="/">
-               <img src={logo1} alt="" />
+               <img src={logo1} alt="header-logo-bottom" />
             </a>
           </div>
           

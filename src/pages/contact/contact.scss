@@ -8,11 +8,18 @@
         height: 200px;
         width: 100%;
 
-        &-title {
-            font-size: 46px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            color: black;
+        @media (max-width:468px) {
+            background: url(../../assets/images/contactMobile.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200px;
+        }
+
+        @media (max-width:500px) {
+            &-title {
+                font-size: 22px;
+                font-weight: 500;
+            }
         }
     }
 
@@ -20,46 +27,15 @@
         display: grid;
         grid-template-columns: 500px 1fr;
         grid-gap: 30px;
-        padding: 40px 0px;
-    }
+        padding: 40px 12px;
 
-    &-form-left {
-        background-color: rgb(234, 234, 234);
-        padding: 20px;
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-
-        &-info {
+        &-left {
+            background-color: rgb(234, 234, 234);
+            padding: 20px;
+            border-radius: 4px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
-
-            &-title {
-                font-size: 26px;
-                font-weight: 600;
-                color: #111333;
-                line-height: 32px;
-            }
-
-            &-text {
-                font-size: 16px;
-                font-weight: 400;
-                color: #111333;
-                line-height: 24px !important;
-            }
-        }
-
-        &-box {
-            display: grid;
-            grid-template-columns: 30px 1fr;
-            gap: 10px;
-
-            svg {
-                font-size: 26px;
-                color: #111333;
-            }
+            gap: 25px;
 
             &-info {
                 display: flex;
@@ -67,90 +43,194 @@
                 gap: 8px;
 
                 &-title {
+                    font-size: 26px;
+                    font-weight: 600;
                     color: #111333;
-                    line-height: 28px;
-                    font-weight: 500;
-                    font-size: 20px;
+                    line-height: 32px;
                 }
 
                 &-text {
                     font-size: 16px;
                     font-weight: 400;
-                    line-height: 26px;
+                    color: #111333;
+                    line-height: 24px !important;
+                }
+            }
+
+            &-box {
+                display: grid;
+                grid-template-columns: 30px 1fr;
+                gap: 10px;
+
+                svg {
+                    font-size: 26px;
                     color: #111333;
                 }
-            }
-        }
-    }
 
-    &-form-right {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
 
-        &-title {
-            font-size: 28px;
-            font-weight: 500;
-            color: #111333;
-        }
+                    &-title {
+                        color: #111333;
+                        line-height: 28px;
+                        font-weight: 500;
+                        font-size: 20px;
+                    }
 
-        &-top {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
-
-            label {
-                input {
-                    padding: 10px;
-                    width: 100%;
-                    outline: none;
-                    background-color: rgb(245, 247, 250);
-                    border: 1px solid #f7f7f7;
-                    height: 60px;
-                    border-radius: 6px;
+                    &-text {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 26px;
+                        color: #111333;
+                    }
                 }
             }
         }
 
-        &-bottom {
+        &-right {
             display: flex;
             flex-direction: column;
             gap: 20px;
 
-            label {
-                input {
+            &-title {
+                font-size: 28px;
+                font-weight: 500;
+                color: #111333;
+            }
+
+            &-top {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+
+                label {
+                    input {
+                        padding: 10px;
+                        width: 100%;
+                        outline: none;
+                        background-color: rgb(245, 247, 250);
+                        border: 1px solid #f7f7f7;
+                        height: 60px;
+                        border-radius: 6px;
+                    }
+                }
+            }
+
+            &-bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                label {
+                    input {
+                        padding: 16px;
+                        width: 100%;
+                        outline: none;
+                        background-color: rgb(245, 247, 250);
+                        border: 1px solid #f7f7f7;
+                        height: 60px;
+                        border-radius: 6px;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        height: 125px;
+                        padding: 15px;
+                        resize: vertical;
+                        background-color: rgb(245, 247, 250);
+                        border: 1px solid #f7f7f7;
+                        outline: none;
+                    }
+                }
+                
+                &-btn {
                     padding: 16px;
-                    width: 100%;
-                    outline: none;
-                    background-color: rgb(245, 247, 250);
-                    border: 1px solid #f7f7f7;
-                    height: 60px;
-                    border-radius: 6px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: white;
+                    background-color: rgb(71, 71, 71);
+                    border: 1px solid rgb(71, 71, 71);
+                    width: 200px;
+                    border-radius: 4px;
+                }
+
+            }
+        }
+
+        @media (max-width:1050px) {
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width:500px) {
+            padding: 20px 12px;
+            gap: 15px;
+
+            &-right {
+                gap: 10px;
+            }
+
+            &-right-top {
+                grid-template-columns: 1fr;
+                gap: 10px;
+
+                label input {
+                    height: 45px;
+                }
+            }
+
+            &-right-bottom {
+                gap: 10px;
+
+                label input {
+                    height: 45px;
                 }
 
                 textarea {
-                    width: 100%;
-                    height: 125px;
-                    padding: 15px;
-                    resize: vertical;
-                    background-color: rgb(245, 247, 250);
-                    border: 1px solid #f7f7f7;
-                    outline: none;
+                    height: 70px !important;
                 }
             }
 
-            &-btn {
-                padding: 16px;
-                font-size: 16px;
-                font-weight: 400;
-                color: white;
-                background-color: rgb(71, 71, 71);
-                border: 1px solid rgb(71, 71, 71);
-                width: 200px;
-                border-radius: 4px;
+            &-right-bottom-btn {
+                padding: 10px;
+            }
+
+            &-left-info-title {
+                font-size: 22px;
+                line-height: 26px;
+            }
+
+            &-left-info-text {
+                font-size: 14px;
+                line-height: 18px !important;
+            }
+
+            &-left-box-info-text {
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            &-left {
+                gap: 15px;
+                padding: 15px;
+            }
+
+            &-left-box {
+                grid-template-columns: 20px 1fr;
+
+                svg {
+                    font-size: 18px;
+                }
+
+                &-info-title {
+                    font-size: 18px;
+                    line-height: 18px;
+                }
             }
 
         }
-    }
 
+
+    }
 }

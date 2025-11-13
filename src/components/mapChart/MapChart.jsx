@@ -4,7 +4,9 @@ import * as am5map from "@amcharts/amcharts5/map";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
 
-import logoIcon from "../../assets/icons/logo1.jpg";
+import logoIcon from "../../assets/icons/logo1.png";
+
+import "./mapChart.scss"
 
 const MapChart = () => {
   useEffect(() => {
@@ -193,6 +195,7 @@ const MapChart = () => {
 
   return (
     <div
+      className="chartDiv"
       id="chartdiv"
       style={{ width: "100%", height: "600px", backgroundColor: "#fff" }}
     ></div>

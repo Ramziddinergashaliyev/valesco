@@ -1,12 +1,12 @@
 .media {
     display: grid;
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: repeat(2,1fr);
     gap: 20px;
     padding: 40px 12px;
 
     @media (max-width:1580px) {
         display: grid;
-        grid-template-columns: 400px 1fr;
+        grid-template-columns: repeat(2,1fr);
         gap: 20px;
         padding: 40px 12px;
     }
@@ -36,7 +36,9 @@
 
     &-right {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-end;
+        justify-content: flex-end;
         grid-gap: 20px;
 
         &-card {

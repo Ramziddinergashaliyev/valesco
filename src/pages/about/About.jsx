@@ -99,11 +99,12 @@ const About = () => {
   }, [count, isVisible]);
 
   useEffect(() => {
-    scrollTo(0,0)
+    scrollTo(0, 0)
   }, [])
 
   return (
     <div className='about'>
+
       <div className="about-top">
         <div className="about-top-box container">
           <div className="about-top-info container">
@@ -153,42 +154,9 @@ const About = () => {
         }
       </div>
 
-      {/* <div className="about-imgs container">
-        <div className="about-imgs-left">
-          <img src={img} alt="" />
-        </div>
-        <div className="about-imgs-right-box">
-          <div className="about-imgs-right">
-            <h1 className='about-imgs-right-title'>About Valesco Oil</h1>
-            <p className='about-imgs-right-desc'>Valesco Oil is more than just engine oil. It's the symbol of modern engineering and pure performance. Our innovative formulas power the heart of your vehicle.</p>
-          </div>
-          <div className="about-imgs-rowe">
-            <div className="about-imgs-rowe-card">
-              <img src={icons3} alt="" />
-              <h2 className="about-imgs-rowe-card-title">300</h2>
-              <p className="about-imgs-rowe-card-text">Members of staff</p>
-            </div>
-
-            <div className="about-imgs-rowe-card">
-              <img src={icons4} alt="" />
-              <h2 className="about-imgs-rowe-card-title">3.000</h2>
-              <p className="about-imgs-rowe-card-text">Containers per hour</p>
-            </div>
-
-            <div className="about-imgs-rowe-card">
-              <img src={icons2} alt="" />
-              <h2 className="about-imgs-rowe-card-title">300</h2>
-              <p className="about-imgs-rowe-card-text">Products</p>
-            </div>
-          </div>
-          <button className='about-imgs-right-btn'>
-              <NavLink to={"/contact"}>Contact Us</NavLink>
-            </button>
-        </div>
-      </div> */}
       <div className="about-imgs container" ref={sectionRef}>
         <div className="about-imgs-left">
-          <img src={img} alt="" />
+          <img src={img} alt="about-img" />
         </div>
 
         <div className="about-imgs-right-box">

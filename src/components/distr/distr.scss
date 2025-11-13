@@ -35,7 +35,7 @@
             color: gray;
             border: none;
             background-color: transparent;
-            padding-top: 50px;
+            padding-top: 10px;
             cursor: pointer;
         }
 
@@ -202,7 +202,7 @@
 
         &-filter-box-info {
             font-size: 12px;
-            min-width: 140px;
+            min-width: 160px;
         }
 
         &-filter-btn {
@@ -241,6 +241,15 @@
             padding-top: 20px;
         }
 
+        &-result-bottom {
+            width: 100%;
+        }
+
+        &-result-bottom-text {
+            font-size: 15px;
+            line-height: 22px;
+        }
+
         .distr .css-rizt0-MuiTypography-root {
             padding-top: 0px;
         }
@@ -256,7 +265,7 @@
 
     @media (max-width:360px) {
         &-filter-box-info {
-            font-size: 10px;
+            font-size: 14px;
         }
     }
 }
@@ -285,12 +294,14 @@
         background-color: #000 !important;
         color: #fff !important;
         border: 1px solid #000 !important;
+
         svg {
             color: #fff !important;
         }
     }
 
     transition: all 0.3s ease;
+
     &:hover {
         opacity: 0.8;
     }
