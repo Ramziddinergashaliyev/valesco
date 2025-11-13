@@ -25,58 +25,112 @@ const Distr = () => {
 
   const Data = [
     {
-      country: 'Казахстан',
+      country: 'КАЗАХСТАН',
       distributor: 'TOO «AVTODETAIL»',
       title: 'Казахстан, Южно-Казахстанская область, 160021, город Шымкент, Абайский район, ул Байтулы баба 14А',
       number: ["77022837999"]
     },
     {
-      country: 'Таджикистан',
+      country: 'ТАДЖИКИСТАН',
       distributor: 'ООО «ТОСОЛ-ПЛЮС»',
       title: 'Таджикистан, Согдийская область, Дж. Расуловский район, пгт Мехробод ул. И. Нурматов 45/4',
       number: ["+992 92 707 49 86"]
     },
     {
-      country: 'Туркменистан',
+      country: 'ТУРКМЕНИСТАН',
       distributor: 'ИП «НУРЫЕВ ГУВАНЧ ТАГАНДУРДЫЕВИЧ»',
       title: 'Туркменистан, Марыйский велаят, Векилбазар Этрап, Акгонур',
       number: ["+993 65 551008"]
+    },
+    {
+      country: 'РОССИЙСКАЯ ФЕДЕРАЦИЯ',
+      distributor: 'OOO «NB GLOBAL»',
+      title: '454047, г. Челябинск, ул. 2-я Павелецкая, 22',
+      number: ["+7 495 145 95 00", "+7 922 717 60 90"]
+    },
+    {
+      country: 'АЗЕРБАЙДЖАН',
+      distributor: 'OOO «ILKIN-N»',
+      title: 'Респ. Азербайджан, Сальянский район д. Карабаглы',
+      number: ["+99 450 321 44 72"]
+    },
+    {
+      country: 'КАЗАХСТАН',
+      distributor: 'TOO «Tanauto Kazakhstan»',
+      title: 'г. Алматы пр. Райымбека д. 169 А',
+      number: ["+7 701 711 0430"]
+    },
+    {
+      country: 'КЫРГЫЗСТАН',
+      distributor: 'ООО «КАРД Групп»',
+      title: 'Кыргызская Республика, г г.Бишкек, ул.Садыгалиева  1',
+      number: ["+996 702 676 514"]
     }
   ];
 
   const DataEN = [
     {
-      country: 'Kazakhstan',
+      country: 'KAZAKHSTAN',
       distributor: 'LLP «AVTODETAIL»',
       title: 'Kazakhstan, South Kazakhstan Region, 160021, Shymkent City, Abai District, 14A Baituly Baba St',
       number: ["77022837999"]
     },
     {
-      country: 'Tajikistan',
+      country: 'TAJIKISTAN',
       distributor: 'LLC «TOSOL-PLUS»',
       title: 'Tajikistan, Sughd Region, J. Rasulov District, Mehrobod Settlement, 45/4 I. Nurmatov St',
       number: ["+992 92 707 49 86"]
     },
     {
-      country: 'Turkmenistan',
+      country: 'TURKMENISTAN',
       distributor: 'IE «NURYYEV GUVANCH TAGANDURDYEVICH»',
       title: 'Turkmenistan, Mary Region, Vekilbazar District, Akgonur',
       number: ["+993 65 551008"]
+    },
+    {
+      country: 'RUSSIAN FEDERATION',
+      distributor: 'LLC «NB GLOBAL»',
+      title: '454047, Chelyabinsk city, Paveletskaya street second, 22',
+      number: ["+7 495 145 95 00", "+7 922 717 60 90"]
+    },
+    {
+      country: 'AZERBAIJAN',
+      distributor: 'LIC «ILKIN-N»',
+      title: 'Salyansk area, Karabagly h',
+      number: ["+99 450 321 4472"]
+    },
+    {
+      country: 'KAZAKHSTAN',
+      distributor: 'TOO «Tanauto Kazakhstan»',
+      title: 'Almaty. Raimbek avenue 169 A',
+      number: ["+7 701 711 0430"]
+    },
+    {
+      country: 'KYRGYZSTAN',
+      distributor: 'LLC «KARD GRUPP»',
+      title: 'KYRGZ REPUBLIC, BISHKEK CITY, SADYGALIEVA STR. 1',
+      number: ["+996 702 676 514"]
     }
   ];
 
   const DATADISTURB = i18n?.languages[0] === "ru" ? Data : DataEN
 
   const filterCountries = [
-    'Казахстан',
-    'Таджикистан',
-    'Туркменистан'
+    'КАЗАХСТАН',
+    'ТАДЖИКИСТАН',
+    'ТУРКМЕНИСТАН',
+    'РОССИЙСКАЯ ФЕДЕРАЦИЯ',
+    'АЗЕРБАЙДЖАН',
+    'КЫРГЫЗСТАН'
   ];
 
   const filterCountriesEN = [
-    'Kazakhstan',
-    'Tajikistan',
-    'Turkmenistan'
+    'KAZAKHSTAN',
+    'TAJIKISTAN',
+    'TURKMENISTAN',
+    'RUSSIAN FEDERATION',
+    'AZERBAIJON',
+    'KYRGYZSTAN'
   ];
 
   const distrbutData = i18n?.languages[0] === "ru" ? filterCountries : filterCountriesEN
