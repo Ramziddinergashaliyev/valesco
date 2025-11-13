@@ -79,7 +79,7 @@ const MapChart = () => {
       
       container.children.push(pulseCircle);
       container.children.moveValue(pulseCircle, 0);
-
+    
       pulseCircle.animate({
         key: "scale",
         from: 1,

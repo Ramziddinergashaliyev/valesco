@@ -22,11 +22,11 @@ const Home = () => {
     <>
       <Hero />
       <ProductRange />
+      <Imgs/>
       <Banner />
       <PrideArea />
       <Differents />
       <Media/>
-      <Imgs/>
     </>
   )
 }
