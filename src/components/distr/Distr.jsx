@@ -207,11 +207,11 @@ const Distr = () => {
                     <Typography component="span">{el?.distributor}</Typography>
                   </AccordionSummary>
                   <AccordionDetails className='distr-result-bottom'>
-                    <span>Адрес</span>
+                    <span>{t("address")}</span>
                     <p className='distr-result-bottom-text'>{el?.title}</p>
                     <div className="distr-result-info">
                       <div className="distr-result-info-left">
-                        <span className='distr-result-info-span'>Телефон</span>
+                        <span className='distr-result-info-span'>{t("телефона")}</span>
                         {el?.number?.map((phone, phoneIndex) => (
                           <a
                             key={phoneIndex}

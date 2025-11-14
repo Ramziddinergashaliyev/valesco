@@ -4,6 +4,7 @@ import MapChart from '../../components/mapChart/MapChart'
 import Distr from '../../components/distr/Distr'
 import { Navigate, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { MdArrowOutward } from 'react-icons/md'
 
 const Distrbut = () => {
   const { t, i18n } = useTranslation()
@@ -24,7 +25,7 @@ const Distrbut = () => {
       <div className="distrbut-catalog container">
         <h2 className='distrbut-catalog-title'>{t("catalogue")}</h2>
         <p className='distrbut-catalog-text'>{t("know all")}</p>
-        <button className='distrbut-catalog-btn'><NavLink to={"/catalogProduct"}>{t("Download")}</NavLink></button>
+        <NavLink to={"/catalogProduct"}  className='distrbut-catalog-btn'>{t("Download")}<MdArrowOutward /></NavLink>
       </div>
       <div className="distrbut-map container">
         <MapChart />

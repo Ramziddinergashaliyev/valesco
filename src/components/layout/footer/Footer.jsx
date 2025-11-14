@@ -64,8 +64,8 @@ const Footer = () => {
           <h3 className='footer__item-title'>{t("LEAVE")}</h3>
           <input placeholder={t('Name')} type="text" />
           <input placeholder={('Phone')} type="text" />
-          <input placeholder='Email' type="text" />
-          <textarea placeholder='Message' name="" id=""></textarea>
+          <input placeholder={t('Email')} type="text" />
+          <textarea placeholder={t('Message')} name="" id=""></textarea>
           <button className='footer__form-btn'>{t("Send Now")}</button>
         </form>
       </nav>
