@@ -20,21 +20,25 @@ const Media = () => {
                 <span className="media-left-text">{t("connected")}</span>
             </div>
             <div className="media-right">
-                <div className="media-right-card">
-                    <div className="media-right-card-logo"><AiFillInstagram /></div>
-                    <div className="media-right-card-img">
-                        <img src={img2} alt="media-img-two" />
+                <a href="https://www.instagram.com/valescooil_official_global/">
+                    <div className="media-right-card">
+                        <div className="media-right-card-logo"><AiFillInstagram /></div>
+                        <div className="media-right-card-img">
+                            <img src={img2} alt="media-img-two" />
+                        </div>
+                        <button className="media-right-card-btns">{t("Follow Us")}</button>
                     </div>
-                    <button className="media-right-card-btns">{t("Follow Us")}</button>
-                </div>
-                
-                <div className="media-right-card">
-                    <div className="media-right-card-logo"><FaFacebookF /></div>
-                    <div className="media-right-card-img">
-                        <img src={img3} alt="media-img-three" />
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61577073517931">
+                    <div className="media-right-card">
+                        <div className="media-right-card-logo"><FaFacebookF /></div>
+                        <div className="media-right-card-img">
+                            <img src={img3} alt="media-img-three" />
+                        </div>
+                        <button className="media-right-card-btns">{t("Follow Us")}</button>
                     </div>
-                    <button className="media-right-card-btns">{t("Follow Us")}</button>
-                </div>
+                </a>
             </div>
         </div>
     )
