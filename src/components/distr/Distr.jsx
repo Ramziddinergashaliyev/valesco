@@ -25,6 +25,12 @@ const Distr = () => {
 
   const Data = [
     {
+      country: 'УЗБЕКИСТАН',
+      distributor: 'ООО «ЮНИМАКС ТЕХНИКС»',
+      title: 'Ташкентская область, ул. Зангиата, 4К744А',
+      number: ["+998712033344"]
+    },
+    {
       country: 'КАЗАХСТАН',
       distributor: 'TOO «AVTODETAIL»',
       title: 'Казахстан, Южно-Казахстанская область, 160021, город Шымкент, Абайский район, ул Байтулы баба 14А',
@@ -69,6 +75,12 @@ const Distr = () => {
   ];
 
   const DataEN = [
+    {
+      country: 'UZBEKISTAN',
+      distributor: 'LLC «UNIMAX TECHNICS»',
+      title: 'Tashkent region, Zangiata str, 4K744A',
+      number: ["+998712033344"]
+    },
     {
       country: 'KAZAKHSTAN',
       distributor: 'LLP «AVTODETAIL»',
@@ -116,6 +128,7 @@ const Distr = () => {
   const DATADISTURB = i18n?.languages[0] === "ru" ? Data : DataEN
 
   const filterCountries = [
+    'УЗБЕКИСТАН',
     'КАЗАХСТАН',
     'ТАДЖИКИСТАН',
     'ТУРКМЕНИСТАН',
@@ -125,6 +138,7 @@ const Distr = () => {
   ];
 
   const filterCountriesEN = [
+    'UZBEKISTAN',
     'KAZAKHSTAN',
     'TAJIKISTAN',
     'TURKMENISTAN',

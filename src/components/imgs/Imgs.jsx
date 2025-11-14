@@ -8,8 +8,12 @@ import img4 from "../../assets/anime/anime-4.webp";
 import img5 from "../../assets/anime/anime-5.webp";
 import img6 from "../../assets/anime/anime-6.webp";
 import img7 from "../../assets/anime/anime-7.webp";
+import { useTranslation } from "react-i18next";
 
 const Imgs = () => {
+
+  const { t, i18n } = useTranslation()
+
   const PRODUCTS = [
     { id: 1, img: img1, stackPos: 60, expandPos: 70, height: 280, zIndex: 8 },
     { id: 2, img: img2, stackPos: 70, expandPos: 86, height: 220, zIndex: 9 },
@@ -91,9 +95,9 @@ const Imgs = () => {
       </div>
 
       <div className="imgs-info">
-        <h3 className="imgs-info-title">VALESCO PRODUCTS – 100% MADE IN UZBEKISTAN</h3>
-        <p className="imgs-info-text">VALESCO offers a full range of products with a high vertical production range, always manufactured in audited sustainable processes. In addition to many motor oils and winter chemicals for many various types of vehicles, we also offer lubricants for a wide variety of other utilisations and applications, for example in the industrial sector. VALESCO products are available in more than 15 countries worldwide today and impress more people every day with their outstanding properties.</p>
-        <button className="imgs-info-btn">To our products</button>
+        <h3 className="imgs-info-title">{t("VALESCO")}</h3>
+        <p className="imgs-info-text">{t("imgsDesc")}</p>
+        <button className="imgs-info-btn">{t("imgsBtn")}</button>
       </div>
     </div>
   );

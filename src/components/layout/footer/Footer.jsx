@@ -59,16 +59,15 @@ const Footer = () => {
             <span>{t("E-mail")}</span>
             <a href="mailTo:info@gpggroup.uz">info@gpggroup.uz</a>
           </li>
-          
         </ul>
 
         <form className='footer__form' action="">
-          <h3 className='footer__item-title'>LEAVE A MESSAGE</h3>
-          <input placeholder='Name' type="text" />
-          <input placeholder='Phone' type="text" />
-          <input placeholder='Email' type="text" />
-          <textarea placeholder='Message' name="" id=""></textarea>
-          <button className='footer__form-btn'>Send Now</button>
+          <h3 className='footer__item-title'>{t("LEAVE")}</h3>
+          <input placeholder={t('Name')} type="text" />
+          <input placeholder={t('Phone')} type="text" />
+          <input placeholder={t('Email')} type="text" />
+          <textarea placeholder={t('Message')} name="" id=""></textarea>
+          <button className='footer__form-btn'>{t("Send Now")}</button>
         </form>
 
       </nav>
