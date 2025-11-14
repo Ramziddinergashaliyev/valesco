@@ -11,6 +11,7 @@ import { MISSION, MISSIONEN } from '../../static';
 import img from "../../assets/images/hero-2.jpg"
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { MdArrowOutward } from 'react-icons/md';
 
 const About = () => {
   const { t, i18n } = useTranslation()
@@ -184,9 +185,7 @@ const About = () => {
             </div>
           </div>
 
-          <button className='about-imgs-right-btn'>
-            <NavLink to={"/contact"}>{("Contact Us")}</NavLink>
-          </button>
+            <NavLink className='about-imgs-right-btn' to={"/contact"}>{("Contact Us")}<MdArrowOutward /></NavLink>
         </div>
       </div>
 

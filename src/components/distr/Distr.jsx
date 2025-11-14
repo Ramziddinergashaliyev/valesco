@@ -62,13 +62,13 @@ const Distr = () => {
     },
     {
       country: 'КАЗАХСТАН',
-      distributor: 'TOO «Tanauto Kazakhstan»',
+      distributor: 'TOO «TANAUTO KAZAKHSTAN»',
       title: 'г. Алматы пр. Райымбека д. 169 А',
       number: ["+7 701 711 0430"]
     },
     {
       country: 'КЫРГЫЗСТАН',
-      distributor: 'ООО «КАРД Групп»',
+      distributor: 'ООО «ГРУПП»',
       title: 'Кыргызская Республика, г г.Бишкек, ул.Садыгалиева  1',
       number: ["+996 702 676 514"]
     }
@@ -183,7 +183,7 @@ const Distr = () => {
               onClick={() => handleFilterClick(country)}
               className={`distr-filter-box-info ${activeFilters.includes(country) ? 'active' : ''}`}
             >
-              {country === 'КЫРГЫЗСТАН' ? 'Киргизия' : country}
+              {country === 'КЫРГЫЗСТАН' ? 'КЫРГЫЗСТАН' : country}
               <CgMathPlus />
             </button>
           ))}
