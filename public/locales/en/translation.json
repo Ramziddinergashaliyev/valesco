@@ -99,6 +99,8 @@
   "Phone":"Phone",
   "Email":"Email",
   "Message":"Message",
+  "Country": "Country",
+  "Company": "Company",
   "About Company": "About Company",
   "Guarantee":"Guarantee",
   "Performance":"100% Performance Guarantee",
@@ -116,5 +118,11 @@
   "Global Logistics":"Advanced Lubrication Technology | Global Logistics",
   "catalogue":"Download our catalogue",
   "know all":"Get to know all the details of our products and download the complete catalogs",
-  "Download":"Download catalogs"
-}
+  "Download":"Download catalogs",
+  "Details":"Contact Details",
+  "questions":"Get in touch with us for any questions about our products.",
+  "Address":"Address",
+  "Republic":"Republic of Uzbekistan, Tashkent region, Zangiata district, Erkinsky rural citizens' meeting, Zafarobod street, house 28",
+  "Call support": "Call support"
+
+} 

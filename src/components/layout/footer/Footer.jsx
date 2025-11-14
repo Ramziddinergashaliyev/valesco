@@ -43,7 +43,6 @@ const Footer = () => {
 
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("Контакты")}</h3>
-
           <li className="footer__item-contact">
             <span>{t("телефона")}</span>
             <a href="tel:+998 71 281 49 30">+998 71 281 49 30</a>
@@ -64,12 +63,11 @@ const Footer = () => {
         <form className='footer__form' action="">
           <h3 className='footer__item-title'>{t("LEAVE")}</h3>
           <input placeholder={t('Name')} type="text" />
-          <input placeholder={t('Phone')} type="text" />
-          <input placeholder={t('Email')} type="text" />
-          <textarea placeholder={t('Message')} name="" id=""></textarea>
+          <input placeholder={('Phone')} type="text" />
+          <input placeholder='Email' type="text" />
+          <textarea placeholder='Message' name="" id=""></textarea>
           <button className='footer__form-btn'>{t("Send Now")}</button>
         </form>
-
       </nav>
     </footer>
   )
