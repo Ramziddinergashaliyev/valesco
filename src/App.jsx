@@ -18,6 +18,7 @@ import ProductItem from './pages/productItem/ProductItem'
 import SingleProduct from './pages/singleProduct/SingleProduct'
 import Outlets from './pages/outlets/Outlets'
 import CatalogProduct from './pages/catologProduct/CatalogProduct'
+import { ToastContainer } from 'react-toastify'
 
 const App = () => {
   return (
@@ -42,6 +43,8 @@ const App = () => {
           <Route path='/catalogProduct' element={<CatalogProduct />} />
         </Route>
       </Routes>
+
+      <ToastContainer />
     </>
   )
 }

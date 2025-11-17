@@ -10,7 +10,7 @@ const Distrbut = () => {
   const { t, i18n } = useTranslation()
 
   useEffect(() => {
-    scrollTo(0,0)
+    scrollTo(0, 0)
   }, [])
 
   return (
@@ -25,12 +25,12 @@ const Distrbut = () => {
       <div className="distrbut-catalog container">
         <h2 className='distrbut-catalog-title'>{t("catalogue")}</h2>
         <p className='distrbut-catalog-text'>{t("know all")}</p>
-        <NavLink to={"/catalogProduct"}  className='distrbut-catalog-btn'>{t("Download")}<MdArrowOutward /></NavLink>
+        <NavLink to={"/catalogProduct"} className='distrbut-catalog-btn'>{t("Download")}<MdArrowOutward /></NavLink>
       </div>
-      <div className="distrbut-map container">
+      <div className="distrbut-map">
         <MapChart />
       </div>
-      <Distr/>
+      <Distr />
 
     </div>
   )

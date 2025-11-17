@@ -37,6 +37,7 @@
     "react-select": "^5.10.2",
     "react-simple-typewriter": "^5.0.1",
     "react-text-animate": "^2.1.1",
+    "react-toastify": "^11.0.5",
     "sass": "^1.89.2",
     "swiper": "^11.2.10"
   },

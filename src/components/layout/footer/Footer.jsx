@@ -4,10 +4,26 @@ import "./footer.scss"
 import { NavLink } from 'react-router-dom'
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi'
 import { useTranslation } from 'react-i18next'
+import { useGetValue } from '../../../hooks/useGetValue'
+
+const initialState = {
+  name: "",
+  phone: "",
+  email: "",
+  message: ""
+}
 
 const Footer = () => {
   const { data } = useGetCategoriesQuery()
   const { t, i18n } = useTranslation()
+
+  const { formData, setFormData, handleChange } = useGetValue(initialState)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(formData);
+    setFormData(initialState)
+  }
 
   return (
     <footer className='footer'>
@@ -36,7 +52,6 @@ const Footer = () => {
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("КОМПАНИЯ")}</h3>
           <li className="footer__item-list"><NavLink to={"/about"}>{t("company")}</NavLink></li>
-          {/* <li className="footer__item-list"><NavLink to={"/news"}>{t("news")}</NavLink></li> */}
           <li className="footer__item-list"><NavLink to={"/distrbut"}>{t("distributors")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/contact"}>{t("contacts")}</NavLink></li>
         </ul>
@@ -60,12 +75,12 @@ const Footer = () => {
           </li>
         </ul>
 
-        <form className='footer__form' action="">
+        <form onSubmit={handleSubmit} className='footer__form' action="">
           <h3 className='footer__item-title'>{t("LEAVE")}</h3>
-          <input placeholder={t('Name')} type="text" />
-          <input placeholder={('Phone')} type="text" />
-          <input placeholder={t('Email')} type="text" />
-          <textarea placeholder={t('Message')} name="" id=""></textarea>
+          <input name='name' value={formData.name} onChange={handleChange} placeholder={t('Name')} type="text" />
+          <input name='phone' value={formData.phone} onChange={handleChange} placeholder={('Phone')} type="text" />
+          <input name='email' value={formData.email} onChange={handleChange} placeholder={t('Email')} type="text" />
+          <textarea name="message" value={formData.message} onChange={handleChange} placeholder={t('Message')} id=""></textarea>
           <button className='footer__form-btn'>{t("Send Now")}</button>
         </form>
       </nav>
