@@ -16,7 +16,6 @@ const initialState = {
 const Footer = () => {
   const { data } = useGetCategoriesQuery()
   const { t, i18n } = useTranslation()
-
   const { formData, setFormData, handleChange } = useGetValue(initialState)
 
   const handleSubmit = (e) => {
@@ -28,6 +27,7 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <div className="footer-line"></div>
+
       <nav className="footer__nav container">
 
         <ul className="footer__item">
@@ -52,12 +52,14 @@ const Footer = () => {
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("КОМПАНИЯ")}</h3>
           <li className="footer__item-list"><NavLink to={"/about"}>{t("company")}</NavLink></li>
+          <li className="footer__item-list"><NavLink to={"/news"}>{t("news")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/distrbut"}>{t("distributors")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/contact"}>{t("contacts")}</NavLink></li>
         </ul>
 
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("Контакты")}</h3>
+
           <li className="footer__item-contact">
             <span>{t("телефона")}</span>
             <a href="tel:+998 71 281 49 30">+998 71 281 49 30</a>
@@ -73,17 +75,20 @@ const Footer = () => {
             <span>{t("E-mail")}</span>
             <a href="mailTo:info@gpggroup.uz">info@gpggroup.uz</a>
           </li>
+          
         </ul>
 
         <form onSubmit={handleSubmit} className='footer__form' action="">
           <h3 className='footer__item-title'>{t("LEAVE")}</h3>
-          <input name='name' value={formData.name} onChange={handleChange} placeholder={t('Name')} type="text" />
-          <input name='phone' value={formData.phone} onChange={handleChange} placeholder={('Phone')} type="text" />
-          <input name='email' value={formData.email} onChange={handleChange} placeholder={t('Email')} type="text" />
-          <textarea name="message" value={formData.message} onChange={handleChange} placeholder={t('Message')} id=""></textarea>
+          <input name='name' onChange={handleChange} value={formData.name} placeholder={t('Name')} type="text" />
+          <input name='phone' onChange={handleChange} value={formData.phone} placeholder={t('Phone')} type="text" />
+          <input name='email' onChange={handleChange} value={formData.email} placeholder={t('Email')} type="text" />
+          <textarea placeholder={t('Message')} name="message" onChange={handleChange} value={formData.message} id=""></textarea>
           <button className='footer__form-btn'>{t("Send Now")}</button>
         </form>
+
       </nav>
+
     </footer>
   )
 }

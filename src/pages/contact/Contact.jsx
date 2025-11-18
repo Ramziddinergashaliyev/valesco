@@ -19,11 +19,10 @@ const initialState = {
 
 const Contact = () => {
   const { t, i18n } = useTranslation()
-
   const { formData, setFormData, handleChange } = useGetValue(initialState)
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     console.log(formData);
     setFormData(initialState)
   }
@@ -68,42 +67,38 @@ const Contact = () => {
               <p className="contact-form-left-box-info-text"><a href="tel: +998 71 203 20 31">+998 71 203 20 31</a></p>
             </div>
           </div>
+          
         </div>
 
         <form onSubmit={handleSubmit} action="" className="contact-form-right">
           <h3 className='contact-top-title'>{t("Contact Us")}</h3>
-
           <div className="contact-form-right-top">
             <label htmlFor="">
-              <input name='name' value={formData.name} onChange={handleChange} placeholder={t('Name')} type="text" />
+              <input name='name' onChange={handleChange} value={formData.name} placeholder={t('Name')} type="text" />
             </label>
-
             <label htmlFor="">
-              <input name='phone' value={formData.phone} onChange={handleChange} placeholder={t('Phone')} type="text" />
+              <input name='phone' onChange={handleChange} value={formData.phone} placeholder={t('Phone')} type="text" />
             </label>
-
             <label htmlFor="">
-              <input name='email' value={formData.email} onChange={handleChange} placeholder={t('Email')} type="text" />
+              <input name='email' onChange={handleChange} value={formData.email} placeholder={t('Email')} type="text" />
             </label>
-
             <label htmlFor="">
-              <input name='country' value={formData.country} onChange={handleChange} placeholder={t('Country')} type="text" />
+              <input name='country' onChange={handleChange} value={formData.country} placeholder={t('Country')} type="text" />
             </label>
           </div>
-
           <div className="contact-form-right-bottom">
             <label htmlFor="">
-              <input name='company' value={formData.company} onChange={handleChange} placeholder={t('Company')} type="text" />
+              <input name='company' onChange={handleChange} value={formData.company} placeholder={t('Company')} type="text" />
             </label>
             <label htmlFor="">
-              <textarea name="message" value={formData.message} onChange={handleChange} placeholder={t('Message')} id=""></textarea>
+              <textarea name="message" onChange={handleChange} value={formData.message} placeholder={t('Message')} id=""></textarea>
             </label>
             <button className="contact-form-right-bottom-btn">{t("Send Now")}</button>
           </div>
         </form>
       </div>
 
-      <div className="contact-maps">
+       <div className="contact-maps">
         <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3248.230692956812!2d69.136341!3d41.200520000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEyJzAxLjkiTiA2OcKwMDgnMTAuOCJF!5e1!3m2!1sen!2s!4v1762319654663!5m2!1sen!2s" style={{ width: "100%", height: "450px", border: "0px" }} loading="lazy"></iframe>
       </div>
     </div>

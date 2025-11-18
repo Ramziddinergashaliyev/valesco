@@ -1,0 +1,171 @@
+.market {
+    &-top {
+        padding: 130px 0px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #333331;
+
+        &-title {
+            font-size: 52px;
+            font-weight: 500;
+            line-height: 62px;
+        }
+
+        &-btn {
+            padding: 14px 28px;
+            width: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 17px;
+            border-radius: 30px;
+            border: 1px solid #aaa4;
+            font-weight: 500;
+            background-color: #333331;
+            color: white;
+
+            svg {
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+
+    &-title {
+        font-size: 42px;
+        font-weight: 300;
+        color: #111333;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .market-place {
+        padding-bottom: 40px;
+
+        &-top {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 6px;
+            position: relative;
+
+            &-left,
+            &-right {
+                text-align: center;
+                color: #9d9d9d;
+                padding: 20px;
+                font-size: 24px;
+                border-radius: 20px 20px 0px 0px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: rgba(170, 170, 170, 0.27);
+                }
+
+                &.active {
+                    background-color: rgba(170, 170, 170, 0.13);
+                    color: black;
+                    transform: scale(1.02);
+                }
+            }
+        }
+
+        &-content {
+            background-color: #f5f5f5;
+            padding: 30px;
+            border-radius: 0 0 20px 20px;
+            min-height: 400px;
+        }
+
+        &-products {
+            position: relative;
+            overflow: hidden;
+            
+            h2 {
+                font-size: 32px;
+                font-weight: 400;
+            }
+            
+            p {
+                color: #666;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .sliding-indicator {
+        position: absolute;
+        bottom: 0;
+        height: 4px;
+        background: #333331;
+        border-radius: 2px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        width: calc(50% - 11.5px);
+
+        &.left {
+            left: 6px;
+        }
+
+        &.right {
+            left: calc(50% + 7.5px);
+        }
+    }
+
+    .tab-content {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &.active {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+            animation: slideInFromRight 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        &.inactive-left {
+            opacity: 0;
+            transform: translateX(-100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        &.inactive-right {
+            opacity: 0;
+            transform: translateX(100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInFromLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}

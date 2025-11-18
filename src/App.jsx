@@ -19,6 +19,7 @@ import SingleProduct from './pages/singleProduct/SingleProduct'
 import Outlets from './pages/outlets/Outlets'
 import CatalogProduct from './pages/catologProduct/CatalogProduct'
 import { ToastContainer } from 'react-toastify'
+import Market from './pages/market/Market'
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
           <Route path='/singleProduct/:id' element={<SingleProduct />} />
           <Route path='/outlets' element={<Outlets />} />
           <Route path='/catalogProduct' element={<CatalogProduct />} />
+          <Route path='/market-pleace' element={<Market/>}/>
         </Route>
       </Routes>
 
