@@ -413,9 +413,9 @@
 // }
 
 .market {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     &-top {
-        padding: 130px 0 30px;
+        padding: 140px 0 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -447,7 +447,8 @@
     &-title {
         font-size: 42px;
         color: #111333;
-        padding: 20px 0 40px;
+        font-weight: 500;
+        padding: 30px 0 40px;
     }
 
     .market-place {
