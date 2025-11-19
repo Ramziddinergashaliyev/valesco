@@ -101,6 +101,22 @@
     }
   }
 
+  .react-tel-input .country-list {
+    width: 350px;
+    border-radius: 4px;
+  }
+
+  .react-tel-input .country-list .search-box {
+    width: 100%;
+  }
+
+  .react-tel-input .country-list .search {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    padding: 10px 10px;
+  }
+
   @media (max-width:1190px) {
     &__nav {
       grid-template-columns: repeat(4,1fr);

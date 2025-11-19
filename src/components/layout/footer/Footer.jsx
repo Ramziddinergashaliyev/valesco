@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom'
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi'
 import { useTranslation } from 'react-i18next'
 import { useGetValue } from '../../../hooks/useGetValue'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 const initialState = {
   name: "",
@@ -75,20 +77,51 @@ const Footer = () => {
             <span>{t("E-mail")}</span>
             <a href="mailTo:info@gpggroup.uz">info@gpggroup.uz</a>
           </li>
-          
+
         </ul>
 
         <form onSubmit={handleSubmit} className='footer__form' action="">
           <h3 className='footer__item-title'>{t("LEAVE")}</h3>
-          <input name='name' onChange={handleChange} value={formData.name} placeholder={t('Name')} type="text" />
-          <input name='phone' onChange={handleChange} value={formData.phone} placeholder={t('Phone')} type="text" />
-          <input name='email' onChange={handleChange} value={formData.email} placeholder={t('Email')} type="text" />
-          <textarea placeholder={t('Message')} name="message" onChange={handleChange} value={formData.message} id=""></textarea>
+
+          <input
+            name='name'
+            onChange={handleChange}
+            value={formData.name}
+            placeholder={t('Name')}
+            type="text"
+          />
+
+          <PhoneInput
+            country={'uz'}
+            enableSearch={true}
+            inputStyle={{
+              width: "100%",
+              height: "44px",
+              fontSize: "15px"
+            }}
+            containerStyle={{ width: "100%" }}
+            value={formData.phone}
+            onChange={(value) => setFormData({ ...formData, phone: value })}
+          />
+
+          <input
+            name='email'
+            onChange={handleChange}
+            value={formData.email}
+            placeholder={t('Email')}
+            type="text"
+          />
+
+          <textarea
+            placeholder={t('Message')}
+            name="message"
+            onChange={handleChange}
+            value={formData.message}
+          ></textarea>
+
           <button className='footer__form-btn'>{t("Send Now")}</button>
         </form>
-
       </nav>
-
     </footer>
   )
 }

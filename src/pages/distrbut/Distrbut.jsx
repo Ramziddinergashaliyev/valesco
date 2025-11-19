@@ -12,7 +12,7 @@ const Distrbut = () => {
   useEffect(() => {
     scrollTo(0, 0)
   }, [])
-
+  
   return (
     <div className='distrbut'>
       <div className="distrbut-top">
@@ -21,16 +21,30 @@ const Distrbut = () => {
           <p className='distrbut-top-info-text'>{t("Global Logistics")}</p>
         </div>
       </div>
-
+    
       <div className="distrbut-catalog container">
         <h2 className='distrbut-catalog-title'>{t("catalogue")}</h2>
         <p className='distrbut-catalog-text'>{t("know all")}</p>
         <NavLink to={"/catalogProduct"} className='distrbut-catalog-btn'>{t("Download")}<MdArrowOutward /></NavLink>
       </div>
+
       <div className="distrbut-map">
         <MapChart />
       </div>
+
       <Distr />
+
+      <div className="distrbut-bg">
+        <div className="container distrbut-bg-container">
+          <div className="distrbut-bg-left">
+            <h3 className="distrbut-bg-left-title">We are looking for new distributor partners</h3>
+            <p className="distrbut-bg-left-text">We are constantly seeking opportunities to expand your business to new countries and markets.</p>
+          </div>
+          <div className="distrbut-bg-right">
+            <NavLink to={'/contact'} className="distrbut-bg-right-btn">Become Our Partner</NavLink>
+          </div>
+        </div>
+      </div>
 
     </div>
   )

@@ -1,6 +1,5 @@
 .distrbut {
     padding-top: 110px;
-    padding-bottom: 40px;
 
     &-top {
         background-color: rgb(135, 9, 9);
@@ -16,12 +15,12 @@
         @media (max-width:1580px) {
             height: 450px;
         }
-
+    
         &-info {
             display: flex;
             flex-direction: column;
             gap: 20px;
-
+            
             &-title {
                 font-size: 54px;
                 font-weight: 700;
@@ -29,7 +28,7 @@
                 text-align: center;
                 color: white;
             }
-
+            
             &-text {
                 font-size: 22px;
                 font-weight: 400;
@@ -87,7 +86,7 @@
         flex-direction: column;
         padding: 40px 12px;
         gap: 20px;
-
+    
         &-title {
             font-size: 44px;
             line-height: 56px;
@@ -187,12 +186,61 @@
         }
     }
 
+    &-bg {
+        background-color: rgb(217, 49, 49);
+        height: 300px;
+
+        &-container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            grid-area: 20px;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 110px;
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &-title {
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 32px;
+                color: white;
+            }
+
+            &-text {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+                color: #ededed;
+            }
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            &-btn {
+                font-size: 18px;
+                width: 240px;
+                font-weight: 500;
+                padding: 16px 20px;
+                border-radius: 14px;
+                border: 1px solid #aaa3;
+                background-color: white;
+                text-align: center;
+            }
+        }
+    }
+
     &-map {
-        // border: 1px solid rgb(221, 221, 221);
         padding: 20px;
         background-color: white;
         border-radius: 8px;
-        // box-shadow: 1px 1px 10px rgba(114, 114, 114, 0.267);
     }
-
 }
