@@ -46,7 +46,7 @@
             gap: 10px;
             position: relative;
             overflow: hidden;
-    
+
             &::before {
                 content: '';
                 position: absolute;
@@ -127,7 +127,7 @@
                     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                     filter: drop-shadow(0 0 0 transparent);
                 }
-            
+
                 &:hover svg {
                     transform: translateY(-3px);
                     filter: drop-shadow(0 4px 8px rgba(17, 19, 51, 0.2));
@@ -411,4 +411,16 @@
     // .contact-form-right-top label input {
     //     height: 40px !important;
     // }
+}
+
+@media (max-width:700px) {
+    .contact .react-tel-input .country-list {
+        width: 280px !important;
+    }
+
+    .react-tel-input  {
+        input {
+            height: 45px !important;
+        }
+    }
 }

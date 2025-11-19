@@ -37,11 +37,11 @@ const Distrbut = () => {
       <div className="distrbut-bg">
         <div className="container distrbut-bg-container">
           <div className="distrbut-bg-left">
-            <h3 className="distrbut-bg-left-title">We are looking for new distributor partners</h3>
-            <p className="distrbut-bg-left-text">We are constantly seeking opportunities to expand your business to new countries and markets.</p>
+            <h3 className="distrbut-bg-left-title">{t("distributor partners")}</h3>
+            <p className="distrbut-bg-left-text">{t("We are constantly seeking opportunities to expand your business to new countries and markets.")}</p>
           </div>
           <div className="distrbut-bg-right">
-            <NavLink to={'/contact'} className="distrbut-bg-right-btn">Become Our Partner</NavLink>
+            <NavLink to={'/contact'} className="distrbut-bg-right-btn">{t("Become Our Partner")}</NavLink>
           </div>
         </div>
       </div>

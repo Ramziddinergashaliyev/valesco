@@ -192,7 +192,7 @@
 
         &-container {
             display: grid;
-            grid-template-columns: 1fr 300px;
+            grid-template-columns: 1fr 400px;
             grid-area: 20px;
             justify-content: space-between;
             align-items: center;
@@ -227,7 +227,7 @@
 
             &-btn {
                 font-size: 18px;
-                width: 240px;
+                width: 300px;
                 font-weight: 500;
                 padding: 16px 20px;
                 border-radius: 14px;
@@ -242,5 +242,41 @@
         padding: 20px;
         background-color: white;
         border-radius: 8px;
+    }
+
+    @media (max-width:900px) {
+        &-bg-container {
+            grid-template-columns: 1fr;
+            padding-top: 50px;
+            gap: 20px;
+        }
+
+        &-bg-left-title {
+           text-align: center;
+        }
+
+        &-bg-left-text {
+           text-align: center;
+        }
+    }
+
+    @media (max-width:500px) {
+        &-bg-left-title {
+           text-align: center;
+           font-size: 20px;
+           line-height: 24px;
+        }
+
+        &-bg-left-text {
+           text-align: center;
+           font-size: 14px;
+           line-height: 16px;
+        }
+
+        &-bg-right-btn {
+         padding: 10px;
+         font-size: 14px;
+         width: 250px;
+        }
     }
 }

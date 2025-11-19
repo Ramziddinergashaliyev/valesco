@@ -67,7 +67,7 @@
     &__item {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 30px;
       position: relative;
       margin: 0;
       padding: 0;
@@ -76,7 +76,7 @@
 
     @media (max-width: 1560px) {
       &__item {
-        gap: 30px;
+        gap: 15px;
       }
     }
 
@@ -443,7 +443,6 @@
     animation: wobble 0.5s ease;
 
     @keyframes wobble {
-
       0%,
       100% {
         transform: rotate(0deg);
@@ -633,7 +632,7 @@
   }
 
 
-  @media (max-width: 1140px) {
+  @media (max-width: 1200px) {
     &__nav__item {
       position: fixed;
       top: 0;

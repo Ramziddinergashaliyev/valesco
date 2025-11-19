@@ -10,7 +10,7 @@ import { useGetCategoriesQuery } from '../../../context/api/categoryApi';
 import { useSearchProductsQuery } from '../../../context/api/productApi';
 
 import "./header.scss"
-                                                                       
+
 const Header = () => {
   const [searchHide, setSearchHide] = useState(false)
   const { t, i18n } = useTranslation();
@@ -20,24 +20,24 @@ const Header = () => {
   const [value, setValue] = useState("")
   const [localSearch, setLocalSearch] = useState(null)
   const navigate = useNavigate()
-  
+
   const [isLangOpen, setIsLangOpen] = useState(false);
   const langDropdownRef = useRef(null);
-  
+
   const { data: searchData, isLoading } = useSearchProductsQuery(
     { query: value },
     { skip: !value.trim() }
   );
-  
+
   const languages = [
     { code: 'ru', label: 'Русский', flag: '🇷🇺' },
     { code: 'en', label: 'English', flag: '🇬🇧' }
   ];
-  
+
   const currentLanguage = languages.find(lang => lang.code === currentLang);
-  
+
   const lenguage = i18n?.languages[0]
-  
+
   const handleChange = (e) => {
     const val = e.target.value
     setValue(val)
@@ -45,7 +45,7 @@ const Header = () => {
       setLocalSearch(null)
     }
   }
-  
+
   useEffect(() => {
     if (searchData) setLocalSearch(searchData)
   }, [searchData])
@@ -81,18 +81,18 @@ const Header = () => {
             <a className='header__nav__logo-top' href="/">
               <img src={logo} alt="header-logo-top" />
             </a>
-            
+
             <a className='header__nav__logo-bottom' href="/">
-               <img src={logo1} alt="header-logo-bottom" />
+              <img src={logo1} alt="header-logo-bottom" />
             </a>
           </div>
-          
+
           <ul className={`header__nav__item ${hide ? "header__nav__hide" : ""}`}>
             <button onClick={() => setHide(false)} className='header__nav__close'><AiOutlineClose /></button>
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/about">{t("company")}</NavLink></li>
-            <li className="header__nav__list">
+            <li onClick={() => setHide(false)} className="header__nav__list">
               <NavLink to={"/catalogProduct"}>
-              {t("catalog")} <IoMdArrowDropdown />
+                {t("catalog")} <IoMdArrowDropdown />
               </NavLink>
               <ul className="dropdown-item">
                 {
@@ -107,7 +107,7 @@ const Header = () => {
               </ul>
             </li>
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/distrbut">{t("distributors")}</NavLink></li>
-            <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/market-pleace">Market Place</NavLink></li>
+            <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/market-pleace">{t("Market Place")}</NavLink></li>
             <li onClick={() => setHide(false)} className="header__nav__list"><NavLink to="/contact">{t("contacts")}</NavLink></li>
           </ul>
 
@@ -195,7 +195,7 @@ const Header = () => {
 
       {searchHide && (
         <div
-          onClick={() => { 
+          onClick={() => {
             setSearchHide(false)
             setValue("")
           }}
