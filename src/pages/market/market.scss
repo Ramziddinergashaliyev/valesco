@@ -11,7 +11,7 @@
 //             font-size: 52px;
 //             font-weight: 500;
 //         }
-    
+
 //         &-btn {
 //             padding: 14px 28px;
 //             width: 260px;
@@ -155,7 +155,7 @@
 //             transition: all 0.35s ease;
 //             z-index: 1;
 //         }
-        
+
 //         &:hover .bottom-slide {
 //             bottom: 0;
 //         }
@@ -175,7 +175,7 @@
 //         background-image: url(../../assets/icons/mark1.png);
 //         background-size: cover;
 //         background-position: center;
-    
+
 //         &:hover {
 //             transform: scale(1.05);
 //             box-shadow: 0 8px 24px rgba(0,0,0,0.12);
@@ -208,12 +208,12 @@
 //             transition: all 0.35s ease;
 //             z-index: 1;
 //         }
-        
+
 //         &:hover .bottom-slide {
 //             bottom: 0;
 //         }
 //     }
-    
+
 //     .marketplace-name {
 //         font-size: 30px;
 //         font-weight: 700;
@@ -268,7 +268,7 @@
         font-size: 46px;
         font-weight: 600;
         color: #111;
-        padding: 120px 0 20px;
+        padding: 140px 0 20px;
         text-align: start;
         background: linear-gradient(90deg, #111, #5c5c5c);
         -webkit-background-clip: text;
@@ -280,7 +280,7 @@
         background: #ffffff;
         border-radius: 28px;
         overflow: hidden;
-        box-shadow: 0 6px 40px rgba(0, 0, 0, 0.06);
+        // box-shadow: 0 6px 40px rgba(0, 0, 0, 0.06);
         animation: fadeIn 0.6s ease;
 
         &-top {
@@ -313,14 +313,15 @@
                 background: #333;
                 color: #fff;
                 transform: translateY(-2px);
-                box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
             }
         }
 
         &-content {
-            background: #f7f7f7;
-            padding: 40px 30px;
-            min-height: 420px;
+            // background: #f7f7f7;
+            padding: 40px 0px;
+            // min-height: 420px;
+            min-height: 100%;
             animation: fadeInUp 0.5s ease;
         }
     }
@@ -328,7 +329,7 @@
     .marketplace-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 32px;
+        gap: 20px;
         animation: fadeIn 0.6s ease;
     }
 
@@ -350,7 +351,7 @@
 
         &:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
         .bottom-slide {
@@ -391,7 +392,7 @@
 
         &:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
         .bottom-slide {
@@ -432,7 +433,7 @@
 
         &:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
         .bottom-slide {
@@ -473,7 +474,7 @@
 
         &:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
         .bottom-slide {
@@ -499,23 +500,44 @@
 
 
     @keyframes fadeIn {
-        from { opacity: 0; transform: scale(0.97); }
-        to { opacity: 1; transform: scale(1); }
+        from {
+            opacity: 0;
+            transform: scale(0.97);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 
     @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(15px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     @keyframes fadeInDown {
-        from { opacity: 0; transform: translateY(-15px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     @media (max-width: 600px) {
         &-title {
-            font-size: 30px;
+            font-size: 40px;
         }
 
         .tab-btn {

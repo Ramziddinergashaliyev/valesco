@@ -71,19 +71,10 @@ const Market = () => {
 
     return (
         <div className='market container'>
+            
             <h3 className="market-title">{t("Где купить")}</h3>
 
             <div className="market-place">
-
-                <div className="market-place-top">
-                    <div
-                        className={`tab-btn ${activeTab === 'oil' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('oil')}
-                    >
-                        {t("Масла")}
-                    </div>
-                </div>
-
                 <div className="market-place-content">
                     <div className={`tab-content ${activeTab === 'oil' ? 'active' : ''}`}>
                         <div className="marketplace-grid">
