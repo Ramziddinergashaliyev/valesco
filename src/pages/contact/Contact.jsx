@@ -9,6 +9,7 @@ import 'react-phone-input-2/lib/style.css'
 
 import "./contact.scss"
 import { useGetValue } from '../../hooks/useGetValue';
+import { toast } from 'react-toastify';
 
 const initialState = {
   name: "",
@@ -28,6 +29,7 @@ const Contact = () => {
     e.preventDefault()
     console.log(formData);
     setFormData(initialState)
+    toast.success("succesfully")
   }
 
   useEffect(() => {

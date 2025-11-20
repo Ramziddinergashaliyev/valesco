@@ -38,7 +38,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
-        // perspective: 1000px;
     }
 
     @media (max-width:1500px) {
@@ -272,7 +271,6 @@
     }
 
     @keyframes pulse {
-
         0%,
         100% {
             transform: rotate(45deg) scale(1.1);
