@@ -36,13 +36,14 @@ import mobileBanner4 from "../../assets/mobile/mobile4.webp"
 import mobileBanner5 from "../../assets/mobile/mobile5.webp"
 import mobileBanner6 from "../../assets/mobile/mobile6.webp"
 import mobileBanner7 from "../../assets/mobile/mobile7.webp"
-// import mobileBanner1 from "../../assets/banner/phone-1.webp"
-// import mobileBanner2 from "../../assets/banner/phone-2.webp"
-// import mobileBanner3 from "../../assets/banner/phone-3.webp"
-// import mobileBanner4 from "../../assets/banner/phone-4.webp"
-// import mobileBanner5 from "../../assets/banner/phone-5.webp"
-// import mobileBanner6 from "../../assets/banner/phone-6.webp"
-// import mobileBanner7 from "../../assets/banner/phone-7.webp"
+
+import mobileBanner1Ru from "../../assets/mobile/mobile1Ru.webp"
+import mobileBanner2Ru from "../../assets/mobile/mobile2Ru.webp"
+import mobileBanner3Ru from "../../assets/mobile/mobile3Ru.webp"
+import mobileBanner4Ru from "../../assets/mobile/mobile4Ru.webp"
+import mobileBanner5Ru from "../../assets/mobile/mobile5Ru.webp"
+import mobileBanner6Ru from "../../assets/mobile/mobile6Ru.webp"
+import mobileBanner7Ru from "../../assets/mobile/mobile7Ru.webp"
 
 import "./product.scss"
 
@@ -213,19 +214,19 @@ const Product = ({ data, loading, title }) => {
     }
 
     const mobileBannerMap = {
-        "Моторные масла для легковой и легкой коммерческой техники": mobileBanner2,
+        "Моторные масла для легковой и легкой коммерческой техники": mobileBanner2Ru,
         "Motor oils for passenger cars and light commercial vehicles": mobileBanner2,
-        "Моторные масла для дизельных двигателей": mobileBanner3,
+        "Моторные масла для дизельных двигателей": mobileBanner3Ru,
         "Motor oils for diesel engines": mobileBanner3,
-        "Трансмиссионные масла": mobileBanner1,
+        "Трансмиссионные масла": mobileBanner1Ru,
         "Transmission oils": mobileBanner1,
-        "Гидравлические масла": mobileBanner4,
+        "Гидравлические масла": mobileBanner4Ru,
         "Hydraulic oils": mobileBanner4,
-        "Тормозная жидкость": mobileBanner6,
+        "Тормозная жидкость": mobileBanner6Ru,
         "Brake fluid": mobileBanner6,
-        "Антифриз": mobileBanner7,
+        "Антифриз": mobileBanner7Ru,
         "Antifreeze": mobileBanner7,
-        "Фильтры": mobileBanner5,
+        "Фильтры": mobileBanner5Ru,
         "Filters": mobileBanner5,
     }
 

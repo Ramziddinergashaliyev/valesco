@@ -1,3 +1,62 @@
+// import React, { useEffect, useState } from 'react'
+// import { ShoppingCart } from 'lucide-react'
+// import './market.scss'
+
+// import { useTranslation } from 'react-i18next'
+
+// const Market = () => {
+//     const [activeTab, setActiveTab] = useState('oil');
+//     const { t, i18n } = useTranslation()
+
+//     useEffect(() => {
+//         window.scrollTo(0, 0)
+//     }, [])
+
+//     return (
+//         <div className='market container'>
+//             <div className="market-top">
+//             </div>
+
+//             <h3 className="market-title">{t("Где купить")}</h3>
+
+//             <div className="market-place">
+
+//                 <div className="market-place-top">
+//                     <div
+//                         className={`market-place-top-left ${activeTab === 'oil' ? 'active' : ''}`}
+//                         onClick={() => setActiveTab('oil')}>
+//                         {t("Масла")}
+//                     </div>
+//                 </div>
+
+//                 <div className="market-place-content">
+//                     <div className="market-place-products">
+//                         <div className={`tab-content ${activeTab === 'oil' ? 'active' : ''}`}>
+//                             <div className="marketplace-grid">
+
+//                                 <a target='_blank' href="https://exzap.uz/brands/VALESCO">
+//                                     <div className="marketplace-card-one">
+//                                         <div className="bottom-slide">{t("В магазин")}</div>
+//                                     </div>
+//                                 </a>
+
+//                                 <a target='_blank' href="https://uzum.uz/uz/search?query=valesco&needsCorrection=1">
+//                                     <div className="marketplace-card-two">
+//                                         <div className="bottom-slide">{t("В магазин")}</div>
+//                                     </div>
+//                                 </a>
+
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }
+// export default Market
+
+
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './market.scss'
@@ -12,10 +71,10 @@ const Market = () => {
 
     return (
         <div className='market container'>
-
             <h3 className="market-title">{t("Где купить")}</h3>
 
             <div className="market-place">
+
                 <div className="market-place-content">
                     <div className={`tab-content ${activeTab === 'oil' ? 'active' : ''}`}>
                         <div className="marketplace-grid">

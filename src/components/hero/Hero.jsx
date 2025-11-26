@@ -89,6 +89,11 @@ import mobile2 from "../../assets/banner/mobil2.webp"
 import mobile3 from "../../assets/banner/mobil3.webp"
 import mobile4 from "../../assets/banner/mobil4.webp"
 
+import mobile1Ru from "../../assets/banner/mobil1Ru.webp"
+import mobile2Ru from "../../assets/banner/mobil2Ru.webp"
+import mobile3Ru from "../../assets/banner/mobil3Ru.webp"
+import mobile4Ru from "../../assets/banner/mobil4Ru.webp"
+
 import imgDesktopRu1 from "../../assets/banner/herobgru1.webp"
 import imgDesktopRu2 from "../../assets/banner/herobgru2.webp"
 import imgDesktopRu3 from "../../assets/banner/herobgru3.webp"
@@ -106,6 +111,7 @@ const Hero = () => {
   const slidesDesktop = [imgDesktop1, imgDesktop2, imgDesktop3, imgDesktop4]
   const slidesDesktopRu = [imgDesktopRu1, imgDesktopRu2, imgDesktopRu3, imgDesktopRu4]
   const slidesMobile = [mobile1, mobile2, mobile3, mobile4]
+  const slidesMobileRu = [mobile1Ru, mobile2Ru, mobile3Ru, mobile4Ru]
 
   React.useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
@@ -115,7 +121,7 @@ const Hero = () => {
 
   const isMobile = windowWidth <= 780
   const langHero = isMobile 
-    ? slidesMobile 
+    ? (i18n?.languages?.[0] === "ru" ? slidesMobileRu : slidesMobile) 
     : (i18n?.languages?.[0] === "ru" ? slidesDesktopRu : slidesDesktop)
 
   return (
