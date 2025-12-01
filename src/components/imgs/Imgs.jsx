@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import { MdArrowOutward } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+
 import "./imgs.scss";
 
 import img1 from "../../assets/anime/anime-1.webp";
@@ -8,11 +12,8 @@ import img4 from "../../assets/anime/anime-4.webp";
 import img5 from "../../assets/anime/anime-5.webp";
 import img6 from "../../assets/anime/anime-6.webp";
 import img7 from "../../assets/anime/anime-7.webp";
-import { useTranslation } from "react-i18next";
-import { MdArrowOutward } from "react-icons/md";
 
 const Imgs = () => {
-
   const { t, i18n } = useTranslation()
 
   const PRODUCTS = [
@@ -98,7 +99,8 @@ const Imgs = () => {
       <div className="imgs-info">
         <h3 className="imgs-info-title">{t("VALESCO")}</h3>
         <p className="imgs-info-text">{t("imgsDesc")}</p>
-        <button className="imgs-info-btn">{t("imgsBtn")}<MdArrowOutward /></button>
+
+        <NavLink to={"/catalogProduct"} className="imgs-info-btn">{t("imgsBtn")}<MdArrowOutward /></NavLink>
       </div>
     </div>
   );
