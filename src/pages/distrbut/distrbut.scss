@@ -100,6 +100,13 @@
             color: #333331;
         }
 
+        &-btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
         &-btn {
             padding: 15px;
             width: 300px;
@@ -114,6 +121,7 @@
             background-color: #333331;
             color: white;
             transition: .5s;
+            overflow: hidden;
 
             &:before {
                 content: '';
@@ -187,7 +195,7 @@
     }
 
     &-bg {
-        background-color: rgb(217, 49, 49);
+        background-color: rgb(198, 18, 18);
         height: 300px;
 
         &-container {
@@ -226,14 +234,37 @@
 
 
             &-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
                 font-size: 18px;
                 width: 300px;
                 font-weight: 500;
                 padding: 16px 20px;
-                border-radius: 14px;
+                border-radius: 50px;
                 border: 1px solid #aaa3;
                 background-color: white;
                 text-align: center;
+
+                svg {
+                    font-size: 22px;
+                    color: #333331;
+                }
+            }
+
+            &-btn:hover {
+                transform: scale(1.02);
+                background-color: #333331;
+                border: 1px solid #333331;
+                color: white;
+                transition: .4s;
+            }
+
+            &-btn:hover svg {
+                transform: rotate(45deg);
+                color: white;
+                transition: .4s;
             }
         }
     }

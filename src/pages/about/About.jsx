@@ -147,7 +147,7 @@ const About = () => {
       <div className="about-cards container">
         {
           MISSIONDATA?.map(el => (
-            <div className='about-card'>
+            <div key={el?.id} className='about-card'>
               <h3 className="about-card-title">{el?.price}</h3>
               <p className="about-card-text">{el?.title}</p>
             </div>
@@ -185,7 +185,7 @@ const About = () => {
             </div>
           </div>
 
-            <NavLink className='about-imgs-right-btn' to={"/contact"}>{("Contact Us")}<MdArrowOutward /></NavLink>
+          <NavLink className='about-imgs-right-btn' to={"/contact"}>{("Contact Us")}<MdArrowOutward /></NavLink>
         </div>
       </div>
 
