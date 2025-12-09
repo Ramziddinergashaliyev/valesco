@@ -54,6 +54,7 @@ const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
 
 const ProductSections = ({ byData, t }) => (
     <div className="single-dropdown">
+
         <ul className="single-dropdown-item container">
             <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
             <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
@@ -61,6 +62,7 @@ const ProductSections = ({ byData, t }) => (
                 <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
             )}
         </ul>
+
         <div className="single-dropdown-result">
             <Specificat data={byData?.specifications} />
             <Characterist data={byData} />
@@ -68,6 +70,7 @@ const ProductSections = ({ byData, t }) => (
                 <Document data={byData?.documents} />
             )}
         </div>
+        
     </div>
 )
 
@@ -123,10 +126,10 @@ const SingleProduct = () => {
     }, [byData])
 
     const isOilCategory = useMemo(() => {
-        
+
         const categoryTitleRu = byData?.category?.title?.ru
         const categoryTitleEn = byData?.category?.title?.en
-        
+
         const oilCategories = [
             { ru: "Моторные масла для легковой и легкой коммерческой техники", en: "Motor oils for passenger cars and light commercial vehicles" },
             { ru: "Моторные масла для дизельных двигателей", en: "Motor oils for diesel engines" },
@@ -139,11 +142,11 @@ const SingleProduct = () => {
         )
 
     }, [byData?.category])
-    
+
     const relatedProducts = useMemo(() => {
         const categoryTitleRu = byData?.category?.title?.ru
         const categoryTitleEn = byData?.category?.title?.en
-        
+
         if (categoryTitleRu === "Антифриз" || categoryTitleEn === "Antifreeze") {
             return Freezee?.products
         }
@@ -162,7 +165,7 @@ const SingleProduct = () => {
         const categoryTitleEn = byData?.category?.title?.en
         return categoryTitleRu === "Фильтры" || categoryTitleEn === "Filters"
     }, [byData?.category])
-    
+
     if (isLoading) {
         return (
             <div className='single'>
@@ -170,11 +173,12 @@ const SingleProduct = () => {
             </div>
         )
     }
-    
+
     return (
         <div className='single'>
             <div className="single-top container">
                 <div className="single-top-left">
+
                     <div className="single-top-left-bottom-imgs">
                         {byData?.image?.map((img, idx) => (
                             <ImageLoader
