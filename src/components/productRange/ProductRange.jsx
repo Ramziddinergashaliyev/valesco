@@ -28,6 +28,8 @@ import rs11 from "../../assets/icon/v6.webp"
 import rs12 from "../../assets/icon/v6-1.webp"
 import rs13 from "../../assets/icon/v7.webp"
 import rs14 from "../../assets/icon/v7-1.webp"
+import rs15 from "../../assets/icon/v8.webp"
+import rs16 from "../../assets/icon/v8-1.webp"
 
 const CATEGORY = [
   {
@@ -57,6 +59,10 @@ const CATEGORY = [
   {
     image: rs9,
     bgImage: rs10,
+  },
+  {
+    image: rs15,
+    bgImage: rs16,
   },
 ];
 

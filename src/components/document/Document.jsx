@@ -8,9 +8,7 @@ import { data } from 'react-router-dom';
 
 const Document = ({data}) => {
   const { t, i18n } = useTranslation()
-  console.log(data?.[0]);
   
-
   return (
     <div id='document' className='document container'>
         <h2 className='document-title'>{t("Документация")}</h2>

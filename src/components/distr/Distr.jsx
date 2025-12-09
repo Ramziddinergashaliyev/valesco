@@ -165,11 +165,6 @@ const Distr = () => {
 
   return (
     <div className='distr container'>
-      {/* <div className="distr-info">
-        <h2 className="distr-info-title">{t("дистрибьюторы")}</h2>
-        <p className="distr-info-text">{t("Вы можете")}</p>
-      </div> */}
-
       <div className="distr-filter">
         <button onClick={() => setHide(p => !p)} className='distr-filter-btn'>
           <img src={img} alt="filter-img" />

@@ -95,7 +95,6 @@ const Imgs = () => {
           })}
         </div>
       </div>
-
       <div className="imgs-info">
         <h3 className="imgs-info-title">{t("VALESCO")}</h3>
         <p className="imgs-info-text">{t("imgsDesc")}</p>

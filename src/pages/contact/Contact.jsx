@@ -12,7 +12,6 @@ import { useGetValue } from '../../hooks/useGetValue';
 import { toast } from 'react-toastify';
 import { useCreateContactMutation } from '../../context/api/contactApi';
 
-
 const initialState = {
   name: "",
   phone: "",
@@ -25,7 +24,7 @@ const initialState = {
 const Contact = () => {
   const { t, i18n } = useTranslation()
   const { formData, setFormData, handleChange } = useGetValue(initialState)
-  const [ contactForm, { data, isError, isLoading, isSuccess } ] = useCreateContactMutation()
+  const [contactForm, { data, isError, isLoading, isSuccess }] = useCreateContactMutation()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -34,29 +33,26 @@ const Contact = () => {
   }
 
   useEffect(() => {
-    if(isSuccess) {
+    if (isSuccess) {
       toast.success("Сообщение успешно отправлено!")
     }
-  },[isSuccess])
+  }, [isSuccess])
 
   useEffect(() => {
-    if(isError) {
+    if (isError) {
       toast.error("Ошибка отправки сообщения!")
     }
-  },[isError])
-  
+  }, [isError])
+
   useEffect(() => {
     scrollTo(0, 0)
   }, [])
-  
+
   return (
     <div className='contact'>
       <div className="contact-top"></div>
-      
       <div className="contact-form container">
-        
         <div className="contact-form-left">
-
           <div className="contact-form-left-info">
             <h3 className="contact-form-left-info-title">{t("Details")}</h3>
             <p className="contact-form-left-info-text">{t("questions")}</p>
@@ -69,7 +65,7 @@ const Contact = () => {
               <p className="contact-form-left-box-info-text">{t("Republic")}</p>
             </div>
           </div>
-
+          
           <div className="contact-form-left-box">
             <MdOutlineMail />
             <div className="contact-form-left-box-info">
@@ -77,7 +73,7 @@ const Contact = () => {
               <p className="contact-form-left-box-info-text">info@gpggroup.uz</p>
             </div>
           </div>
-          
+
           <div className="contact-form-left-box">
             <LuPhone />
             <div className="contact-form-left-box-info">
