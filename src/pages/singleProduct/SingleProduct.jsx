@@ -109,7 +109,7 @@ const SingleProduct = () => {
     const [activeImg, setActiveImg] = useState(null)
 
     const { data: Freezee } = useGetCategoriesByIdQuery(25)
-    const { data: FILTER } = useGetCategoriesByIdQuery(14)
+    const { data: FILTER } = useGetCategoriesByIdQuery(28)
     const { data: BREAKE } = useGetCategoriesByIdQuery(12)
 
     useEffect(() => {
