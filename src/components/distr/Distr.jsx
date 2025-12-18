@@ -68,7 +68,7 @@ const Distr = () => {
     },
     {
       country: 'КЫРГЫЗСТАН',
-      distributor: 'ООО «ГРУПП»',
+      distributor: 'ООО «КАРД ГРУПП»',
       title: 'Кыргызская Республика, г г.Бишкек, ул.Садыгалиева  1',
       number: ["+996 702 676 514"]
     }
@@ -119,7 +119,7 @@ const Distr = () => {
     },
     {
       country: 'KYRGYZSTAN',
-      distributor: 'LLC «KARD GRUPP»',
+      distributor: 'LLC «KARD GROUP»',
       title: 'KYRGZ REPUBLIC, BISHKEK CITY, SADYGALIEVA STR. 1',
       number: ["+996 702 676 514"]
     }

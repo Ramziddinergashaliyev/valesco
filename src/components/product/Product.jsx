@@ -117,6 +117,7 @@ const ImageWithLoading = ({ src, alt, className, linkTo }) => {
             {imageContent}
         </NavLink>
     ) : imageContent;
+    
 };
 
 const Product = ({ data, loading, title }) => {
