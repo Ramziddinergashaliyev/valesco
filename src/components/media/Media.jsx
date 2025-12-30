@@ -57,11 +57,11 @@ import img3 from "../../assets/images/new3.webp"
 import { useTranslation } from 'react-i18next';
 
 const Media = () => {
-
     const { t } = useTranslation()
 
     return (
         <div className='media container'>
+        
             <div className="media-left">
                 <h2 className="media-left-title">
                     {t("Follow")}<br />
