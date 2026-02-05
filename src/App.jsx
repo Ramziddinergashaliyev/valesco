@@ -35,6 +35,7 @@ const CatalogProduct = lazy(() => import('./pages/catologProduct/CatalogProduct'
 // import CatalogProduct from './pages/catologProduct/CatalogProduct'
 import { ToastContainer } from 'react-toastify'
 import Market from './pages/market/Market'
+import NewsSingle from './pages/newsSingle/NewsSingle'
 
 const App = () => {
   return (
@@ -57,7 +58,8 @@ const App = () => {
           <Route path='/singleProduct/:id' element={<SingleProduct />} />
           <Route path='/outlets' element={<Outlets />} />
           <Route path='/catalogProduct' element={<CatalogProduct />} />
-          <Route path='/market-pleace' element={<Market/>}/>
+          <Route path='/market-pleace' element={<Market />} />
+          <Route path='/news-single/:id' element={<NewsSingle />} />
         </Route>
       </Routes>
 
