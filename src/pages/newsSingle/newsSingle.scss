@@ -96,15 +96,16 @@
         }
 
         .article-image {
-            width: 410px;
+            width: 430px;
             height: 460px;
             display: flex;
-            justify-content: center;
-            align-items: center;
             margin-bottom: 10px;
             gap: 10px;
             border-radius: 20px;
 
+            @media (max-width:1580px) {
+                width: 410px;
+            }
 
             img {
                 width: 410px;

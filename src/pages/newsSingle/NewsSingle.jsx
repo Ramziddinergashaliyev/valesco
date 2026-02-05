@@ -81,8 +81,6 @@ const NewsSingle = () => {
 
 
                     <div className="article-content">
-                        
-
                         <div className="article-content-info">
                             {
                                 news.fullContent?.map(el => (
@@ -115,11 +113,10 @@ const NewsSingle = () => {
                                 </div>
                             </div>
                         </div> */}
-                        
                     </div>
                 </article>
 
-                <div className="related-news">
+                {/* <div className="related-news">
                     <h2 className="related-title">{t("O'xshash")}</h2>
                     <div className="related-grid">
                         {newsData
@@ -131,9 +128,11 @@ const NewsSingle = () => {
                                     className="related-item"
                                     onClick={() => navigate(`/news/${item.id}`)}
                                 >
+
                                     <div className="related-image">
                                         <img src={item.image} alt={item.title} />
                                     </div>
+
                                     <div className="related-content">
                                         <span className="related-category">{item.category}</span>
                                         <h3 className="related-item-title">{item.title}</h3>
@@ -143,7 +142,7 @@ const NewsSingle = () => {
                             ))
                         }
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
