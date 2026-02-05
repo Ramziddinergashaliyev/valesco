@@ -138,7 +138,6 @@ const News = () => {
           >
             <div className="card-image">
               <img src={news.img} alt={news.title} />
-              {/* <div className="category-badge">{news.category}</div> */}
             </div>
             <div className="card-content">
               <div className="card-date">{news.date}</div>

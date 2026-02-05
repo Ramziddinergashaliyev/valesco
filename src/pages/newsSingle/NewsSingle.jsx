@@ -1,62 +1,3 @@
-// import React, { useEffect, useState } from 'react'
-// import { useParams, useNavigate } from 'react-router-dom'
-// import './newsSingle.scss'
-// import { newsData } from '../../static'
-
-// const NewsSingle = () => {
-//   const { id } = useParams()
-//   const navigate = useNavigate()
-//   const [news, setNews] = useState(null)
-
-//   useEffect(() => {
-//     window.scrollTo(0, 0)
-
-//     const foundNews = newsData.find(item => item.id === parseInt(id))
-
-//     if (foundNews) {
-//       setNews(foundNews)
-//     } else {
-//       navigate('/news')
-//     }
-//   }, [id, navigate])
-
-//   if (!news) {
-//     return <div className="loading">Yuklanmoqda...</div>
-//   }
-
-//   return (
-//     <div className="news-single-container container">
-//       <button className="back-button" onClick={() => navigate('/news')}>
-//         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-//           <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-//         </svg>
-//         Orqaga
-//       </button>
-
-//       <article className="news-single">
-//         <div className="news-header">
-//           <div className="category-badge">{news.category}</div>
-//           <div className="news-date">{news.date}</div>
-//         </div>
-
-//         <h1 className="news-title">{news.title}</h1>
-
-//         <div className="news-image">
-//           <img src={news.image} alt={news.title} />
-//         </div>
-
-//         <div className="news-content">
-//           <p className="news-description">{news.description}</p>
-//           <p className="news-full-content">{news.fullContent}</p>
-//         </div>
-//       </article>
-//     </div>
-//   )
-// }
-
-// export default NewsSingle
-
-
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './newsSingle.scss'
@@ -99,33 +40,48 @@ const NewsSingle = () => {
                     <span className="breadcrumb-divider">/</span>
                     <span onClick={() => navigate('/news')} className="breadcrumb-item">{t("Новости")}</span>
                     <span className="breadcrumb-divider">/</span>
-                    <span className="breadcrumb-current">{news.category}</span>
+                    <span className="breadcrumb-current">{news?.category}</span>
                 </div>
 
                 <article className="news-article">
+                    
                     <div className="article-header">
-                        <div className="article-meta">
-                            <span className="category">{news.category}</span>
-                            <span className="date">{news.date}</span>
-                        </div>
-
                         <h1 className="article-title">{news.title}</h1>
                     </div>
-
-                    <div className="article-image">
-                        <>
+                    
+                    <div className="article-content-top">
                             {
-                                news.image?.map(el => (
-                                    <img src={el} alt={news.title} />
+                                news.description?.map(el => (
+                                    <p className="article-lead">
+                                        {el}
+                                    </p>
                                 ))
                             }
-                        </>
+                        </div>
+
+                    <div className="news-article-bottom">
+                        <div className="article-image">
+                            <>
+                                {
+                                    news.image?.map(el => (
+                                        <img src={el} alt={news.title} />
+                                    ))
+                                }
+                            </>
+                        </div>
+
+                        <div className="article-image-name">
+                            {
+                                news.world?.map(el => (
+                                    <p className="article-image-name-title">{el}</p>
+                                ))
+                            }
+                        </div>
                     </div>
 
+
                     <div className="article-content">
-                        <div className="article-lead">
-                            {news.description}
-                        </div>
+                        
 
                         <div className="article-content-info">
                             {
@@ -137,7 +93,7 @@ const NewsSingle = () => {
                             }
                         </div>
 
-                        <div className="article-footer">
+                        {/* <div className="article-footer">
                             <div className="share-section">
                                 <span className="share-label">{t("Совместное использование:")}</span>
                                 <div className="social-links">
@@ -158,7 +114,7 @@ const NewsSingle = () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </article>
 
