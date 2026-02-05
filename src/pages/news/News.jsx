@@ -99,19 +99,24 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./news.scss"
-import { newsData } from '../../static'
+import { newsData, newsDataEn } from '../../static'
+import { useTranslation } from 'react-i18next'
 
 const News = () => {
   const navigate = useNavigate()
   const [activeCategory, setActiveCategory] = useState('Barchasi')
+  const { t, i18n } = useTranslation()
+  
+
+  const allData = i18n?.language === "ru" ? newsData : newsDataEn
 
   useEffect(() => {
     window.scrollTo(0,0)
   },[])
 
-  const filteredNews = activeCategory === 'Barchasi' 
-    ? newsData
-    : newsData.filter(news => news.category === activeCategory)
+  // const filteredNews = activeCategory === 'Barchasi' 
+  //   ? newsData
+  //   : newsData.filter(news => news.category === activeCategory)
 
   const handleNewsClick = (id) => {
     navigate(`/news-single/${id}`)
@@ -124,7 +129,7 @@ const News = () => {
       </div>
 
       <div className="news-grid">
-        {filteredNews.map((news) => (
+        {allData?.map((news) => (
           <article 
             key={news.id} 
             className="news-card"
@@ -133,14 +138,14 @@ const News = () => {
           >
             <div className="card-image">
               <img src={news.img} alt={news.title} />
-              <div className="category-badge">{news.category}</div>
+              {/* <div className="category-badge">{news.category}</div> */}
             </div>
             <div className="card-content">
               <div className="card-date">{news.date}</div>
               <h3 className="card-title">{news.title}</h3>
               <p className="card-description">{news.description}</p>
               <button className="read-more">
-                Более
+                {t("Более")}
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>

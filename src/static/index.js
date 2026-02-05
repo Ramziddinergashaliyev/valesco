@@ -413,10 +413,75 @@ export const newsData = [
     category: "Новости",
     title: "Компания Valesco провела масштабный розыгрыш призов в Худжанде, Таджикистан",
     description: "Компания Valesco успешно организовала масштабный рекламный розыгрыш призов в городе Худжанд, Таджикистан, посвященный доверию клиентов, росту бренда и долгосрочному партнерству в регионе. Мероприятие привлекло большое количество участников и создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением.",
-    date: "14 январь, 2026",
+    date: "11 январь, 2026",
     img: news1,
     image: [ news1, news2],
     fullContent: ["Компания Valesco успешно организовала масштабный рекламный розыгрыш призов в городе Худжанд, Таджикистан, посвященный доверию клиентов, росту бренда и долгосрочному партнерству в регионе. Мероприятие привлекло большое количество участников и создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением.","В течение всего мероприятия гости принимали участие в розыгрыше призов, вращая лотерейный барабан, предоставляя каждому равные шансы на победу. Инициатива была разработана не только для поощрения лояльных клиентов, но и для укрепления связей Valesco с водителями, автосервисами и дистрибьюторами на всем рынке.","Было вручено впечатляющее количество призов, отражающих масштаб и амбиции акции. Победители получили 3 электромобиля, 250 телевизоров, 50 утюгов, 10 холодильников и 10 кондиционеров, что сделало это мероприятие одним из самых запоминающихся рекламных акций автомобильных брендов в регионе.","Розыгрыш призов был организован в тесном сотрудничестве с официальным дистрибьютором Valesco в Таджикистане, ООО «ТОСОЛ-ПЛЮС», чья поддержка и местный опыт сыграли ключевую роль в успешном проведении мероприятия.","Valesco выражает искреннюю благодарность всем участникам, партнерам и организаторам, которые внесли свой вклад в успех этой инициативы. Подобные мероприятия подтверждают нашу приверженность взаимодействию с клиентами, развитию рынка и предоставлению ценности, выходящей за рамки нашей продукции.","В ближайшем будущем запланированы новые рекламные кампании, специальные мероприятия и интересные возможности для розыгрыша призов, поскольку Valesco продолжает расширять свое присутствие и укреплять отношения на международных рынках."]
+  },
+  {
+    id: 2,
+    category: "Tadbirlar",
+    title: "Xalqaro fan olimpiadasi o'tkaziladi",
+    description: "Fevral oyining 15-kunida maktabimizda Xalqaro fan olimpiadasi bo'lib o'tadi. Barcha qiziquvchilar ishtirok etishlari mumkin.",
+    date: "3 Fevral, 2026",
+    img: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80",
+    fullContent: "Fevral oyining 15-kunida maktabimizda Xalqaro fan olimpiadasi bo'lib o'tadi. Olimpiadada matematika, fizika, kimya va biologiya fanlari bo'yicha musobaqalar tashkil etiladi. Barcha qiziquvchi o'quvchilar ishtirok etishlari mumkin. G'oliblar diplomlar va qimmatbaho sovg'alar bilan taqdirlanadi. Ro'yxatdan o'tish uchun sinf rahbarlariga murojaat qiling."
+  },
+  {
+    id: 5,
+    category: "Tadbirlar",
+    title: "Ochiq eshiklar kuni e'lon qilinadi",
+    description: "Fevral oyining 20-kunida ota-onalar uchun Ochiq eshiklar kuni tashkil etiladi. Maktab bilan tanishish imkoniyati.",
+    date: "28 Yanvar, 2026",
+    img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80",
+    fullContent: "Fevral oyining 20-kunida ota-onalar uchun Ochiq eshiklar kuni tashkil etiladi. Ushbu kunda ota-onalar maktab bilan tanishish, o'qituvchilar bilan suhbatlashish va ta'lim jarayonini kuzatish imkoniyatiga ega bo'ladilar. Tadbirda maktab rahbariyati va barcha o'qituvchilar qatnashadilar. Tadbir soat 10:00 dan boshlanadi."
+  },
+  {
+    id: 6,
+    category: "Yangiliklar",
+    title: "Raqamli ta'lim platformasi joriy etildi",
+    description: "Barcha o'quvchilar uchun onlayn ta'lim platformasi ishga tushirildi. Darslar va topshiriqlar elektron shaklda.",
+    date: "25 Yanvar, 2026",
+    img: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
+    fullContent: "Barcha o'quvchilar uchun zamonaviy onlayn ta'lim platformasi ishga tushirildi. Platforma orqali o'quvchilar darslar, topshiriqlar va testlarni elektron shaklda bajarishlari mumkin. Har bir o'quvchi shaxsiy kabinetga ega bo'ladi. Platformaga kirish uchun login va parol sinf rahbarlaridan olinadi."
+  },
+  {
+    id: 8,
+    category: "Maktab hayoti",
+    title: "Yangi kutubxona to'plami keldi",
+    description: "Maktab kutubxonasiga 500 dan ortiq yangi kitoblar qo'shildi. O'quvchilar uchun turli xil adabiyotlar mavjud.",
+    date: "20 Yanvar, 2026",
+    img: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80",
+    fullContent: "Maktab kutubxonasiga 500 dan ortiq yangi kitoblar qo'shildi. Yangi to'plamga badiiy adabiyot, ilmiy-ommabop kitoblar va darsliklar kiradi. O'quvchilar uchun o'zbek va jahon adabiyotidan turli xil asarlar mavjud. Kutubxona har kuni soat 9:00 dan 17:00 gacha ochiq. Kitob olish uchun o'quvchilik guvohnomasini olib kelish zarur."
+  },
+  {
+    id: 9,
+    category: "Tadbirlar",
+    title: "Bahor festivali tashkil etiladi",
+    description: "Mart oyida an'anaviy Bahor festivali o'tkaziladi. Konsert dasturi, ko'rgazmalar va sport musobaqalari.",
+    date: "18 Yanvar, 2026",
+    img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
+    fullContent: "Mart oyida an'anaviy Bahor festivali o'tkaziladi. Festival dasturida konsert, ko'rgazmalar va turli sport musobaqalari bo'ladi. Barcha o'quvchilar va ota-onalar taklif etiladi. Festival maktab hovlisida bo'lib o'tadi. Har bir sinf o'z konsert raqamini tayyorlashi kerak."
+  }
+]
+
+
+
+export const newsDataEn = [
+  {
+    id: 1,
+    category: "News",
+    title: "Valesco hosts large-scale prize draw event in Khujand, Tajikistan",
+    description: "Valesco successfully organized a large-scale promotional prize draw in the city of Khujand, Tajikistan, celebrating customer trust, brand growth, and long-term partnerships in the region. The event attracted a large number of participants and created a lively, engaging atmosphere filled with excitement and anticipation.",
+    date: "11 January, 2026",
+    img: news1,
+    image: [ news1, news2],
+    fullContent: ["Throughout the event, guests took part in the prize draw by spinning the lottery drum, giving everyone an equal chance to win. The initiative was designed not only to reward loyal customers, but also to strengthen Valesco’s connection with drivers, workshops, and distributors across the market.","An impressive range of prizes was awarded, reflecting the scale and ambition of the promotion. Winners received 3 electric cars, 250 televisions, 50 irons, 10 refrigerators, and 10 air conditioners, making the event one of the most memorable automotive brand promotions held in the region.","The prize draw was organized in close cooperation with Valesco’s official distributor in Tajikistan, LLC “TOSOL-PLUS,” whose support and local expertise played a key role in the successful execution of the event.","Valesco extends its sincere gratitude to all participants, partners, and organizers who contributed to the success of this initiative. Events like this reaffirm our commitment to customer engagement, market development, and delivering value beyond our products.","More promotional campaigns, special events, and exciting prize opportunities are planned in the near future, as Valesco continues to expand its presence and strengthen relationships across international markets."]
   },
   {
     id: 2,

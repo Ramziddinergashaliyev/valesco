@@ -60,17 +60,21 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './newsSingle.scss'
-import { newsData } from '../../static'
+import { newsData, newsDataEn } from '../../static'
+import { useTranslation } from 'react-i18next'
 
 const NewsSingle = () => {
     const { id } = useParams()
     const navigate = useNavigate()
     const [news, setNews] = useState(null)
+    const { t, i18n } = useTranslation()
+
+    const fullData = i18n?.languages === "ru" ? newsData : newsDataEn
 
     useEffect(() => {
         window.scrollTo(0, 0)
 
-        const foundNews = newsData.find(item => item.id === parseInt(id))
+        const foundNews = fullData.find(item => item.id === parseInt(id))
 
         if (foundNews) {
             setNews(foundNews)
@@ -91,9 +95,9 @@ const NewsSingle = () => {
         <div className="news-single-page">
             <div className="news-single-container container">
                 <div className="breadcrumb">
-                    <span onClick={() => navigate('/')} className="breadcrumb-item">Домашняя страница</span>
+                    <span onClick={() => navigate('/')} className="breadcrumb-item">{t("Домашняя")}</span>
                     <span className="breadcrumb-divider">/</span>
-                    <span onClick={() => navigate('/news')} className="breadcrumb-item">Новости</span>
+                    <span onClick={() => navigate('/news')} className="breadcrumb-item">{t("Новости")}</span>
                     <span className="breadcrumb-divider">/</span>
                     <span className="breadcrumb-current">{news.category}</span>
                 </div>
@@ -135,7 +139,7 @@ const NewsSingle = () => {
 
                         <div className="article-footer">
                             <div className="share-section">
-                                <span className="share-label">Совместное использование:</span>
+                                <span className="share-label">{t("Совместное использование:")}</span>
                                 <div className="social-links">
                                     <a href="#" className="social-link telegram" title="Telegram">
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
@@ -159,7 +163,7 @@ const NewsSingle = () => {
                 </article>
 
                 <div className="related-news">
-                    <h2 className="related-title">O'xshash yangiliklar</h2>
+                    <h2 className="related-title">{t("O'xshash")}</h2>
                     <div className="related-grid">
                         {newsData
                             .filter(item => item.id !== news.id && item.category === news.category)
