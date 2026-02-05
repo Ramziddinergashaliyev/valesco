@@ -115,6 +115,7 @@ const NewsSingle = () => {
                                 </div>
                             </div>
                         </div> */}
+                        
                     </div>
                 </article>
 
