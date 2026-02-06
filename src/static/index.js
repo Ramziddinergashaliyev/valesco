@@ -14,9 +14,16 @@ import news1 from "../assets/news/news1.webp"
 import news2 from "../assets/news/news2.webp"
 import news3 from "../assets/news/news3.webp"
 
+//Automechanika
 import world1 from "../assets/news/istanbul.webp"
 import world3 from "../assets/news/shanghai.webp"
 import world2 from "../assets/news/tashkent.webp"
+
+//china
+import one from "../assets/news/shanhai/one.webp"
+import two from "../assets/news/shanhai/two.webp"
+import three from "../assets/news/shanhai/three.webp"
+import four from "../assets/news/shanhai/four.webp"
 
 export const CATEGORY = [
     {
@@ -412,22 +419,31 @@ export const NEW = [
     }
 ]
 
-
-
 export const newsData = [
   {
     id: 1,
     category: "Новости",
     world: [""],
-    title: "Компания Valesco провела масштабный розыгрыш призов в Худжанде, Таджикистан",
-    description: ["Компания Valesco успешно организовала масштабный рекламный розыгрыш призов в городе Худжанд, Таджикистан, посвященный доверию клиентов, росту бренда и долгосрочному партнерству в регионе. Мероприятие привлекло большое количество участников и создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением."],
-    date: "11 январь, 2026",
+    title: "Узбекско-Пакистанский бизнес-форум и выставка «Сделано в Узбекистане» в Исламабаде",
+    description: ["Узбекско-Пакистанский бизнес-форум и выставка «Сделано в Узбекистане» пройдут 5–6 февраля 2026 года в Исламабаде, столице Исламской Республики Пакистан."],
+    date: "11 January, 2026",
     img: news0,
     image: [news1, news2],
-    fullContent: ["Компания Valesco успешно организовала масштабный рекламный розыгрыш призов в городе Худжанд, Таджикистан, посвященный доверию клиентов, росту бренда и долгосрочному партнерству в регионе. Мероприятие привлекло большое количество участников и создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением.","В течение всего мероприятия гости принимали участие в розыгрыше призов, вращая лотерейный барабан, предоставляя каждому равные шансы на победу. Инициатива была разработана не только для поощрения лояльных клиентов, но и для укрепления связей Valesco с водителями, автосервисами и дистрибьюторами на всем рынке.","Было вручено впечатляющее количество призов, отражающих масштаб и амбиции акции. Победители получили 3 электромобиля, 250 телевизоров, 50 утюгов, 10 холодильников и 10 кондиционеров, что сделало это мероприятие одним из самых запоминающихся рекламных акций автомобильных брендов в регионе.","Розыгрыш призов был организован в тесном сотрудничестве с официальным дистрибьютором Valesco в Таджикистане, ООО «ТОСОЛ-ПЛЮС», чья поддержка и местный опыт сыграли ключевую роль в успешном проведении мероприятия.","Valesco выражает искреннюю благодарность всем участникам, партнерам и организаторам, которые внесли свой вклад в успех этой инициативы. Подобные мероприятия подтверждают нашу приверженность взаимодействию с клиентами, развитию рынка и предоставлению ценности, выходящей за рамки нашей продукции.","В ближайшем будущем запланированы новые рекламные кампании, специальные мероприятия и интересные возможности для розыгрыша призов, поскольку Valesco продолжает расширять свое присутствие и укреплять отношения на международных рынках."]
+    fullContent: ["Эти мероприятия станут важной платформой для прямого диалога и сотрудничества между представителями государственных структур и деловых кругов обеих стран.","Форум будет посвящён укреплению двусторонних торгово-экономических отношений, развитию инвестиционного сотрудничества и обмену опытом между узбекскими и пакистанскими компаниями. Ключевыми темами обсуждения станут инвестиционный потенциал Узбекистана, доступные механизмы поддержки иностранных инвесторов, а также стратегии по созданию и дальнейшему развитию благоприятного инвестиционного климата.","В рамках программы состоится выставка «Сделано в Узбекистане», на которой будет представлен широкий ассортимент продукции узбекских производителей. Выставка направлена на продвижение экспортно-ориентированных товаров, расширение деловых партнёрств и стимулирование развития долгосрочных кооперационных связей с пакистанскими компаниями.","Узбекско-Пакистанский бизнес-форум и выставка подчёркивают растущий интерес обеих стран к расширению экономического сотрудничества и созданию новых возможностей для взаимного роста."]
   },
   {
     id: 2,
+    category: "Новости",
+    world: [""],
+    title: "Компания Valesco провела масштабный розыгрыш призов в Худжанде, Таджикистан",
+    description: ["В начале января компания Valesco совместно с нашим официальным дистрибьютером в Таджикистане компанией Tosol Plus провела масштабный розыгрыш призов по итогам акции, проведённой среди покупателей в 2025-м году."],
+    date: "11 январь, 2026",
+    img: news0,
+    image: [news1, news2],
+    fullContent: ["Valesco и Tosol Plus успешно организовали и провели лотерею с розыгрышем большого количества призов. Данное  мероприятие траслировалось онлайн в Instagram и было направлено на укрепление доверия клиентов, рост имени Бренда Valesco.","Мероприятие привлекло большое количество участников, создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением.","В течение всего мероприятия гости принимали прямое активное участие в розыгрыше призов, вращая лотерейный барабан, каждому были даны равные шансы на победу. Масштабная акция и последовавшей за ней розыгрыш призов была разработана не только для поощрения лояльных клиентов, но и для укрепления Бренда Valesco среди обычных потребителей, автосервисов и дистрибьютеров на всем рынке Таджикистана ","Было вручено впечатляющее количество призов, отражающих масштаб и амбиции акции. Победители получили 3 электромобиля, 250 телевизоров, 50 утюгов, 10 холодильников и 10 кондиционеров, что сделало это мероприятие одним из самых запоминающихся рекламных акций автомобильных брендов в регионе.","Розыгрыш призов был организован в тесном сотрудничестве с официальным дистрибьютором Valesco в Таджикистане, ООО «ТОСОЛ-ПЛЮС», чья поддержка и местный опыт сыграли ключевую роль в успешном проведении мероприятия.","Valesco выражает искреннюю благодарность всем участникам, партнерам и организаторам, которые внесли свой вклад в успех этой инициативы. Подобные мероприятия подтверждают нашу приверженность взаимодействию с клиентами, развитию рынка и предоставлению ценности, выходящей за рамки нашей продукции.","В ближайшем будущем запланированы новые рекламные кампании, специальные мероприятия и интересные возможности для розыгрыша призов, поскольку Valesco продолжает расширять свое присутствие и укреплять отношения на международных рынках."]
+  },
+  {
+    id: 3,
     category: "Новости",
     world: ["Automechanika Istanbul","Automechanika Tashkent","Automechanika Shanghai"],
     title: "Valesco at Automechanika 2025",
@@ -457,7 +473,7 @@ export const newsData = [
         title: 'Automechanika Shanghai 2025',
         location: 'Шанхай, Китай',
         description: 'Одна из крупнейших автомобильных выставок в мире, Automechanika Shanghai объединяет производителей, дистрибьюторов и отраслевых экспертов со всех мировых рынков. На этом мероприятии Valesco представляет свои последние инновации и укрепляет партнерские отношения в азиатском и международном автомобильном секторе. Выставка открывает двери к новым возможностям сотрудничества на крупнейших азиатских рынках.',
-        images: [world1, world1, world1, world1],
+        images: [one, four, two, three],
         position: 'left' 
       }
     ]
@@ -471,15 +487,26 @@ export const newsDataEn = [
     id: 1,
     category: "News",
     world: [""],
-    title: "Valesco hosts large-scale prize draw event in Khujand, Tajikistan",
-    description: ["Valesco successfully organized a large-scale promotional prize draw in the city of Khujand, Tajikistan, celebrating customer trust, brand growth, and long-term partnerships in the region. The event attracted a large number of participants and created a lively, engaging atmosphere filled with excitement and anticipation."],
+    title: "Uzbekistan–Pakistan Business Forum & “Made in Uzbekistan” Exhibition in Islamabad",
+    description: ["The Uzbekistan–Pakistan Business Forum and the “Made in Uzbekistan” Exhibition will be held on 5–6 February 2026 in Islamabad, the capital of the Islamic Republic of Pakistan."],
     date: "11 January, 2026",
     img: news0,
     image: [news1, news2],
-    fullContent: ["Throughout the event, guests took part in the prize draw by spinning the lottery drum, giving everyone an equal chance to win. The initiative was designed not only to reward loyal customers, but also to strengthen Valesco's connection with drivers, workshops, and distributors across the market.","An impressive range of prizes was awarded, reflecting the scale and ambition of the promotion. Winners received 3 electric cars, 250 televisions, 50 irons, 10 refrigerators, and 10 air conditioners, making the event one of the most memorable automotive brand promotions held in the region.","The prize draw was organized in close cooperation with Valesco's official distributor in Tajikistan, LLC TOSOL-PLUS, whose support and local expertise played a key role in the successful execution of the event.","Valesco extends its sincere gratitude to all participants, partners, and organizers who contributed to the success of this initiative. Events like this reaffirm our commitment to customer engagement, market development, and delivering value beyond our products.","More promotional campaigns, special events, and exciting prize opportunities are planned in the near future, as Valesco continues to expand its presence and strengthen relationships across international markets."]
+    fullContent: ["These events will serve as an important platform for direct dialogue and cooperation between representatives of government institutions and the business communities of both countries.","The forum will focus on strengthening bilateral trade and economic relations, promoting investment cooperation, and facilitating the exchange of experience between Uzbek and Pakistani companies. Key discussion topics will include Uzbekistan’s investment potential, available support mechanisms for foreign investors, and strategies for creating and further developing a favorable investment climate.","As part of the program, the “Made in Uzbekistan” Exhibition will showcase a wide range of products from Uzbek manufacturers. The exhibition is aimed at promoting export-oriented goods, expanding business partnerships, and encouraging the development of long-term cooperative ties with Pakistani companies.","The Uzbekistan–Pakistan Business Forum and exhibition highlight the growing interest of both countries in expanding economic collaboration and creating new opportunities for mutual growth."]
   },
   {
     id: 2,
+    category: "News",
+    world: [""],
+    title: "Valesco hosts large-scale prize draw event in Khujand, Tajikistan",
+    description: ["At the beginning of January, Valesco, together with its official distributor in Tajikistan, Tosol Plus, held a large-scale prize draw as the final stage of a promotional campaign conducted among customers throughout 2025."],
+    date: "11 January, 2026",
+    img: news0,
+    image: [news1, news2],
+    fullContent: ["Valesco and Tosol Plus successfully organized and delivered a major lottery featuring a wide range of prizes. The event was broadcast live on Instagram and was aimed at strengthening customer trust and increasing brand awareness of Valesco.","The event attracted a large number of participants and created a lively, engaging atmosphere filled with excitement and anticipation.","Throughout the event, guests took an active part in the prize draw by spinning the lottery drum, with everyone having an equal chance to win. The large-scale promotion and the subsequent prize draw were designed not only to reward loyal customers, but also to strengthen the Valesco brand among everyday consumers, automotive service centers, and distributors across the entire Tajikistan market.","An impressive number of prizes were awarded, reflecting the scale and ambition of the campaign. Winners received 3 electric vehicles, 250 televisions, 50 irons, 10 refrigerators, and 10 air conditioners, making this event one of the most memorable automotive brand promotional campaigns in the region.","The prize draw was organized in close cooperation with Valesco’s official distributor in Tajikistan, TOSOL PLUS LLC, whose support and local expertise played a key role in the successful execution of the event.","Valesco expresses its sincere gratitude to all participants, partners, and organizers who contributed to the success of this initiative. Such events reaffirm our commitment to customer engagement, market development, and delivering value beyond our products.","In the near future, new promotional campaigns, special events, and exciting prize opportunities are planned, as Valesco continues to expand its presence and strengthen relationships in international markets."]
+  },
+  {
+    id: 3,
     category: "News",
     world: ["Automechanika Istanbul","Automechanika Tashkent","Automechanika Shanghai"],
     title: "Valesco at Automechanika 2025",
@@ -501,7 +528,7 @@ export const newsDataEn = [
         title: 'Automechanika Tashkent 2025',
         location: 'Tashkent, Uzbekistan',
         description: 'As an important exhibition for Central Asia, Automechanika Tashkent allows Valesco to connect closely with local markets and industry partners. The event supports our continued expansion and reinforces our presence in the region. This is a strategically important platform for strengthening partnerships and presenting products in the rapidly growing Central Asian market.',
-        images: [world1, world1, world1, world1],
+        images: [world3, world3, world1, world1],
         position: 'right' 
       },
       {
@@ -509,15 +536,12 @@ export const newsDataEn = [
         title: 'Automechanika Shanghai 2025',
         location: 'Shanghai, China',
         description: 'One of the largest automotive exhibitions in the world, Automechanika Shanghai brings together manufacturers, distributors, and industry experts from across global markets. At this event, Valesco presents its latest innovations and strengthens partnerships in the Asian and international automotive sectors. The exhibition opens doors to new collaboration opportunities in the largest Asian markets.',
-        images: [world1, world1, world1, world1],
+        images: [one, four, two, three],
         position: 'left'
       }
     ]
   }
 ]
-
-
-
 
 // export const newsData = [
 //   {
