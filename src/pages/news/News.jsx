@@ -120,15 +120,15 @@ const News = () => {
 
 
   return (
-    <div className="news-container container">
+    <div className="new-container container">
       <div className="categories-wrapper">
       </div>
 
-      <div className="news-grid">
+      <div className="new-grid">
         {allData?.map((news) => (
           <article 
             key={news.id} 
-            className="news-card"
+            className="new-card"
             onClick={() => handleNewsClick(news.id)}
             style={{ cursor: 'pointer' }}
           >

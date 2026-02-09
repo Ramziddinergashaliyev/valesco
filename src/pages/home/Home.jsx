@@ -11,6 +11,7 @@ import Mission from '../../components/mission/Mission'
 import CallTo from '../../components/callTo/CallTo'
 import Imgs from '../../components/imgs/Imgs'
 import Media from '../../components/media/Media'
+import NewsCard from '../../components/newsCard/NewsCard'
 
 const Home = () => {
 
@@ -26,7 +27,8 @@ const Home = () => {
       <Banner />
       <PrideArea />
       <Differents />
-      <Media/>
+      <NewsCard/>
+      {/* <Media/> */}
     </>
   )
 }

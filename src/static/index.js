@@ -29,6 +29,7 @@ import iraq2 from "../assets/news/iraq/two.webp"
 import world1 from "../assets/news/istanbul.webp"
 import world3 from "../assets/news/shanghai.webp"
 import world2 from "../assets/news/tashkent.webp"
+import world4 from "../assets/news/moscow.webp"
 
 //china
 import one from "../assets/news/shanhai/one.webp"
@@ -47,6 +48,12 @@ import Ione from "../assets/news/istanbul/one.webp"
 import Itwo from "../assets/news/istanbul/two.webp"
 import Ithree from "../assets/news/istanbul/three.webp"
 import Ifour from "../assets/news/istanbul/four.webp"
+
+//moscow
+import Mone from "../assets/news/moscow/one.webp"
+import Mtwo from "../assets/news/moscow/two.webp"
+import Mthree from "../assets/news/moscow/three.webp"
+import Mfour from "../assets/news/moscow/four.webp"
 
 
 export const CATEGORY = [
@@ -464,7 +471,7 @@ export const newsData = [
         date: "1-7 февраль, 2026",
         img: iraq,
         image: [iraq1, iraq2],
-        fullContent: ["В рамках выставки Valesco демонстрирует свои высококачественные автомобильные смазочные материалы и масла иракским импортёрам, дистрибьюторам и представителям местного рынка. Мероприятие предоставляет важную возможность представить продукцию узбекского производства новым рынкам и укрепить международное присутствие Valesco.","В ходе выставки представители Valesco провели ряд продуктивных переговоров с потенциальными партнёрами. Обсуждения были сосредоточены на следующих вопросах:","Анализ автомобильного рынка Ирака","Сегменты смазочных материалов с высоким спросом","Возможности логистики и дистрибуции","Стратегии расширения присутствия продукции Valesco в Ираке","В результате этих встреч было успешно заключено несколько экспортных соглашений, что является важным шагом к долгосрочному сотрудничеству с иракскими партнёрами.","Участие в Международной выставке в Багдаде 2026 подчёркивает приверженность Valesco расширению экспортных рынков, укреплению торгово-экономических связей между Узбекистаном и Ираком и предоставлению клиентам по всему миру надёжных и высокоэффективных смазочных материалов."]
+        fullContent: ["В рамках выставки Valesco демонстрирует свои высококачественные автомобильные смазочные материалы и масла иракским импортёрам, дистрибьюторам и представителям местного рынка. Мероприятие предоставляет важную возможность представить продукцию узбекского производства новым рынкам и укрепить международное присутствие Valesco.", "В ходе выставки представители Valesco провели ряд продуктивных переговоров с потенциальными партнёрами. Обсуждения были сосредоточены на следующих вопросах:", "Анализ автомобильного рынка Ирака", "Сегменты смазочных материалов с высоким спросом", "Возможности логистики и дистрибуции", "Стратегии расширения присутствия продукции Valesco в Ираке", "В результате этих встреч было успешно заключено несколько экспортных соглашений, что является важным шагом к долгосрочному сотрудничеству с иракскими партнёрами.", "Участие в Международной выставке в Багдаде 2026 подчёркивает приверженность Valesco расширению экспортных рынков, укреплению торгово-экономических связей между Узбекистаном и Ираком и предоставлению клиентам по всему миру надёжных и высокоэффективных смазочных материалов."]
     },
     {
         id: 3,
@@ -480,19 +487,27 @@ export const newsData = [
     {
         id: 4,
         category: "Новости",
-        world: ["Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
-        title: "Valesco at Automechanika 2025",
+        world: ["MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
+        title: "Automechanika 2025",
         description: ["В 2025 году Valesco с гордостью принимает участие в самых важных мировых автомобильных торговых выставках под брендом Automechanika. Эти глобальные мероприятия предоставляют возможность для взаимодействия с профессионалами отрасли, партнерами и клиентами, демонстрируя наши новейшие продуктовые решения и технологии.", "В течение всего года Valesco будет демонстрировать расширяющийся портфель автомобильных жидкостей и смазочных материалов, разработанных в соответствии с международными стандартами и требованиями современных транспортных средств."],
         date: "2025",
         img: news3,
-        image: [world1, world2, world3],
+        image: [world4, world1, world2, world3],
         locationData: [
+            {
+                id: 'moscow',
+                title: 'MIMS Automobility Moscow',
+                location: 'Москва, Россия',
+                description: 'Valesco принимает участие в выставке MIMS Automobility Moscow — ведущей международной выставке автомобильного послепродажного рынка, объединяющей профессионалов отрасли из России, стран СНГ и других международных рынков. Мероприятие предоставляет важную платформу для демонстрации продукции, укрепления партнёрских связей и поиска новых бизнес-возможностей.',
+                images: [Mone, Mtwo, Mthree, Mfour],
+                position: 'right'
+            },
             {
                 id: 'istanbul',
                 title: 'Automechanika Istanbul 2025',
                 location: 'Стамбул, Турция',
                 description: 'Automechanika Istanbul служит ключевой точкой встречи для Европы, Ближнего Востока и окружающих регионов. Участие Valesco подчеркивает нашу приверженность региональному росту и прямому взаимодействию с дистрибьюторами, автомастерскими и автомобильными профессионалами. Выставка предоставляет уникальную платформу для демонстрации инновационных продуктов и установления долгосрочных деловых отношений.',
-                images: [Ione, Itwo, Ithree, Tfour],
+                images: [Ione, Itwo, Ithree, Ifour],
                 position: 'left'
             },
             {
@@ -554,26 +569,34 @@ export const newsDataEn = [
     {
         id: 4,
         category: "News",
-        world: ["Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
-        title: "Valesco at Automechanika 2025",
+        world: ["MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
+        title: "Automechanika 2025",
         description: ["In 2025, Valesco proudly participates in some of the world's most important automotive trade exhibitions under the Automechanika brand. These global events provide an opportunity to connect with industry professionals, partners, and customers while presenting our latest product solutions and technologies.", "Throughout the year, Valesco will showcase its expanding portfolio of automotive fluids and lubricants, developed to meet international standards and the demands of modern vehicles."],
         date: "2025",
         img: news3,
-        image: [world1, world2, world3],
+        image: [world4, world1, world2, world3],
         locationData: [
+            {
+                id: 'moscow',
+                title: 'MIMS Automobility Moscow',
+                location: 'Moscow, Russia',
+                description: 'Valesco participates in MIMS Automobility Moscow, a leading automotive aftermarket exhibition bringing together industry professionals from Russia, the CIS, and international markets. The event provides an important platform to showcase products, strengthen partnerships, and explore new business opportunities.',
+                images: [Mone, Mtwo, Mthree, Mfour],
+                position: 'right'
+            },
             {
                 id: 'istanbul',
                 title: 'Automechanika Istanbul 2025',
                 location: 'Istanbul, Türkiye',
-                description: 'Automechanika Istanbul serves as a key meeting point for Europe, the Middle East, and surrounding regions. Valesco\'s participation highlights our commitment to regional growth and direct engagement with distributors, workshops, and automotive professionals. The exhibition provides a unique platform for showcasing innovative products and establishing long-term business relationships.',
-                images: [Ione, Itwo, Ithree, Tfour],
+                description: 'Automechanika Istanbul serves as a key meeting point for Europe, the Middle East, and surrounding regions. Valesco’s participation highlights our commitment to regional growth and direct engagement with distributors, workshops, and automotive professionals.',
+                images: [Ione, Itwo, Ithree, Ifour],
                 position: 'left'
             },
             {
                 id: 'tashkent',
                 title: 'Automechanika Tashkent 2025',
                 location: 'Tashkent, Uzbekistan',
-                description: 'As an important exhibition for Central Asia, Automechanika Tashkent allows Valesco to connect closely with local markets and industry partners. The event supports our continued expansion and reinforces our presence in the region. This is a strategically important platform for strengthening partnerships and presenting products in the rapidly growing Central Asian market.',
+                description: 'As an important exhibition for Central Asia, Automechanika Tashkent allows Valesco to connect closely with local markets and industry partners. The event supports our continued expansion and reinforces our presence in the region.',
                 images: [Tone, Ttwo, Tfour, Tthree],
                 position: 'right'
             },
@@ -581,62 +604,10 @@ export const newsDataEn = [
                 id: 'shanghai',
                 title: 'Automechanika Shanghai 2025',
                 location: 'Shanghai, China',
-                description: 'One of the largest automotive exhibitions in the world, Automechanika Shanghai brings together manufacturers, distributors, and industry experts from across global markets. At this event, Valesco presents its latest innovations and strengthens partnerships in the Asian and international automotive sectors. The exhibition opens doors to new collaboration opportunities in the largest Asian markets.',
+                description: 'One of the largest automotive exhibitions in the world, Automechanika Shanghai brings together manufacturers, distributors, and industry experts from across global markets. At this event, Valesco presents its latest innovations and strengthens partnerships in the Asian and international automotive sectors.',
                 images: [one, four, two, three],
                 position: 'left'
             }
         ]
     }
 ]
-
-// export const newsData = [
-//   {
-//     id: 1,
-//     category: "Новости",
-//     world: [""],
-//     title: "Компания Valesco провела масштабный розыгрыш призов в Худжанде, Таджикистан",
-//     description: ["Компания Valesco успешно организовала масштабный рекламный розыгрыш призов в городе Худжанд, Таджикистан, посвященный доверию клиентов, росту бренда и долгосрочному партнерству в регионе. Мероприятие привлекло большое количество участников и создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением."],
-//     date: "11 январь, 2026",
-//     img: news0,
-//     image: [news1, news2],
-//     fullContent: ["Компания Valesco успешно организовала масштабный рекламный розыгрыш призов в городе Худжанд, Таджикистан, посвященный доверию клиентов, росту бренда и долгосрочному партнерству в регионе. Мероприятие привлекло большое количество участников и создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением.","В течение всего мероприятия гости принимали участие в розыгрыше призов, вращая лотерейный барабан, предоставляя каждому равные шансы на победу. Инициатива была разработана не только для поощрения лояльных клиентов, но и для укрепления связей Valesco с водителями, автосервисами и дистрибьюторами на всем рынке.","Было вручено впечатляющее количество призов, отражающих масштаб и амбиции акции. Победители получили 3 электромобиля, 250 телевизоров, 50 утюгов, 10 холодильников и 10 кондиционеров, что сделало это мероприятие одним из самых запоминающихся рекламных акций автомобильных брендов в регионе.","Розыгрыш призов был организован в тесном сотрудничестве с официальным дистрибьютором Valesco в Таджикистане, ООО «ТОСОЛ-ПЛЮС», чья поддержка и местный опыт сыграли ключевую роль в успешном проведении мероприятия.","Valesco выражает искреннюю благодарность всем участникам, партнерам и организаторам, которые внесли свой вклад в успех этой инициативы. Подобные мероприятия подтверждают нашу приверженность взаимодействию с клиентами, развитию рынка и предоставлению ценности, выходящей за рамки нашей продукции.","В ближайшем будущем запланированы новые рекламные кампании, специальные мероприятия и интересные возможности для розыгрыша призов, поскольку Valesco продолжает расширять свое присутствие и укреплять отношения на международных рынках."]
-//   },
-//   {
-//     id: 2,
-//     category: "Новости",
-//     world: ["Automechanika Istanbul","Automechanika Tashkent","Automechanika Shanghai"],
-//     title: "Valesco at Automechanika 2025",
-//     description: ["In 2025, Valesco proudly participates in some of the world’s most important automotive trade exhibitions under the Automechanika brand. These global events provide an opportunity to connect with industry professionals, partners, and customers while presenting our latest product solutions and technologies.","Throughout the year, Valesco will showcase its expanding portfolio of automotive fluids and lubricants, developed to meet international standards and the demands of modern vehicles."],
-//     date: "2025",
-//     img: news3,
-//     image: [world1, world2, world3],
-//     fullContent: ["Automechanika Istanbul 2025","Istanbul, Türkiye Automechanika Istanbul serves as a key meeting point for Europe, the Middle East, and surrounding regions. Valesco’s participation highlights our commitment to regional growth and direct engagement with distributors, workshops, and automotive professionals.", "Automechanika Tashkent 2025", "Tashkent, Uzbekistan As an important exhibition for Central Asia, Automechanika Tashkent allows Valesco to connect closely with local markets and industry partners. The event supports our continued expansion and reinforces our presence in the region.","Automechanika Shanghai 2025","Shanghai, China One of the largest automotive exhibitions in the world, Automechanika Shanghai brings together manufacturers, distributors, and industry experts from across global markets. At this event, Valesco presents its latest innovations and strengthens partnerships in the Asian and international automotive sectors."]
-//   }
-// ]
-
-
-
-// export const newsDataEn = [
-//   {
-//     id: 1,
-//     category: "News",
-//     world: [""],
-//     title: "Valesco hosts large-scale prize draw event in Khujand, Tajikistan",
-//     description: ["Valesco successfully organized a large-scale promotional prize draw in the city of Khujand, Tajikistan, celebrating customer trust, brand growth, and long-term partnerships in the region. The event attracted a large number of participants and created a lively, engaging atmosphere filled with excitement and anticipation."],
-//     date: "11 January, 2026",
-//     img: news0,
-//     image: [ news1, news2],
-//     fullContent: ["Throughout the event, guests took part in the prize draw by spinning the lottery drum, giving everyone an equal chance to win. The initiative was designed not only to reward loyal customers, but also to strengthen Valesco’s connection with drivers, workshops, and distributors across the market.","An impressive range of prizes was awarded, reflecting the scale and ambition of the promotion. Winners received 3 electric cars, 250 televisions, 50 irons, 10 refrigerators, and 10 air conditioners, making the event one of the most memorable automotive brand promotions held in the region.","The prize draw was organized in close cooperation with Valesco’s official distributor in Tajikistan, LLC “TOSOL-PLUS,” whose support and local expertise played a key role in the successful execution of the event.","Valesco extends its sincere gratitude to all participants, partners, and organizers who contributed to the success of this initiative. Events like this reaffirm our commitment to customer engagement, market development, and delivering value beyond our products.","More promotional campaigns, special events, and exciting prize opportunities are planned in the near future, as Valesco continues to expand its presence and strengthen relationships across international markets."]
-//   },
-//   {
-//     id: 2,
-//     category: "News",
-//     world: ["Automechanika Istanbul","Automechanika Tashkent","Automechanika Shanghai"],
-//     title: "Valesco at Automechanika 2025",
-//     description: ["In 2025, Valesco proudly participates in some of the world’s most important automotive trade exhibitions under the Automechanika brand. These global events provide an opportunity to connect with industry professionals, partners, and customers while presenting our latest product solutions and technologies.","Throughout the year, Valesco will showcase its expanding portfolio of automotive fluids and lubricants, developed to meet international standards and the demands of modern vehicles."],
-//     date: "2025",
-//     img: news3,
-//     image: [world1, world2, world3],
-//     fullContent: ["Automechanika Istanbul 2025","Istanbul, Türkiye Automechanika Istanbul serves as a key meeting point for Europe, the Middle East, and surrounding regions. Valesco’s participation highlights our commitment to regional growth and direct engagement with distributors, workshops, and automotive professionals.", "Automechanika Tashkent 2025", "Tashkent, Uzbekistan As an important exhibition for Central Asia, Automechanika Tashkent allows Valesco to connect closely with local markets and industry partners. The event supports our continued expansion and reinforces our presence in the region.","Automechanika Shanghai 2025","📍 Shanghai, China One of the largest automotive exhibitions in the world, Automechanika Shanghai brings together manufacturers, distributors, and industry experts from across global markets. At this event, Valesco presents its latest innovations and strengthens partnerships in the Asian and international automotive sectors."]
-//   }
-// ]
