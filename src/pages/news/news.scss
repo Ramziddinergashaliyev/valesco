@@ -526,7 +526,7 @@
 
 .new-container {
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 80px 12px;
   min-height: 100vh;
   animation: pageLoad 0.8s ease;
 
@@ -630,7 +630,6 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
       display: flex;
       flex-direction: column;
       opacity: 0;
@@ -643,7 +642,7 @@
 
       &:hover {
         transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        // box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 
         .card-image {
           &::after {
@@ -651,7 +650,7 @@
           }
 
           img {
-            transform: scale(1.15);
+            transform: scale(1.09);
             filter: brightness(1.1);
           }
         }
@@ -673,7 +672,7 @@
           background: linear-gradient(135deg, #ff0000, #ff4444);
           color: white;
           transform: translateX(5px);
-          box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+          box-shadow: 1px 1px 10px rgba(255, 0, 0, 0.3);
           
           svg {
             animation: arrowSlide 0.8s ease infinite;
@@ -695,7 +694,6 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: linear-gradient(135deg, rgba(0, 102, 204, 0.2), rgba(255, 0, 0, 0.2));
           opacity: 0;
           transition: opacity 0.5s ease;
         }
@@ -723,7 +721,7 @@
           font-size: 0.8rem;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.5px;     
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
           z-index: 2;
           opacity: 0;
@@ -790,12 +788,12 @@
           align-items: center;
           gap: 5px;
           background: transparent;
-          border: 2px solid red;
+          border: 1.5px solid red;
           color: red;
           padding: 8px 20px;
           border-radius: 12px;
           font-size: 0.9rem;
-          font-weight: 700;
+          font-weight: 600;
           cursor: pointer;
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           align-self: flex-start;
