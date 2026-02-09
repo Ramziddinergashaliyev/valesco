@@ -232,7 +232,12 @@ $transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
 @media (max-width: 768px) {
     .news-section {
-        padding: 60px 16px;
+        padding: 20px 16px;
+    }
+
+    .news-heading {
+        font-size: 32px;
+        line-height: 38px;
     }
 
     .news-grid {
@@ -266,6 +271,14 @@ $transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         font-size: 0.938rem;
         width: 100%;
         justify-content: center;
+    }
+}
+
+@media (max-width:550px) {
+    .news-header {
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 10px;
     }
 }
 
