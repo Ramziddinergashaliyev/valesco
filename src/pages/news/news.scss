@@ -90,7 +90,7 @@
 
   .news-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: 40px;
 
@@ -160,7 +160,7 @@
       }
 
       .card-content {
-        padding: 24px;
+        padding: 18px;
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -211,8 +211,8 @@
           background: transparent;
           border: 2px solid red;
           color: red;
-          padding: 10px 24px;
-          border-radius: 25px;
+          padding: 8px 20px;
+          border-radius: 12px;
           font-size: 0.9rem;
           font-weight: 700;
           cursor: pointer;
