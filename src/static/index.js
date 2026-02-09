@@ -30,6 +30,7 @@ import world1 from "../assets/news/istanbul.webp"
 import world3 from "../assets/news/shanghai.webp"
 import world2 from "../assets/news/tashkent.webp"
 import world4 from "../assets/news/moscow.webp"
+import world5 from "../assets/news/astana.webp"
 
 //china
 import one from "../assets/news/shanhai/one.webp"
@@ -54,6 +55,12 @@ import Mone from "../assets/news/moscow/one.webp"
 import Mtwo from "../assets/news/moscow/two.webp"
 import Mthree from "../assets/news/moscow/three.webp"
 import Mfour from "../assets/news/moscow/four.webp"
+
+//astana
+import Aone from "../assets/news/astana/one.webp"
+import Atwo from "../assets/news/astana/two.webp"
+import Athree from "../assets/news/astana/three.webp"
+import Afour from "../assets/news/astana/four.webp"
 
 
 export const CATEGORY = [
@@ -487,13 +494,21 @@ export const newsData = [
     {
         id: 4,
         category: "Новости",
-        world: ["MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
+        world: ["Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
         title: "Automechanika 2025",
         description: ["В 2025 году Valesco с гордостью принимает участие в самых важных мировых автомобильных торговых выставках под брендом Automechanika. Эти глобальные мероприятия предоставляют возможность для взаимодействия с профессионалами отрасли, партнерами и клиентами, демонстрируя наши новейшие продуктовые решения и технологии.", "В течение всего года Valesco будет демонстрировать расширяющийся портфель автомобильных жидкостей и смазочных материалов, разработанных в соответствии с международными стандартами и требованиями современных транспортных средств."],
         date: "2025",
         img: news3,
-        image: [world4, world1, world2, world3],
+        image: [world5, world4, world1, world2, world3],
         locationData: [
+            {
+                id: 'astana',
+                title: 'Automechanika Astana',
+                location: 'Астана, Казахстан',
+                description: 'Valesco принимает участие в выставке Automechanika Astana — ключевой выставке автомобильного послепродажного рынка Центральной Азии. Мероприятие служит важной платформой для установления контактов с профессионалами отрасли, укрепления региональных партнёрств и презентации наших решений в области автомобильных технических жидкостей.',
+                images: [Aone, Atwo, Athree, Afour],
+                position: 'left'
+            },
             {
                 id: 'moscow',
                 title: 'MIMS Automobility Moscow',
@@ -529,8 +544,6 @@ export const newsData = [
         ]
     }
 ]
-
-
 
 export const newsDataEn = [
     {
@@ -569,13 +582,21 @@ export const newsDataEn = [
     {
         id: 4,
         category: "News",
-        world: ["MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
+        world: ["Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
         title: "Automechanika 2025",
         description: ["In 2025, Valesco proudly participates in some of the world's most important automotive trade exhibitions under the Automechanika brand. These global events provide an opportunity to connect with industry professionals, partners, and customers while presenting our latest product solutions and technologies.", "Throughout the year, Valesco will showcase its expanding portfolio of automotive fluids and lubricants, developed to meet international standards and the demands of modern vehicles."],
         date: "2025",
         img: news3,
-        image: [world4, world1, world2, world3],
+        image: [world5, world4, world1, world2, world3],
         locationData: [
+            {
+                id: 'astana',
+                title: 'Automechanika Astana',
+                location: 'Astana, Kazakhstan',
+                description: 'Valesco participates in Automechanika Astana, a key automotive aftermarket exhibition for Central Asia. The event provides an important platform to connect with industry professionals, strengthen regional partnerships, and present our automotive fluid solutions.',
+                images: [Aone, Atwo, Athree, Afour],
+                position: 'left'
+            },
             {
                 id: 'moscow',
                 title: 'MIMS Automobility Moscow',
