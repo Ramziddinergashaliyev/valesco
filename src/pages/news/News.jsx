@@ -113,11 +113,7 @@ const News = () => {
   useEffect(() => {
     window.scrollTo(0,0)
   },[])
-
-  // const filteredNews = activeCategory === 'Barchasi' 
-  //   ? newsData
-  //   : newsData.filter(news => news.category === activeCategory)
-
+  
   const handleNewsClick = (id) => {
     navigate(`/news-single/${id}`)
   }
