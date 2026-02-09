@@ -31,6 +31,7 @@ import world3 from "../assets/news/shanghai.webp"
 import world2 from "../assets/news/tashkent.webp"
 import world4 from "../assets/news/moscow.webp"
 import world5 from "../assets/news/astana.webp"
+import world6 from "../assets/news/dubai.webp"
 
 //china
 import one from "../assets/news/shanhai/one.webp"
@@ -62,6 +63,11 @@ import Atwo from "../assets/news/astana/two.webp"
 import Athree from "../assets/news/astana/three.webp"
 import Afour from "../assets/news/astana/four.webp"
 
+//dubai
+import Done from "../assets/news/dubai/one.webp"
+import Dtwo from "../assets/news/dubai/two.webp"
+import Dthree from "../assets/news/dubai/three.webp"
+import Dfour from "../assets/news/dubai/four.webp"
 
 export const CATEGORY = [
     {
@@ -494,13 +500,21 @@ export const newsData = [
     {
         id: 4,
         category: "Новости",
-        world: ["Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
+        world: ["Automechanika Dubai", "Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
         title: "Automechanika 2025",
         description: ["В 2025 году Valesco с гордостью принимает участие в самых важных мировых автомобильных торговых выставках под брендом Automechanika. Эти глобальные мероприятия предоставляют возможность для взаимодействия с профессионалами отрасли, партнерами и клиентами, демонстрируя наши новейшие продуктовые решения и технологии.", "В течение всего года Valesco будет демонстрировать расширяющийся портфель автомобильных жидкостей и смазочных материалов, разработанных в соответствии с международными стандартами и требованиями современных транспортных средств."],
         date: "2025",
         img: news3,
-        image: [world5, world4, world1, world2, world3],
+        image: [world6, world5, world4, world1, world2, world3],
         locationData: [
+            {
+                id: 'dubai',
+                title: 'Automechanika Dubai',
+                location: 'Дубай, ОАЭ',
+                description: 'Valesco принимает участие в выставке Automechanika Dubai — одной из крупнейших в мире выставок автомобильного послепродажного рынка. Мероприятие объединяет мировых производителей и дистрибьюторов, предоставляя идеальную платформу для демонстрации продукции и развития международных партнёрств.',
+                images: [Done, Dtwo, Dthree, Dfour],
+                position: 'right'
+            },
             {
                 id: 'astana',
                 title: 'Automechanika Astana',
@@ -582,13 +596,21 @@ export const newsDataEn = [
     {
         id: 4,
         category: "News",
-        world: ["Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
+        world: ["Automechanika Dubai", "Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
         title: "Automechanika 2025",
         description: ["In 2025, Valesco proudly participates in some of the world's most important automotive trade exhibitions under the Automechanika brand. These global events provide an opportunity to connect with industry professionals, partners, and customers while presenting our latest product solutions and technologies.", "Throughout the year, Valesco will showcase its expanding portfolio of automotive fluids and lubricants, developed to meet international standards and the demands of modern vehicles."],
         date: "2025",
         img: news3,
-        image: [world5, world4, world1, world2, world3],
+        image: [world6, world5, world4, world1, world2, world3],
         locationData: [
+            {
+                id: 'dubai',
+                title: 'Automechanika Dubai',
+                location: 'Dubai, UAE',
+                description: 'Valesco participates in Automechanika Dubai, one of the world’s largest automotive aftermarket exhibitions. The event brings together global manufacturers and distributors, offering an ideal platform to showcase products and develop international partnerships.',
+                images: [Done, Dtwo, Dthree, Dfour],
+                position: 'right'
+            },
             {
                 id: 'astana',
                 title: 'Automechanika Astana',
