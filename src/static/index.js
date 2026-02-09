@@ -21,6 +21,10 @@ import ione from "../assets/news/isl/one.webp"
 import itwo from "../assets/news/isl/two.webp"
 import ithree from "../assets/news/isl/four.webp"
 
+//iraq
+import iraq1 from "../assets/news/iraq/one.webp"
+import iraq2 from "../assets/news/iraq/two.webp"
+
 //Automechanika
 import world1 from "../assets/news/istanbul.webp"
 import world3 from "../assets/news/shanghai.webp"
@@ -37,6 +41,13 @@ import Tone from "../assets/news/tashkent/one.webp"
 import Ttwo from "../assets/news/tashkent/two.webp"
 import Tthree from "../assets/news/tashkent/three.webp"
 import Tfour from "../assets/news/tashkent/four.webp"
+
+//istanbul
+import Ione from "../assets/news/istanbul/one.webp"
+import Itwo from "../assets/news/istanbul/two.webp"
+import Ithree from "../assets/news/istanbul/three.webp"
+import Ifour from "../assets/news/istanbul/four.webp"
+
 
 export const CATEGORY = [
     {
@@ -450,9 +461,9 @@ export const newsData = [
         world: [""],
         title: "Valesco на Международной выставке в Багдаде 2026",
         description: ["Valesco принимает участие в Международной выставке в Багдаде 2026, которая в настоящее время проходит в Багдаде, столице Республики Ирак. Выставка является одной из ключевых международных торговых платформ региона, объединяя производителей, дистрибьюторов и профессионалов отрасли из различных секторов."],
-        date: "11 January, 2026",
+        date: "1-7 февраль, 2026",
         img: iraq,
-        image: [ione, itwo, ithree],
+        image: [iraq1, iraq2],
         fullContent: ["В рамках выставки Valesco демонстрирует свои высококачественные автомобильные смазочные материалы и масла иракским импортёрам, дистрибьюторам и представителям местного рынка. Мероприятие предоставляет важную возможность представить продукцию узбекского производства новым рынкам и укрепить международное присутствие Valesco.","В ходе выставки представители Valesco провели ряд продуктивных переговоров с потенциальными партнёрами. Обсуждения были сосредоточены на следующих вопросах:","Анализ автомобильного рынка Ирака","Сегменты смазочных материалов с высоким спросом","Возможности логистики и дистрибуции","Стратегии расширения присутствия продукции Valesco в Ираке","В результате этих встреч было успешно заключено несколько экспортных соглашений, что является важным шагом к долгосрочному сотрудничеству с иракскими партнёрами.","Участие в Международной выставке в Багдаде 2026 подчёркивает приверженность Valesco расширению экспортных рынков, укреплению торгово-экономических связей между Узбекистаном и Ираком и предоставлению клиентам по всему миру надёжных и высокоэффективных смазочных материалов."]
     },
     {
@@ -481,7 +492,7 @@ export const newsData = [
                 title: 'Automechanika Istanbul 2025',
                 location: 'Стамбул, Турция',
                 description: 'Automechanika Istanbul служит ключевой точкой встречи для Европы, Ближнего Востока и окружающих регионов. Участие Valesco подчеркивает нашу приверженность региональному росту и прямому взаимодействию с дистрибьюторами, автомастерскими и автомобильными профессионалами. Выставка предоставляет уникальную платформу для демонстрации инновационных продуктов и установления долгосрочных деловых отношений.',
-                images: [world1, world1, world1, world1],
+                images: [Ione, Itwo, Ithree, Tfour],
                 position: 'left'
             },
             {
@@ -524,9 +535,9 @@ export const newsDataEn = [
         world: [""],
         title: "Valesco at Baghdad International Fair 2026",
         description: ["Valesco is participating in the Baghdad International Fair 2026, which is currently being held in Baghdad, the capital of the Republic of Iraq. The exhibition serves as one of the region’s key international trade platforms, bringing together manufacturers, distributors, and industry professionals from across multiple sectors."],
-        date: "11 January, 2026",
+        date: "1-7 February, 2026",
         img: iraq,
-        image: [ione, itwo, ithree],
+        image: [iraq1, iraq2],
         fullContent: ["Within the framework of the exhibition, Valesco is showcasing its high-quality automotive lubricants to Iraqi importers, distributors, and local market representatives. The event provides an important opportunity to present Uzbek-made products to new markets and to strengthen Valesco’s international presence.", "During the exhibition, Valesco representatives held a series of productive negotiations with potential partners. Discussions focused on:", "Analysis of the Iraqi automotive market", "High-demand lubricant product segments", "Logistics and distribution opportunities", "Strategies for expanding the presence of Valesco products in Iraq", "As a result of these meetings, a number of export agreements were successfully concluded, marking an important step toward long-term cooperation with Iraqi partners.", "Participation in the Baghdad International Fair 2026 highlights Valesco’s commitment to expanding export markets, strengthening Uzbekistan–Iraq trade and economic relations, and delivering reliable, high-performance lubricant solutions to customers worldwide."]
     },
     {
@@ -555,7 +566,7 @@ export const newsDataEn = [
                 title: 'Automechanika Istanbul 2025',
                 location: 'Istanbul, Türkiye',
                 description: 'Automechanika Istanbul serves as a key meeting point for Europe, the Middle East, and surrounding regions. Valesco\'s participation highlights our commitment to regional growth and direct engagement with distributors, workshops, and automotive professionals. The exhibition provides a unique platform for showcasing innovative products and establishing long-term business relationships.',
-                images: [world1, world1, world1, world1],
+                images: [Ione, Itwo, Ithree, Tfour],
                 position: 'left'
             },
             {
