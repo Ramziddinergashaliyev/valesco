@@ -20,6 +20,7 @@ const Outlets = () => {
                         <p className="outlets-top-info-text">В 2024 году Valesco запустил программу брендирования сервисных центров и розничных магазинов по всей России – Valesco TOP.</p>
                     </div>
                 </div>
+
                 <div className="outlets-middle">
                     <h2 className="outlets-middle-title">Официальные магазины Valesco TOP</h2>
                     <div className="outlets-middle-info">
@@ -74,6 +75,7 @@ const Outlets = () => {
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </AccordionDetails>
                             </Accordion>
+
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -82,11 +84,13 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Гипермаркеты</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </AccordionDetails>
                             </Accordion>
+
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -95,11 +99,13 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Федеральные сети</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </AccordionDetails>
                             </Accordion>
+
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -108,6 +114,7 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">АЗС</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
@@ -132,11 +139,13 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Москва и Московская область</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </AccordionDetails>
                             </Accordion>
+
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -145,11 +154,13 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Центральный федеральный округ</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </AccordionDetails>
                             </Accordion>
+
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -163,6 +174,7 @@ const Outlets = () => {
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </AccordionDetails>
                             </Accordion>
+
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -171,11 +183,13 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Урал</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </AccordionDetails>
                             </Accordion>
+
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -189,6 +203,7 @@ const Outlets = () => {
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </AccordionDetails>
                             </Accordion>
+
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -202,6 +217,7 @@ const Outlets = () => {
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </AccordionDetails>
                             </Accordion>
+
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}

@@ -17,6 +17,28 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
+const LightboxModal = ({ src, alt, onClose }) => {
+    useEffect(() => {
+        const handleKey = (e) => { if (e.key === 'Escape') onClose() }
+        document.addEventListener('keydown', handleKey)
+        document.body.style.overflow = 'hidden'
+
+        return () => {
+            document.removeEventListener('keydown', handleKey)
+            document.body.style.overflow = ''
+        }
+    }, [onClose])
+
+    return (
+        <div className="lightbox-overlay" onClick={onClose}>
+            <button className="lightbox-close" onClick={onClose}>✕</button>
+            <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                <img src={src} alt={alt} className="lightbox-img" />
+            </div>
+        </div>
+    )
+}
+
 const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
@@ -51,10 +73,8 @@ const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
     )
 }
 
-
 const ProductSections = ({ byData, t }) => (
     <div className="single-dropdown">
-
         <ul className="single-dropdown-item container">
             <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
             <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
@@ -62,7 +82,6 @@ const ProductSections = ({ byData, t }) => (
                 <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
             )}
         </ul>
-
         <div className="single-dropdown-result">
             <Specificat data={byData?.specifications} />
             <Characterist data={byData} />
@@ -70,7 +89,6 @@ const ProductSections = ({ byData, t }) => (
                 <Document data={byData?.documents} />
             )}
         </div>
-        
     </div>
 )
 
@@ -88,14 +106,14 @@ const RelatedProductsCarousel = ({ products }) => (
             768: { slidesPerView: 3, spaceBetween: 30 },
             1024: { slidesPerView: 4, spaceBetween: 40 }
         }}
-        className="single-freezees container"
-    >
+        className="single-freezees container">
         {products?.map((el, index) => (
             <SwiperSlide key={el?.id || index} className='single-freezee'>
                 <NavLink to={`/singleProduct/${el?.id}`}>
                     <div className="single-freezee-img">
                         <img src={el?.image?.[0] || el?.image?.[1]} alt={el?.title} />
                     </div>
+
                     <div className="single-freeze-item">
                         <p className="single-freezee-item-text">{el?.title}</p>
                     </div>
@@ -110,6 +128,7 @@ const SingleProduct = () => {
     const { id } = useParams()
     const { data: byData, isLoading } = useGetProductByIdQuery(id)
     const [activeImg, setActiveImg] = useState(null)
+    const [lightboxImg, setLightboxImg] = useState(null)
 
     const { data: Freezee } = useGetCategoriesByIdQuery(25)
     const { data: FILTER } = useGetCategoriesByIdQuery(28)
@@ -126,10 +145,8 @@ const SingleProduct = () => {
     }, [byData])
 
     const isOilCategory = useMemo(() => {
-
         const categoryTitleRu = byData?.category?.title?.ru
         const categoryTitleEn = byData?.category?.title?.en
-
         const oilCategories = [
             { ru: "Моторные масла для легковой и легкой коммерческой техники", en: "Motor oils for passenger cars and light commercial vehicles" },
             { ru: "Моторные масла для дизельных двигателей", en: "Motor oils for diesel engines" },
@@ -146,18 +163,10 @@ const SingleProduct = () => {
     const relatedProducts = useMemo(() => {
         const categoryTitleRu = byData?.category?.title?.ru
         const categoryTitleEn = byData?.category?.title?.en
-
-        if (categoryTitleRu === "Антифриз" || categoryTitleEn === "Antifreeze") {
-            return Freezee?.products
-        }
-        if (categoryTitleRu === "Фильтры" || categoryTitleEn === "Filters") {
-            return FILTER?.products
-        }
-        if (categoryTitleRu === "Тормозная жидкость" || categoryTitleEn === "Brake fluid") {
-            return BREAKE?.products
-        }
+        if (categoryTitleRu === "Антифриз" || categoryTitleEn === "Antifreeze") return Freezee?.products
+        if (categoryTitleRu === "Фильтры" || categoryTitleEn === "Filters") return FILTER?.products
+        if (categoryTitleRu === "Тормозная жидкость" || categoryTitleEn === "Brake fluid") return BREAKE?.products
         return null
-
     }, [byData?.category, Freezee?.products, FILTER?.products, BREAKE?.products])
 
     const showFilterInfo = useMemo(() => {
@@ -192,7 +201,11 @@ const SingleProduct = () => {
                         ))}
                     </div>
 
-                    <div className="single-top-left-img">
+                    <div
+                        className="single-top-left-img"
+                        onClick={() => activeImg && setLightboxImg(activeImg)}
+                        style={{ cursor: 'zoom-in' }}
+                    >
                         {activeImg && (
                             <ImageLoader
                                 src={activeImg}
@@ -234,6 +247,14 @@ const SingleProduct = () => {
             {isOilCategory && <ProductSections byData={byData} t={t} />}
 
             {relatedProducts && <RelatedProductsCarousel products={relatedProducts} />}
+
+            {lightboxImg && (
+                <LightboxModal
+                    src={lightboxImg}
+                    alt="product zoomed"
+                    onClose={() => setLightboxImg(null)}
+                />
+            )}
         </div>
     )
 }

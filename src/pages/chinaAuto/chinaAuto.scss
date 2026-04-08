@@ -201,35 +201,35 @@
         }
 
         &-bottom-boxs-text {
-           font-size: 16px;
-           line-height: 20px;
-           font-weight: 400;
-           text-align: center;
-           color: #333331;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+            text-align: center;
+            color: #333331;
         }
 
         &-bottom-boxs-middle-info {
-          align-items: center;
+            align-items: center;
         }
 
         &-bottom-boxs-middle-info-title {
-           font-size: 18px;
-           text-align: center;
+            font-size: 18px;
+            text-align: center;
         }
 
         &-bottom-boxs-middle-info-text {
-           display: none;
+            display: none;
         }
 
         &-bottom-boxs-btn {
-          padding: 10px;
-          width: 100%;
+            padding: 10px;
+            width: 100%;
         }
     }
 
     @media (max-width:720px) {
         &-bottom {
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -242,7 +242,7 @@
 
     @media (max-width:480px) {
         &-bottom {
-         grid-template-columns: 1fr;
+            grid-template-columns: 1fr;
         }
     }
 

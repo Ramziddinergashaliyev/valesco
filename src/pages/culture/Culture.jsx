@@ -13,6 +13,7 @@ const Culture = () => {
       <div className="culture-top">
         <h2 className="culture-top-title">Корпоративная культура</h2>
       </div>
+      
       <div className="culture-box">
         <div className="culture-box-info">
           <h2 className="culture-box-info-title">Корпоративная культура VALESCO</h2>
@@ -29,10 +30,12 @@ const Culture = () => {
                   <p className="culture-box-card-info-text">Лучшие смазочные материалы</p>
                 </div>
               </div>
+
               <div className="culture-box-line"><FaArrowRight /></div>
               <div className="culture-box-card">
                 <p className="culture-box-card-info-title">культура победы</p>
               </div>
+
               <div className="culture-box-line-top"><FaArrowUp /></div>
               <div className="culture-box-card">
                 <p className="culture-box-card-info-title">профессионализм</p>
@@ -42,6 +45,7 @@ const Culture = () => {
                   <p className="culture-box-card-info-text">Дух победителя</p>
                 </div>
               </div>
+
               <div className="culture-box-line-plus"><FaPlus /></div>
               <div className="culture-box-card">
                 <div className="culture-box-card-info">

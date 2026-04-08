@@ -156,6 +156,7 @@
     }
 
     @media (max-width:760px) {
+
         &-analog,
         &-dannim {
             grid-template-columns: 1fr 2fr;
@@ -163,20 +164,21 @@
 
         &-analog-title,
         &-dannim-title {
-          font-size: 30px;
-          line-height: 36px;
-          font-weight: 400;
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: 400;
         }
 
         &-analog-selects-title,
         &-dannim-selects-title {
-          font-size: 20px;
-          line-height: 26px;
-          padding-bottom: 0px;
+            font-size: 20px;
+            line-height: 26px;
+            padding-bottom: 0px;
         }
     }
 
     @media (max-width: 600px) {
+
         &-analog,
         &-dannim {
             grid-template-columns: 1fr;
@@ -196,8 +198,9 @@
     }
 
     @media (max-width:450px) {
+
         &-analog-title,
-        &-dannim-title  {
+        &-dannim-title {
             font-size: 22px;
             font-weight: 400;
             line-height: 26px;
@@ -211,34 +214,34 @@
 
         &-analog-selects-title,
         &-dannim-selects-title {
-          font-size: 16px;
-          font-weight: 300;
-          line-height: 22px;
-          text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+            text-align: center;
         }
 
         &-analog-select,
         &-dannim-select {
-          padding: 16px 10px;
-          font-size: 14px;
+            padding: 16px 10px;
+            font-size: 14px;
         }
 
         &-analog-selects,
         &-dannim-selects {
-          gap: 10px;
+            gap: 10px;
         }
 
         &-analog-button,
-        &-dannim-button  {
+        &-dannim-button {
             padding: 15px 10px;
         }
 
-        &-analog-selects-bottom-title  {
+        &-analog-selects-bottom-title {
             font-size: 15px;
             font-weight: 300;
             line-height: 18px;
             text-align: center;
-            
+
         }
     }
 

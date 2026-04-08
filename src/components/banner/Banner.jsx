@@ -19,7 +19,7 @@ const Banner = () => {
                         {t("способствует")}
                     </p>
                 </div>
-                                    
+
                 <div className="banner__cards">
                     {
                         lenguageCard?.map(el => (

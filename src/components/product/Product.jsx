@@ -62,7 +62,7 @@ const ImageWithLoading = ({ src, alt, className, linkTo }) => {
         setImageError(true);
         setImageLoading(false);
     };
-    
+
     const imageContent = (
         <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             {imageLoading && (
@@ -117,7 +117,7 @@ const ImageWithLoading = ({ src, alt, className, linkTo }) => {
             {imageContent}
         </NavLink>
     ) : imageContent;
-    
+
 };
 
 const Product = ({ data, loading, title }) => {

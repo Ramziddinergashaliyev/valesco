@@ -8,20 +8,20 @@
     grid-gap: 40px;
     padding-top: 40px;
   }
-  
+
   @media (max-width:1580px) {
     &__nav {
       grid-template-columns: 300px 200px 1fr 350px;
     }
   }
-  
+
   &__nav-logo {
     img {
       width: 80px;
       height: 80px;
     }
   }
-   
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -79,7 +79,7 @@
       border: 1px solid #aaa9;
       border-radius: 3px;
     }
-    
+
     textarea {
       height: 60px;
       resize: vertical;
@@ -88,7 +88,7 @@
       padding: 10px;
       border-radius: 3px;
     }
-    
+
     &-btn {
       width: 160px;
       padding: 12px;
@@ -119,21 +119,21 @@
 
   @media (max-width:1190px) {
     &__nav {
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 15px;
     }
   }
 
   @media (max-width:960px) {
     &__nav {
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 40px 20px;
     }
   }
 
   @media (max-width:550px) {
     &__nav {
-      grid-template-columns: repeat(1,1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 20px;
     }
   }

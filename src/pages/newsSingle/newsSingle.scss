@@ -152,7 +152,7 @@
                 }
 
                 .swiper-pagination-bullet {
-                    background: #0066cc;
+                    background: rgba(255, 0, 0, 0.89);
                     opacity: 0.5;
                     transition: all 0.3s ease;
 
@@ -184,9 +184,17 @@
             animation: fadeInUp 0.6s ease forwards;
             transition: all 0.3s ease;
 
-            &:nth-child(1) { animation-delay: 0.5s; }
-            &:nth-child(2) { animation-delay: 0.6s; }
-            &:nth-child(3) { animation-delay: 0.7s; }
+            &:nth-child(1) {
+                animation-delay: 0.5s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: 0.6s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 0.7s;
+            }
 
             @media (max-width: 768px) {
                 font-size: 18px;
@@ -219,7 +227,6 @@
                     border-bottom: none;
                 }
 
-                // Scroll animatsiyalari uchun boshlang'ich holat
                 &.scroll-animate {
                     .animate-from-left {
                         opacity: 0;
@@ -233,8 +240,8 @@
                         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
                     }
 
-                    // Ko'rinishga kirganida
                     &.visible {
+
                         .animate-from-left,
                         .animate-from-right {
                             opacity: 1;
@@ -249,20 +256,22 @@
                             transition-delay: 0.1s;
                         }
 
-                        // Rasmlar uchun ketma-ket animatsiya
                         .images-grid .image-item {
                             opacity: 1;
                             transform: scale(1);
-                            
+
                             &:nth-child(1) {
                                 transition-delay: 0.3s;
                             }
+
                             &:nth-child(2) {
                                 transition-delay: 0.4s;
                             }
+
                             &:nth-child(3) {
                                 transition-delay: 0.5s;
                             }
+
                             &:nth-child(4) {
                                 transition-delay: 0.6s;
                             }
@@ -349,7 +358,7 @@
                     .location-subtitle {
                         font-size: 18px;
                         font-weight: 600;
-                        color: #0066cc;
+                        color: rgba(255, 0, 0, 0.89);
                         margin: 0;
                         transition: all 0.3s ease;
 
@@ -474,11 +483,11 @@
     }
 }
 
-// Animatsiyalar
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -489,6 +498,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -500,6 +510,7 @@
         opacity: 0;
         transform: translateY(-15px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -511,6 +522,7 @@
         opacity: 0;
         transform: scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -528,6 +540,7 @@
         opacity: 0;
         transform: translateX(-100px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -539,6 +552,7 @@
         opacity: 0;
         transform: translateX(100px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);

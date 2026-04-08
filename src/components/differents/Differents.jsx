@@ -17,6 +17,7 @@ const Differents = () => {
                 <p className="differents__left-desc">{t("масел")}</p>
                 <NavLink to={"/about"} className='differents__left-btn'>{t("Узнать больше")}<MdArrowOutward /></NavLink>
             </div>
+
             <div className="differents__right">
                 <img className='differents__right-topImg' src={img1} alt="different img-top" />
                 <img className='differents__right-bottomImg' src={img2} alt="different img-bottom" />

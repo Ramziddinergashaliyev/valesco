@@ -21,26 +21,26 @@ const Footer = () => {
   const { data } = useGetCategoriesQuery()
   const { t, i18n } = useTranslation()
   const { formData, setFormData, handleChange } = useGetValue(initialState)
-  const [ contactForm, {isSuccess, isError} ] = useCreateContactMutation()
-  
+  const [contactForm, { isSuccess, isError }] = useCreateContactMutation()
+
   const handleSubmit = (e) => {
     e.preventDefault()
     contactForm(formData);
     setFormData(initialState);
   }
-  
+
   useEffect(() => {
-    if(isSuccess) {
+    if (isSuccess) {
       toast.success("Сообщение успешно отправлено!")
     }
-  },[isSuccess])
-  
+  }, [isSuccess])
+
   useEffect(() => {
-    if(isError) {
+    if (isError) {
       toast.error("Ошибка отправки сообщения!")
     }
-  },[isError])
-  
+  }, [isError])
+
   return (
     <footer className='footer'>
       <div className="footer-line"></div>

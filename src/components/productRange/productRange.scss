@@ -6,14 +6,14 @@
         grid-template-columns: 1.2fr 2fr;
         grid-gap: 40px;
         padding: 20px 0px 50px;
-        
+
         &-hide {
             margin-top: 100px;
             display: block !important;
             grid-template-columns: none !important;
             grid-gap: 0 !important;
             padding: 20px 0px !important;
-            
+
             .productRange-card-list {
                 grid-template-columns: repeat(4, 1fr) !important;
                 grid-gap: 20px !important;
@@ -26,7 +26,7 @@
         flex-direction: column;
         gap: 40px;
         align-items: self-start;
-        
+
         &-title {
             font-size: 44px;
             line-height: 48px;
@@ -62,7 +62,7 @@
             background-color: #333331;
             color: white;
             transition: .5s;
-        
+
             &:before {
                 content: '';
                 position: absolute;
@@ -73,7 +73,7 @@
                 background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
                 transition: left 0.6s;
             }
-                    
+
             &:hover {
                 transform: translateY(-3px);
                 box-shadow: 0 15px 35px rgba(51, 51, 49, 0.3);

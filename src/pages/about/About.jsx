@@ -125,6 +125,7 @@ const About = () => {
 
       <div className="about-middle container">
         <div className="about-middle-top">
+
           <div className="about-middle-top-box" ref={counterRef}>
             <img src={logo} alt="" />
             <div className="about-middle-top-box-info">
@@ -132,15 +133,18 @@ const About = () => {
               <h2 className="about-middle-top-box-info-title">{t("Guarantee")}</h2>
             </div>
           </div>
+
           <div className="about-middle-top-info">
             <h2 className="about-middle-top-info-title">{t("Performance")}</h2>
             <p className="about-middle-top-info-text">{t("confidence")}</p>
           </div>
+
           <div className="about-middle-top-right">
             <p className="about-middle-top-right-title"><FaCircleChevronRight />{t("Long-lasting")}</p>
             <p className="about-middle-top-right-title"><FaCircleChevronRight />{t("Reduced")}</p>
             <p className="about-middle-top-right-title"><FaCircleChevronRight />{t("Advanced")}</p>
           </div>
+
         </div>
       </div>
 

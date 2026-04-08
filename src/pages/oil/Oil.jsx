@@ -5,6 +5,7 @@ const Oil = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
     return (
         <div className='oil container'>
             <div className="oil-top">
@@ -63,9 +64,10 @@ const Oil = () => {
 
                     <div className="oil-analog-selects-bottom-title">* Не обязательные для выбора поля, которые необходимы для осуществления более точного подбора. Если не выбрано ничего, то подбор будет осуществляться по полному перечню продуктов.</div>
                 </div>
-            </div> 
+            </div>
         </div>
     )
 }
+
 
 export default Oil

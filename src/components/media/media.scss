@@ -1,11 +1,11 @@
 .media {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 40px 12px;
-    
+
     @media (max-width:1580px) {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 40px 12px;
     }
@@ -58,37 +58,36 @@
                 align-items: center;
                 justify-content: center;
                 transition: .5s;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 
                 svg {
                     font-size: 40px;
                     color: #fff;
                     transition: .4s;
-                    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+                    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
                 }
 
                 &.instagram {
                     background: radial-gradient(circle at 33% 100%,
-                        #fdf497 0%,
-                        #fdf497 15%,
-                        #fd5949 45%,
-                        #d6249f 60%,
-                        #9638f0 75%,
-                        #285AEB 100%
-                    );
-                    box-shadow: 
-                        0 10px 25px rgba(0,0,0,0.25),
-                        0 0 18px rgba(255,255,255,0.4) inset;
+                            #fdf497 0%,
+                            #fdf497 15%,
+                            #fd5949 45%,
+                            #d6249f 60%,
+                            #9638f0 75%,
+                            #285AEB 100%);
+                    box-shadow:
+                        0 10px 25px rgba(0, 0, 0, 0.25),
+                        0 0 18px rgba(255, 255, 255, 0.4) inset;
                 }
 
                 &.facebook {
                     background: linear-gradient(145deg, #1877f2, #3b5998);
-                    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
                 }
 
                 &:hover {
                     transform: translate(-50%, -15%) scale(1.15);
-                    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+                    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 
                     svg {
                         transform: scale(1.15);

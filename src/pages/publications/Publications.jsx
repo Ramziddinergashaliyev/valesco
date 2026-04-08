@@ -4,11 +4,11 @@ import { PUBLIC } from '../../static'
 import { MdArrowOutward } from 'react-icons/md'
 
 const Publications = () => {
-  const [ hide, setHide ] = useState(6)
+  const [hide, setHide] = useState(6)
 
-   useEffect(() => {
-      window.scrollTo(0, 0)
-    }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const handleChange = () => {
     setHide(prev => prev + 5)

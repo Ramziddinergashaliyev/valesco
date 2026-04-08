@@ -5,7 +5,7 @@ import "./unical.scss"
 const Unical = () => {
 
     useEffect(() => {
-       window.scrollTo(0, 0)
+        window.scrollTo(0, 0)
     }, [])
 
     const UNICAL = [
@@ -55,6 +55,7 @@ const Unical = () => {
                     <img src={img} alt="unical-img" />
                 </div>
             </div>
+
             <div className="unical-brand">
                 <h2 className="unical-brand-title">Бренд Valesco</h2>
                 <div className="unical-brand-info">
@@ -64,6 +65,7 @@ const Unical = () => {
                     <p className='unical-brand-info-text'>Наша главная цель — это предоставлять продукты, которые опережают свое время, используя творческий подход и новейшие технологии.</p>
                 </div>
             </div>
+
             <div className="unical-core">
                 <h2 className="unical-core-title">основная идентичность</h2>
                 <div className="unical-core-boxs">
@@ -85,10 +87,11 @@ const Unical = () => {
 
                 </div>
             </div>
+
             <div className="unical-expand">
 
                 <h2 className="unical-expand-title">развернутая идентичность</h2>
-               
+
                 <div className="unical-expand-cards">
                     {
                         UNICAL?.map(el => (

@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react'
 import "./impact.scss"
-// import img from "../../assets/images/impact.jpg"
-// import img1 from "../../assets/images/impgroup.jpg"
-// import img2 from "../../assets/images/acsio.jpg"
-// import img3 from "../../assets/images/doct.jpg"
 import { IMPACT } from '../../static'
 
 const Impact = () => {

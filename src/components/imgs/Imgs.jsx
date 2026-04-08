@@ -3,8 +3,6 @@ import { useTranslation } from "react-i18next";
 import { MdArrowOutward } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
-import "./imgs.scss";
-
 import img1 from "../../assets/anime/anime-1.webp";
 import img2 from "../../assets/anime/anime-2.webp";
 import img3 from "../../assets/anime/anime-3.webp";
@@ -12,6 +10,8 @@ import img4 from "../../assets/anime/anime-4.webp";
 import img5 from "../../assets/anime/anime-5.webp";
 import img6 from "../../assets/anime/anime-6.webp";
 import img7 from "../../assets/anime/anime-7.webp";
+
+import "./imgs.scss";
 
 const Imgs = () => {
   const { t, i18n } = useTranslation()

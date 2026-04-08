@@ -1,54 +1,219 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./distrbut.scss"
-import MapChart from '../../components/mapChart/MapChart'
-import Distr from '../../components/distr/Distr'
-import { Navigate, NavLink } from 'react-router-dom'
+import vd from "../../assets/videos/vd.mp4"
 import { useTranslation } from 'react-i18next'
-import { MdArrowOutward } from 'react-icons/md'
-import pdf from "../../assets/pdf/v-catalog.pdf"
+
+const Data = [
+  {
+    id: 1,
+    country: 'УЗБЕКИСТАН',
+    distributor: 'ООО «ЮНИМАКС ТЕХНИКС»',
+    title: 'Узбекистан, Ташкент Регион ул 4K 744A, Зангиота, 100000, (EXZAP Автозапчасти и Масла)',
+    number: ["+998712033344"]
+  },
+  {
+    id: 2,
+    country: 'КАЗАХСТАН',
+    distributor: 'TOO «AVTODETAIL»',
+    title: 'Казахстан, Южно-Казахстанская область, 160021, город Шымкент, Абайский район, ул Байтулы баба 14А',
+    number: ["77022837999"]
+  },
+  {
+    id: 3,
+    country: 'ТАДЖИКИСТАН',
+    distributor: 'ООО «ТОСОЛ-ПЛЮС»',
+    title: 'Таджикистан, Согдийская область, Дж. Расуловский район, пгт Мехробод ул. И. Нурматов 45/4',
+    number: ["+992 92 707 49 86"]
+  },
+  {
+    id: 4,
+    country: 'ТУРКМЕНИСТАН',
+    distributor: 'ИП «НУРЫЕВ ГУВАНЧ ТАГАНДУРДЫЕВИЧ»',
+    title: 'Туркменистан, Марыйский велаят, Векилбазар Этрап, Акгонур',
+    number: ["+993 65 551008"]
+  },
+  // {
+  //   id: 5,
+  //   country: 'РОССИЙСКАЯ ФЕДЕРАЦИЯ',
+  //   distributor: 'OOO «NB GLOBAL»',
+  //   title: '454047, г. Челябинск, ул. 2-я Павелецкая, 22',
+  //   number: ["+7 495 145 95 00", "+7 922 717 60 90"]
+  // },
+  {
+    id: 6,
+    country: 'АЗЕРБАЙДЖАН',
+    distributor: 'OOO «ILKIN-N»',
+    title: 'Респ. Азербайджан, Сальянский район д. Карабаглы',
+    number: ["+99 450 321 44 72"]
+  },
+  {
+    id: 7,
+    country: 'КАЗАХСТАН',
+    distributor: 'TOO «TANAUTO KAZAKHSTAN»',
+    title: 'г. Алматы пр. Райымбека д. 169 А',
+    number: ["+7 701 711 0430"]
+  },
+  {
+    id: 8,
+    country: 'КЫРГЫЗСТАН',
+    distributor: 'ООО «КАРД ГРУПП»',
+    title: 'Кыргызская Республика, г г.Бишкек, ул.Садыгалиева 1',
+    number: ["+996 702 676 514"]
+  },
+]
+
+const DataEN = [
+  {
+    id: 1,
+    country: 'UZBEKISTAN',
+    distributor: 'LLC «UNIMAX TECHNICS»',
+    title: 'Узбекистан, Ташкент Регион ул 4K 744A, Зангиота, 100000, (EXZAP Автозапчасти и Масла)',
+    number: ["+998712033344"]
+  },
+  {
+    id: 2,
+    country: 'KAZAKHSTAN',
+    distributor: 'LLP «AVTODETAIL»',
+    title: 'Kazakhstan, South Kazakhstan Region, 160021, Shymkent City, Abai District, 14A Baituly Baba St',
+    number: ["77022837999"]
+  },
+  {
+    id: 3,
+    country: 'TAJIKISTAN',
+    distributor: 'LLC «TOSOL-PLUS»',
+    title: 'Tajikistan, Sughd Region, J. Rasulov District, Mehrobod Settlement, 45/4 I. Nurmatov St',
+    number: ["+992 92 707 49 86"]
+  },
+  {
+    id: 4,
+    country: 'TURKMENISTAN',
+    distributor: 'IE «NURYYEV GUVANCH TAGANDURDYEVICH»',
+    title: 'Turkmenistan, Mary Region, Vekilbazar District, Akgonur',
+    number: ["+993 65 551008"]
+  },
+  // {
+  //   id: 5,
+  //   country: 'RUSSIAN FEDERATION',
+  //   distributor: 'LLC «NB GLOBAL»',
+  //   title: '454047, Chelyabinsk city, Paveletskaya street second, 22',
+  //   number: ["+7 495 145 95 00", "+7 922 717 60 90"]
+  // },
+  {
+    id: 6,
+    country: 'AZERBAIJAN',
+    distributor: 'LIC «ILKIN-N»',
+    title: 'Salyansk area, Karabagly h',
+    number: ["+99 450 321 4472"]
+  },
+  {
+    id: 7,
+    country: 'KAZAKHSTAN',
+    distributor: 'TOO «Tanauto Kazakhstan»',
+    title: 'Almaty. Raimbek avenue 169 A',
+    number: ["+7 701 711 0430"]
+  },
+  {
+    id: 8,
+    country: 'KYRGYZSTAN',
+    distributor: 'LLC «KARD GROUP»',
+    title: 'Kyrgyz Republic, Bishkek city, Sadygalieva str. 1',
+    number: ["+996 702 676 514"]
+  },
+]
+
+const MapPinIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+    <circle cx="12" cy="10" r="3" />
+  </svg>
+)
+
+const PhoneIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+  </svg>
+)
+
+const ChevronIcon = () => (
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="18 15 12 9 6 15" />
+  </svg>
+)
 
 const Distrbut = () => {
+  const [openId, setOpenId] = useState(null)
   const { t, i18n } = useTranslation()
 
   useEffect(() => {
-    scrollTo(0, 0)
+    window.scrollTo(0, 0)
   }, [])
+
+  const DATADISTURB = i18n?.languages[0] === "ru" ? Data : DataEN
+
+  const toggle = (id) => {
+    setOpenId(prev => prev === id ? null : id)
+  }
 
   return (
     <div className='distrbut'>
-      <div className="distrbut-top">
-        <div className="distrbut-top-info container">
-          <h2 className='distrbut-top-info-title'>{t("DISTRIBUTOR")}</h2>
-          <p className='distrbut-top-info-text'>{t("Global Logistics")}</p>
+      <video
+        className='distrbut__video-bg'
+        src={vd}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
+      <div className='distrbut__overlay' />
+
+      <div className='distrbut__content'>
+        <div className='distrbut__left'>
+          <p className='distrbut__label'>{t('distributors.label')}</p>
+          <h2 className='distrbut__title'>{t('distributors.title')}</h2>
+          <h2 className='distrbut__subtitle'>{t('distributors.subtitle')}</h2>
+          <div className='distrbut__divider' />
+        </div>
+
+        <div className='distrbut__list'>
+          {DATADISTURB.map((d) => (
+            <div
+              key={d.id}
+              className={`distrbut__item ${openId === d.id ? 'open' : ''}`}
+            >
+              <div
+                className='distrbut__item-header'
+                onClick={() => toggle(d.id)}
+              >
+                <span className='distrbut__item-num'>{d.id}</span>
+                <span className='distrbut__item-name'>{d.country}</span>
+                <span className='distrbut__item-chevron'>
+                  <ChevronIcon />
+                </span>
+              </div>
+
+              <div className='distrbut__item-body'>
+                <p className='distrbut__company-name'>{d.distributor}</p>
+                <div className='distrbut__card'>
+                  <div className='distrbut__card-row'>
+                    <MapPinIcon />
+                    <span>{d.title}</span>
+                  </div>
+
+                  <div className='distrbut__card-row'>
+                    <PhoneIcon />
+                    <div className='distrbut__phones'>
+                      {d.number.map((el, i) => ( // ✅ key prop qo'shildi
+                        <span key={i}>{el}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
-      <div className="distrbut-catalog container">
-        <h2 className='distrbut-catalog-title'>{t("catalogue")}</h2>
-        <p className='distrbut-catalog-text'>{t("know all")}</p>
-        <div className="distrbut-catalog-btns">
-            <a download className='distrbut-catalog-btn' href={pdf}>{t("DownloadEn")}<MdArrowOutward /></a>
-            <a download target='_blank' className='distrbut-catalog-btn' href="https://backend.valescooil.com/uploads/files/1764574907305-685895377.pdf">{t("Download")}<MdArrowOutward /></a>
-        </div>
-      </div>
-
-      <div className="distrbut-bg">
-        <div className="container distrbut-bg-container">
-          <div className="distrbut-bg-left">
-            <h3 className="distrbut-bg-left-title">{t("distributor partners")}</h3>
-            <p className="distrbut-bg-left-text">{t("We are constantly seeking opportunities to expand your business to new countries and markets.")}</p>
-          </div>
-          <div className="distrbut-bg-right">
-            <NavLink to={'/contact'} className="distrbut-bg-right-btn">{t("Become Our Partner")}<MdArrowOutward /></NavLink>
-          </div>
-        </div>
-      </div>
-
-      <div className="distrbut-map">
-        <MapChart />
-      </div>
-
-      <Distr />
     </div>
   )
 }

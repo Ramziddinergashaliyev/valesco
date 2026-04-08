@@ -8,7 +8,6 @@ import new7 from "../assets/images/new7.jpg"
 import new8 from "../assets/images/new8.jpg"
 import news from "../assets/icons/logo.png"
 
-
 import news0 from "../assets/news/news0.webp"
 import news1 from "../assets/news/news1.webp"
 import news2 from "../assets/news/news2.webp"
@@ -16,16 +15,13 @@ import news3 from "../assets/news/news3.webp"
 import isl from "../assets/news/isl.webp"
 import iraq from "../assets/news/iraq.webp"
 
-//isl
 import ione from "../assets/news/isl/one.webp"
 import itwo from "../assets/news/isl/two.webp"
 import ithree from "../assets/news/isl/four.webp"
 
-//iraq
 import iraq1 from "../assets/news/iraq/one.webp"
 import iraq2 from "../assets/news/iraq/two.webp"
 
-//Automechanika
 import world1 from "../assets/news/istanbul.webp"
 import world3 from "../assets/news/shanghai.webp"
 import world2 from "../assets/news/tashkent.webp"
@@ -33,37 +29,31 @@ import world4 from "../assets/news/moscow.webp"
 import world5 from "../assets/news/astana.webp"
 import world6 from "../assets/news/dubai.webp"
 
-//china
 import one from "../assets/news/shanhai/one.webp"
 import two from "../assets/news/shanhai/two.webp"
 import three from "../assets/news/shanhai/three.webp"
 import four from "../assets/news/shanhai/four.webp"
 
-//tashkent
 import Tone from "../assets/news/tashkent/one.webp"
 import Ttwo from "../assets/news/tashkent/two.webp"
 import Tthree from "../assets/news/tashkent/three.webp"
 import Tfour from "../assets/news/tashkent/four.webp"
 
-//istanbul
 import Ione from "../assets/news/istanbul/one.webp"
 import Itwo from "../assets/news/istanbul/two.webp"
 import Ithree from "../assets/news/istanbul/three.webp"
 import Ifour from "../assets/news/istanbul/four.webp"
 
-//moscow
 import Mone from "../assets/news/moscow/one.webp"
 import Mtwo from "../assets/news/moscow/two.webp"
 import Mthree from "../assets/news/moscow/three.webp"
 import Mfour from "../assets/news/moscow/four.webp"
 
-//astana
 import Aone from "../assets/news/astana/one.webp"
 import Atwo from "../assets/news/astana/two.webp"
 import Athree from "../assets/news/astana/three.webp"
 import Afour from "../assets/news/astana/four.webp"
 
-//dubai
 import Done from "../assets/news/dubai/one.webp"
 import Dtwo from "../assets/news/dubai/two.webp"
 import Dthree from "../assets/news/dubai/three.webp"
