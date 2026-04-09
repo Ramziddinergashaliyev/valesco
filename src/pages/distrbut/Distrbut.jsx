@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./distrbut.scss"
-import vd from "../../assets/videos/vd.mp4"
+import vd from "../../assets/videos/vd.webm"
 import { useTranslation } from 'react-i18next'
 
 const Data = [
