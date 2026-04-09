@@ -13,7 +13,7 @@ const Culture = () => {
       <div className="culture-top">
         <h2 className="culture-top-title">Корпоративная культура</h2>
       </div>
-      
+
       <div className="culture-box">
         <div className="culture-box-info">
           <h2 className="culture-box-info-title">Корпоративная культура VALESCO</h2>

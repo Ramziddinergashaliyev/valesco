@@ -203,7 +203,7 @@ const Distrbut = () => {
                   <div className='distrbut__card-row'>
                     <PhoneIcon />
                     <div className='distrbut__phones'>
-                      {d.number.map((el, i) => ( // ✅ key prop qo'shildi
+                      {d.number.map((el, i) => (
                         <span key={i}>{el}</span>
                       ))}
                     </div>

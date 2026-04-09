@@ -18,6 +18,7 @@ const Impact = () => {
         </div>
       </div>
 
+
       <div className="impact-nashi">
         <h2 className="impact-nashi-title">наша философия</h2>
         <div className="impact-nashi-info">
