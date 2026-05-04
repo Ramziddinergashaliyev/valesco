@@ -63,6 +63,7 @@ const Footer = () => {
             ))
           }
         </ul>
+        
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("КОМПАНИЯ")}</h3>
           <li className="footer__item-list"><NavLink to={"/about"}>{t("company")}</NavLink></li>
@@ -70,6 +71,7 @@ const Footer = () => {
           <li className="footer__item-list"><NavLink to={"/distrbut"}>{t("distributors")}</NavLink></li>
           <li className="footer__item-list"><NavLink to={"/contact"}>{t("contacts")}</NavLink></li>
         </ul>
+
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("Контакты")}</h3>
           <li className="footer__item-contact">

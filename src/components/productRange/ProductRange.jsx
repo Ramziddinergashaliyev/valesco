@@ -22,6 +22,7 @@ import rs13 from "../../assets/icon/v7.webp"
 import rs14 from "../../assets/icon/v7-1.webp"
 import rs15 from "../../assets/icon/v8.webp"
 import rs16 from "../../assets/icon/v8-1.webp"
+import file from "../../assets/pdf/v-catalog.pdf"
 
 const CATEGORY = [
   {
@@ -55,7 +56,7 @@ const CATEGORY = [
   {
     image: rs15,
     bgImage: rs16,
-  },
+  }
 ];
 
 const ProductRange = ({ hide }) => {
@@ -134,9 +135,9 @@ const ProductRange = ({ hide }) => {
             <p className="productRange__info-desc">
               {t("Воспользуйтесь нашим")}
             </p>
-            <NavLink to={"/categories/10"} className="productRange__info-btn">
-              {t("Все")} <MdArrowOutward />
-            </NavLink>
+            <a href={file} download className="productRange__info-btn">
+              {t("ctdw")} <MdArrowOutward />
+            </a>
           </div>
         )}
 

@@ -172,7 +172,7 @@ const Header = () => {
               :
               <p className='header-search-result-form-text'>{t("searchHelp")}</p>
           }
-          
+
         </div>
 
         <div className="header-search-info container">

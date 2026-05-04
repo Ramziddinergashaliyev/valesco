@@ -11,7 +11,7 @@ import img2 from "../../assets/images/sp-tec3.webp"
 
 const PrideArea = () => {
     const { t, i18n } = useTranslation()
-    const { data } = useGetCategoriesByIdQuery(10)    
+    const { data } = useGetCategoriesByIdQuery(10)
 
     const Data = [
         {

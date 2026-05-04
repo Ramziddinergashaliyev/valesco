@@ -45,8 +45,8 @@ const Hero = () => {
   }, [])
 
   const isMobile = windowWidth <= 780
-  const langHero = isMobile 
-    ? (i18n?.languages?.[0] === "ru" ? slidesMobileRu : slidesMobile) 
+  const langHero = isMobile
+    ? (i18n?.languages?.[0] === "ru" ? slidesMobileRu : slidesMobile)
     : (i18n?.languages?.[0] === "ru" ? slidesDesktopRu : slidesDesktop)
 
   return (
@@ -88,7 +88,7 @@ const Hero = () => {
           </div>
         ))}
       </div>
-      
+
     </div>
   )
 }

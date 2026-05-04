@@ -129,7 +129,7 @@
         border-radius: 16px;
         overflow: hidden;
         transition: all 0.5s ease;
-        
+
         &:hover {
             transform: scale(1.03) translateY(-5px);
         }
@@ -219,6 +219,7 @@
     }
 
     &[data-aos] {
+
         .differents__left-title,
         .differents__left-text,
         .differents__left-desc,

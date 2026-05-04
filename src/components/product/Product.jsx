@@ -235,6 +235,7 @@ const Product = ({ data, loading, title }) => {
 
     return (
         <div className='product'>
+
             <style>
                 {`
                 @keyframes spin {
@@ -252,7 +253,6 @@ const Product = ({ data, loading, title }) => {
                         effect="blur"
                         alt="products-imgs"
                     />
-                    {/* <img className="product-banner-img" src={bannerSrc} alt="banner" /> */}
                 </div>
             )}
 
@@ -368,7 +368,6 @@ const Product = ({ data, loading, title }) => {
                         :
                         <></>
                 }
-
 
                 {
                     title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"

@@ -20,7 +20,7 @@
             line-height: 60px;
             letter-spacing: -1px;
         }
-        
+
         &-info {
             display: flex;
             flex-direction: column;
@@ -137,7 +137,7 @@
                 font-weight: 500;
                 color: #fff;
                 transition: all 0.3s ease;
-                
+
                 svg {
                     display: flex;
                     align-items: center;
@@ -147,7 +147,7 @@
             }
         }
     }
-    
+
     @media (max-width:900px) {
         &-top-title {
             font-size: 34px;
