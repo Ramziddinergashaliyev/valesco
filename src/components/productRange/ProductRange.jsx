@@ -155,6 +155,7 @@ const ProductRange = ({ hide }) => {
                     <div className="productRange-card-img" ref={(el) => (imgRefs.current[index] = el)}>
                       <img src={category?.image} alt={item.title} />
                     </div>
+
                     <div className="productRange-card-content">
                       {
                         i18n?.languages[0] === "ru"
@@ -164,6 +165,7 @@ const ProductRange = ({ hide }) => {
                           <h4>{item.title?.en}</h4>
                       }
                     </div>
+
                   </NavLink>
                 </div>
               );
