@@ -18,16 +18,16 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-  
+
   return (
     <>
       <Hero />
-      <Imgs/>
+      <Imgs />
       <ProductRange />
       <Banner />
       <PrideArea />
       <Differents />
-      <NewsCard/>
+      <NewsCard />
       {/* <Media/> */}
     </>
   )
