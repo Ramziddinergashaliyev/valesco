@@ -65,7 +65,7 @@ const Contact = () => {
               <p className="contact-form-left-box-info-text">{t("Republic")}</p>
             </div>
           </div>
-          
+
           <div className="contact-form-left-box">
             <MdOutlineMail />
             <div className="contact-form-left-box-info">

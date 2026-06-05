@@ -77,6 +77,7 @@ const NewsSingle = () => {
                                     ))}
                                 </div>
                             </div>
+
                             <div className="location-text-block animate-from-right">
                                 <h2 className="location-title">{location.title}</h2>
                                 <p className="location-subtitle">📍 {location.location}</p>
@@ -94,6 +95,7 @@ const NewsSingle = () => {
                                 <p className="location-subtitle">📍 {location.location}</p>
                                 <p className="location-description">{location.description}</p>
                             </div>
+
                             <div className="location-images-block animate-from-left">
                                 <div className="images-grid">
                                     {location.images.map((img, imgIndex) => (

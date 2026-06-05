@@ -32,13 +32,6 @@ const Data = [
     title: 'Туркменистан, Марыйский велаят, Векилбазар Этрап, Акгонур',
     number: ["+993 65 551008"]
   },
-  // {
-  //   id: 5,
-  //   country: 'РОССИЙСКАЯ ФЕДЕРАЦИЯ',
-  //   distributor: 'OOO «NB GLOBAL»',
-  //   title: '454047, г. Челябинск, ул. 2-я Павелецкая, 22',
-  //   number: ["+7 495 145 95 00", "+7 922 717 60 90"]
-  // },
   {
     id: 6,
     country: 'АЗЕРБАЙДЖАН',
@@ -91,13 +84,6 @@ const DataEN = [
     title: 'Turkmenistan, Mary Region, Vekilbazar District, Akgonur',
     number: ["+993 65 551008"]
   },
-  // {
-  //   id: 5,
-  //   country: 'RUSSIAN FEDERATION',
-  //   distributor: 'LLC «NB GLOBAL»',
-  //   title: '454047, Chelyabinsk city, Paveletskaya street second, 22',
-  //   number: ["+7 495 145 95 00", "+7 922 717 60 90"]
-  // },
   {
     id: 6,
     country: 'AZERBAIJAN',

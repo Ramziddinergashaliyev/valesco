@@ -2,7 +2,7 @@ import { api } from "./index";
 
 export const categoryApi = api.injectEndpoints({
   endpoints: (build) => ({
-    
+
     getCategories: build.query({
       query: (params) => ({
         url: "/categories",
@@ -17,7 +17,7 @@ export const categoryApi = api.injectEndpoints({
       }),
       providesTags: ["Categories"],
     }),
-    
+
     createCategories: build.mutation({
       query: (body) => ({
         url: "/categories",
@@ -43,7 +43,7 @@ export const categoryApi = api.injectEndpoints({
       }),
       invalidatesTags: ["Categories"],
     }),
-    
+
   }),
 });
 

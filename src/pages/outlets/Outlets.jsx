@@ -35,6 +35,7 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Выбор города</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
@@ -48,6 +49,7 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Выбор типа торговой точки</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
@@ -70,6 +72,7 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Онлайн партнеры</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
@@ -130,6 +133,7 @@ const Outlets = () => {
                         <p className="outlets-partners-info-text">
                             Смазочные материалы Valesco представлены в магазинах наших региональных партнеров. С подробным ассортиментом Вы можете ознакомиться на сайтах наших партнеров.
                         </p>
+
                         <div className='outlets-accardion'>
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
@@ -226,6 +230,7 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Приволжский округ</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.

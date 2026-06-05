@@ -169,6 +169,7 @@ const About = () => {
             <h1 className='about-imgs-right-title'>{t("About Valesco Oil")}</h1>
             <p className='about-imgs-right-desc'>{t("more than")}</p>
           </div>
+
           <div className="about-imgs-rowe">
             <div className="about-imgs-rowe-card">
               <img src={icons3} alt="" />
