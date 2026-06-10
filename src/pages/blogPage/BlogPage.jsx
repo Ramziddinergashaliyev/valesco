@@ -222,7 +222,7 @@ export default function BlogPage() {
     return (
         <main className="blog-page">
             <section className="blog-page__hero">
-                <div className="blog-page__hero-eyebrow">Valesco Oil — База знаний12</div>
+                <div className="blog-page__hero-eyebrow">Valesco Oil — База знаний</div>
                 <h1 className="blog-page__hero-title">Масла и технические жидкости</h1>
                 <p className="blog-page__hero-subtitle">
                     Экспертные статьи о моторных маслах, вязкости и выборе технических жидкостей.
