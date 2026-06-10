@@ -44,7 +44,7 @@ const Unical = () => {
         {
             id: 9,
             title: "Интеллектуальный подход к задачам"
-        },
+        }
     ]
 
     return (
@@ -110,7 +110,6 @@ const Unical = () => {
                     <p className="unical-cut-box-desc">Современный премиум</p>
                 </div>
             </div>
-
         </div>
     )
 

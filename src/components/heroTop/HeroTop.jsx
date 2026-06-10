@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 const HeroTop = () => {
     const { t, i18n } = useTranslation()
+
     return (
         <div className='heroTop'>
             <div className="heroTop__container container">

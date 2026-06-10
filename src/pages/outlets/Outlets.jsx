@@ -173,6 +173,7 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Северо-Западный федеральный округ</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
@@ -202,6 +203,7 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Сибирь</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
@@ -216,6 +218,7 @@ const Outlets = () => {
                                 >
                                     <Typography component="span">Дальневосточный регион</Typography>
                                 </AccordionSummary>
+
                                 <AccordionDetails>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.

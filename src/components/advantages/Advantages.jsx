@@ -5,9 +5,11 @@ import { useTranslation } from 'react-i18next';
 const Advantages = ({ data }) => {
   if (!data || data.length === 0) return null;
   const { t, i18n } = useTranslation()
+
   return (
     <div id='advantages' className='advantages container'>
       <h2 className="advantages-title">{t("Преимущества")}</h2>
+
       <div className="advantages__info">
         <ul className="advantages-info-item">
           {data.map((text, index) => {

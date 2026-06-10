@@ -37,7 +37,6 @@ const NewsCard = () => {
                 </div>
                 <div className="news-grid">
                     {productData.slice(0, 3)?.map((item, index) => {
-
                         return (
                             <article
                                 key={item.id}

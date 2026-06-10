@@ -510,6 +510,7 @@ const Product = ({ data, loading, title }) => {
                                                 </div>
                                             ))
                                         }
+
                                         {displayData?.length === 0 && !loading && (
                                             <div className="no-products">
                                                 <p>{t("По выбранным")}</p>

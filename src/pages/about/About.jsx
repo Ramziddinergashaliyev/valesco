@@ -109,7 +109,6 @@ const About = () => {
 
   return (
     <div className='about'>
-
       <div className="about-top">
         <div className="about-top-box container">
           <div className="about-top-info container">
@@ -119,6 +118,7 @@ const About = () => {
             <p className='about-top-text'>{t("производства")}</p>
             <p className='about-top-text'>{t("Продукция компании")}</p>
           </div>
+
           <div></div>
         </div>
       </div>

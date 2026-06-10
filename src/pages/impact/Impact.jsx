@@ -18,7 +18,6 @@ const Impact = () => {
         </div>
       </div>
 
-
       <div className="impact-nashi">
         <h2 className="impact-nashi-title">наша философия</h2>
         <div className="impact-nashi-info">
@@ -27,6 +26,7 @@ const Impact = () => {
               В основе успеха бизнеса Valesco лежат удовлетворенность акционеров, достижение максимума SUPEX и победный дух «Pae-gi»</h3>
             <p className="impact-nashi-info-top-desc">MS (система управления ) систематически излагает корпоративную культуру и бизнес-идеологию, а также методы управления  Group. Это эксклюзивная философия управления , которую разделяют и с которой согласны все филиалы</p>
           </div>
+
           <div className="impact-nashi-info-bottom">
             <div className="impact-nashi-info-bottom-boxs">
               {

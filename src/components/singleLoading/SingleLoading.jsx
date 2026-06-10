@@ -27,6 +27,7 @@ const SingleLoading = () => {
                             aria-hidden="true"
                         ></div>
                     </div>
+
                     <div
                         className="loadingSin__img1 bg__animation"
                         aria-hidden="true"
@@ -50,6 +51,7 @@ const SingleLoading = () => {
                     </div>
                 </div>
             </div>
+
             <div className="loadingSin__bottom">
                 <div className="loadingSin__bottom__items">
                     {Array.from({ length: 5 }).map((_, i) => (
@@ -60,6 +62,7 @@ const SingleLoading = () => {
                         ></div>
                     ))}
                 </div>
+
                 {Array.from({ length: 3 }).map((_, i) => (
                     <div key={i} className="loadingSin__bottom-table bg__animation"></div>
                 ))}

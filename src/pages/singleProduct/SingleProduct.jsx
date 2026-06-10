@@ -82,6 +82,7 @@ const ProductSections = ({ byData, t }) => (
                 <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
             )}
         </ul>
+
         <div className="single-dropdown-result">
             <Specificat data={byData?.specifications} />
             <Characterist data={byData} />

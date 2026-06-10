@@ -62,6 +62,7 @@ const Characterist = ({ data }) => {
               <th className='characterist-info-table-thead-th'>{t("Метод испытания")}</th>
             </tr>
           </thead>
+
           <tbody className='characterist-info-tbody'>
             {currentRows.map((row, i) => (
               <tr key={i} className='characterist-info-tbody-tr'>

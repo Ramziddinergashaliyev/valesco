@@ -60,6 +60,8 @@ import React, { lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Leazy from "./components/leazy/Leazy";
 import { ToastContainer } from "react-toastify";
+import BlogPage from "./pages/blogPage/BlogPage";
+import ArticlePage from "./pages/blogPage/ArticlePage";
 
 // Lazy pages
 const Layout = lazy(() => import("./components/layout/Layout"));
@@ -130,6 +132,8 @@ const App = () => {
             <Route path="catalogProduct" element={<CatalogProduct />} />
             <Route path="market-pleace" element={<Market />} />
             <Route path="news-single/:id" element={<NewsSingle />} />
+            <Route path="blog" element={<BlogPage />} />
+            <Route path="blog/:slug" element={<ArticlePage />} />
           </Route>
         </Routes>
       </Suspense>

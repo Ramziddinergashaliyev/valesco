@@ -20,6 +20,7 @@ const Publications = () => {
         За максимальную
         подкованность в знаниях
       </h2>
+
       <div className="public-cards">
         <div></div>
         <div className="public-boxs">
