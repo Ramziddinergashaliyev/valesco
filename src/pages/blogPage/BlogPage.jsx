@@ -230,7 +230,7 @@ export default function BlogPage() {
                 </p>
             </section>
 
-            <div className="blog-page__articles">
+            <div className="blog-page__articles container">
                 {loading && (
                     <div className="blog-page__loading">
                         <div className="blog-page__spinner" />
