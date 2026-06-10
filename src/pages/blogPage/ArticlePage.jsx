@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { ARTICLES_API_BASE } from '../../config/api';
 import './blog.scss';
 
 const OilDropIcon = () => (
@@ -78,7 +79,7 @@ export default function ArticlePage() {
                 setLoading(true);
                 setError(null);
 
-                const res = await fetch(`/api/articles/${slug}`, { signal: controller.signal });
+                const res = await fetch(`${ARTICLES_API_BASE}/articles/${slug}`, { signal: controller.signal });
                 if (res.status === 404) throw new Error('not_found');
                 if (!res.ok) throw new Error(`Ошибка ${res.status}`);
                 const data = await res.json();
@@ -91,7 +92,7 @@ export default function ArticlePage() {
                 });
 
                 try {
-                    const allRes = await fetch('/api/articles', { signal: controller.signal });
+                    const allRes = await fetch(`${ARTICLES_API_BASE}/articles`, { signal: controller.signal });
                     if (allRes.ok) {
                         const allData = await allRes.json();
                         setRelated(allData.filter((a) => a.slug !== slug).slice(0, 3));

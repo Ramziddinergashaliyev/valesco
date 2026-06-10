@@ -143,9 +143,8 @@
 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ARTICLES_API_BASE } from '../../config/api';
 import './blog.scss';
-
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 const OilDropIcon = () => (
     <svg viewBox="0 0 48 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +203,7 @@ export default function BlogPage() {
             try {
                 setLoading(true);
                 setError(null);
-                const res = await fetch(`${API_BASE}/articles`, { signal: controller.signal });
+                const res = await fetch(`${ARTICLES_API_BASE}/articles`, { signal: controller.signal });
                 if (!res.ok) throw new Error(`Ошибка ${res.status}`);
                 const data = await res.json();
                 setArticles(data);
