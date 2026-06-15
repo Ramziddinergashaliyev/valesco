@@ -152,6 +152,7 @@ const Header = () => {
 
             <span onClick={() => setHide(true)} className='header__nav__bottom-menu'><FiMenu /></span>
           </div>
+
           {hide && <div onClick={() => setHide(false)} className="header-overlay"></div>}
         </nav>
       </header>

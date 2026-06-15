@@ -546,7 +546,37 @@ export const newsData = [
                 position: 'left'
             }
         ]
-    }
+    },
+    {
+        id: 5,
+        category: "Новости",
+        world: [""],
+        title: "Компания Valesco провела масштабный розыгрыш призов в Худжанде, Таджикистан",
+        description: ["В начале января компания Valesco совместно с нашим официальным дистрибьютером в Таджикистане компанией Tosol Plus провела масштабный розыгрыш призов по итогам акции, проведённой среди покупателей в 2025-м году."],
+        date: "11 январь, 2026",
+        img: news0,
+        image: [news1, news2],
+        sections: [
+            {
+                texts: [
+                    { type: "heading", text: "Обзор" },
+                    { type: "paragraph", text: "Valesco и Tosol Plus успешно организовали и провели лотерею с розыгрышем большого количества призов. Данное мероприятие транслировалось онлайн в Instagram и было направлено на укрепление доверия клиентов, рост имени Бренда Valesco." },
+                    { type: "paragraph", text: "Мероприятие привлекло большое количество участников, создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением." },
+                    { type: "paragraph", text: "В течение всего мероприятия гости принимали прямое активное участие в розыгрыше призов, вращая лотерейный барабан, каждому были даны равные шансы на победу. Масштабная акция и последовавший за ней розыгрыш призов была разработана не только для поощрения лояльных клиентов, но и для укрепления Бренда Valesco среди обычных потребителей, автосервисов и дистрибьютеров на всем рынке Таджикистана." },
+                ],
+                images: [Athree, Athree, Athree, Athree, Athree, Athree, Athree],
+            },
+            {
+                texts: [
+                    { type: "heading", text: "Итоги розыгрыша" },
+                    { type: "paragraph", text: "Было вручено впечатляющее количество призов, отражающих масштаб и амбиции акции. Победители получили 3 электромобиля, 250 телевизоров, 50 утюгов, 10 холодильников и 10 кондиционеров, что сделало это мероприятие одним из самых запоминающихся рекламных акций автомобильных брендов в регионе." },
+                    { type: "paragraph", text: "Розыгрыш призов был организован в тесном сотрудничестве с официальным дистрибьютором Valesco в Таджикистане, ООО «ТОСОЛ-ПЛЮС», чья поддержка и местный опыт сыграли ключевую роль в успешном проведении мероприятия." },
+                    { type: "paragraph", text: "Valesco выражает искреннюю благодарность всем участникам, партнерам и организаторам, которые внесли свой вклад в успех этой инициативы. В ближайшем будущем запланированы новые рекламные кампании, специальные мероприятия и интересные возможности для розыгрыша призов." },
+                ],
+                images: [Athree, Athree, Athree, Athree, Athree, Athree, Athree],
+            },
+        ],
+    },
 ]
 
 export const newsDataEn = [
@@ -642,5 +672,39 @@ export const newsDataEn = [
                 position: 'left'
             }
         ]
-    }
+    },
+    {
+        id: 5,
+        category: "News",
+        world: [""],
+        title: "Valesco hosts large-scale prize draw event in Khujand, Tajikistan",
+        description: ["At the beginning of January, Valesco, together with its official distributor in Tajikistan, Tosol Plus, held a large-scale prize draw as the final stage of a promotional campaign conducted among customers throughout 2025."],
+        date: "11 January, 2026",
+        img: news0,
+        image: [news1, news2],
+        sections: [
+            {
+                texts: [
+                    { type: "heading", text: "Overview & Factory Tour" },
+                    { type: "paragraph", text: "Valesco recently hosted a specialized technical seminar for automotive professionals from across Uzbekistan, bringing together car service masters, spare parts dealers, distributors, fleet operators, and aftermarket specialists." },
+                    { type: "paragraph", text: "The seminar was organized to strengthen industry knowledge, share technical expertise, and provide participants with a deeper understanding of Valesco's commitment to quality, innovation, and advanced lubricant technology. Attendees learned about Valesco's complete range of automotive lubricants, including engine oils, transmission oils, coolants, brake fluids, and other performance solutions designed for modern vehicles and commercial fleets." },
+                    { type: "paragraph", text: "The event also served as a valuable platform for networking, experience sharing, and building stronger partnerships within the automotive aftermarket industry." },
+                    { type: "paragraph", text: "As part of the seminar, guests were invited to take part in an exclusive factory tour, where they were given a firsthand look at Valesco's production facilities and manufacturing processes." },
+                    { type: "paragraph", text: "Participants explored the complete lubricant production cycle, from raw material selection and laboratory testing to blending, filling, packaging, and final quality control procedures. The Valesco technical team provided detailed explanations of the technologies, production standards, and quality assurance systems used to ensure consistent product performance and reliability." },
+                    { type: "paragraph", text: "Visitors had the opportunity to observe how Valesco lubricants are developed and manufactured to meet international standards, delivering superior protection, efficiency, and durability for passenger cars, commercial vehicles, and industrial applications." },
+                ],
+                images: [news1, news2, news1, news1, news1, news1, news1],
+            },
+            {
+                texts: [
+                    { type: "heading", text: "Question & Answer Session" },
+                    { type: "paragraph", text: "Following the factory tour, participants joined an interactive Question & Answer session with Valesco engineers, technical specialists, and product experts." },
+                    { type: "paragraph", text: "During the session, attendees shared their experiences using Valesco products and provided valuable feedback regarding product performance, engine protection, reliability, and customer satisfaction. Automotive professionals had the opportunity to ask questions about lubricant technology, oil specifications, product applications, maintenance recommendations, and future developments within the Valesco product portfolio." },
+                    { type: "paragraph", text: "The open discussion created a productive exchange of ideas between Valesco and its partners, reinforcing the company's commitment to continuous improvement, technical support, and customer-focused innovation." },
+                    { type: "paragraph", text: "We sincerely thank all car service masters, spare parts dealers, distributors, and aftermarket professionals who participated in the seminar. Their valuable feedback and industry expertise continue to help Valesco deliver high-quality lubrication solutions trusted by professionals across the region." },
+                ],
+                images: [news1, news1, news1, news1, news1, news1, news1],
+            },
+        ],
+    },
 ]

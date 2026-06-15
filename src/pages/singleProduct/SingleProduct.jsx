@@ -231,12 +231,15 @@ const SingleProduct = () => {
                             <div className="row">
                                 <span className="label">MODEL</span>
                             </div>
+
                             <div className="row">
                                 <span className="value">{byData?.kinematic_one?.[0]}</span>
                             </div>
+
                             <div className="row">
                                 <span className="label">TYPE</span>
                             </div>
+
                             <div className="row">
                                 <span className="value">{byData?.kinematic_two?.[0]}</span>
                             </div>

@@ -111,6 +111,7 @@ const About = () => {
     <div className='about'>
       <div className="about-top">
         <div className="about-top-box container">
+
           <div className="about-top-info container">
             <h2 className="about-top-title">{t("About Company")}</h2>
             <p className='about-top-text about-top-desc'>{t("Наша компания")}</p>
