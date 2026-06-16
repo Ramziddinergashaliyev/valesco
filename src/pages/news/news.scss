@@ -313,6 +313,12 @@
       margin-bottom: 35px;
     }
   }
+
+  @media (max-width: 418px) {
+    padding: 40px 15px;
+
+
+  }
 }
 
 @keyframes pageLoad {
