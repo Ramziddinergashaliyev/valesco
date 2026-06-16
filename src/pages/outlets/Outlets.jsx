@@ -22,7 +22,6 @@ const Outlets = () => {
                         <h2 className="outlets-top-info-title">Смазочные материалы под брендом Valesco представлены во всех известных розничных автомагазинах по всей России.</h2>
                         <p className="outlets-top-info-text">В 2024 году Valesco запустил программу брендирования сервисных центров и розничных магазинов по всей России – Valesco TOP.</p>
                     </div>
-
                 </div>
 
                 <div className="outlets-middle">
@@ -62,7 +61,6 @@ const Outlets = () => {
                             </Accordion>
                         </div>
                     </div>
-
                 </div>
 
                 <div className="outlets-markets">

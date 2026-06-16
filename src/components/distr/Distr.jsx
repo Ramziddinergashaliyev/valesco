@@ -201,6 +201,7 @@ const Distr = () => {
                   >
                     <Typography component="span">{el?.distributor}</Typography>
                   </AccordionSummary>
+
                   <AccordionDetails className='distr-result-bottom'>
                     <span>{t("address")}</span>
                     <p className='distr-result-bottom-text'>{el?.title}</p>

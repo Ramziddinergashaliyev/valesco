@@ -112,7 +112,6 @@ const Unical = () => {
             </div>
         </div>
     )
-
 }
 
 export default Unical
