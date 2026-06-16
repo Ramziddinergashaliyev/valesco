@@ -59,6 +59,24 @@ import Dtwo from "../assets/news/dubai/two.webp"
 import Dthree from "../assets/news/dubai/three.webp"
 import Dfour from "../assets/news/dubai/four.webp"
 
+
+import bottom1 from "../assets/com/top/one.webp"
+import bottom2 from "../assets/com/top/two.webp"
+import bottom3 from "../assets/com/top/three.webp"
+import bottom4 from "../assets/com/top/four.webp"
+import top1 from "../assets/com/top/top1.webp"
+import top2 from "../assets/com/top/top2.webp"
+import top3 from "../assets/com/top/top3.webp"
+
+
+import bottomOne from "../assets/com/bottom/one.webp"
+import bottomTwo from "../assets/com/bottom/two.webp"
+import bottomThree from "../assets/com/bottom/three.webp"
+import bottomFour from "../assets/com/bottom/four.webp"
+import bottomTop1 from "../assets/com/bottom/top1.webp"
+import bottomTop2 from "../assets/com/bottom/top2.webp"
+import bottomTop3 from "../assets/com/bottom/top3.webp"
+
 export const CATEGORY = [
     {
         id: 1,
@@ -564,7 +582,7 @@ export const newsData = [
                     { type: "paragraph", text: "Мероприятие привлекло большое количество участников, создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением." },
                     { type: "paragraph", text: "В течение всего мероприятия гости принимали прямое активное участие в розыгрыше призов, вращая лотерейный барабан, каждому были даны равные шансы на победу. Масштабная акция и последовавший за ней розыгрыш призов была разработана не только для поощрения лояльных клиентов, но и для укрепления Бренда Valesco среди обычных потребителей, автосервисов и дистрибьютеров на всем рынке Таджикистана." },
                 ],
-                images: [Athree, Athree, Athree, Athree, Athree, Athree, Athree],
+                images: [top1, top2, top3, bottom1, bottom2, bottom3, bottom4],
             },
             {
                 texts: [
@@ -573,7 +591,7 @@ export const newsData = [
                     { type: "paragraph", text: "Розыгрыш призов был организован в тесном сотрудничестве с официальным дистрибьютором Valesco в Таджикистане, ООО «ТОСОЛ-ПЛЮС», чья поддержка и местный опыт сыграли ключевую роль в успешном проведении мероприятия." },
                     { type: "paragraph", text: "Valesco выражает искреннюю благодарность всем участникам, партнерам и организаторам, которые внесли свой вклад в успех этой инициативы. В ближайшем будущем запланированы новые рекламные кампании, специальные мероприятия и интересные возможности для розыгрыша призов." },
                 ],
-                images: [Athree, Athree, Athree, Athree, Athree, Athree, Athree],
+                images: [bottomTop1, bottomTop2, bottomTop3, bottomOne, bottomTwo, bottomThree, bottomFour],
             },
         ],
     },
@@ -693,7 +711,7 @@ export const newsDataEn = [
                     { type: "paragraph", text: "Participants explored the complete lubricant production cycle, from raw material selection and laboratory testing to blending, filling, packaging, and final quality control procedures. The Valesco technical team provided detailed explanations of the technologies, production standards, and quality assurance systems used to ensure consistent product performance and reliability." },
                     { type: "paragraph", text: "Visitors had the opportunity to observe how Valesco lubricants are developed and manufactured to meet international standards, delivering superior protection, efficiency, and durability for passenger cars, commercial vehicles, and industrial applications." },
                 ],
-                images: [news1, news2, news1, news1, news1, news1, news1],
+                images: [top1, top2, top3, bottom1, bottom2, bottom3, bottom4],
             },
             {
                 texts: [
@@ -703,7 +721,7 @@ export const newsDataEn = [
                     { type: "paragraph", text: "The open discussion created a productive exchange of ideas between Valesco and its partners, reinforcing the company's commitment to continuous improvement, technical support, and customer-focused innovation." },
                     { type: "paragraph", text: "We sincerely thank all car service masters, spare parts dealers, distributors, and aftermarket professionals who participated in the seminar. Their valuable feedback and industry expertise continue to help Valesco deliver high-quality lubrication solutions trusted by professionals across the region." },
                 ],
-                images: [news1, news1, news1, news1, news1, news1, news1],
+                images: [bottomTop1, bottomTop2, bottomTop3, bottomOne, bottomTwo, bottomThree, bottomFour],
             },
         ],
     },
