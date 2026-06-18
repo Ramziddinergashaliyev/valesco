@@ -16,14 +16,17 @@ const SingleLoading = () => {
                             className="loadingSin__item-top__img1 bg__animation"
                             aria-hidden="true">
                         </div>
+
                         <div
                             className="loadingSin__item-top__img1 bg__animation"
                             aria-hidden="true">
                         </div>
+
                         <div
                             className="loadingSin__item-top__img1 bg__animation"
                             aria-hidden="true">
                         </div>
+
                         <div
                             className="loadingSin__item-top__img1 bg__animation"
                             aria-hidden="true">

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ARTICLES_API_BASE } from '../../config/api';
 import './blog.scss';
+import { useTranslation } from 'react-i18next';
 
 const OilDropIcon = () => (
     <svg viewBox="0 0 48 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,6 +54,7 @@ export default function BlogPage() {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const { t } = useTranslation()
 
     useEffect(() => {
         const controller = new AbortController();
@@ -74,16 +76,17 @@ export default function BlogPage() {
         return () => controller.abort();
     }, []);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const go = (slug) => navigate(`/blog/${slug}`);
 
     return (
         <main className="blog-page">
             <section className="blog-page__hero">
-                <div className="blog-page__hero-eyebrow">Valesco Oil — База знаний</div>
-                <h1 className="blog-page__hero-title">Масла и технические жидкости</h1>
-                <p className="blog-page__hero-subtitle">
-                    Экспертные статьи о моторных маслах, вязкости и выборе технических жидкостей.
-                </p>
+                <h1 className="blog-page__hero-title" style={{ paddingTop: "50px" }}>{t("жидкости")}</h1>
+                <p className="blog-page__hero-subtitle">{t("статьи")}</p>
             </section>
 
             <div className="blog-page__articles container">

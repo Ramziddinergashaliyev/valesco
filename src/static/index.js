@@ -59,7 +59,6 @@ import Dtwo from "../assets/news/dubai/two.webp"
 import Dthree from "../assets/news/dubai/three.webp"
 import Dfour from "../assets/news/dubai/four.webp"
 
-
 import bottom1 from "../assets/com/top/one.webp"
 import bottom2 from "../assets/com/top/two.webp"
 import bottom3 from "../assets/com/top/three.webp"
@@ -70,7 +69,6 @@ import top3 from "../assets/com/top/top3.webp"
 
 import mainTopp from "../assets/com/main.webp"
 
-
 import bottomOne from "../assets/com/bottom/one.webp"
 import bottomTwo from "../assets/com/bottom/two.webp"
 import bottomThree from "../assets/com/bottom/three.webp"
@@ -78,6 +76,13 @@ import bottomFour from "../assets/com/bottom/four.webp"
 import bottomTop1 from "../assets/com/bottom/top1.webp"
 import bottomTop2 from "../assets/com/bottom/top2.webp"
 import bottomTop3 from "../assets/com/bottom/top3.webp"
+
+// 2026 Astana
+import one26 from "../assets/news26/astana/one.webp"
+import two26 from "../assets/news26/astana/two.webp"
+import three26 from "../assets/news26/astana/three.webp"
+import four26 from "../assets/news26/astana/four.webp"
+import main26 from "../assets/news26/astana/main.webp"
 
 export const CATEGORY = [
     {
@@ -568,6 +573,26 @@ export const newsData = [
         ]
     },
     {
+        id: 6,
+        category: "Новости",
+        world: ["Automechanika Astana"],
+        title: "Valesco на международных автомобильных выставках 2026 года",
+        description: ["Valesco продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках 2026 года. Эти мероприятия предоставляют платформу для демонстрации наших высококачественных смазочных материалов, налаживания связей с профессионалами индустрии и изучения новых бизнес-возможностей по всему миру.", "Благодаря активному участию в глобальных выставках, Valesco укрепляет свое присутствие на рынке послепродажного обслуживания автомобилей и подтверждает свою приверженность инновациям, качеству и надежной работе.", "Эти выставки отражают стремление Valesco к созданию прочных партнерских отношений и предоставлению надежных решений в области смазочных материалов для мировых рынков."],
+        date: "2026",
+        img: news3,
+        image: [main26],
+        locationData: [
+            {
+                id: 'astana',
+                title: 'Automechanika Astana',
+                location: 'Астана, Казахстан',
+                description: 'Automechanika Astana — один из ключевых автосалонов в Центральной Азии, объединяющий профессионалов, дистрибьюторов и лидеров автомобильной индустрии со всего региона. В ходе мероприятия компания Valesco продемонстрировала свой ассортимент высокоэффективных моторных масел и автомобильных смазочных материалов, укрепив партнерские отношения и расширив свое присутствие на рынке Центральной Азии',
+                images: [one26, two26, three26, four26],
+                position: 'left'
+            }
+        ]
+    },
+    {
         id: 5,
         category: "Новости",
         world: [""],
@@ -693,6 +718,26 @@ export const newsDataEn = [
                 location: 'Shanghai, China',
                 description: 'One of the largest automotive exhibitions in the world, Automechanika Shanghai brings together manufacturers, distributors, and industry experts from across global markets. At this event, Valesco presents its latest innovations and strengthens partnerships in the Asian and international automotive sectors.',
                 images: [one, four, two, three],
+                position: 'left'
+            }
+        ]
+    },
+    {
+        id: 6,
+        category: "News",
+        world: ["Automechanika Astana"],
+        title: "Valesco at International Automotive Exhibitions 2026",
+        description: ["Valesco continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase our high-quality lubricants, connect with industry professionals, and explore new business opportunities worldwide.", "Through active participation in global exhibitions, Valesco strengthens its presence in the automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance.", "These exhibitions reflect Valesco’s vision of building strong partnerships and delivering trusted lubrication solutions to global markets."],
+        date: "2026",
+        img: news3,
+        image: [main26],
+        locationData: [
+            {
+                id: 'astana',
+                title: 'Automechanika Astana',
+                location: 'Astana, Kazakhstan',
+                description: 'Automechanika Astana is one of Central Asia’s key automotive industry exhibitions, bringing together professionals, distributors, and industry leaders from across the region. During the event, Valesco showcased its high-performance range of engine oils and automotive lubricants while strengthening partnerships and expanding its presence in the Central Asian market.',
+                images: [one26, two26, three26, four26],
                 position: 'left'
             }
         ]

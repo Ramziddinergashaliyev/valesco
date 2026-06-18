@@ -9,6 +9,7 @@ import { NavLink } from 'react-router-dom'
 
 const Differents = () => {
     const { t, i18n } = useTranslation()
+
     return (
         <div className='differents container'>
             <div className="differents__left">

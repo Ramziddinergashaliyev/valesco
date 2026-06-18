@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ARTICLES_API_BASE } from '../../config/api';
 import './blog.scss';
+import { useTranslation } from 'react-i18next';
 
 const OilDropIcon = () => (
     <svg viewBox="0 0 48 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,6 +71,7 @@ export default function ArticlePage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [copied, setCopied] = useState(false);
+    const { t } = useTranslation()
 
     useEffect(() => {
         const controller = new AbortController();
@@ -132,7 +134,7 @@ export default function ArticlePage() {
             <main className="article-page">
                 <div className="blog-page__loading" aria-live="polite">
                     <div className="blog-page__spinner" aria-hidden="true" />
-                    Загрузка статьи...
+                    {t("Загрузка")}
                 </div>
             </main>
         );
@@ -143,8 +145,8 @@ export default function ArticlePage() {
             <main className="article-page">
                 <div style={{ textAlign: 'center', padding: '80px 24px' }}>
                     <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '4rem', color: '#B8922A', marginBottom: '16px' }}>404</div>
-                    <p style={{ fontFamily: "'DM Sans', sans-serif", color: '#7A7870', marginBottom: '24px' }}>Статья не найдена</p>
-                    <button className="article-page__back" onClick={handleBack}><ArrowLeft /> Все статьи</button>
+                    <p style={{ fontFamily: "'DM Sans', sans-serif", color: '#7A7870', marginBottom: '24px' }}>{t("Article")}</p>
+                    <button className="article-page__back" onClick={handleBack}><ArrowLeft />{t("Все статьи")}</button>
                 </div>
             </main>
         );
@@ -154,7 +156,7 @@ export default function ArticlePage() {
         return (
             <main className="article-page">
                 <div style={{ textAlign: 'center', padding: '80px 24px', fontFamily: "'DM Sans', sans-serif", color: '#7A7870' }}>
-                    Не удалось загрузить статью. Попробуйте позже.
+                    {t("позже")}
                 </div>
             </main>
         );
@@ -169,14 +171,14 @@ export default function ArticlePage() {
         <main className="article-page container">
             <div className="article-page__nav">
                 <button className="article-page__back" onClick={handleBack} aria-label="Вернуться к списку статей">
-                    <ArrowLeft /> Все статьи
+                    <ArrowLeft /> {t("Все статьи")}
                 </button>
             </div>
 
             <header className="article-page__header">
                 <div className="article-page__meta">
                     {article.category && <span className="article-page__category">{article.category}</span>}
-                    {article.read_time && <span className="article-page__readtime">{article.read_time} чтения</span>}
+                    {article.read_time && <span className="article-page__readtime">{article.read_time} {t('чтения')}</span>}
                 </div>
                 <h1 className="article-page__title">{article.title}</h1>
                 {excerpt && <p className="article-page__lead">{excerpt}</p>}
@@ -200,12 +202,12 @@ export default function ArticlePage() {
                 />
             ) : (
                 <div className="article-page__body" style={{ color: '#B8B5AD', fontStyle: 'italic' }}>
-                    Содержимое статьи загружается...
+                    {t("Содержимое")}
                 </div>
             )}
 
             <div className="article-page__footer">
-                <span className="article-page__footer-label">Поделиться</span>
+                <span className="article-page__footer-label">{t("Поделиться")}</span>
                 <div className="article-page__share-btns">
                     <button className="article-page__share-btn" onClick={handleCopyLink} aria-label="Скопировать ссылку">
                         <IconCopy /> {copied ? 'Скопировано!' : 'Ссылка'}
@@ -215,7 +217,7 @@ export default function ArticlePage() {
 
             {related.length > 0 && (
                 <section className="article-page__related" aria-labelledby="related-heading">
-                    <h2 className="article-page__related-title" id="related-heading">Читайте также</h2>
+                    <h2 className="article-page__related-title" id="related-heading">{t("Читайте")}</h2>
                     <div className="article-page__related-grid">
                         {related.map((a) => (
                             <RelatedCard key={a.id} article={a} onClick={(s) => navigate(`/blog/${s}`)} />

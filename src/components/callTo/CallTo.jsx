@@ -15,6 +15,7 @@ const CallTo = () => {
                 <h1 className="callTo__left-title">{t("Хочешь")}</h1>
                 <p className="callTo__left-text">{t("дорожим")}</p>
             </div>
+
             <div className="callTo__right">
                 {
                     cardCALLTO?.map(el => (
