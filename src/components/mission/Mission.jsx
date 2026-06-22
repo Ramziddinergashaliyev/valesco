@@ -8,7 +8,7 @@ const Mission = () => {
     const { t, i18n } = useTranslation()
     const currentLanguage = i18n?.languages[0]
     const cardMission = currentLanguage == "ru" ? MISSION : MISSIONEN
-    //Mission
+
     return (
         <div className='mission'>
             <div className="container mission-container">
