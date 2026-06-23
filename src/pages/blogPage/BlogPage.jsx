@@ -96,10 +96,12 @@ export default function BlogPage() {
                         Загрузка статей...
                     </div>
                 )}
+
                 {!loading && error && <div className="blog-page__empty">{error}</div>}
                 {!loading && !error && articles.length === 0 && (
                     <div className="blog-page__empty">Статей пока нет</div>
                 )}
+
                 {!loading && !error && articles.length > 0 && (
                     <>
                         <div className="blog-page__featured">

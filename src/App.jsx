@@ -62,6 +62,7 @@ import Leazy from "./components/leazy/Leazy";
 import { ToastContainer } from "react-toastify";
 import BlogPage from "./pages/blogPage/BlogPage";
 import ArticlePage from "./pages/blogPage/ArticlePage";
+import PopupModal from "./components/popupModal/PopupModal";
 
 // Lazy pages
 const Layout = lazy(() => import("./components/layout/Layout"));
@@ -136,6 +137,8 @@ const App = () => {
             <Route path="blog/:slug" element={<ArticlePage />} />
           </Route>
         </Routes>
+
+        <PopupModal delay={10000} />
       </Suspense>
 
       <ToastContainer />
