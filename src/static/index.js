@@ -84,6 +84,19 @@ import three26 from "../assets/news26/astana/three.webp"
 import four26 from "../assets/news26/astana/four.webp"
 import main26 from "../assets/news26/astana/main.webp"
 
+// 2026 Turkia
+import turk26main from "../assets/turk26/main.webp"
+import turk26one from "../assets/turk26/v1.webp"
+import turk26two from "../assets/turk26/v2.webp"
+import turk26three from "../assets/turk26/v3.webp"
+import turk26four from "../assets/turk26/v4.webp"
+import turk26fife from "../assets/turk26/v5.webp"
+import turk26six from "../assets/turk26/v6.webp"
+import turk26seven from "../assets/turk26/v7.webp"
+import turk26eight from "../assets/turk26/v8.webp"
+import turk26nine from "../assets/turk26/v9.webp"
+import turk26ten from "../assets/turk26/v10.webp"
+
 export const CATEGORY = [
     {
         id: 1,
@@ -500,6 +513,35 @@ export const newsData = [
         ]
     },
     {
+        id: 7,
+        category: "Новости",
+        world: [""],
+        title: "Турецкая делегация посетила производственный комплекс Valesco",
+        description: ["Компания Valesco недавно приняла группу международных клиентов, дистрибьюторов и специалистов автомобильной отрасли на своём производственном предприятии в Узбекистане."],
+        date: "18 Июнь, 2026",
+        img: turk26main,
+        image: [news1, news2],
+        sections: [
+            {
+                texts: [
+                    { type: "heading", text: "" },
+                    { type: "paragraph", text: "В ходе визита гостям была представлена широкая линейка смазочных материалов и автомобильных жидкостей компании Valesco, включая моторные масла, трансмиссионные жидкости, антифризы, тормозные жидкости и другие высокоэффективные решения. Участники смогли осмотреть современные производственные мощности компании и получить ценную информацию о технологиях и стандартах качества, лежащих в основе каждого продукта Valesco." },
+                    { type: "paragraph", text: "В рамках программы Valesco организовала подробную экскурсию по заводу, продемонстрировав все этапы производственного процесса — от отбора сырья и лабораторных испытаний до смешивания, разлива, упаковки и финального контроля качества. Визит подчеркнул приверженность компании инновациям, стабильному качеству продукции и международным стандартам." },
+                ],
+                images: [turk26one, turk26two, turk26three, turk26four, turk26fife],
+            },
+            {
+                texts: [
+                    { type: "heading", text: "" },
+                    { type: "paragraph", text: "Программа также включала технические презентации и интерактивные обсуждения с инженерами и представителями руководства Valesco. Гости обменялись отраслевым опытом, поделились ценными отзывами и узнали больше о производственных возможностях компании, исследовательских инициативах и процессах разработки новой продукции." },
+                    { type: "paragraph", text: "Визит стал отличной возможностью укрепить деловые отношения, повысить узнаваемость продукции и продемонстрировать стремление Valesco к качеству, прозрачности и удовлетворённости клиентов." },
+                    { type: "paragraph", text: "Valesco — надёжные решения для смазки на каждом этапе пути." },
+                ],
+                images: [turk26six, turk26seven, turk26eight, turk26nine, turk26ten],
+            },
+        ],
+    },
+    {
         id: 5,
         category: "Новости",
         world: [""],
@@ -650,6 +692,35 @@ export const newsDataEn = [
         ]
     },
     {
+        id: 7,
+        category: "News",
+        world: [""],
+        title: "Turkish Delegation Visit Valesco Manufacturing Facility",
+        description: ["Valesco recently welcomed a group of international clients, distributors, and automotive industry professionals to its manufacturing facility in Uzbekistan."],
+        date: "18 June, 2026",
+        img: turk26main,
+        image: [news1, news2],
+        sections: [
+            {
+                texts: [
+                    { type: "heading", text: "" },
+                    { type: "paragraph", text: "During the visit, guests were introduced to Valesco’s comprehensive range of lubricants and automotive fluids, including engine oils, transmission fluids, coolants, brake fluids, and other performance solutions. They had the opportunity to explore the company's modern production facilities and gain valuable insight into the technologies and quality standards behind every Valesco product." },
+                    { type: "paragraph", text: "As part of the program, Valesco organized a detailed factory tour, showcasing every stage of the manufacturing process—from raw material selection and laboratory testing to blending, filling, packaging, and final quality control. The visit highlighted the company's commitment to innovation, product consistency, and international quality standards." },
+                ],
+                images: [turk26one, turk26two, turk26three, turk26four, turk26fife],
+            },
+            {
+                texts: [
+                    { type: "heading", text: "" },
+                    { type: "paragraph", text: "The program also included technical presentations and interactive discussions with Valesco engineers and management representatives. Guests exchanged industry insights, provided valuable feedback, and learned more about the company's manufacturing capabilities, research initiatives, and product development processes." },
+                    { type: "paragraph", text: "The visit served as an excellent opportunity to strengthen business relationships, enhance product awareness, and demonstrate Valesco's dedication to quality, transparency, and customer satisfaction." },
+                    { type: "paragraph", text: "Valesco – Trusted Lubrication Solutions for Every Journey." },
+                ],
+                images: [turk26six, turk26seven, turk26eight, turk26nine, turk26ten],
+            },
+        ],
+    },
+    {
         id: 5,
         category: "News",
         world: [""],
@@ -775,5 +846,5 @@ export const newsDataEn = [
                 position: 'left'
             }
         ]
-    }
+    },
 ]

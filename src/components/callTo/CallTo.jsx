@@ -11,6 +11,7 @@ const CallTo = () => {
 
     return (
         <div className='callTo container'>
+
             <div className="callTo__left">
                 <h1 className="callTo__left-title">{t("Хочешь")}</h1>
                 <p className="callTo__left-text">{t("дорожим")}</p>

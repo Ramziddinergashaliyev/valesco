@@ -95,6 +95,7 @@ const Header = () => {
               <NavLink to={"/catalogProduct"}>
                 {t("catalog")} <IoMdArrowDropdown />
               </NavLink>
+
               <ul className="dropdown-item">
                 {
                   data?.map((el, inx) => (
