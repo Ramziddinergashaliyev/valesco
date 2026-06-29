@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "fetch-sitemap": "node scripts/fetch-sitemap.js",
     "build": "npm run fetch-sitemap && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
