@@ -19,6 +19,11 @@ export default defineConfig({
         changeOrigin: true,
         secure: true,
       },
+      '/sitemap.xml': {
+        target: 'https://backend.valescooil.com',
+        changeOrigin: true,
+        secure: true,
+      },
     },
   },
 })
