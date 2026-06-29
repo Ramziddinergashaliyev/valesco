@@ -51,7 +51,9 @@ const Contact = () => {
   return (
     <div className='contact'>
       <div className="contact-top"></div>
+
       <div className="contact-form container">
+
         <div className="contact-form-left">
           <div className="contact-form-left-info">
             <h3 className="contact-form-left-info-title">{t("Details")}</h3>

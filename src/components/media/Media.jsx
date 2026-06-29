@@ -42,6 +42,7 @@ const Media = () => {
                 <a target='_blank' href="https://www.facebook.com/profile.php?id=61577073517931">
 
                     <div className="media-right-card">
+
                         <div className="media-right-card-logo facebook">
                             <FaFacebookF />
                         </div>
