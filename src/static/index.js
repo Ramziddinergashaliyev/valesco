@@ -528,7 +528,7 @@ export const newsData = [
                     { type: "paragraph", text: "В ходе визита гостям была представлена широкая линейка смазочных материалов и автомобильных жидкостей компании Valesco, включая моторные масла, трансмиссионные жидкости, антифризы, тормозные жидкости и другие высокоэффективные решения. Участники смогли осмотреть современные производственные мощности компании и получить ценную информацию о технологиях и стандартах качества, лежащих в основе каждого продукта Valesco." },
                     { type: "paragraph", text: "В рамках программы Valesco организовала подробную экскурсию по заводу, продемонстрировав все этапы производственного процесса — от отбора сырья и лабораторных испытаний до смешивания, разлива, упаковки и финального контроля качества. Визит подчеркнул приверженность компании инновациям, стабильному качеству продукции и международным стандартам." },
                 ],
-                images: [turk26one, turk26two, turk26three, turk26four, turk26fife],
+                images: [turk26six, turk26seven, turk26eight, turk26nine, turk26ten],
             },
             {
                 texts: [
@@ -537,7 +537,7 @@ export const newsData = [
                     { type: "paragraph", text: "Визит стал отличной возможностью укрепить деловые отношения, повысить узнаваемость продукции и продемонстрировать стремление Valesco к качеству, прозрачности и удовлетворённости клиентов." },
                     { type: "paragraph", text: "Valesco — надёжные решения для смазки на каждом этапе пути." },
                 ],
-                images: [turk26six, turk26seven, turk26eight, turk26nine, turk26ten],
+                images: [turk26one, turk26two, turk26three, turk26four, turk26fife],
             },
         ],
     },
@@ -707,7 +707,7 @@ export const newsDataEn = [
                     { type: "paragraph", text: "During the visit, guests were introduced to Valesco’s comprehensive range of lubricants and automotive fluids, including engine oils, transmission fluids, coolants, brake fluids, and other performance solutions. They had the opportunity to explore the company's modern production facilities and gain valuable insight into the technologies and quality standards behind every Valesco product." },
                     { type: "paragraph", text: "As part of the program, Valesco organized a detailed factory tour, showcasing every stage of the manufacturing process—from raw material selection and laboratory testing to blending, filling, packaging, and final quality control. The visit highlighted the company's commitment to innovation, product consistency, and international quality standards." },
                 ],
-                images: [turk26one, turk26two, turk26three, turk26four, turk26fife],
+                images: [turk26six, turk26seven, turk26eight, turk26nine, turk26ten],
             },
             {
                 texts: [
@@ -716,7 +716,7 @@ export const newsDataEn = [
                     { type: "paragraph", text: "The visit served as an excellent opportunity to strengthen business relationships, enhance product awareness, and demonstrate Valesco's dedication to quality, transparency, and customer satisfaction." },
                     { type: "paragraph", text: "Valesco – Trusted Lubrication Solutions for Every Journey." },
                 ],
-                images: [turk26six, turk26seven, turk26eight, turk26nine, turk26ten],
+                images: [turk26one, turk26two, turk26three, turk26four, turk26fife],
             },
         ],
     },
