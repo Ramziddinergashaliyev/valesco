@@ -12,6 +12,7 @@ import CallTo from '../../components/callTo/CallTo'
 import Imgs from '../../components/imgs/Imgs'
 import Media from '../../components/media/Media'
 import NewsCard from '../../components/newsCard/NewsCard'
+import FrontBg from '../../components/frontBg/FrontBg'
 
 const Home = () => {
 
@@ -27,6 +28,7 @@ const Home = () => {
       <Banner />
       <PrideArea />
       <Differents />
+      <FrontBg />
       <NewsCard />
       {/* <Media/> */}
     </>
