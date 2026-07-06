@@ -3,5 +3,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 320px;
+
+    @media (max-width: 1500px) {
+        height: 250px;
+    }
 }
