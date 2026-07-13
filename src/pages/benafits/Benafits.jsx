@@ -28,6 +28,7 @@ const Benafits = () => {
                 </div>
             </div>
 
+
             <div className="benafits-advent">
                 <h2 className="benafits-advent-title">10 уникальных преимуществ</h2>
                 <div className="benafits-advent-info">

@@ -35,6 +35,7 @@ const NewsCard = () => {
                         <NavLink to={"/news"} className="news-actions-btn">{t("all")}<MdArrowOutward /></NavLink>
                     </div>
                 </div>
+
                 <div className="news-grid">
                     {productData.slice(0, 3)?.map((item, index) => {
                         return (

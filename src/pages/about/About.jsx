@@ -194,7 +194,6 @@ const About = () => {
           <NavLink className='about-imgs-right-btn' to={"/contact"}>{("Contact Us")}<MdArrowOutward /></NavLink>
         </div>
       </div>
-
     </div>
   )
 }

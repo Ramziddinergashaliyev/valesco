@@ -3,9 +3,7 @@ import './frontBg.scss'
 
 const FrontBg = () => {
     return (
-        <div className='front-bg'>
-
-        </div>
+        <div className='front-bg'></div>
     )
 }
 

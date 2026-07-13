@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import "./productRange.scss";
 import { NavLink } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 import { useGetCategoriesQuery } from "../../context/api/categoryApi";
 import { useTranslation } from "react-i18next";
 import CatalogLoading from "../catalogLoading/CatalogLoading";
+
+import "./productRange.scss";
 
 import rs1 from "../../assets/icon/v1.webp"
 import rs2 from "../../assets/icon/v1-1.webp"
@@ -129,12 +130,15 @@ const ProductRange = ({ hide }) => {
         {!hide && (
           <div className="productRange__info">
             <h1 className="productRange__info-title">{t("линейка")}</h1>
+
             <h3 className="productRange__info-text">
               {t("России много")}
             </h3>
+
             <p className="productRange__info-desc">
               {t("Воспользуйтесь нашим")}
             </p>
+
             <a href={file} download className="productRange__info-btn">
               {t("ctdw")} <MdArrowOutward />
             </a>

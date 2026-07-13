@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ARTICLES_API_BASE } from '../../config/api';
-import './blog.scss';
 import { useTranslation } from 'react-i18next';
+
+import './blog.scss';
 
 const OilDropIcon = () => (
     <svg viewBox="0 0 48 58" fill="none" xmlns="http://www.w3.org/2000/svg">

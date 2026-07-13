@@ -123,6 +123,7 @@ const Distr = () => {
       title: 'KYRGZ REPUBLIC, BISHKEK CITY, SADYGALIEVA STR. 1',
       number: ["+996 702 676 514"]
     }
+
   ];
 
   const DATADISTURB = i18n?.languages[0] === "ru" ? Data : DataEN
@@ -165,6 +166,7 @@ const Distr = () => {
 
   return (
     <div className='distr container'>
+
       <div className="distr-filter">
         <button onClick={() => setHide(p => !p)} className='distr-filter-btn'>
           <img src={img} alt="filter-img" />

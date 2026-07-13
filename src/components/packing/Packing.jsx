@@ -1,6 +1,7 @@
 import React from 'react'
-import "./packing.scss"
 import { useTranslation } from 'react-i18next';
+
+import "./packing.scss"
 
 const Packing = ({ data }) => {
     const { t, i18n } = useTranslation()
