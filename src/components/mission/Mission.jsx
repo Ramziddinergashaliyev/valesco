@@ -9,6 +9,7 @@ const Mission = () => {
     const currentLanguage = i18n?.languages[0]
     const cardMission = currentLanguage == "ru" ? MISSION : MISSIONEN
 
+
     return (
         <div className='mission'>
             <div className="container mission-container">

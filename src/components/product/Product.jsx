@@ -304,48 +304,56 @@ const Product = ({ data, loading, title }) => {
                                             >
                                                 0W - 20<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '0W-30')}
                                                 onClick={() => handleFilterSelect('viscosity', '0W-30')}
                                             >
                                                 0W - 30<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '0W-40')}
                                                 onClick={() => handleFilterSelect('viscosity', '0W-40')}
                                             >
                                                 0W - 40<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '5W-30')}
                                                 onClick={() => handleFilterSelect('viscosity', '5W-30')}
                                             >
                                                 5W - 30<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '5W-40')}
                                                 onClick={() => handleFilterSelect('viscosity', '5W-40')}
                                             >
                                                 5W - 40<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '10W-40')}
                                                 onClick={() => handleFilterSelect('viscosity', '10W-40')}
                                             >
                                                 10W - 40<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '15W-40')}
                                                 onClick={() => handleFilterSelect('viscosity', '15W-40')}
                                             >
                                                 15W - 40<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '15W-50')}
                                                 onClick={() => handleFilterSelect('viscosity', '15W-50')}
                                             >
                                                 15W - 50<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '20W-50')}
                                                 onClick={() => handleFilterSelect('viscosity', '20W-50')}
@@ -383,12 +391,14 @@ const Product = ({ data, loading, title }) => {
                                             >
                                                 10W - 40<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '15W-40')}
                                                 onClick={() => handleFilterSelect('viscosity', '15W-40')}
                                             >
                                                 15W - 40<FiPlus />
                                             </button>
+
                                             <button
                                                 className={getFilterButtonClass('viscosity', '20W-50')}
                                                 onClick={() => handleFilterSelect('viscosity', '20W-50')}
@@ -411,7 +421,6 @@ const Product = ({ data, loading, title }) => {
                         :
                         <></>
                 }
-
                 {
                     hide || isMobile
                         ?

@@ -229,6 +229,7 @@ const NewsSingle = () => {
                             )
                         ))}
                     </div>
+
                     <div className="images-bottom">
                         {section.images.slice(3, 7).map((img, i) => (
                             renderImage(
@@ -250,6 +251,7 @@ const NewsSingle = () => {
                     `section-${sectionIndex}-hero`,
                     'collage-hero-item'
                 )}
+
                 <div className="collage-grid">
                     {section.images.slice(1, 5).map((img, i) => (
                         renderImage(

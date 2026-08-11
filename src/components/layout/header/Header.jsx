@@ -19,6 +19,7 @@ const Header = () => {
   const { data } = useGetCategoriesQuery()
   const [value, setValue] = useState("")
   const [localSearch, setLocalSearch] = useState(null)
+
   const navigate = useNavigate()
 
   const [isLangOpen, setIsLangOpen] = useState(false);
@@ -78,6 +79,7 @@ const Header = () => {
       <header className='header'>
         <nav className="header__nav container">
           <div className="header__nav__logo">
+
             <a className='header__nav__logo-top' href="/">
               <img src={logo} alt="header-logo-top" />
             </a>
@@ -85,6 +87,7 @@ const Header = () => {
             <a className='header__nav__logo-bottom' href="/">
               <img src={logo1} alt="header-logo-bottom" />
             </a>
+
           </div>
 
           <ul className={`header__nav__item ${hide ? "header__nav__hide" : ""}`}>

@@ -53,6 +53,7 @@ const Characterist = ({ data }) => {
   return (
     <div id='characterist' className='container characterist'>
       <h2 className='characterist-title'>{t("Характеристики")}</h2>
+
       <div className="characterist-info">
         <table className='characterist-info-table'>
           <thead className='characterist-info-table-thead'>
@@ -75,6 +76,7 @@ const Characterist = ({ data }) => {
           </tbody>
         </table>
       </div>
+
     </div>
   )
 }

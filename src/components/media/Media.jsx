@@ -52,6 +52,7 @@ const Media = () => {
                         </div>
 
                         <button className="media-right-card-btns">{t("Follow Us")}</button>
+
                     </div>
 
                 </a>

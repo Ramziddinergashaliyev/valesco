@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import "./news.scss"
 import { newsData, newsDataEn } from '../../static'
 import { useTranslation } from 'react-i18next'
 import { FaArrowRight } from "react-icons/fa6";
+
+import "./news.scss"
 
 const News = () => {
   const navigate = useNavigate()
@@ -31,8 +32,7 @@ const News = () => {
   return (
     <div className="new-container container">
 
-      <div className="categories-wrapper">
-      </div>
+      <div className="categories-wrapper"></div>
 
       <div className="new-grid">
         {allData?.map((news, index) => (

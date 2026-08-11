@@ -248,7 +248,7 @@ const Outlets = () => {
                 </div>
             </div>
 
-            <div className="outlets-bottom">
+            <div className="outlets-bottom">3333d
                 <div className="outlets-bottom-black container">
                     <h2 className="outlets-bottom-black-title">Подбери свой Valesco</h2>
                     <div className="outlets-bottom-black-info">

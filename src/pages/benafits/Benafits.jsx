@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
-import "./benafits.scss"
 import { BENAFITS } from '../../static'
+import "./benafits.scss"
 
 const Benafits = () => {
 

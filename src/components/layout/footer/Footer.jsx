@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import img from "../../../assets/icons/logo1.jpg"
-import "./footer.scss"
 import { NavLink } from 'react-router-dom'
 import { useGetCategoriesQuery } from '../../../context/api/categoryApi'
 import { useTranslation } from 'react-i18next'
@@ -9,6 +8,8 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import { useCreateContactMutation } from '../../../context/api/contactApi'
 import { toast } from 'react-toastify'
+
+import "./footer.scss"
 
 const initialState = {
   name: "",
@@ -74,6 +75,7 @@ const Footer = () => {
 
         <ul className="footer__item">
           <h3 className='footer__item-title'>{t("Контакты")}</h3>
+
           <li className="footer__item-contact">
             <span>{t("телефона")}</span>
             <a href="tel:+998 71 281 49 30">+998 71 281 49 30</a>
@@ -89,10 +91,12 @@ const Footer = () => {
             <span>{t("E-mail")}</span>
             <a href="mailTo:info@gpggroup.uz">info@gpggroup.uz</a>
           </li>
+
         </ul>
 
         <form onSubmit={handleSubmit} className='footer__form' action="">
           <h3 className='footer__item-title'>{t("LEAVE")}</h3>
+
           <input
             name='name'
             onChange={handleChange}
@@ -101,6 +105,7 @@ const Footer = () => {
             placeholder={t('Name')}
             type="text"
           />
+
           <PhoneInput
             country={'uz'}
             enableSearch={true}
@@ -114,6 +119,7 @@ const Footer = () => {
             value={formData.phone}
             onChange={(value) => setFormData({ ...formData, phone: value })}
           />
+
           <input
             name='email'
             onChange={handleChange}
@@ -122,12 +128,14 @@ const Footer = () => {
             required
             type="text"
           />
+
           <textarea
             placeholder={t('Message')}
             name="message"
             onChange={handleChange}
             value={formData.message}
           ></textarea>
+
           <button className='footer__form-btn'>{t("Send Now")}</button>
         </form>
       </nav>

@@ -12,9 +12,11 @@ const HeroBrand = () => {
             <div className="container heroBrand__container">
                 <h2 className="heroBrand__title">{t("brand")}</h2>
                 <div className="heroBrand__info">
+
                     <h3 className="heroBrand__info-title">
                         {t("euroTech")}</h3>
                     <p className="heroBrand__info-text"><span>{t("цель")}</span> — {t("предоставлять")}</p>
+
                     <NavLink to={"/about"}>
                         <button className="heroBrand__info-btn">{t("Узнать больше")}<MdArrowOutward /></button>
                     </NavLink>

@@ -82,6 +82,7 @@ const Hero = () => {
             <div className="line-wrapper">
               <div className="line-progress"></div>
             </div>
+
             <div className="line-number">
               {String(index + 1).padStart(2, '0')}
             </div>

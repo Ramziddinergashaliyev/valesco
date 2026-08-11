@@ -123,7 +123,6 @@ const Distr = () => {
       title: 'KYRGZ REPUBLIC, BISHKEK CITY, SADYGALIEVA STR. 1',
       number: ["+996 702 676 514"]
     }
-
   ];
 
   const DATADISTURB = i18n?.languages[0] === "ru" ? Data : DataEN

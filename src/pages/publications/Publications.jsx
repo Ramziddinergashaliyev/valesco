@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import "./publications.scss"
 import { PUBLIC } from '../../static'
 import { MdArrowOutward } from 'react-icons/md'
+
+import "./publications.scss"
 
 const Publications = () => {
   const [hide, setHide] = useState(6)

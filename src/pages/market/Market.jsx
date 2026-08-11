@@ -43,11 +43,9 @@ const Market = () => {
                                     <div className="bottom-slide">{t("В магазин")}</div>
                                 </div>
                             </a>
-
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     )

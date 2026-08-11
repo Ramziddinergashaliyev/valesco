@@ -64,6 +64,7 @@ const MapChart = () => {
           stops: [{ opacity: 1 }, { opacity: 0 }],
         }),
       });
+
       container.children.push(line);
 
       const circle = am5.Circle.new(root, {
@@ -73,6 +74,7 @@ const MapChart = () => {
         strokeWidth: 3,
         dy: -50,
       });
+
       container.children.push(circle);
 
       const logoImage = am5.Picture.new(root, {
@@ -84,6 +86,7 @@ const MapChart = () => {
         dy: -50,
         opacity: 1,
       });
+
       container.children.push(logoImage);
 
       const label = am5.Label.new(root, {
@@ -108,6 +111,7 @@ const MapChart = () => {
         dy: 20,
         opacity: 0,
       });
+
       container.children.push(label);
 
       const hoverArea = am5.Circle.new(root, {

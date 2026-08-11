@@ -47,10 +47,12 @@ const Unical = () => {
         }
     ]
 
+
     return (
         <div className='unical container'>
             <div className="unical-top">
                 <h2 className="unical-top-title">Уникальность бренда</h2>
+
                 <div className="unical-top-imgs">
                     <img src={img} alt="unical-img" />
                 </div>
@@ -58,6 +60,7 @@ const Unical = () => {
 
             <div className="unical-brand">
                 <h2 className="unical-brand-title">Бренд Valesco</h2>
+
                 <div className="unical-brand-info">
                     <h2 className="unical-brand-info-title">Бренд Valesco принадлежит компании по производству смазочных материалов SK Enmove.</h2>
                     <p className='unical-brand-info-text'>Уникальная идентичность бренда Valesco строится на трех главных компонентах: креативность, технологии и премиальное качество.</p>

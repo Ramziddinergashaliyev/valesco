@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+
 import "./about.scss"
 
 import { FaCircleChevronRight } from "react-icons/fa6";

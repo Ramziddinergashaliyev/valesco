@@ -215,6 +215,7 @@ const SingleProduct = () => {
                             />
                         )}
                     </div>
+
                 </div>
 
                 <div className="single-top-right">
