@@ -16,9 +16,11 @@ const Culture = () => {
 
       <div className="culture-box">
         <div className="culture-box-info">
+
           <h2 className="culture-box-info-title">Корпоративная культура VALESCO</h2>
 
           <div className="culture-box-info-right">
+
             <h2 className="culture-box-info-right-title">
               Сотрудники VALESCO вместе создают «Культуру победы»</h2>
             <p className="culture-box-info-right-text">В VALESCO мы ценим профессионалов, которым не все равно. Мы поощряем инициативу, чтобы вместе преодолевать кризисные ситуации и находить возможности для дальнейшего роста.</p>
@@ -44,11 +46,13 @@ const Culture = () => {
 
               <div className="culture-box-card">
                 <p className="culture-box-card-info-title">профессионализм</p>
+
                 <div className="culture-box-card-info">
                   <p className="culture-box-card-info-text">Глубокое понимание сферы смазочных материалов</p>
                   <p className="culture-box-card-info-text">Высокая конкурентоспособность</p>
                   <p className="culture-box-card-info-text">Дух победителя</p>
                 </div>
+
               </div>
 
               <div className="culture-box-line-plus"><FaPlus /></div>

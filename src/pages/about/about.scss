@@ -406,6 +406,11 @@
                 justify-content: center;
             }
 
+            &-top-info-title {
+                display: flex;
+
+            }
+
             &-top-info-text {
                 text-align: center;
                 font-size: 15px;

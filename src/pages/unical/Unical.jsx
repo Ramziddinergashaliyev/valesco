@@ -47,7 +47,6 @@ const Unical = () => {
         }
     ]
 
-
     return (
         <div className='unical container'>
             <div className="unical-top">

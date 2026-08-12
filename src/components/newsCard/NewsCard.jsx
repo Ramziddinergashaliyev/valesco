@@ -30,7 +30,7 @@ const NewsCard = () => {
 
                 <div className="news-header">
                     <h2 className="news-heading">
-                        {t("Последние")} <span className="accent">{t("Новости")}</span>
+                        {t("Latest")} <span className="accent">{t("Новости")}</span>
                     </h2>
 
                     <NavLink to={"/news"} className="news-actions-btn">

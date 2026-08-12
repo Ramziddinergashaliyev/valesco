@@ -29,7 +29,9 @@ const Outlets = () => {
 
                     <div className="outlets-middle-info">
                         <p className="outlets-middle-info-text">
-                            Воспользуйтесь картой чтобы узнать, какие магазины и сервисы уже присоединились к официальной программе брендирования.</p>
+                            Воспользуйтесь картой чтобы узнать, какие магазины и сервисы уже присоединились к официальной программе брендирования.
+                        </p>
+
                         <div className='outlets-accardion'>
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary
@@ -60,6 +62,7 @@ const Outlets = () => {
                                 </AccordionDetails>
                             </Accordion>
                         </div>
+
                     </div>
                 </div>
 
@@ -248,7 +251,7 @@ const Outlets = () => {
                 </div>
             </div>
 
-            <div className="outlets-bottom">3333d
+            <div className="outlets-bottom">
                 <div className="outlets-bottom-black container">
                     <h2 className="outlets-bottom-black-title">Подбери свой Valesco</h2>
                     <div className="outlets-bottom-black-info">
