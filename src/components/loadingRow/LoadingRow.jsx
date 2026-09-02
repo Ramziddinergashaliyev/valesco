@@ -9,6 +9,7 @@ const LoadingRow = () => {
                     <div className="loading__item" key={index}>
                         <div className="loading__item-left">
                             <div className="loading__img bg__animation"></div>
+
                             <div className="loading__item-left-info">
                                 <div className="loading__title bg__animation"></div>
                                 <div className="loading__title bg__animation"></div>

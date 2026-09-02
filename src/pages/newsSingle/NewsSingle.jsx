@@ -83,11 +83,13 @@ const NewsSingle = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
         const foundNews = fullData.find(item => item.id === parseInt(id))
+
         if (foundNews) {
             setNews(foundNews)
         } else {
             navigate('/news')
         }
+
     }, [id, navigate, fullData])
 
     useEffect(() => {
