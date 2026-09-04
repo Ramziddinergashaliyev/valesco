@@ -506,13 +506,6 @@ const Product = ({ data, loading, title }) => {
                                                         }
                                                         <div className="product-box-left-info">
                                                             <h2 className="product-box-left-info-title">{el?.title}</h2>
-                                                            <div className="product-box-left-info-item">
-                                                                {
-                                                                    el?.specifications?.map((el, index) => (
-                                                                        <span className='product-box-left-info-item-desc' key={index}>{el},</span>
-                                                                    ))
-                                                                }
-                                                            </div>
                                                         </div>
                                                     </div>
                                                     <NavLink to={`/singleProduct/${el?.id}`}><button className='product-box-btn'>{t("Подробнее")}<MdArrowOutward /></button></NavLink>

@@ -76,7 +76,15 @@ const ImageLoader = ({ src, alt, onClick, className, isActive }) => {
 const ProductSections = ({ byData, t }) => (
     <div className="single-dropdown">
         <ul className="single-dropdown-item container">
-            <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
+            {
+                byData?.category?.title?.en === "Transmission oils" || byData?.category?.title?.ru === "Трансмиссионные масла" || byData?.category?.title?.en === "Hydraulic oils" || byData?.category?.title?.ru === "Гидравлические масла"
+                    ?
+                    <></>
+                    :
+                    <>
+                        <li className="single-dropdown-item-list"><a href="#specy">{t("Спецификации")}</a></li>
+                    </>
+            }
             <li className="single-dropdown-item-list"><a href="#characterist">{t("Характеристики")}</a></li>
             {byData?.documents?.length > 0 && (
                 <li className="single-dropdown-item-list"><a href="#document">{t("Документация")}</a></li>
@@ -84,7 +92,13 @@ const ProductSections = ({ byData, t }) => (
         </ul>
 
         <div className="single-dropdown-result">
-            <Specificat data={byData?.specifications} />
+            {
+                byData?.category?.title?.en === "Transmission oils" || byData?.category?.title?.ru === "Трансмиссионные масла" || byData?.category?.title?.en === "Hydraulic oils" || byData?.category?.title?.ru === "Гидравлические масла"
+                    ?
+                    <></>
+                    :
+                    <Specificat data={byData} />
+            }
             <Characterist data={byData} />
             {byData?.documents?.length > 0 && (
                 <Document data={byData?.documents} />
@@ -92,6 +106,8 @@ const ProductSections = ({ byData, t }) => (
         </div>
     </div>
 )
+
+
 
 const RelatedProductsCarousel = ({ products }) => (
     <Swiper
