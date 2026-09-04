@@ -257,7 +257,6 @@ const Product = ({ data, loading, title }) => {
             )}
 
             <div className="container">
-
                 <div className="product-filter ">
                     {
                         title === "Моторные масла для легковой и легкой коммерческой техники" || title === "Motor oils for passenger cars and light commercial vehicles" || title === "Моторные масла для дизельных двигателей" || title === "Motor oils for diesel engines"
