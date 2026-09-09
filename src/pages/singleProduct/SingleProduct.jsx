@@ -107,8 +107,6 @@ const ProductSections = ({ byData, t }) => (
     </div>
 )
 
-
-
 const RelatedProductsCarousel = ({ products }) => (
     <Swiper
         modules={[Navigation, Pagination, Autoplay]}
