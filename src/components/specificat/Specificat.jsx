@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 
 const Specificat = ({ data }) => {
   const { t, i18n } = useTranslation()
-  console.log(data);
 
   return (
     <div id='specy' className='specificat container'>

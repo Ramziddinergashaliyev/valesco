@@ -83,11 +83,11 @@ import three26 from "../assets/news26/astana/three.webp"
 import four26 from "../assets/news26/astana/four.webp"
 import main26 from "../assets/news26/astana/main.webp"
 
-import mimsOne from "../assets/news26/mims/one.webp"
-import mimsTwo from "../assets/news26/mims/two.webp"
-import mimsThree from "../assets/news26/mims/three.webp"
-import mimsFour from "../assets/news26/mims/four.webp"
-import mimsFife from "../assets/news26/mims/fife.webp"
+import frankOne from "../assets/news26/frankfurt/one.webp"
+import frankTwo from "../assets/news26/frankfurt/two.webp"
+import frankThree from "../assets/news26/frankfurt/three.webp"
+import frankFour from "../assets/news26/frankfurt/four.webp"
+import frankFife from "../assets/news26/frankfurt/fife.webp"
 
 // 2026 Turkia
 import turk26main from "../assets/turk26/main.webp"
@@ -591,21 +591,21 @@ export const newsData = [
     {
         id: 6,
         category: "Новости",
-        world: ["Automechanika Astana"],
+        world: ["Automechanika Astana", "Автомеханика Франкфурт"],
         title: "Automechanika 2026",
         description: ["Valesco продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках 2026 года. Эти мероприятия предоставляют платформу для демонстрации наших высококачественных смазочных материалов, налаживания связей с профессионалами индустрии и изучения новых бизнес-возможностей по всему миру.", "Благодаря активному участию в глобальных выставках, Valesco укрепляет свое присутствие на рынке послепродажного обслуживания автомобилей и подтверждает свою приверженность инновациям, качеству и надежной работе.", "Эти выставки отражают стремление Valesco к созданию прочных партнерских отношений и предоставлению надежных решений в области смазочных материалов для мировых рынков."],
         date: "2026",
         img: news3,
-        image: [main26],
+        image: [main26, frankOne],
         locationData: [
-            // {
-            //     id: 'peter',
-            //     title: 'Valesco на MIMS Automobility Санкт-Петербург 2026',
-            //     location: 'Выставочный центр Экспофорум, Санкт-Петербург',
-            //     description: 'Компания Valesco приняла участие в выставке MIMS Санкт-Петербург, которая прошла в выставочном центре Экспофорум, представив на своём стенде G035 в павильоне G полный ассортимент автомобильных смазочных материалов и технических жидкостей. Выставка предоставила возможность наладить контакты с партнёрами и дистрибьюторами, представить новейшие разработки бренда и укрепить присутствие Valesco на автомобильном рынке Санкт-Петербурга. Команда с нетерпением ждёт дальнейшего участия в предстоящих отраслевых мероприятиях по мере расширения присутствия Valesco на новых рынках. Valesco — надёжная защита. Мощная производительность.',
-            //     images: [mimsTwo, mimsThree, mimsFour, mimsFife],
-            //     position: 'left'
-            // },
+            {
+                id: 'frankfurt',
+                title: 'Автомеханика Франкфурт',
+                location: 'Выставочный центр Messe Frankfurt',
+                description: 'Аутомеханика Франкфурт — одна из ведущих мировых выставок автомобильного вторичного рынка, которая собирает производителей, дистрибьюторов, покупателей и профессионалов отрасли со всего мира. В рамках мероприятия компания Valesco представила свой ассортимент высокоэффективных моторных масел, трансмиссионных жидкостей, антифриза и автомобильных смазочных материалов, укрепив международные партнёрства и расширив своё присутствие на мировом автомобильном рынке.',
+                images: [frankTwo, frankThree, frankFour, frankFife],
+                position: 'left'
+            },
             {
                 id: 'astana',
                 title: 'Automechanika Astana',
@@ -856,21 +856,21 @@ export const newsDataEn = [
     {
         id: 6,
         category: "News",
-        world: ["Automechanika Astana"],
+        world: ["Automechanika Astana", "Automechanika Frankfurt"],
         title: "Automechanika 2026",
         description: ["Valesco continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase our high-quality lubricants, connect with industry professionals, and explore new business opportunities worldwide.", "Through active participation in global exhibitions, Valesco strengthens its presence in the automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance.", "These exhibitions reflect Valesco’s vision of building strong partnerships and delivering trusted lubrication solutions to global markets."],
         date: "2026",
         img: news3,
-        image: [main26],
+        image: [main26, frankOne],
         locationData: [
-            // {
-            //     id: 'peter',
-            //     title: 'Valesco at MIMS Automobility Saint Petersburg 2026',
-            //     location: 'Expoforum Exhibition Centre Saint Petersburg',
-            //     description: 'Valesco took part in MIMS Saint Petersburg, held at Expoforum Exhibition Centre, showcasing its full range of automotive lubricants and fluids at Pavilion G, Stand G035. The exhibition offered an opportunity to connect with partners and distributors, present the brand\'s latest product developments, and strengthen Valesco\'s presence in the Saint Petersburg automotive market. The team looks forward to continued participation in upcoming industry events as Valesco expands its reach across new markets. Valesco — Trusted Protection.Powerful Performance.',
-            //     images: [mimsTwo, mimsThree, mimsFour, mimsFife],
-            //     position: 'right'
-            // },
+            {
+                id: 'frankfurt',
+                title: 'Automechanika Frankfurt',
+                location: 'Messe Frankfurt Exhibition Centre',
+                description: 'Automechanika Frankfurt is one of the world’s leading automotive aftermarket exhibitions, bringing together manufacturers, distributors, buyers, and industry professionals from across the globe. During the event, Valesco showcased its range of high-performance engine oils, transmission fluids, antifreeze, and automotive lubricants while strengthening international partnerships and expanding its presence in the global automotive market.',
+                images: [frankTwo, frankThree, frankFour, frankFife],
+                position: 'right'
+            },
             {
                 id: 'astana',
                 title: 'Automechanika Astana',
