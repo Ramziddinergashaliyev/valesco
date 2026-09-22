@@ -112,7 +112,7 @@ const RelatedProductsCarousel = ({ products }) => (
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={15}
         slidesPerView={1}
-        navigation
+        navigationd
         loop={true}
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
