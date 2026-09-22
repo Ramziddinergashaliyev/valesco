@@ -520,6 +520,34 @@ export const NEW = [
 
 export const newsData = [
     {
+        id: 6,
+        category: "Новости",
+        world: ["Automechanika Astana", "Автомеханика Франкфурт"],
+        title: "Automechanika 2026",
+        description: ["Valesco продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках 2026 года. Эти мероприятия предоставляют платформу для демонстрации наших высококачественных смазочных материалов, налаживания связей с профессионалами индустрии и изучения новых бизнес-возможностей по всему миру.", "Благодаря активному участию в глобальных выставках, Valesco укрепляет свое присутствие на рынке послепродажного обслуживания автомобилей и подтверждает свою приверженность инновациям, качеству и надежной работе.", "Эти выставки отражают стремление Valesco к созданию прочных партнерских отношений и предоставлению надежных решений в области смазочных материалов для мировых рынков."],
+        date: "2026",
+        img: news3,
+        image: [main26, frankOne],
+        locationData: [
+            {
+                id: 'frankfurt',
+                title: 'Автомеханика Франкфурт',
+                location: 'Выставочный центр Messe Frankfurt',
+                description: 'Аутомеханика Франкфурт — одна из ведущих мировых выставок автомобильного вторичного рынка, которая собирает производителей, дистрибьюторов, покупателей и профессионалов отрасли со всего мира. В рамках мероприятия компания Valesco представила свой ассортимент высокоэффективных моторных масел, трансмиссионных жидкостей, антифриза и автомобильных смазочных материалов, укрепив международные партнёрства и расширив своё присутствие на мировом автомобильном рынке.',
+                images: [frankTwo, frankThree, frankFour, frankFife],
+                position: 'left'
+            },
+            {
+                id: 'astana',
+                title: 'Automechanika Astana',
+                location: 'Астана, Казахстан',
+                description: 'Automechanika Astana — один из ключевых автосалонов в Центральной Азии, объединяющий профессионалов, дистрибьюторов и лидеров автомобильной индустрии со всего региона. В ходе мероприятия компания Valesco продемонстрировала свой ассортимент высокоэффективных моторных масел и автомобильных смазочных материалов, укрепив партнерские отношения и расширив свое присутствие на рынке Центральной Азии',
+                images: [one26, two26, three26, four26],
+                position: 'right'
+            }
+        ]
+    },
+    {
         id: 10,
         category: "Новости",
         world: [""],
@@ -648,34 +676,6 @@ export const newsData = [
     //         },
     //     ],
     // },
-    {
-        id: 6,
-        category: "Новости",
-        world: ["Automechanika Astana", "Автомеханика Франкфурт"],
-        title: "Automechanika 2026",
-        description: ["Valesco продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках 2026 года. Эти мероприятия предоставляют платформу для демонстрации наших высококачественных смазочных материалов, налаживания связей с профессионалами индустрии и изучения новых бизнес-возможностей по всему миру.", "Благодаря активному участию в глобальных выставках, Valesco укрепляет свое присутствие на рынке послепродажного обслуживания автомобилей и подтверждает свою приверженность инновациям, качеству и надежной работе.", "Эти выставки отражают стремление Valesco к созданию прочных партнерских отношений и предоставлению надежных решений в области смазочных материалов для мировых рынков."],
-        date: "2026",
-        img: news3,
-        image: [main26, frankOne],
-        locationData: [
-            {
-                id: 'frankfurt',
-                title: 'Автомеханика Франкфурт',
-                location: 'Выставочный центр Messe Frankfurt',
-                description: 'Аутомеханика Франкфурт — одна из ведущих мировых выставок автомобильного вторичного рынка, которая собирает производителей, дистрибьюторов, покупателей и профессионалов отрасли со всего мира. В рамках мероприятия компания Valesco представила свой ассортимент высокоэффективных моторных масел, трансмиссионных жидкостей, антифриза и автомобильных смазочных материалов, укрепив международные партнёрства и расширив своё присутствие на мировом автомобильном рынке.',
-                images: [frankTwo, frankThree, frankFour, frankFife],
-                position: 'left'
-            },
-            {
-                id: 'astana',
-                title: 'Automechanika Astana',
-                location: 'Астана, Казахстан',
-                description: 'Automechanika Astana — один из ключевых автосалонов в Центральной Азии, объединяющий профессионалов, дистрибьюторов и лидеров автомобильной индустрии со всего региона. В ходе мероприятия компания Valesco продемонстрировала свой ассортимент высокоэффективных моторных масел и автомобильных смазочных материалов, укрепив партнерские отношения и расширив свое присутствие на рынке Центральной Азии',
-                images: [one26, two26, three26, four26],
-                position: 'right'
-            }
-        ]
-    },
     {
         id: 7,
         category: "Новости",
@@ -836,6 +836,34 @@ export const newsData = [
 
 export const newsDataEn = [
     {
+        id: 6,
+        category: "News",
+        world: ["Automechanika Astana", "Automechanika Frankfurt"],
+        title: "Automechanika 2026",
+        description: ["Valesco continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase our high-quality lubricants, connect with industry professionals, and explore new business opportunities worldwide.", "Through active participation in global exhibitions, Valesco strengthens its presence in the automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance.", "These exhibitions reflect Valesco’s vision of building strong partnerships and delivering trusted lubrication solutions to global markets."],
+        date: "2026",
+        img: news3,
+        image: [main26, frankOne],
+        locationData: [
+            {
+                id: 'frankfurt',
+                title: 'Automechanika Frankfurt',
+                location: 'Messe Frankfurt Exhibition Centre',
+                description: 'Automechanika Frankfurt is one of the world’s leading automotive aftermarket exhibitions, bringing together manufacturers, distributors, buyers, and industry professionals from across the globe. During the event, Valesco showcased its range of high-performance engine oils, transmission fluids, antifreeze, and automotive lubricants while strengthening international partnerships and expanding its presence in the global automotive market.',
+                images: [frankTwo, frankThree, frankFour, frankFife],
+                position: 'right'
+            },
+            {
+                id: 'astana',
+                title: 'Automechanika Astana',
+                location: 'Astana, Kazakhstan',
+                description: 'Automechanika Astana is one of Central Asia’s key automotive industry exhibitions, bringing together professionals, distributors, and industry leaders from across the region. During the event, Valesco showcased its high-performance range of engine oils and automotive lubricants while strengthening partnerships and expanding its presence in the Central Asian market.',
+                images: [one26, two26, three26, four26],
+                position: 'left'
+            }
+        ]
+    },
+    {
         id: 10,
         category: "News",
         world: [""],
@@ -966,34 +994,6 @@ export const newsDataEn = [
     //         },
     //     ],
     // },
-    {
-        id: 6,
-        category: "News",
-        world: ["Automechanika Astana", "Automechanika Frankfurt"],
-        title: "Automechanika 2026",
-        description: ["Valesco continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase our high-quality lubricants, connect with industry professionals, and explore new business opportunities worldwide.", "Through active participation in global exhibitions, Valesco strengthens its presence in the automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance.", "These exhibitions reflect Valesco’s vision of building strong partnerships and delivering trusted lubrication solutions to global markets."],
-        date: "2026",
-        img: news3,
-        image: [main26, frankOne],
-        locationData: [
-            {
-                id: 'frankfurt',
-                title: 'Automechanika Frankfurt',
-                location: 'Messe Frankfurt Exhibition Centre',
-                description: 'Automechanika Frankfurt is one of the world’s leading automotive aftermarket exhibitions, bringing together manufacturers, distributors, buyers, and industry professionals from across the globe. During the event, Valesco showcased its range of high-performance engine oils, transmission fluids, antifreeze, and automotive lubricants while strengthening international partnerships and expanding its presence in the global automotive market.',
-                images: [frankTwo, frankThree, frankFour, frankFife],
-                position: 'right'
-            },
-            {
-                id: 'astana',
-                title: 'Automechanika Astana',
-                location: 'Astana, Kazakhstan',
-                description: 'Automechanika Astana is one of Central Asia’s key automotive industry exhibitions, bringing together professionals, distributors, and industry leaders from across the region. During the event, Valesco showcased its high-performance range of engine oils and automotive lubricants while strengthening partnerships and expanding its presence in the Central Asian market.',
-                images: [one26, two26, three26, four26],
-                position: 'left'
-            }
-        ]
-    },
     {
         id: 7,
         category: "News",
