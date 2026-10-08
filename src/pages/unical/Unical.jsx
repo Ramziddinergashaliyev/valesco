@@ -103,7 +103,6 @@ const Unical = () => {
                         ))
                     }
                 </div>
-
             </div>
 
             <div className="unical-cut">
