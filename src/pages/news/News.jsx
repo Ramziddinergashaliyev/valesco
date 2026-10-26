@@ -11,7 +11,6 @@ const News = () => {
   const [activeCategory, setActiveCategory] = useState('Barchasi')
   const [visibleCards, setVisibleCards] = useState([])
   const { t, i18n } = useTranslation()
-
   const allData = i18n?.language === "ru" ? newsData : newsDataEn
 
   useEffect(() => {
@@ -43,7 +42,6 @@ const News = () => {
             onClick={() => handleNewsClick(news.id)}
             style={{ cursor: 'pointer' }}
           >
-
             <div className="card-image">
               <img src={news.img} alt={news.title} />
             </div>

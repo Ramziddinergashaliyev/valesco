@@ -4,7 +4,6 @@ import { newsData, newsDataEn } from '../../static'
 import { useTranslation } from 'react-i18next'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
-
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -26,6 +25,7 @@ const TiltImage = ({ src, alt, className, style }) => {
         const py = y / rect.height - 0.5
 
         if (frameRef.current) cancelAnimationFrame(frameRef.current)
+
         frameRef.current = requestAnimationFrame(() => {
             const maxTilt = 10
             const rotateY = px * maxTilt * 2

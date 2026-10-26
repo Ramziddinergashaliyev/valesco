@@ -19,6 +19,7 @@ const Benafits = () => {
 
             <div className="benafits-sass">
                 <p className="benafits-sass-title">Состав</p>
+
                 <div className="benafits-sass-info">
                     <p className="benafits-sass-info-text">
                         Valesco способствует повышению производительности двигателей и обеспечивает превосходную защиту даже в экстремальных климатических условиях.</p>

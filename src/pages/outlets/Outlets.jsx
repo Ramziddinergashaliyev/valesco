@@ -1,6 +1,4 @@
 import React from 'react'
-import "./outlets.scss"
-
 import Accordion from '@mui/material/Accordion';
 import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -9,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 import { MdArrowOutward } from "react-icons/md";
+
+import "./outlets.scss"
 
 const Outlets = () => {
     return (
@@ -62,7 +62,6 @@ const Outlets = () => {
                                 </AccordionDetails>
                             </Accordion>
                         </div>
-
                     </div>
                 </div>
 
@@ -71,6 +70,7 @@ const Outlets = () => {
 
                     <div className="outlets-markets-info">
                         <p className="outlets-markets-info-text">Продукция Valesco представлена в крупнейших гипермаркетах, федеральных сетях автозапчастей "БИ-БИ", "Родные масла", "Armtek" и других. С подробным ассортиментом Вы можете ознакомиться на сайтах наших партнеров.</p>
+
                         <div className='outlets-accardion'>
                             <Accordion className='outlets-accardion-item'>
                                 <AccordionSummary

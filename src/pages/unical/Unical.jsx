@@ -3,7 +3,6 @@ import img from "../../assets/images/unical.jpg"
 import "./unical.scss"
 
 const Unical = () => {
-
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -69,7 +68,9 @@ const Unical = () => {
             </div>
 
             <div className="unical-core">
+
                 <h2 className="unical-core-title">основная идентичность</h2>
+
                 <div className="unical-core-boxs">
 
                     <div className="unical-core-box">
@@ -88,10 +89,10 @@ const Unical = () => {
                     </div>
 
                 </div>
+
             </div>
 
             <div className="unical-expand">
-
                 <h2 className="unical-expand-title">развернутая идентичность</h2>
 
                 <div className="unical-expand-cards">
@@ -106,10 +107,13 @@ const Unical = () => {
             </div>
 
             <div className="unical-cut">
+
                 <h2 className="unical-cut-title">суть бренда</h2>
+
                 <div className="unical-cut-box">
                     <p className="unical-cut-box-desc">Современный премиум</p>
                 </div>
+
             </div>
         </div>
     )

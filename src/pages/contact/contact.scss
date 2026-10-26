@@ -233,7 +233,6 @@
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 20px;
 
-
                 label {
                     input {
                         padding: 10px;
@@ -286,8 +285,6 @@
                     background-color: #333331;
                     color: white;
                     transition: .5s;
-
-
 
                     &:before {
                         content: '';

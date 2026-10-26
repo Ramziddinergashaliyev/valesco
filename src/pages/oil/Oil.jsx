@@ -14,8 +14,10 @@ const Oil = () => {
 
             <div className="oil-dannim">
                 <h2 className="oil-dannim-title">по данным автомобиля</h2>
+
                 <div className="oil-dannim-selects">
                     <p className="oil-dannim-selects-title">Воспользуйтесь нашим сервисом по подбору масел, используя данные вашего автомобиля.</p>
+
                     <select className="oil-dannim-select">
                         <option>Легковые автомобили</option>
                     </select>
@@ -35,7 +37,9 @@ const Oil = () => {
                     <button className="oil-dannim-button" disabled>
                         Подобрать
                     </button>
+
                 </div>
+
             </div>
 
             <div className="oil-analog">

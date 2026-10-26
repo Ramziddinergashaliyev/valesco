@@ -23,7 +23,9 @@ const Publications = () => {
       </h2>
 
       <div className="public-cards">
+
         <div></div>
+
         <div className="public-boxs">
           {
             PUBLIC?.slice(0, hide)?.map(el => (
@@ -38,6 +40,7 @@ const Publications = () => {
           }
           <button className='public-click' onClick={handleChange}>Загрузить еще</button>
         </div>
+
       </div>
     </div>
   )

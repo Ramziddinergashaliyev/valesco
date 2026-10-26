@@ -69,15 +69,19 @@ const Contact = () => {
           </div>
 
           <div className="contact-form-left-box">
+
             <MdOutlineMail />
+
             <div className="contact-form-left-box-info">
               <h3 className="contact-form-left-box-info-title">{t("E-mail")}</h3>
               <p className="contact-form-left-box-info-text">info@gpggroup.uz</p>
             </div>
+
           </div>
 
           <div className="contact-form-left-box">
             <LuPhone />
+
             <div className="contact-form-left-box-info">
               <h3 className="contact-form-left-box-info-title">{t("Call support")}</h3>
               <p className="contact-form-left-box-info-text"><a href="tel: +998 71 281 49 30"> +998 71 281 49 30</a></p>
@@ -133,7 +137,6 @@ const Contact = () => {
             </label>
 
             <button className="contact-form-right-bottom-btn">{t("Send Now")}</button>
-
           </div>
 
         </form>

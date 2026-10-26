@@ -4,7 +4,6 @@ import { MdArrowOutward } from "react-icons/md";
 import { useGetCategoriesQuery } from "../../context/api/categoryApi";
 import { useTranslation } from "react-i18next";
 import CatalogLoading from "../catalogLoading/CatalogLoading";
-
 import "./productRange.scss";
 
 import rs1 from "../../assets/icon/v1.webp"
@@ -26,34 +25,42 @@ import rs16 from "../../assets/icon/v8-1.webp"
 import file from "../../assets/pdf/v-catalog.pdf"
 
 const CATEGORY = [
+
   {
     image: rs13,
     bgImage: rs14,
   },
+
   {
     image: rs1,
     bgImage: rs2,
   },
+
   {
     image: rs3,
     bgImage: rs4,
   },
+
   {
     image: rs7,
     bgImage: rs8,
   },
+
   {
     image: rs11,
     bgImage: rs12,
   },
+
   {
     image: rs5,
     bgImage: rs6,
   },
+
   {
     image: rs9,
     bgImage: rs10,
   },
+
   {
     image: rs15,
     bgImage: rs16,
@@ -154,8 +161,11 @@ const ProductRange = ({ hide }) => {
               return (
                 <div key={item.id} className="productRange-card" ref={(el) => (cardRefs.current[index] = el)}>
                   <NavLink to={`/categories/${item?.id}`}>
+
                     <div className="productRange-card-bg" ref={(el) => (bgRefs.current[index] = el)} style={{ backgroundImage: `url(${category?.bgImage})`, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center" }} />
+
                     <div className="overlay" />
+
                     <div className="productRange-card-img" ref={(el) => (imgRefs.current[index] = el)}>
                       <img src={category?.image} alt={item.title} />
                     </div>

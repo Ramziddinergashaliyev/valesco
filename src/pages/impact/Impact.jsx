@@ -10,6 +10,7 @@ const Impact = () => {
 
   return (
     <div className='impact container'>
+
       <div className="impact-top">
         <h1 className="impact-top-title">социальная ответственность</h1>
         <div className="impact-top-imgs">

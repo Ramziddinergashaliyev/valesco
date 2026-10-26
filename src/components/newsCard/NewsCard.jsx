@@ -61,7 +61,9 @@ const NewsCard = () => {
                                     <div className="news-card__date">
                                         {item?.date} <span className="dot">•</span>
                                     </div>
+
                                     <h3 className="news-card__title">{item?.title}</h3>
+
                                     <div className="news-card__footer">
                                         <span className="news-card__read">{t("Читать далее")}</span>
                                         <span className="news-card__arrow">
