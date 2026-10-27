@@ -266,7 +266,7 @@ const NewsSingle = () => {
             </div>
         )
     }
-
+    22
     if (!news) {
         return (
             <div className="loading-container">

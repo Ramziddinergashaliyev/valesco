@@ -44,8 +44,10 @@ const Oil = () => {
 
             <div className="oil-analog">
                 <h2 className="oil-analog-title">по аналогу</h2>
+
                 <div className="oil-analog-selects">
                     <p className="oil-analog-selects-title">Вы можете подобрать моторное масло Valesco аналогичное или близкое по характеристикам к тому продукту, которым вы пользуетесь в настоящее время.</p>
+
                     <select className="oil-analog-select">
                         <option>Бренд</option>
                     </select>
