@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+
 import HeroTop from '../../components/heroTop/HeroTop'
 import Hero from '../../components/hero/Hero'
 import HeroBrand from '../../components/heroBrand/HeroBrand'
@@ -36,3 +37,4 @@ const Home = () => {
 }
 
 export default Home
+
